@@ -11,7 +11,7 @@
       />
       <div v-for="(item, index) in timelineData" :key="item.year">
         <div
-          class="flex justify-center gap-4 max-w-[880px] w-full mx-auto items-start"
+          class="flex justify-center gap-4 max-w-[940px] w-full mx-auto items-start mt-12"
           :class="{ 'flex-row-reverse': index % 2 === 1 }"
         >
           <div
@@ -43,19 +43,17 @@
           </div>
           <div class="flex-1 flex flex-col text-left">
             <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-              <span
-                className="highlight-mark  text-xl font-bold text-green-600 mb-4"
-              >
+              <span className="highlight-mark text-2xl font-bold text-black">
                 {{ item.title }}
               </span>
-              <p className="text-black mb-4 leading-relaxed">
+              <p className="text-black my-2 leading-relaxed">
                 {{ item.description }}
               </p>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <p
                   v-for="(detail, detailIndex) in item.details"
                   :key="detailIndex"
-                  className="text-black text-sm leading-relaxed"
+                  className="text-black leading-relaxed break-words"
                 >
                   {{ detail }}
                 </p>
@@ -84,11 +82,12 @@ const timelineData = ref([
   {
     year: "2024",
     title: "The Launch of the LawOnGo Platform",
-    description:
-      "The LawOnGo project team was officially established in Jakarta.",
+    // description:
+
     details: [
-      "The prototype of the first-generation AI legal Q&A engine was developed.",
-      "Preliminary cooperation mechanisms were established with more than 10 local law firms.",
+      "• The LawOnGo project team was officially established in Jakarta",
+      "• The prototype of the first-generation AI legal Q&A engine was developed.",
+      "• Preliminary cooperation mechanisms were established with more than 10 local law firms.",
       "The debt mediation model process was designed, including:",
       "• User profile collection",
       "• Case pre-assessment",
