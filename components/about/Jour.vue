@@ -73,11 +73,11 @@ import { ref } from "vue";
 const timelineData = ref([
   {
     year: "2023",
-    title: 'Initial Concept: Responding to the "Silent Need"',
+    title: 'Initial Concept:Responding to the"Silent Need"',
     description:
-      "As Indonesia's fintech industry rapidly develops, an increasing number of individual users and small merchants are falling into the quagmire of multiple lending and debt collection. We have observed that a significant number of users, when confronted with debt, are left in a state of confusion, fear, and a lack of resources or viable solutions.",
+      "As Indonesia's fintech industry rapidly develops,an increasing number of individual users and small merchants are falling into the quagmire of multiple lending and debt collection.We have observed that a significant number of users,when confronted with debt,are left in a state of confusion,fear,and a lack of resources or viable solutions.",
     details: [
-      'Thus, we conceived an initial idea to create a low-threshold, digital, and trustworthy legal platform that ensures "everyone has the right to negotiate."',
+      'Thus,we conceived an initial idea:to create a low-threshold,digital,and trustworthy legal platform that ensures"everyone has the right to negotiate."',
     ],
     image: "/image/features/story-placeholder.png",
   },
