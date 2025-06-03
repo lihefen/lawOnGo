@@ -79,11 +79,7 @@
           class="w-full flex justify-center items-center px-4 py-2 bg-white text-lightblack-1 rounded-lg !text-[#04A45E] mt-4"
         >
           View all
-          <font-awesome-icon
-            icon="fa-solid fa-arrow-right"
-            class="ml-2"
-            style="color: #04a45e"
-          />
+          <Icon name="material-symbols:arrow-forward-ios" class="ml-2" />
         </button>
       </div>
     </div>

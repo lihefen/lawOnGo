@@ -39,9 +39,14 @@
         <img :src="item" width="100%" height="350" class="rounded-lg" />
       </UCarousel>
       <div class="flex justify-center items-center gap-2 mt-9">
-        <button class="linear-button text-2xl font-bold text-[#333333]">
+        <button
+          class="linear-button text-2xl font-bold text-[#333333] flex items-center justify-center"
+        >
           Join Us
-          <font-awesome-icon :icon="['fas', 'arrow-right']" />
+          <Icon
+            name="material-symbols:arrow-right-alt-rounded"
+            class="ml-2 text-2xl"
+          />
         </button>
       </div>
     </div>

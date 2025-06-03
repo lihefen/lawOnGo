@@ -22,9 +22,7 @@
             <div>
               <p
                 class="text-neutral-800 text-sm md:text-xl font-bold font-dm-sans leading-normal"
-              >
-                Bingung Pilih Advokat?
-              </p>
+              ></p>
               <p
                 class="text-dm-sans text-[#3A475B] text-xs md:text-sm font-normal"
               >
@@ -37,11 +35,9 @@
             src="/image/FindYourLawyer/ornament-banner.png"
             alt="ornament"
           />
-
-          <font-awesome-icon
-            icon="fa-solid fa-chevron-right"
-            size="lg"
-            class="mx-2"
+          <Icon
+            name="material-symbols:arrow-forward-ios"
+            class="mx-2 text-lg"
           />
         </a>
       </SwiperSlide>
@@ -65,10 +61,9 @@
                 </p>
               </div>
             </div>
-            <font-awesome-icon
-              icon="fa-solid fa-chevron-right"
-              size="lg"
-              class="mx-2"
+            <Icon
+              name="material-symbols:arrow-forward-ios"
+              class="mx-2 text-lg"
             />
           </div>
         </a>

@@ -1,8 +1,8 @@
 <template>
   <div class="relative bg-black rounded-2xl overflow-hidden" @click="playVideo">
-    <font-awesome-icon
+    <Icon
       v-if="!isPlaying"
-      icon="fa-solid fa-play"
+      name="material-symbols:play-arrow-rounded"
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/80 text-3xl"
     />
     <video
