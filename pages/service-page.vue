@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-08 21:13:28
  * @LastEditors: hean
- * @LastEditTime: 2025-05-31 14:15:15
+ * @LastEditTime: 2025-06-03 16:52:24
 -->
 
 <template>
@@ -530,7 +530,7 @@
     </div>
   </template>
   
- <style scoped>
+  <style scoped>
  .service-head {
   background-image: url("/image/service-page/service_head.png");
   background-size: cover;
@@ -612,6 +612,7 @@
 }
 </style>
   <script setup>
+    import {getQueryString}  from '~/utils/getQueryString';
     const showLoginDialog = ref(false);
     const inputName = ref("");
     const inputPhone = ref("");
@@ -653,5 +654,37 @@
         console.log("loginHandler");
         showLoginDialog.value = true;
     };
+
+    const scrollToId = (id) => {
+        const idEle = getQueryString('id');
+        if(idEle) {
+            let element= null;
+            if(idEle == 'document') {
+                element = document.getElementById('pendirian-badan-usaha');
+            }
+            if(idEle == 'tax') {
+                element = document.getElementById('konsultasi-pajak');
+            }
+            if(idEle == 'copyright') {
+                element = document.getElementById('form');
+            }
+
+            
+            if (element) {
+                element.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+    onMounted(() => {
+        scrollToId()
+    });
+
+    
+
+
+
   </script>
   

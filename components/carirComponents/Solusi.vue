@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-31 14:46:30
  * @LastEditors: hean
- * @LastEditTime: 2025-06-02 12:32:34
+ * @LastEditTime: 2025-06-03 16:30:21
 -->
 <template>
   <div>
@@ -16,7 +16,7 @@
       <div class="max-w-[1280px] ">
         <div
           id="testimony-wrapper"
-          class="flex flex-row overflow-x-auto scrollbar-hide scroll-smooth gap-6 px-2"
+          class="flex flex-row overflow-x-auto scrollbar-hide scroll-smooth gap-6 px-2 mt-6"
         >
           <UCarousel
             ref="carousel"
