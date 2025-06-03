@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-07 23:27:22
  * @LastEditors: hean
- * @LastEditTime: 2025-05-14 14:12:32
+ * @LastEditTime: 2025-06-03 16:09:36
  */
 import tailwindcss from "@tailwindcss/vite";
 
@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         "~/assets/css/entry.css",
         "@fortawesome/fontawesome-svg-core/styles.css",
     ],
-    modules: ["@nuxt/eslint", "@nuxt/ui",'@element-plus/nuxt','@nuxt/content'],
+    modules: ["@nuxt/eslint", "@nuxt/ui",'@element-plus/nuxt'],
     vite: {
         plugins: [tailwindcss()],
     },

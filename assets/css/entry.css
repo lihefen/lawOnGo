@@ -1,0 +1,162 @@
+[role=button],button {
+    cursor: pointer
+}
+
+
+[multiple],[type=date],[type=datetime-local],[type=email],[type=month],[type=number],[type=password],[type=search],[type=tel],[type=text],[type=time],[type=url],[type=week],input:where(:not([type])),select,textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border-color: #6b7280;
+    border-radius: 0;
+    border-width: 1px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: .5rem .75rem;
+    --tw-shadow: 0 0 #0000
+}
+
+.prose :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: decimal;
+    margin-bottom: 1.25em;
+    margin-top: 1.25em;
+    padding-inline-start:1.625em}
+
+.prose :where(ol[type=A]):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: upper-alpha
+}
+
+.prose :where(ol[type=a]):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: lower-alpha
+}
+
+.prose :where(ol[type=A s]):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: upper-alpha
+}
+
+.prose :where(ol[type=a s]):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: lower-alpha
+}
+
+.prose :where(ol[type=I]):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: upper-roman
+}
+
+.prose :where(ol[type=i]):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: lower-roman
+}
+
+.prose :where(ol[type=I s]):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: upper-roman
+}
+
+.prose :where(ol[type=i s]):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: lower-roman
+}
+
+.prose :where(ol[type="1"]):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: decimal
+}
+
+.prose :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    list-style-type: disc;
+    margin-bottom: 1.25em;
+    margin-top: 1.25em;
+    padding-inline-start:1.625em}
+
+.prose :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker {
+    color: var(--tw-prose-counters);
+    font-weight: 400
+}
+
+.prose :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker {
+    color: var(--tw-prose-bullets)
+}
+
+.bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.overflow-auto {
+    overflow: auto;
+}
+.bg-cultured {
+    --tw-bg-opacity: 1;
+    background-color: rgb(244 242 243/var(--tw-bg-opacity,1))
+}
+.border-lightgrey-2 {
+    --tw-border-opacity: 1;
+    border-color: rgb(238 240 243 / var(--tw-border-opacity, 1));
+}
+.bg-lightblue-3 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(237 242 247 / var(--tw-bg-opacity, 1));
+}
+.animate-ping-slow {
+    animation: ping 2.5s cubic-bezier(0,0,.2,1) infinite
+}
+.space-y-4>:not([hidden])~:not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+    margin-top: calc(1rem * (1 - var(--tw-space-y-reverse)));
+}
+.bg-radial-gradient {
+    background: radial-gradient(50% 50% at 50% 50%, #07346a 0, #0a50a3);
+}
+.bg-steelBlue {
+    --tw-bg-opacity: 1;
+    background-color: rgb(32 114 184 / var(--tw-bg-opacity, 1));
+}
+.bg-lightblue-1 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(225 242 248 / var(--tw-bg-opacity, 1));
+}
+.text-cultured {
+    --tw-text-opacity: 1;
+    color: rgb(244 242 243 / var(--tw-text-opacity, 1));
+}
+@keyframes ping {
+    75%,to {
+        opacity: 0;
+        transform: scale(2)
+    }
+}
+@media (min-width: 768px) {
+    .md\:bg-black {
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+    }
+}
+@media (min-width: 768px) {
+    .md\:bg-opacity-50 {
+        --tw-bg-opacity: .5;
+    }
+}
+@media (min-width: 768px) {
+    .md\:text-sm {
+        font-size: .875rem;
+        line-height: 1.25rem;
+    }
+}
+@media (min-width: 475px) {
+    .xs\:text-sm {
+        font-size: .875rem;
+        line-height: 1.25rem;
+    }
+}
+@media (min-width: 640px) {
+    .sm\:mt-9 {
+        margin-top: 2.25rem;
+    }
+}
+@media (min-width: 768px) {
+    .md\:pt-\[241px\] {
+        padding-top: 241px;
+    }
+}
+@media (min-width: 768px) {
+    .md\:pt-40 {
+        padding-top: 10rem;
+    }
+}
