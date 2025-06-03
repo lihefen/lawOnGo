@@ -116,53 +116,11 @@
                             </div>
                             <div>
                               <div>
-                                <el-checkbox
-                                  v-model="checked1"
-                                  label="Kepailitan &amp; PKPU"
-                                  size="large"
-                                />
-                              </div>
-                              <div>
-                                <el-checkbox
-                                  v-model="checked1"
-                                  label="Ketenagakerjaan"
-                                  size="large"
-                                />
-                              </div>
-                              <div>
-                                <el-checkbox
-                                  v-model="checked1"
-                                  label="Perkawinan & Perceraian"
-                                  size="large"
-                                />
-                              </div>
-                              <div>
-                                <el-checkbox
-                                  v-model="checked1"
-                                  label="Pertanahan"
-                                  size="large"
-                                />
-                              </div>
-                              <div>
-                                <el-checkbox
-                                  v-model="checked1"
-                                  label="Perdata"
-                                  size="large"
-                                />
-                              </div>
-                              <div>
-                                <el-checkbox
-                                  v-model="checked1"
-                                  label="Pajak Perusahaan"
-                                  size="large"
-                                />
-                              </div>
-                              <div>
-                                <el-checkbox
-                                  v-model="checked1"
-                                  label="Pajak Pribadi"
-                                  size="large"
-                                />
+                                <el-radio-group v-model="radioStatus">
+                                    <el-radio :value="3"> Lawyer Zhang </el-radio>
+                                    <el-radio :value="4">Lawyer Zhang</el-radio>
+                                    <el-radio :value="4">Lawyer Zhang</el-radio>
+                                </el-radio-group>
                               </div>
                             </div>
                           </div>
@@ -465,6 +423,31 @@ const advokatList = [
 </script>
 
 <style scoped>
+::v-deep .el-radio__input .el-radio__inner {
+    width: 22px;
+    height: 22px;
+    background: url('/image/utils/el-radio-icon.png') no-repeat center center;
+    background-size: 100% 100%;
+    border: none;
+}
+::v-deep .el-radio__input.is-checked .el-radio__inner {
+    width: 22px;
+    height: 22px;
+    background: url('/image/utils/el-radio-active.png') no-repeat center center;
+    background-size: 100% 100%;
+    border: none;
+}
+::v-deep .el-radio__input.is-checked+.el-radio__label {
+    color: #333;
+    font-size: 18px;
+}
+::v-deep  .el-radio__label {
+    color: #333;
+    font-size: 18px;
+}
+::v-deep .el-radio__inner:after {
+    display: none;
+}
 ::v-deep .el-radio-group {
     display: flex;
     flex-direction: column;
