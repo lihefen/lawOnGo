@@ -86,8 +86,8 @@
                       </div>
                       <div class="flex gap-1 text-xs items-center">
                         <div class="flex gap-1 items-center">
-                          <font-awesome-icon
-                            :icon="['fas', 'location-dot']"
+                          <Icon
+                            name="mdi:map-marker"
                             class="size-4 text-[#04A45E]"
                           />
                           <span class="text-black capitalize">
@@ -96,8 +96,8 @@
                         </div>
                         <div class="border-l h-2/3 border-gray-500"></div>
                         <div class="flex gap-1 flex-1">
-                          <font-awesome-icon
-                            :icon="['fas', 'medal']"
+                          <Icon
+                            name="mdi:medal"
                             class="size-4 text-[#04A45E]"
                           />
                           <span class="text-black truncate"
@@ -109,18 +109,15 @@
                         <p
                           class="text-xs antialiased text-black my-auto flex gap-1 items-center"
                         >
-                          <font-awesome-icon
-                            :icon="['fas', 'clock']"
+                          <Icon
+                            name="mdi:clock"
                             class="size-4 text-[#04A45E]"
                           />
                           {{ item.experience }} years
                         </p>
                         <div class="flex items-center">
                           <div class="h-2 border-l border-gray-400 mx-2"></div>
-                          <font-awesome-icon
-                            :icon="['fas', 'star']"
-                            class="size-3 text-[#FEAF27]"
-                          />
+                          <Icon name="mdi:star" class="size-3 text-[#FEAF27]" />
                           <label class="my-auto ml-0.5 text-xs text-black">
                             {{ item.rating }}
                           </label>
@@ -143,7 +140,7 @@
                         </div>
                         <div class="flex items-center gap-1 text-xs text-black">
                           <span>+{{ item.addCount }}</span>
-                          <font-awesome-icon :icon="['fas', 'chevron-down']" />
+                          <Icon name="mdi:chevron-down" />
                         </div>
                       </div>
                     </div>
@@ -222,7 +219,7 @@ const isEnd = ref(false);
 const items = ref([
   {
     name: "Aura Akhman, S.H., M.H.",
-    image:"/image/landing-page/lawyer/profile-lawyer-1.png",
+    image: "/image/landing-page/lawyer/profile-lawyer-1.png",
     location: "Jakarta Selatan",
     verified: true,
     experience: 4,
@@ -236,7 +233,7 @@ const items = ref([
   },
   {
     name: "Dwi Kurniawan, S.H.",
-    image:"/image/landing-page/lawyer/profile-lawyer-2.png",
+    image: "/image/landing-page/lawyer/profile-lawyer-2.png",
     location: "Jakarta Selatan",
     verified: true,
     experience: 4,
@@ -250,7 +247,7 @@ const items = ref([
   },
   {
     name: "Dwi Kurniawan, S.H.",
-    image:"/image/landing-page/lawyer/profile-lawyer-3.png",
+    image: "/image/landing-page/lawyer/profile-lawyer-3.png",
     location: "Jakarta Selatan",
     verified: true,
     experience: 4,
@@ -264,7 +261,7 @@ const items = ref([
   },
   {
     name: "Dwi Kurniawan, S.H.",
-    image:"/image/landing-page/lawyer/profile-lawyer-4.png",
+    image: "/image/landing-page/lawyer/profile-lawyer-4.png",
     location: "Jakarta Selatan",
     verified: true,
     experience: 4,

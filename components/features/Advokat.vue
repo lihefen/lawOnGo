@@ -34,17 +34,14 @@
     >
       <button
         type="button"
-        class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 w-full flex justify-center items-center px-4 py-2 bg-white text-lightblack-1 hover:bg-cultured rounded-lg !text-[#04A45E] mt-4"
+        class="w-full flex justify-center items-center px-4 py-2 bg-white text-lightblack-1 hover:bg-cultured rounded-lg text-[#04A45E] mt-4"
       >
-        <span>
-          View all advocates
-          <span class="ml-2">
-            <font-awesome-icon
-              icon="fa-solid fa-arrow-right"
-              style="color: #04a45e"
-            />
-          </span>
-        </span>
+        <span> View all advocates </span>
+        <Icon
+          name="material-symbols:arrow-forward-ios"
+          class="ml-2"
+          style="color: #04a45e"
+        />
       </button>
     </div>
   </div>

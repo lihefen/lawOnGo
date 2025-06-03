@@ -4,12 +4,15 @@
       <div class="flex gap-2 justify-center items-center">
         <button
           id="sampleSwiperPrev"
-          class="bg-[#A6E9CC]/30 rounded-full p-1 z-10 size-11"
+          class="bg-[#A6E9CC]/30 rounded-full p-1 z-10 size-11 flex items-center justify-center"
           :disabled="activeIndex === 0"
           :class="{ 'opacity-50': activeIndex === 0 }"
           @click="swiperRef.slidePrev()"
         >
-          <font-awesome-icon :icon="['fas', 'less-than']" />
+          <Icon
+            name="material-symbols:arrow-back-ios-new"
+            class="text-[#2D5946]"
+          />
         </button>
         <div class="w-9/12 lg:w-[1000px]">
           <Swiper
@@ -65,26 +68,28 @@
                         {{ item.name }}
                       </h3>
                       <div class="flex justify-center mt-1">
-                        <font-awesome-icon
+                        <Icon
                           v-for="i in item.rating"
                           :key="i"
-                          :icon="['fas', 'star']"
-                          class="text-yellow-400"
+                          name="material-symbols:star"
+                          class="text-yellow-400 text-lg"
                         />
                       </div>
                     </div>
                   </div>
-                  <div class="text-sm space-y-6">
+                  <div class="text-base space-y-6">
                     <div class="flex items-center gap-2">
-                      <font-awesome-icon :icon="['fas', 'clock']" />
+                      <Icon name="ic:sharp-access-time" />
                       <span>{{ item.experience }}</span>
                     </div>
                     <div class="flex items-center gap-2">
-                      <font-awesome-icon :icon="['fas', 'users']" />
+                      <Icon name="mdi:account-multiple" />
                       <span>{{ item.peopleHelped }} person</span>
                     </div>
                     <div class="flex items-start gap-2">
-                      <font-awesome-icon :icon="['fas', 'file-alt']" />
+                      <Icon
+                        name="fluent:text-bullet-list-square-person-32-filled"
+                      />
                       <span>{{ item.services }}</span>
                     </div>
                   </div>
@@ -95,12 +100,15 @@
         </div>
         <button
           id="sampleSwiperNext"
-          class="bg-[#A6E9CC]/30 rounded-full p-1 z-10 size-11"
+          class="bg-[#A6E9CC]/30 rounded-full p-1 z-10 size-11 flex items-center justify-center"
           :disabled="activeIndex === 3"
           :class="{ 'opacity-50': activeIndex === 3 }"
           @click="swiperRef.slideNext()"
         >
-          <font-awesome-icon :icon="['fas', 'greater-than']" />
+          <Icon
+            name="material-symbols:arrow-forward-ios"
+            class="text-[#2D5946]"
+          />
         </button>
       </div>
     </div>
@@ -153,15 +161,15 @@ const items = ref([
     peopleHelped: "1000+",
     services: "Family Law, Criminal Law, Civil Law",
   },
-//   {
-//     id: 5,
-//     image: "/image/landing-page/lawyer/profile-lawyer-5.png",
-//     name: "Chairunnisa Ratu Salma, S.H.",
-//     rating: 5,
-//     experience: "10+ years",
-//     peopleHelped: "1000+",
-//     services: "Family Law, Criminal Law, Civil Law",
-//   },
+  //   {
+  //     id: 5,
+  //     image: "/image/landing-page/lawyer/profile-lawyer-5.png",
+  //     name: "Chairunnisa Ratu Salma, S.H.",
+  //     rating: 5,
+  //     experience: "10+ years",
+  //     peopleHelped: "1000+",
+  //     services: "Family Law, Criminal Law, Civil Law",
+  //   },
 ]);
 
 const onSwiper = (newSwiper) => {

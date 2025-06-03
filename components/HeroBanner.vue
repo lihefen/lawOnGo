@@ -23,13 +23,12 @@
           </p>
           <button
             type="button"
-            class="font-roboto-mono font-bold text-lg sm:text-xl lg:text-[24px] text-white bg-[#04A45E] hover:bg-[#038a4c] transition-colors duration-300 py-4 px-8 sm:px-10 rounded-[24px]"
+            class="font-roboto-mono font-bold text-lg sm:text-xl lg:text-[24px] text-white bg-[#04A45E] hover:bg-[#038a4c] transition-colors duration-300 py-4 px-8 sm:px-10 rounded-[24px] flex items-center justify-center"
           >
             Lihat Cara Kerjanya
-            <font-awesome-icon
-              icon="fa-solid fa-arrow-right"
+            <Icon
+              name="material-symbols:arrow-right-alt-rounded"
               class="ml-2"
-              style="color: #ffffff"
             />
           </button>
         </div>

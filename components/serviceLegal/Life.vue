@@ -33,7 +33,7 @@
       <div class="flex justify-center items-center gap-2 mt-9">
         <button class="linear-button text-2xl font-bold text-[#333333]">
           Join Us
-          <font-awesome-icon :icon="['fas', 'arrow-right']" />
+          <Icon name="mdi:arrow-right" />
         </button>
       </div>
     </div>
