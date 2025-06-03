@@ -99,7 +99,7 @@
                             </div>
                             <div class="flex flex-col gap-1.5">
                               <el-radio-group v-model="radioStatus">
-                                <el-radio :value="1"> Semua Status </el-radio>
+                                <el-radio :value="1"> All Status </el-radio>
                                 <el-radio :value="2">online</el-radio>
                               </el-radio-group>
                             </div>
