@@ -7,7 +7,7 @@
  * @LastEditTime: 2025-05-10 17:45:16
 -->
 <template>
-  <div class="bg-[#f4f2f3] font-dm-sans min-h-screen">
+  <div class="bg-[#f4f2f3] font-dm-sans min-h-screen overflow-x-hidden">
     <main>
       <TheNavbar @loginHandler="loginHandler" />
       <div class="bg-white font-lexend -mt-16">
