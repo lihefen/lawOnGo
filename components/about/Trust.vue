@@ -1,5 +1,5 @@
 <template>
-  <section class="p-4 md:-mt-60">
+  <section class="p-4 md:-mt-50">
     <div class="relative z-10 max-w-[1280px] mx-auto mt-4 xl:px-52">
       <div
         class="card-bg p-4 md:py-6 rounded-[24px] text-[#333333] overflow-hidden"
@@ -78,7 +78,6 @@
         </div>
       </div>
     </div>
-
   </section>
 </template>
 <style scoped>
@@ -90,5 +89,4 @@
   /* box-shadow: 0px 35px 28px -32px rgba(15, 169, 66, 0.22),
     inset 2px 2px 0px 0px #ffffff; */
 }
-
 </style>

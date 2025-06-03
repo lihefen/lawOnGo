@@ -100,7 +100,7 @@
                             <div class="flex flex-col gap-1.5">
                               <el-radio-group v-model="radioStatus">
                                 <el-radio :value="1"> All Status </el-radio>
-                                <el-radio :value="2">online</el-radio>
+                                <el-radio :value="2">On Line</el-radio>
                               </el-radio-group>
                             </div>
                           </div>
@@ -112,7 +112,7 @@
                             <div
                               class="text-black antialiased font-medium text-xs leading-6"
                             >
-                              <h2>Kategori</h2>
+                              <h2>Category</h2>
                             </div>
                             <div>
                               <div>
@@ -174,12 +174,12 @@
                             <div
                               class="text-black antialiased font-medium text-xs leading-6"
                             >
-                              <h2>Provinsi</h2>
+                              <h2>Province</h2>
                             </div>
                             <div>
                               <el-select
                                 v-model="inputCity"
-                                placeholder="Cari Provinsi"
+                                placeholder="Search Province"
                                 size="large"
                                 style="--el-border-radius-base: 30px"
                               >
@@ -196,12 +196,12 @@
                             <div
                               class="text-black antialiased font-medium text-xs leading-6"
                             >
-                              <h2>Kota</h2>
+                              <h2>City</h2>
                             </div>
                             <div>
                               <el-select
                                 v-model="inputCity"
-                                placeholder="Cari Kota"
+                                placeholder="Search City"
                                 size="large"
                                 style="--el-border-radius-base: 30px"
                               >
@@ -465,6 +465,12 @@ const advokatList = [
 </script>
 
 <style scoped>
+::v-deep .el-radio-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: baseline;
+}
 ::v-deep .el-collapse-item__header {
   border: none;
 }
