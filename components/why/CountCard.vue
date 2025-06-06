@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-18 18:45:48
  * @LastEditors: hean
- * @LastEditTime: 2025-05-24 13:37:13
+ * @LastEditTime: 2025-06-06 18:01:11
 -->
 <template>
   <div
@@ -37,7 +37,7 @@
     <div class="border-t border-[#F1F1F1]"></div>
     <div class="flex justify-center gap-4">
       <a
-        href="https://play.google.com/store/apps/details?id=com.limaindonesia.perqara"
+        href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share"
         rel="noopener noreferrer"
         target="_blank"
         ><img

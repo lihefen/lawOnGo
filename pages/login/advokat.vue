@@ -74,7 +74,7 @@
                     <div class="flex md:flex-row flex-col items-center justify-center md:gap-6 gap-4 text-cultured">
                         <span class="sm:text-2xl text-xl font-semibold">Also Download Perqara Advokat Application</span>
                         <div class="flex items-center gap-3 flex-1">
-                            <a href="https://play.google.com/store/apps/details?id=com.limaindonesia.lawyers" rel="noopener noreferrer" target="_blank">
+                            <a href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share" rel="noopener noreferrer" target="_blank">
                                 <img
                                     alt="android-logo"
                                     class="sm:w-36 w-full"
@@ -146,7 +146,7 @@
                     <div class="text-sm text-white">
                         <span>Download LowOnGo Advocate</span>
                         <div class="flex items-center gap-4 mt-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.limaindonesia.lawyers" rel="noopener noreferrer" target="_blank">
+                            <a href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share" rel="noopener noreferrer" target="_blank">
                                 <img
                                     alt="android-logo"
                                     class="sm:w-36 w-full"

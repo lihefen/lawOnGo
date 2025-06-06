@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @version: 
+ * @Author: hean
+ * @Date: 2025-05-25 18:28:37
+ * @LastEditors: hean
+ * @LastEditTime: 2025-06-06 18:00:43
+-->
 <template>
   <div class="w-full bg-gradient-to-r from-[#005F38] to-[#005F38]">
     <div class="flex justify-center max-w-[1280px] p-4 xl:px-40 mx-auto">
@@ -17,7 +25,7 @@
                   class="w-36"
                   src="/image/landing-page/appstore-logo.png" /></a
               ><a
-                href="https://play.google.com/store/apps/details?id=com.limaindonesia.perqara"
+                href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share"
                 rel="noopener noreferrer"
                 target="_blank"
                 ><img

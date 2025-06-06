@@ -50,7 +50,7 @@
                 class="md:w-36 w-full"
                 src="/image/landing-page/appstore-logo.png" /></a
             ><a
-              href="https://play.google.com/store/apps/details?id=com.limaindonesia.perqara"
+              href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share"
               rel="noopener noreferrer"
               target="_blank"
               ><img
