@@ -107,9 +107,9 @@ import { ref } from "vue";
 import { cn } from "~/utils";
 const items = [
   "/image/landing-page/phone-first.png",
-  "/image/landing-page/phone-first.png",
-  "/image/landing-page/phone-first.png",
-  "/image/landing-page/phone-first.png",
+  "/image/landing-page/phone-second.png",
+  "/image/landing-page/phone-third.png",
+  "/image/landing-page/phone-four.png",
 ];
 
 const active = ref("professional");
