@@ -21,7 +21,6 @@
             : ''
         )
       "
-      @click="changeActive('ai')"
     >
       <h2 class="md:text-2xl text-base font-bold">AI intelligent match</h2>
       <p>
@@ -39,7 +38,6 @@
             : ''
         )
       "
-      @click="changeActive('multi')"
     >
       <h2 class="md:text-2xl text-base font-bold">
         Multi dimensional value-added services
@@ -73,7 +71,6 @@
             : ''
         )
       "
-      @click="changeActive('professional')"
     >
       <h2 class="md:text-2xl text-base font-bold">
         Professional endorsement and case library
@@ -92,7 +89,6 @@
             : ''
         )
       "
-      @click="changeActive('progress')"
     >
       <h2 class="md:text-2xl text-base font-bold">Visual progress tracking</h2>
       <p>
@@ -116,12 +112,9 @@ const items = [
 const activeIndex = ref(0);
 const carousel = useTemplateRef("carousel");
 
-// console.log(carousel.value);
-
 function logSlidesInViewOnce(emblaApi) {
   const indexs = emblaApi.slidesInView();
   if (indexs.length === 1) {
-    console.log(indexs[0]);
     activeIndex.value = indexs[0];
   }
 }
