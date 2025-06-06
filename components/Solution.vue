@@ -64,14 +64,14 @@ const items = ref([
     link: "/cari-advokat",
     top: -20,
   },
-  {
-    title: "Company Establishment",
-    description:
-      "Layanan pendirian badan usaha (PT, CV, Yayasan), perubahan akta, dan waarmerking.",
-    image: "/image/features/gongsi-2.png",
-    link: "/pendirian-badan-usaha",
-    top: -7,
-  },
+//   {
+//     title: "Company Establishment",
+//     description:
+//       "Layanan pendirian badan usaha (PT, CV, Yayasan), perubahan akta, dan waarmerking.",
+//     image: "/image/features/gongsi-2.png",
+//     link: "/pendirian-badan-usaha",
+//     top: -7,
+//   },
   {
     title: "Document Creation",
     description:
