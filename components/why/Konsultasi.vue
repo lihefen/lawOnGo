@@ -16,7 +16,7 @@
       :class="
         cn(
           'bg-[#F5FBFD] bg-[url(/image/features/ai.png)] bg-bottom-left bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333] font-light md:text-base text-sm space-y-1',
-          active === 'ai'
+          activeIndex === 0
             ? 'bg-[#54F9AB] bg-[url(/image/features/ai-active.png)]'
             : ''
         )
@@ -34,7 +34,7 @@
       :class="
         cn(
           'bg-[#F5FBFD] bg-[url(/image/features/multi.png)] bg-bottom-left bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333] font-light md:text-base text-sm space-y-1',
-          active === 'multi'
+          activeIndex === 1
             ? 'bg-[#54F9AB] bg-[url(/image/features/multi-active.png)]'
             : ''
         )
@@ -51,6 +51,7 @@
     </div>
     <div class="hidden md:block row-span-2 my-auto">
       <UCarousel
+        ref="carousel"
         v-slot="{ item }"
         :loop="true"
         dots
@@ -67,7 +68,7 @@
       :class="
         cn(
           'bg-[#F5FBFD] bg-[url(/image/features/professional.png)] bg-bottom-left bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333] font-light md:text-base text-sm space-y-1',
-          active === 'professional'
+          activeIndex === 2
             ? 'bg-[#54F9AB] bg-[url(/image/features/professional-active.png)]'
             : ''
         )
@@ -86,7 +87,7 @@
       :class="
         cn(
           'bg-[#F5FBFD] bg-[url(/image/features/progress.png)] bg-bottom-left bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333] font-light md:text-base text-sm space-y-1',
-          active === 'progress'
+          activeIndex === 3
             ? 'bg-[#54F9AB] bg-[url(/image/features/progress-active.png)]'
             : ''
         )
@@ -112,9 +113,21 @@ const items = [
   "/image/landing-page/phone-four.png",
 ];
 
-const active = ref("professional");
+const activeIndex = ref(0);
+const carousel = useTemplateRef("carousel");
 
-const changeActive = (value) => {
-  active.value = value;
-};
+// console.log(carousel.value);
+
+function logSlidesInViewOnce(emblaApi) {
+  const indexs = emblaApi.slidesInView();
+  if (indexs.length === 1) {
+    console.log(indexs[0]);
+    activeIndex.value = indexs[0];
+  }
+}
+
+onMounted(() => {
+  const emblaApi = carousel.value.emblaApi;
+  if (emblaApi) emblaApi.on("slidesInView", logSlidesInViewOnce);
+});
 </script>
