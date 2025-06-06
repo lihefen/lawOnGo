@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @version: 
+ * @Author: hean
+ * @Date: 2025-05-25 18:28:37
+ * @LastEditors: hean
+ * @LastEditTime: 2025-06-06 17:35:44
+-->
 <template>
   <div class="relative">
     <div class="max-w-[1280px] px-4 xl:px-30 mx-auto">
@@ -36,7 +44,7 @@
             />
           </a>
           <a
-            href="/pendirian-badan-usaha"
+            href="/cari-advokat"
             class="bg-gradient-panel px-6 py-9 space-y-2 md:space-y-4 rounded-xl md:flex-1 relative cursor-pointer"
           >
             <!-- <div
@@ -64,7 +72,7 @@
             />
           </a>
           <a
-            href="/layanan-lainnya"
+            href="/cari-advokat"
             class="bg-gradient-panel px-6 py-9 space-y-2 md:space-y-4 md:max-w-[252px] cursor-pointer"
           >
             <div class="flex gap-2 items-center">
