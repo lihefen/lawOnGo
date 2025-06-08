@@ -96,16 +96,16 @@
                     class="flex items-center justify-center gap-4 md:gap-9 text-center text-[#333333]"
                     >
                     <div class="flex flex-col">
-                        <span class="md:text-2xl font-medium">27.000+</span>
-                        <span class="text-xs md:text-sm">Konsultasi Selesai</span>
+                        <span class="md:text-2xl font-medium">8000+</span>
+                        <span class="text-xs md:text-sm">Registered Lawyers</span>
                     </div>
                     <div class="flex flex-col">
-                        <span class="md:text-2xl font-medium">500+</span>
-                        <span class="text-xs md:text-sm">Advokat Terdaftar</span>
+                        <span class="md:text-2xl font-medium">50+</span>
+                        <span class="text-xs md:text-sm">Registered Lawyers</span>
                     </div>
                     <div class="flex flex-col">
-                        <span class="md:text-2xl font-medium">130+</span>
-                        <span class="text-xs md:text-sm">Kota Dijangkau</span>
+                        <span class="md:text-2xl font-medium">15+</span>
+                        <span class="text-xs md:text-sm">Cities Covered</span>
                     </div>
                     <div class="flex flex-col">
                         <span
@@ -118,7 +118,7 @@
                         />
                         <span>4.9<span class="text-sm">/5.0</span></span>
                         </span>
-                        <span class="text-xs md:text-sm">Kepuasan Klien</span>
+                        <span class="text-xs md:text-sm">Excellent rating</span>
                     </div>
                     </div>
                 </div>

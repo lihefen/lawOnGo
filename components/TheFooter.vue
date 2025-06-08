@@ -89,8 +89,7 @@
               <div class="mt-2 hidden lg:block">
                 <p class="font-bold">Address</p>
               <p class="text-[14px] lg:text-base mt-3">
-                Vantage Office Business Center at
-                Equity Tower,26th floor H,Kavling 52-52,JI Jendrai Sudirman Senayan,Jakarta Selatan,12910
+                Vantage Office Business Centre at Equity Tower, 26th floor H, Kavling 52 - 52, Jl Jendral Sudirman Senayan, Jakarta Selatan, 12910 Jakarta, Indonesia
               </p>
               </div>
             </div>
@@ -99,7 +98,7 @@
       </div>
     </div>
     <div class="w-full text-white text-center mt-10 pb-10 text-xs lg:text-base">
-      <p>2025PT Solusi Teknologi.Hak Cipta Dilindingi</p>
+      <p>2025 PT Solusi Pertiwi Teknologi. Hak Cipta Dilindungi</p>
     </div>
   </div>
 </template>
