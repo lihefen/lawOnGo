@@ -48,7 +48,7 @@
                   stroke-linejoin="round"
                 ></path>
               </svg>
-              <span>Klien LawOnGo</span>
+              <span>1 LawOnGo</span>
             </div>
             <img
                 :src="item.image"
@@ -76,31 +76,25 @@ import "swiper/css";
 const isMobile = ref(false);
 const items = ref([
   {
-    name: "Rima Gravianty Baskoro",
+    name:'Riza Zafita Rizki, S.H.',
     image: "/image/testimonial/testimonial-3.png",
     description:
       "“The lawyer really helped me in finding solutions and legal steps that I had to take regarding my problem.”",
   },
   {
-    name: "Rima Gravianty Baskoro",
+    name:'Farouq Habibullah El-Hassan, S.H',
     image: "/image/testimonial/testimonial-3.png",
     description:
       "Saya cukup puas selama konsultasi, karena insight yang diberikan cukup baik dan jujur sehingga saya bisa menentukan keputusan apa yang sekiranya mungkin saya ambil.",
   },
   {
-    name: "Rima Gravianty Baskoro",
+    name:'Edo',
     image: "/image/testimonial/testimonial-3.png",
     description:
       "Saya cukup puas selama konsultasi, karena insight yang diberikan cukup baik dan jujur sehingga saya bisa menentukan keputusan apa yang sekiranya mungkin saya ambil.",
   },
   {
-    name: "Rima Gravianty Baskoro",
-    image: "/image/testimonial/testimonial-3.png",
-    description:
-      "Saya cukup puas selama konsultasi, karena insight yang diberikan cukup baik dan jujur sehingga saya bisa menentukan keputusan apa yang sekiranya mungkin saya ambil.",
-  },
-  {
-    name: "Rima Gravianty Baskoro",
+    name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
     image: "/image/testimonial/testimonial-3.png",
     description:
       "Saya cukup puas selama konsultasi, karena insight yang diberikan cukup baik dan jujur sehingga saya bisa menentukan keputusan apa yang sekiranya mungkin saya ambil.",
