@@ -63,11 +63,6 @@
                 <li class="mt-2 lg:mt-3">
                   <a href="/cari-advokat" class=""> Find an Advocate </a>
                 </li>
-                <li class="mt-2 lg:mt-3">
-                  <a href="https://perqara.com/blog/" rel="noopener noreferrer">
-                    Leagal Articles
-                  </a>
-                </li>
                 <li class="mt-2 lg:mt-3"><a href="/faq" class=""> FAQ </a></li>
                 <li class="mt-2 lg:mt-3">
                   <a href="/karir" class=""> Career </a>
