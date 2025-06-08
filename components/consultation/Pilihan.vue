@@ -218,7 +218,7 @@ const isEnd = ref(false);
 
 const items = ref([
   {
-    name: "Aura Akhman, S.H., M.H.",
+    name: "Farouq Habibullah El-Hassan, S.H",
     image: "/image/landing-page/lawyer/profile-lawyer-1.png",
     location: "Jakarta Selatan",
     verified: true,
@@ -232,7 +232,7 @@ const items = ref([
     video: false,
   },
   {
-    name: "Dwi Kurniawan, S.H.",
+    name: "Edo",
     image: "/image/landing-page/lawyer/profile-lawyer-2.png",
     location: "Jakarta Selatan",
     verified: true,
@@ -246,7 +246,7 @@ const items = ref([
     video: true,
   },
   {
-    name: "Dwi Kurniawan, S.H.",
+    name: "Riza Zafita Rizki, S.H.",
     image: "/image/landing-page/lawyer/profile-lawyer-3.png",
     location: "Jakarta Selatan",
     verified: true,
@@ -260,7 +260,7 @@ const items = ref([
     video: false,
   },
   {
-    name: "Dwi Kurniawan, S.H.",
+    name: "Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.",
     image: "/image/landing-page/lawyer/profile-lawyer-4.png",
     location: "Jakarta Selatan",
     verified: true,

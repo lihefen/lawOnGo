@@ -137,7 +137,7 @@ const items = ref([
   {
     id: 2,
     image: "/image/landing-page/lawyer/profile-lawyer-1.png",
-    name: "Alvin Alfiansyah S.H",
+    name: "Farouq Habibullah El-Hassan, S.H",
     rating: 5,
     experience: "10+ years",
     peopleHelped: "1000+",
@@ -146,7 +146,7 @@ const items = ref([
   {
     id: 3,
     image: "/image/landing-page/lawyer/profile-lawyer-3.png",
-    name: "Desi Permatasari, S.H., M.H.",
+    name: "Riza Zafita Rizki, S.H.",
     rating: 5,
     experience: "10+ years",
     peopleHelped: "1000+",
@@ -155,7 +155,7 @@ const items = ref([
   {
     id: 4,
     image: "/image/landing-page/lawyer/profile-lawyer-4.png",
-    name: "Ricky Rachmat Yuniardi, S.H., M.H., C.L.A.",
+    name: "Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.",
     rating: 5,
     experience: "10+ years",
     peopleHelped: "1000+",
