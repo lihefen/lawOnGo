@@ -129,7 +129,6 @@
     }
 
     const loginRequest = async () => {
-
         const dataText = JSON.stringify({
             aesKey:'rMM+4uHIkgfbhk2qOqPxzw==',
             appName:'LawOnGo',

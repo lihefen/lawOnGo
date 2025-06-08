@@ -358,7 +358,7 @@
                                 </div>
 
                                 <div>
-                                    <p  class="font-medium font-dm-sans antialiased mb-2 text-black text-base">Mobile Number (Whats</p>
+                                    <p  class="font-medium font-dm-sans antialiased mb-2 text-black text-base">Mobile Number (Whatsapp)</p>
                                     <div class="relative w-full text-black">
                                         <el-input v-model="inputPhone" type="text"  placeholder="Example:08123456789" size="large" ></el-input>
                                     </div>
@@ -376,7 +376,7 @@
                                     <label class="mb-2 block">Legal Services</label>
                                     <div class="relative z-100">
                                         <el-select
-                                            v-model="inputHukum"
+                                            v-model="inputLegalServices"
                                             placeholder="Choose legal service"
                                             size="large"
                                             >
@@ -394,7 +394,7 @@
                                     <label class="mb-2 block">Type of Service</label>
                                     <div class="relative z-100">
                                         <el-select
-                                            v-model="inputType"
+                                            v-model="inputTypeOfService"
                                             placeholder="Choose legal service"
                                             size="large"
                                             >
@@ -432,7 +432,7 @@
                         <div  class="rounded-lg px-3 py-2 flex items-center gap-2 bg-[#E7FFF4] text-[#00854B] text-sm">
                             <img class="w-4" src="/image/register/anquan_icon.png"><span  class="flex-1">Your data security is our top priority, this data will be used exclusively in Perqara services.</span>
                         </div>
-                        <button  class="text-center bg-[#04A45E] px-7 py-2.5 w-full text-lg text-white rounded-md shadow-gray-500 hover:bg-[#04A45E]/80 transition-all ease-in-out duration-300 cursor-pointer"> Kirim </button>
+                        <button  @click="officialInfoRequest" class="text-center bg-[#04A45E] px-7 py-2.5 w-full text-lg text-white rounded-md shadow-gray-500 hover:bg-[#04A45E]/80 transition-all ease-in-out duration-300 cursor-pointer"> Send </button>
                     </div>
                 </div>
             </div>
@@ -613,13 +613,15 @@
 </style>
   <script setup>
     import {getQueryString}  from '~/utils/getQueryString';
+    import { officialInfo } from '~/services/officialInfo';
     const showLoginDialog = ref(false);
     const inputName = ref("");
     const inputPhone = ref("");
-    const inputHukum =ref('')
     const inputEmail = ref('')
-    const inputType = ref('')
     const inputBusiness = ref('')
+    const inputTypeOfService = ref('');
+    const inputLegalServices = ref('');
+    const textareaDibutuhkan =ref('');
     const hukumOptions = [
     {
         value: 'Pembuatan Dokumen',
@@ -704,7 +706,38 @@
         scrollToId()
     });
 
-    
+
+
+    const officialInfoRequest = async () => {
+
+        // const inputName = ref("");
+        // const inputPhone = ref("");
+        // const inputHukum =ref('')
+        // const inputEmail = ref('')
+        // const inputType = ref('')
+        // const inputBusiness = ref('')
+
+        if(inputName.value == '' ||inputPhone.value == '' || inputTypeOfService.value ==''||inputEmail.value==''||inputBusiness.value == ''  || textareaDibutuhkan.value == '') {
+            ElMessage('Please fill all the fields!')
+            return
+        }
+        try {
+            const res = await officialInfo({
+                data: {
+                    "type": "web", 
+                    "fullName": "test", 
+                    "mobileNumber": "test", 
+                    "email": "test", 
+                    "legalServices": "test", 
+                    "typeOfService": "test", 
+                    "businessField": "test", 
+                    "detailOfRequired": "test" 
+                }
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
 
 
