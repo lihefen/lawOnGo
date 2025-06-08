@@ -222,7 +222,7 @@
                             <div class="flex items-center h-[40px]">
                               <span
                                 class="text-sm md:text-xl font-bold line-clamp-2 leading-4 md:leading-6"
-                                >Dwi Kurniawan, S.H.</span
+                                >{{ item.name }}</span
                               >
                             </div>
                             <div
@@ -409,15 +409,19 @@ const kotaOptions = [
 const advokatList = [
   {
     photo: "/image/photo/photo-01.png",
+    name:'Riza Zafita Rizki, S.H.'
   },
   {
     photo: "/image/photo/photo-02.png",
+    name:'Farouq Habibullah El-Hassan, S.H'
   },
   {
     photo: "/image/photo/photo-03.png",
+    name:'Edo'
   },
   {
     photo: "/image/photo/photo-04.png",
+    name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.'
   },
 ];
 </script>
