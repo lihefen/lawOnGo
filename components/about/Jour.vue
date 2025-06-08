@@ -26,7 +26,7 @@
             <img
               alt="story-2020"
               class="w-[280px] md:w-[410px] ml-auto"
-              src="/image/about-us/story-2020.svg"
+              :src="item.image"
             />
           </div>
           <div class="flex flex-col">
@@ -77,13 +77,11 @@ const timelineData = ref([
     details: [
       'Thus,we conceived an initial idea:to create a low-threshold,digital,and trustworthy legal platform that ensures"everyone has the right to negotiate."',
     ],
-    image: "/image/features/story-placeholder.png",
+    image: "/image/about-us/story-2023.png",
   },
   {
     year: "2024",
     title: "The Launch of the LawOnGo Platform",
-    // description:
-
     details: [
       "• The LawOnGo project team was officially established in Jakarta",
       "• The prototype of the first-generation AI legal Q&A engine was developed.",
@@ -95,27 +93,38 @@ const timelineData = ref([
       "• Verification of the successful payment mechanism",
       "Our services began to be open for testing to the first batch of real users.",
     ],
-    image: "/image/features/story-placeholder.png",
+    image: "/image/about-us/story-2024-1.png",
+  },
+  {
+    year: "2024",
+    title: 'Completing the Integrated Loop of"Consultation-Mediation-Signing"',
+    description:"The official version of App 1.0 was launched,supporting AI consultation+manual mediation+electronic signing of contracts.",
+
+    details: [
+     'Over 30 law firms,creditor institutions,and mediation experts in Indonesia were partnered with to form a professional network.',
+     'The total number of user consultations exceeded 10,000.Diversified service packages were introduced.',
+     'The platform began to be recognized by the media and the industry as an"innovative representative in the debt mediation field."'
+    ],
+    image: "/image/about-us/story-2024-2.png",
   },
   {
     year: "2025",
-    title: 'Completing the Integrated Loop of "Consultation-Mediation-Signing"',
-    description:
-      "The official version of App 1.0 was launched, supporting AI consultation + manual mediation + electronic signing of contracts.",
+    title: 'Evolving into an"Intelligent Legal Platform"',
     details: [
-      "Over 30 law firms, creditor institutions, and mediation experts in Indonesia were partnered with to form a professional network.",
-      "The total number of user consultations exceeded 10,000.",
-      "Diversified service packages were introduced.",
-      'The platform began to be recognized by the media and the industry as an "innovative representative in the debt mediation field."',
+     'Upgraded the AI legal Q&A system to support preliminary screening of complex cases and situational simulation responses.',
+     'Established channels for synchronizing mediation agreements with financial institutions and arbitration bodies.',
+     'Expanded the contract service module to support the entire chain of contract drafting,review,translation,and signing.',
+     'Formed long-term partnerships with law schools and legal organizations to expand the impact of legal accessibility.',
+     'Launched the LawOnGo B2B service line to address compliance and debt management issues for small and medium-sized enterprises.',
+     'We are evolving from a"debt mediation tool"to a"legal partner in everyones pocket."'
     ],
-    image: "/image/features/story-placeholder.png",
+    image: "/image/about-us/story-2025.png",
   },
 ]);
 </script>
 <style scoped>
 .title-adron {
   position: relative;
-
   &::before {
     content: "";
     position: absolute;
