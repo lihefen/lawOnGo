@@ -242,10 +242,11 @@ const menuItems = [
 
 // Service items data
 const serviceItems = [
+
   {
     id: 1,
-    title: "Konsultasi Hukum",
-    description: "Konsultasi hukum langsung bersama advokat LawOnGo.",
+    title: " AI based Legal Services ",
+    description: "Contact lawyers directly in LOG for legal service",
     icon: "/image/navbar/icon-legal-consultation.png",
     path: "cari-advokat",
   },
@@ -260,25 +261,25 @@ const serviceItems = [
 //   },
   {
     id: 2,
-    title: "Pembuatan Dokumen",
+    title: "Legal Document Creation",
     description:
-      "Layanan pembuatan dokumen untuk individu/perusahaan seperti Perjanjian Jual Beli, Perjanjian Kerja, Surat Kuasa, dll.",
+      "Services for creating legal documents for individuals/companies such as Sales and Purchase Agreements, Employment Agreements, Power of Attorney, etc.",
     icon: "/image/navbar/document-icon.png",
     isNew: true,
     path: "service-page?id=document",
   },
   {
     id: 3,
-    title: "Pendaftaran HAKI",
-    description: "Layanan pendaftaran Merek, Paten, Hak Cipta, dll.",
+    title: "Intellectual Property Registration",
+    description: "Services for registering Trademarks, Patents, Copyrights, etc.",
     icon: "/image/navbar/tax-icon.png",
     isNew: true,
     path: "service-page?id=tax",
   },
   {
     id: 4,
-    title: "Konsultasi Pajak",
-    description: "Konsultasi pelaporan pajak perusahaan maupun individu.",
+    title: "Tax Consultation ",
+    description: "Consultation on tax reporting for companies and individuals",
     icon: "/image/navbar/copyright-icon.png",
     isNew: true,
     path: "service-page?id=copyright",

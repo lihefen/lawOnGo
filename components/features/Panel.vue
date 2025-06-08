@@ -80,7 +80,6 @@
               <p class="font-bold text-xl lg:text-2xl flex-1">Other</p>
             </div>
             <p class="text-xs sm:text-sm text-[#647387]">
-              Rapid debt reduction
             </p>
             <img
               src="/image/features/polka-dot.svg"

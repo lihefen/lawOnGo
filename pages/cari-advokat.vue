@@ -326,7 +326,7 @@
                               <button
                                 class="font-medium px-4 py-2.5 md:px-6 md:py-3 md:w-40 rounded-md md:rounded-[16px] text-xs md:text-base bg-[#04A45E] mt-[10px] text-white"
                               >
-                                Konsultasi
+                              consult now
                               </button>
                             </div>
                           </div>
