@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-18 18:45:48
  * @LastEditors: hean
- * @LastEditTime: 2025-06-06 18:01:11
+ * @LastEditTime: 2025-06-08 15:57:00
 -->
 <template>
   <div
@@ -45,9 +45,9 @@
           class="w-36"
           src="/image/landing-page/google-logo.png" /></a
       ><a
-        href="https://apps.apple.com/id/app/perqara/id6443946589"
+         href="javascript:;"
+                @click="ElMessage('敬请期待')"
         rel="noopener noreferrer"
-        target="_blank"
         ><img
           alt="appstore-logo"
           class="w-36"

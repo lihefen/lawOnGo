@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-25 18:28:37
  * @LastEditors: hean
- * @LastEditTime: 2025-06-06 18:00:43
+ * @LastEditTime: 2025-06-08 15:56:01
 -->
 <template>
   <div class="w-full bg-gradient-to-r from-[#005F38] to-[#005F38]">
@@ -17,9 +17,9 @@
             </div>
             <div class="flex gap-2 pb-8 justify-center">
               <a
-                href="https://apps.apple.com/id/app/perqara/id6443946589"
+                href="javascript:;"
+                @click="ElMessage('敬请期待')"
                 rel="noopener noreferrer"
-                target="_blank"
                 ><img
                   alt="appstore-logo"
                   class="w-36"

@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-18 18:45:48
  * @LastEditors: hean
- * @LastEditTime: 2025-05-24 13:17:34
+ * @LastEditTime: 2025-06-08 15:56:42
 -->
 
 <template>
@@ -42,9 +42,9 @@
           </div>
           <div class="flex items-center md:justify-start justify-center gap-2">
             <a
-              href="https://apps.apple.com/id/app/perqara/id6443946589"
+                href="javascript:;"
+                @click="ElMessage('敬请期待')"
               rel="noopener noreferrer"
-              target="_blank"
               ><img
                 alt="appstore-logo"
                 class="md:w-36 w-full"
@@ -64,3 +64,6 @@
     </div>
   </div>
 </template>
+<script setup>
+    import { ElMessage } from 'element-plus'
+</script>

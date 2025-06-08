@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-10 15:16:42
  * @LastEditors: hean
- * @LastEditTime: 2025-06-04 00:38:13
+ * @LastEditTime: 2025-06-08 16:00:29
 -->
 <template>
     <div class="bg-cultured font-dm-sans min-h-screen">
@@ -81,7 +81,9 @@
                                     src="/image/landing-page/google-logo.png" />
 
                             </a>
-                            <a href="https://apps.apple.com/id/app/perqara-for-lawyers/id1659860332" rel="noopener noreferrer" target="_blank">
+                            <a 
+                                href="javascript:;"
+                                @click="ElMessage('敬请期待')"rel="noopener noreferrer" >
                                 <img
                                     alt="appstore-logo"
                                     class="sm:w-36 w-full"
@@ -153,7 +155,10 @@
                                     src="/image/landing-page/google-logo.png" />
 
                             </a>
-                            <a href="https://apps.apple.com/id/app/perqara-for-lawyers/id1659860332" rel="noopener noreferrer" target="_blank">
+                            <a 
+                              href="javascript:;"
+                                @click="ElMessage('敬请期待')" 
+                rel="noopener noreferrer">
                                 <img
                                     alt="appstore-logo"
                                     class="sm:w-36 w-full"
