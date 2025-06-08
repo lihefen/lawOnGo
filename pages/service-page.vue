@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-08 21:13:28
  * @LastEditors: hean
- * @LastEditTime: 2025-06-03 16:52:24
+ * @LastEditTime: 2025-06-08 11:28:46
 -->
 
 <template>
@@ -442,39 +442,23 @@
             <div class="max-w-[1280px] mx-auto px-4 xl:px-40">
                 <div class="space-y-4">
                     <h2 class="text-2xl md:text-3xl font-bold text-[#262E35] text-center" > Frequently Asked Questions </h2>
-                    <div class="space-y-4">
+                    <div class="space-y-4" v-for="(item, index) in questionsList" :key="index + 909">
                         <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 ">
                             <el-collapse-item title="Consistency" name="1">
                                 <template #title="{ isActive }">
                                 <div :class="['title-wrapper', { 'is-active': isActive }]">
                                     <div class="space-y-2 flex-1">
-                                        <p class="font-semibold leading-5" >What is LawOnGo?</p>
+                                        <p class="font-semibold leading-5" >{{ item.title }}</p>
                                     </div>
                                 </div>
                                 </template>
                                 <div>
-                                    <p class="font-light text-[#737373] leading-6 group-data-[active=false]:hidden" >Layanan hukum on-demand LawOnGo memungkinkan Anda mendapatkan bantuan hukum sesuai kebutuhan. Anda bisa mengurus perizinan usaha, registrasi hak cipta, konsultasi pajak hingga membuat dokumen hukum kapan saja dengan biaya transparan.</p>
+                                    <p class="font-light text-[#737373] leading-6 group-data-[active=false]:hidden" v-html=" item.desc"></p>
                                 </div>
                             </el-collapse-item>
                         </el-collapse>
                     </div>
-                    <div class="space-y-4">
-                        <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 ">
-                            <el-collapse-item title="Consistency" name="1">
-                                <template #title="{ isActive }">
-                                <div :class="['title-wrapper', { 'is-active': isActive }]">
-                                    <div class="space-y-2 flex-1">
-                                        <p class="font-semibold leading-5" >Apa itu layanan hukum on-demand LawOnGo?</p>
-                                    </div>
-                                </div>
-                                </template>
-                                <div>
-                                    <p class="font-light text-[#737373] leading-6 group-data-[active=false]:hidden" >Layanan hukum on-demand LawOnGo memungkinkan Anda mendapatkan bantuan hukum sesuai kebutuhan. Anda bisa mengurus perizinan usaha, registrasi hak cipta, konsultasi pajak hingga membuat dokumen hukum kapan saja dengan biaya transparan.</p>
-                                </div>
-                            </el-collapse-item>
-                        </el-collapse>
-                    </div>
-                    <div class="space-y-4">
+                    <!-- <div class="space-y-4">
                         <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 ">
                             <el-collapse-item title="Consistency" name="1">
                                 <template #title="{ isActive }">
@@ -506,6 +490,22 @@
                             </el-collapse-item>
                         </el-collapse>
                     </div>
+                    <div class="space-y-4">
+                        <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 ">
+                            <el-collapse-item title="Consistency" name="1">
+                                <template #title="{ isActive }">
+                                <div :class="['title-wrapper', { 'is-active': isActive }]">
+                                    <div class="space-y-2 flex-1">
+                                        <p class="font-semibold leading-5" >Apa itu layanan hukum on-demand LawOnGo?</p>
+                                    </div>
+                                </div>
+                                </template>
+                                <div>
+                                    <p class="font-light text-[#737373] leading-6 group-data-[active=false]:hidden" >Layanan hukum on-demand LawOnGo memungkinkan Anda mendapatkan bantuan hukum sesuai kebutuhan. Anda bisa mengurus perizinan usaha, registrasi hak cipta, konsultasi pajak hingga membuat dokumen hukum kapan saja dengan biaya transparan.</p>
+                                </div>
+                            </el-collapse-item>
+                        </el-collapse>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -678,6 +678,28 @@
             }
         }
     }
+    const questionsList = [
+            {
+                title: 'What is LawOnGo?',
+                desc:'LawOnGo is an AI-based legal platform that focuses on providing fast,legal,and user-friendly debt mediation solutions.</br>Through LawOnGo,you can easily access debt mediation services,legal consultations,and rights protection via your smartphone—no upfront fees and no need to visit a law firm.</br>LawOnGo is committed to helping the people of Indonesia deal with debt stress in a fair,secure,and humane manner.Supported by AI technology and a network of legal professionals,we offer:</br><ol></ol><uL><li>Legal and compliant online debt mediation</li></uL><uL><li>24/7 AI-powered legal consultations that are fast and confidential</li></uL><uL><li>Negotiation with creditors on your behalf</li></uL><uL><li> Data protection and legal assistance throughout the processLawOnGo believes that everyone should have access to affordable and reliable legal solutions,especially during tough times.We will accompany you on your journey to financial freedom.</li></uL></ol>'
+            },
+            {
+                title: 'How to register for a LawOnGo account?',
+                desc:'<ol><ul><li> Open the official website or App and click on“Register.”</li></ul><ul><li>Enter your mobile phone number and receive the SMS verification code,or log in quickly using WeChat/Alipay.</li></ul><ul><li> Complete the basic information form:name,ID number,email address.</li></ul><ul><li>Upload a photo for facial recognition to enhance account security.</li></ul></ol>'
+            },
+            {
+                title: 'How can I participate in LawOnGos Pro Bono public interest projects',
+                desc:'The platform regularly collaborates with public welfare organizations to provide free legal aid to low-income or economically disadvantaged groups.</br>Enter the“Public Interest Law”section,register,and submit proof of family income or poverty.</br>After approval,you can book a Pro Bono lawyer for a 30-minute free consultation.<br/>Some assistance projects are subsidized.'
+            },
+            {
+                title: 'How to entrust LawOnGo to draft or review a contract?',
+                desc:'<ol><ul><li>Select“Document Services”→“Contract Drafting/Review”on the platform.</li></ul><ul><li>Upload the existing contract or fill in the basic elements(information of the parties,rights and obligations).</li></ul><ul><li>The system AI will conduct an initial review and generate a contract draft,which you can preview online and suggest modifications.</li></ul><ul><li>After the lawyer consultant completes the customized modifications,you can sign and download the final version online.</li></ul></ol>'
+            }
+
+
+           
+        
+    ]
     onMounted(() => {
         scrollToId()
     });
