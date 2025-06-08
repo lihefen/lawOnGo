@@ -124,19 +124,19 @@ const items = ref([
     id: 1,
     name: "Siska",
     quote:
-      "Advocate advice in this application is very helpful for small communities like me. ",
+      "After submitting the information, the lawyer contacted me quickly and helped me solve the debt problem. Thanks to LawOnGo ",
   },
   {
     id: 2,
     name: "Siska",
     quote:
-      "Advocate advice in this application is very helpful for small communities like me. ",
+      "Attorney Rima demonstrated exceptional professionalism—patiently listening to my concerns, providing practical legal guidance, and skillfully negotiating with my borrower. She resolved all my debts within manageable terms. I truly can't imagine how I'll be today without LawOnGo. ",
   },
   {
     id: 3,
     name: "Siska",
     quote:
-      "Advocate advice in this application is very helpful for small communities like me. ",
+      "AI smart consultation is very goood. It answered my questions in just a few words. Most importantly, it is completely free. I hope LawOnGo will do better and better.",
   },
 ]);
 

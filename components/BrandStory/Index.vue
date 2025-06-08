@@ -42,7 +42,7 @@
                 className="w-2 h-2 bg-green-500 rounded-full relative z-10 mb-1"
               />
               <div className="text-lg text-[#333333] text-center max-w-xs">
-                Established
+                Fast developing
               </div>
             </div>
           </div>
@@ -93,21 +93,21 @@ const items = ref([
   {
     title: "Leagal Consultation",
     description:
-      "LawOnGo bermitra dengan Advokat-advokat terbaik yang telah disumpah.",
+      "LawOnGo makes mediation simple, and legal services truly serve everyone.",
     video: "https://www.youtube.com/embed/Sy4ROOthOg4",
     poster: "/image/features/story-placeholder.png",
   },
   {
     title: "Company Establishment",
     description:
-      "Layanan pendirian badan usaha (PT, CV, Yayasan), perubahan akta, dan waarmerking.",
+      "Oversight is not a barrier to progress, but a guardian of trust. LawOnGo will deliver legal tech services worthy of confidence from users, partners, and regulators.",
     video: "https://www.youtube.com/embed/81FNi23lrbc",
     poster: "/image/features/story-placeholder.png",
   },
   {
     title: "Document Creation",
     description:
-      "Layanan pembuatan dokumen untuk individu/perusahaan seperti Perjanjian Jual Beli, Perjanjian Kerja, Surat Kuasa, dll.",
+      "Let's change our perspective on the debt problem, from something scary to an opportunity to improve and rebuild.",
     video: "https://www.youtube.com/embed/zq83AsGKCA0",
     poster: "/image/features/story-placeholder.png",
   },

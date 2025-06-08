@@ -10,7 +10,7 @@
           What Legal Consultation Do You Want?
         </h2>
         <p>
-          Advocates at Perqara are ready to listen and help resolve issues
+          Advocates at LawOnGo are ready to listen and help resolve issues
           related to:
         </p>
       </div>
