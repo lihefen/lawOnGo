@@ -319,12 +319,28 @@
                                   </div>
                                 </div>
                               </div>
-                              <button
+                              <el-popover
+                                    class="box-item"
+                                    placement="top"
+                                    :width="102"
+                                >
+                                    <template #reference>
+                                        <button
+                                            class="font-medium px-4 py-2.5 md:px-6 md:py-3 md:w-[160px] rounded-md md:rounded-[16px] text-xs md:text-base bg-[#04A45E] mt-[10px] text-white"
+                                        >
+                                        consult now
+                                        </button>
+                                    </template>
+                                    <div class="text-center">
+                                        <img src="/image/ewm.png" class="m-auto">
+                                    </div>
+                                </el-popover>
+                              <!-- <button
                                 @click="consultHandle"
-                                class="font-medium px-4 py-2.5 md:px-6 md:py-3 md:w-40 rounded-md md:rounded-[16px] text-xs md:text-base bg-[#04A45E] mt-[10px] text-white"
+                                class="font-medium px-4 py-2.5 md:px-6 md:py-3 md:w-[160px] rounded-md md:rounded-[16px] text-xs md:text-base bg-[#04A45E] mt-[10px] text-white"
                               >
                               consult now
-                              </button>
+                              </button> -->
                             </div>
                           </div>
                         </div>
@@ -345,10 +361,6 @@
       @hide="showLoginDialog = false"
     />
 
-    <ProductManagerDialog
-      v-model:show="showProductManagerDialog"
-      @hide="showProductManagerDialog = false"
-    />
   </div>
 </template>
 
@@ -398,25 +410,6 @@ const provinsiOptions = [
   },
 ];
 
-const kotaOptions = [
-  {
-    value: "SIMEULUE",
-    label: "SIMEULUE",
-  },
-  {
-    value: "ACEH SINGKIL",
-    label: "ACEH SINGKIL",
-  },
-  {
-    value: "ACEH SELATAN",
-    label: "ACEH SELATAN",
-  },
-  {
-    value: "ACEH TENGGARA",
-    label: "ACEH TENGGARA",
-  },
-];
-
 // "Consult now
 // Riza zafita rizki:Jakata;Corporate law, Contract review and drafting, Venture capital compliance, P2P lending, Acquisitions
 // Farouq Habibullah El-Hassan, S.H:Jakata;AML/CFT supervision,Commercial contracts,Company establishment,IPO legal affairs,Legal due diligence,Cross-border legal cooperatio
@@ -441,7 +434,7 @@ const advokatList = [
     photo: "/image/photo/photo-03.png",
     name:'Aditya Edo Primantoro',
     location:'Jakata',
-    marks:['Corporate transactions','Merger & Acquistion',' Foreign investment']
+    marks:['Corporate transactions','Merger & Acquistion',' Foreign']
   },
   {
     photo: "/image/photo/photo-04.png",
