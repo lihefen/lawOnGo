@@ -10,7 +10,7 @@
 <template>
   <div class="max-w-[1280px] px-4 xl:px-40 mx-auto md:mb-20 mb-10">
     <div
-      class="relative bg-gradient-to-r from-[#00D89C] to-[#00B163] rounded-2xl md:pt-3.5 md:pl-8 md:pr-14 md:pb-0 p-4 overflow-hidden"
+      class="relative bg-gradient-to-r from-[#00D89C] to-[#00B163] rounded-2xl md:pt-3.5 md:pl-0 md:pr-7 md:pb-0 p-4 overflow-hidden"
     >
       <!-- <img
         src="/image/bg-banner-consultation.svg"

@@ -260,7 +260,7 @@ const loginRequest = async () => {
         if(code != '00000' ) {
             ElMessage(msg)
         }else {
-            window.location.href = '/'
+            window.location.href = '/down'
         }
         // {
         //     "code": "00000",

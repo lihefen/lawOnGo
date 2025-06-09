@@ -30,9 +30,10 @@
       </p>
     </div> -->
     <div
-      class="flex justify-center w-[214px] font-lexend text-sm font-bold antialiased"
+      class="relative z-[10] flex justify-center w-[214px] font-lexend text-sm font-bold antialiased"
     >
       <button
+        @click="goCariAdvokat"
         type="button"
         class="w-full flex justify-center items-center px-4 py-2 bg-white text-lightblack-1 hover:bg-cultured rounded-lg text-[#04A45E] mt-4"
       >
@@ -48,6 +49,9 @@
 </template>
 <script setup>
 import Swiper from "./Swiper.vue";
+const goCariAdvokat = () => {
+  navigateTo("/cari-advokat");
+}
 </script>
 <style scoped>
 .bg-linear1 {

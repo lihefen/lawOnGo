@@ -77,6 +77,7 @@
         class="flex justify-center w-full font-lexend text-sm font-bold antialiased"
       >
         <button
+          @click="goAbout"
           type="button"
           class="w-full flex justify-center items-center px-4 py-2 bg-white text-lightblack-1 rounded-lg !text-[#04A45E] mt-4"
         >
@@ -114,6 +115,10 @@ const items = ref([
     poster: "/image/features/story-placeholder.png",
   },
 ]);
+
+const goAbout = () => { 
+    navigateTo("/about");
+}
 </script>
 <style scoped>
 .story-bg {

@@ -232,7 +232,7 @@ const items = ref([
     video: false,
   },
   {
-    name: "Edo",
+    name: "Aditya Edo Primantoro",
     image: "/image/landing-page/lawyer/profile-lawyer-2.png",
     location: "Jakarta Selatan",
     verified: true,

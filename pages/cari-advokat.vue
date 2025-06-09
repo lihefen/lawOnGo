@@ -181,7 +181,7 @@
             </div>
             <div class="lg:col-span-2">
               <!-- <CariSwiper /> -->
-              <div class="mb-4">
+              <div class="pb-7">
                 <div v-for="(item, index) in advokatList" :key="index + 908">
                   <div
                     class="cursor-pointer relative font-lexend min-w-[328px] max-h-[239px] mb-4"
@@ -427,7 +427,7 @@ const advokatList = [
   },
   {
     photo: "/image/photo/photo-03.png",
-    name:'Edo'
+    name:'Aditya Edo Primantoro'
   },
   {
     photo: "/image/photo/photo-04.png",

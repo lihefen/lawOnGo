@@ -77,21 +77,21 @@ const items = ref([
     description:
       "Layanan pembuatan dokumen untuk individu/perusahaan seperti Perjanjian Jual Beli, Perjanjian Kerja, Surat Kuasa, dll.",
     image: "/image/features/wendang-2.png",
-    link: "/layanan-lainnya?to=pembuatan-dokumen",
+    link: "/service-page?id=document",
     top: -7,
   },
   {
     title: "Haki Registration",
     description: "Layanan pendaftaran Merek, Paten, Hak Cipta, dll.",
     image: "/image/features/zhishichanquan.png",
-    link: "/layanan-lainnya?to=pendaftaran-haki",
+    link: "/service-page?id=copyright",
     top: -8,
   },
   {
     title: "Tax Consultation",
     description: "Konsultasi pelaporan pajak perusahaan maupun individu.",
     image: "/image/features/tax.png",
-    link: "/layanan-lainnya?to=konsultasi-pajak",
+    link: "/service-page?id=tax",
     top: -5,
   },
 ]);

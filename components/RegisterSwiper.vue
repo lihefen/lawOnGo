@@ -71,7 +71,7 @@ const items = ref([
       "Saya cukup puas selama konsultasi, karena insight yang diberikan cukup baik dan jujur sehingga saya bisa menentukan keputusan apa yang sekiranya mungkin saya ambil.",
   },
   {
-    name:'Edo',
+    name:'Aditya Edo Primantoro',
     image: "/image/testimonial/testimonial-3.png",
     description:
       "Saya cukup puas selama konsultasi, karena insight yang diberikan cukup baik dan jujur sehingga saya bisa menentukan keputusan apa yang sekiranya mungkin saya ambil.",
