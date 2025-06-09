@@ -30,8 +30,9 @@
             poster="/image/features/story-placeholder.png"
             class="w-[360px] h-[212px] shrink-0"
           /> -->
+
         <iframe
-          src="https://www.youtube.com/embed/Sy4ROOthOg4"
+          src="https://www.youtube.com/embed/81FNi23lrbc"
           class="w-[360px] h-[212px] rounded-xl shrink-0"
         />
       </div>
