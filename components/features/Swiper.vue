@@ -128,7 +128,7 @@ const items = ref([
   {
     id: 1,
     image: "/image/landing-page/lawyer/profile-lawyer-2.png",
-    name: "Edo",
+    name: "Aditya Edo Primantoro",
     rating: 5,
     experience: "10+ years",
     peopleHelped: "1000+",
