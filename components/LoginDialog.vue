@@ -29,14 +29,40 @@
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
                         </button></div></div>
                         <div class="md:px-8 px-6">
-                            <div class="pt-8 lg:pt-10">
+                            <div class="pt-8 lg:pt-10" v-if="!showCode">
                                 <p class="font-medium font-dm-sans antialiased mb-2 text-black text-base">Mobile Number</p>
                                 <div class="relative w-full ">
                                     <el-input v-model="inputPhone" type="text" size="large" placeholder="08313302938***" ></el-input>
                                 </div>
+                                <button class="mt-4 py-2 w-full bg-[#04A45E] text-[#ffffff] text-bold text-lg rounded-md " @click="sendSms"> List </button>
                             </div>
 
-                            <div class="mt-6">
+                            <div class="space-y-6" v-if="showCode">
+                                <p class="text-2xl text-neutral-800 text-center font-bold" > Masukkan Kode OTP </p>
+                                <div class="flex items-center gap-2">
+                                    <img src="/image/icon-whatsapp-otp.svg" alt="icon-Whatsapp" class="w-12 h-12">
+                                    <p class="text-sm flex-1"> Kami telah mengirimkan 6 angka kode OTP melalui Whatsapp Anda </p>
+                                </div>
+                                <div class="w-fit bg-[#F3FBFF] rounded-lg px-3 py-1 text-sm text-center mx-auto">{{ inputPhone }}</div>
+                                <div class="flex justify-center">
+                                    <section>
+                                        <div>
+                                            <div>
+                                                <div class="relative w-full flex">
+                                                    <el-input
+                                                        v-model="inputCode"
+                                                        type="text"
+                                                        placeholder=""
+                                                        size="large" 
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <button  @click="loginRequest" type="button" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 w-full flex justify-center items-center px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E]/80 rounded-lg font-medium"><span> Login </span></button>
+                            </div>
+                            <!-- <div class="mt-6">
                                 <div>
                                     <p class="font-medium font-dm-sans antialiased mb-2 text-black text-base">verification code</p>
                                     <div class="relative w-full flex">
@@ -47,13 +73,10 @@
                                             size="large" 
                                         />
                                         <el-button class="ml-2" color="#04A45E" type="primary" size="large" @click="sendSms">send</el-button>
-                                        <!-- <div class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
-                                        </div> -->
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- <div class="mt-1.5 flex justify-end"><button class="text-sm text-[#04A45E] text-right cursor-pointer"> Forgot your password? </button></div> -->
-                            <button class="mt-4 py-2 w-full bg-[#04A45E] text-[#ffffff] text-bold text-lg rounded-md " @click="loginRequest"> Login </button>
                             <div class="mt-6 px-3 py-2 lg:px-2 w-full"><p class="text-black text-center text-base"> Don’t have a LawOnGo account yet? <span class="text-[#04A45E] lg:contents"><button>Register here</button></span></p></div>
                             <div id="border-line" class="my-4"><div class="border border-[#CED1D6]"></div></div>
                             <div id="login-advokat"><p class="antialiased font-bold mb-2"> Anda Advokat LawOnGo? </p><a href="/login/advokat" class=""><img class="w-full cursor-pointer" src="/image/lawyer/login/banner-login-advokat.png" alt="banner-advokat"></a></div>
@@ -68,12 +91,14 @@
 </template>
 <script setup>
     import { reactive, ref ,watch,defineProps, defineEmits,watchEffect} from 'vue'
+    import { get } from 'lodash';
     // 发送验证码
     import { sendCode } from '~/services/sendCode';
     import { loginCode } from '~/services/loginCode';
     import {encryptDataWithRSA}  from '~/utils/encryptDataWithRSA';
     const inputPhone = ref('');
     const inputCode = ref('');
+    const showCode = ref(false)
     const publicKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbWcnQIWROhmlba/fhdJ8XGMLjHC5GC/Mb08ZueFocHLD7WUifTfyxTo0DjTm2KpRTMuUAO5YQbofuHU2kB018CAwEAAQ==';
     const props = defineProps({
         show: {
@@ -109,6 +134,10 @@
 
 
     const sendSms = async () => {
+        if(inputPhone.value == '') {
+            ElMessage('Please fill all the fields!')
+            return
+        }
         const dataText = JSON.stringify({
             channel: 'io.lawongo.app',
             mobile: inputPhone.value,
@@ -119,6 +148,13 @@
             const res = await sendCode({
                 data:dataBody
             })
+            const msg = get(res,'msg','');
+            const code = get(res,'code','-9999');
+            if(code != '00000' ) {
+                ElMessage(msg)
+            }else {
+                showCode.value = true
+            }
         } catch (error) {
             console.log(error)
         }
@@ -141,6 +177,14 @@
             const res = await loginCode({
                 data:dataBody
             })
+            const msg = get(res,'msg','');
+            const code = get(res,'code','-9999');
+            if(code != '00000' ) {
+                ElMessage(msg)
+            }else {
+                state.active = false;
+                window.location.href = '/'
+            }
         } catch (error) {
             console.log(error)
         }
