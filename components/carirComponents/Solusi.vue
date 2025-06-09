@@ -26,8 +26,6 @@
             :ui="{
               item: 'basis-auto',
               controls: 'absolute -bottom-0 h-10 left-1/2 -translate-x-1/2',
-              prevIcon: prevIcon,
-              nextIcon: nextIcon
             }"
             class="inline-flex gap-4 md:gap-6 w-full pb-10"
             @select="onSelect"
@@ -37,11 +35,11 @@
             >
              <div class="flex pl-[20px] pr-[20px]">
                 <div class="w-[90px]">
-                    <div><img class="w-[90px]" src="/image/landing-page/img_sayphoto.png"></div>
+                    <div><img class="w-[90px]" :src="item.image"></div>
                     <div class="text-center text-[24px] font-bold">{{ item.name }}</div>
                 </div>
                 <div class="pl-[10px] pb-4 overflow-auto scrollbar-hide w-[300px]">
-                    <blockquote class="pt-2 text-sm antialiased text-slate-500">
+                    <blockquote class="pt-10 text-sm antialiased text-slate-500">
                     {{ item.quote }}
                     </blockquote>
                 </div>
@@ -64,18 +62,28 @@ const items = ref([
     name: "Siska",
     quote:
       "LawOnGo is a fast paced starup in a relatively new industry that has been exposing me with a step learning curve.",
+    image:'/image/landing-page/img_sayphoto_1.png'
   },
   {
     id: 2,
     name: "Siska",
     quote:
       "Advocate advice in this application is very helpful for small communities like me. ",
+      image:'/image/landing-page/img_sayphoto_2.png'
   },
   {
     id: 3,
     name: "Siska",
     quote:
       "Advocate advice in this application is very helpful for small communities like me. ",
+      image:'/image/landing-page/img_sayphoto_3.png'
+  },
+  {
+    id: 4,
+    name: "Siska",
+    quote:
+      "Advocate advice in this application is very helpful for small communities like me. ",
+      image:'/image/landing-page/img_sayphoto_4.png'
   },
 ]);
 
@@ -83,8 +91,6 @@ const carousel = useTemplateRef("carousel");
 const prevBtnDisabled = ref(false);
 const nextBtnDisabled = ref(false);
 
-const prevIcon = ref('/image/landing-page/pre_button_icon.png');
-const nextIcon = ref('/image/landing-page/next_button_icon.png');
 
 const onSelect = () => {
   if (!carousel.value) return;
