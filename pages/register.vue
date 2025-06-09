@@ -30,7 +30,7 @@
                         </div>
 
                         <div class="lg:w-[386px] space-y-3">
-                            <div id="form-register" class="p-4 md:p-6 rounded-2xl bg-white md:shadow-[0_20px_50px_0_rgba(0,0,0,0.13)]">
+                            <div id="form-register" class="p-4 md:p-6 rounded-2xl bg-white md:shadow-[0_20px_50px_0_rgba(0,0,0,0.13)]" v-if="!showCode">
                                 <p class="text-center text-neutral-800 text-2xl font-bold pb-4"> Account Registration </p>
                                 <div class="space-y-4">
                                     <div class="space-y-2">
@@ -121,23 +121,37 @@
                                     <p class="text-neutral-800 text-sm text-center"> By registering, I agree to LawOnGo’s<a href="#" class="text-[#04A45E]"> Terms and 
                                         Conditions</a> and <a href="#" class="text-[#04A45E]">Privacy Policy</a>.</p>
                                     <button @click="registerHandle" type="button" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 w-full flex justify-center items-center px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E] rounded-lg font-medium"><span> List </span></button>
-
-                                    <div class="mt-6">
-                                        <div>
-                                            <p class="font-medium font-dm-sans antialiased mb-2 text-black text-base">verification code</p>
-                                            <div class="relative w-full flex">
-                                                <el-input
-                                                    v-model="inputCode"
-                                                    type="text"
-                                                    placeholder=""
-                                                    size="large" 
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="md:px-6 py-3 px-4 rounded-2xl bg-white" v-if="showCode">
+
+
+                            <div class="lg:w-[386px] h-fit p-4 md:p-6 rounded-2xl bg-white md:shadow-[0_20px_50px_0_rgba(0,0,0,0.13)] flex flex-col justify-between gap-4" v-if="showCode">
+                                <div class="space-y-6"><p class="text-2xl text-neutral-800 text-center font-bold"> Masukkan Kode OTP </p>
+                                    <div class="flex items-center gap-2">
+                                        <img src="/image/icon-whatsapp-otp.svg" alt="icon-Whatsapp" class="w-12 h-12">
+                                        <p class="text-sm flex-1"> Kami telah mengirimkan 6 angka kode OTP melalui Whatsapp Anda </p>
+                                    </div>
+                                    <div class="w-fit bg-[#F3FBFF] rounded-lg px-3 py-1 text-sm text-center mx-auto">{{ inputPhone }}</div>
+                                    <div class="flex justify-center">
+                                        <section>
+                                            <div>
+                                                <div>
+                                                    <div class="relative w-full flex">
+                                                        <el-input
+                                                            v-model="inputCode"
+                                                            type="text"
+                                                            placeholder=""
+                                                            size="large" 
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <button  @click="loginRequest" type="button" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 w-full flex justify-center items-center px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E]/80 rounded-lg font-medium"><span> Register </span></button>
+                                </div>
+                            </div>
+                            <div class="md:px-6 py-3 px-4 rounded-2xl bg-white">
                                 <p class="font-semibold text-center mb-4"> Gabung Menjadi Advokat </p><a href="/login/advokat" class=""><img class="w-full cursor-pointer" src="/image/lawyer/login/banner-login-advokat.png" alt="banner-advokat"></a>
                             </div>
                         </div>
@@ -207,11 +221,11 @@ const registerHandle = async () => {
         // {"code":"00000","msg":"Success!","data":true}
         const msg = get(res,'msg','');
         const code = get(res,'code','-9999');
-            if(code != '00000' ) {
-                ElMessage(msg)
-            }else {
-                showCode.value = true
-            }
+        if(code != '00000' ) {
+            ElMessage(msg)
+        }else {
+            showCode.value = true
+        }
         
     } catch (error) {
         console.log(error)
@@ -220,18 +234,40 @@ const registerHandle = async () => {
 
 
 const loginRequest = async () => {
+    if(inputCode.value == '') {
+        ElMessage('Please enter the mobile verification code.')
+        return
+    }
     const dataText = JSON.stringify({
         aesKey:'rMM+4uHIkgfbhk2qOqPxzw==',
         appName:'LawOnGo',
         channel:'io.lawongo.app',
         mobile:inputPhone.value,
-        vcode: inputCode.value
+        vcode: inputCode.value,
+        email:inputEmail.value,
+        date:inputDate.value,
+        city:inputCity.value,
+        sex:inputGender.value
     });
     const dataBody = encryptDataWithRSA(dataText,publicKey)
     try {
         const res = await loginCode({
             data:dataBody
         })
+
+        const msg = get(res,'msg','');
+        const code = get(res,'code','-9999');
+        if(code != '00000' ) {
+            ElMessage(msg)
+        }else {
+            window.location.href = '/'
+        }
+        // {
+        //     "code": "00000",
+        //     "msg": "Success!",
+        //     "data": "bVJGF54S77hgtk/0M5FCowSGXor1rKQrHLlExpIgZ9MALXk2qwLAs5jEZjoga57zQniwhyOVFUsi+6QjlRENnv9fgtUlpfPngtgHhXe9e7rWMPKWq48c35LyN4xNFIrkgR2mIan7KYkpFFeaBx8jNQcWGDDSD1dyh7QfgkO5+Ps2GVxB1QTiExSYbKMsdDBOBkdyXrdb2cAzhhPR9z1uyhzfwmSB8X1NGh/87FsF+go="
+        // }
+
     } catch (error) {
         console.log(error)
     }
