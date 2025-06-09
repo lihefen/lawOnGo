@@ -118,8 +118,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="text-neutral-800 text-sm text-center"> By registering, I agree to LawOnGo’s<a href="#" class="text-[#04A45E]"> Terms and 
-                                        Conditions</a> and <a href="#" class="text-[#04A45E]">Privacy Policy</a>.</p>
+                                    <p class="text-neutral-800 text-sm text-center"> By registering, I agree to LawOnGo’s<a href="/syarat-ketentuan" class="text-[#04A45E]"> Terms and 
+                                        Conditions</a> and <a href="/kebijakan-privasi" class="text-[#04A45E]">Privacy Policy</a>.</p>
                                     <button @click="registerHandle" type="button" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 w-full flex justify-center items-center px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E] rounded-lg font-medium"><span> List </span></button>
                                 </div>
                             </div>
