@@ -119,7 +119,7 @@
                                 <el-radio-group v-model="radioStatus">
                                     <el-radio :value="3"> Lawyer Zhang </el-radio>
                                     <el-radio :value="4">Lawyer Zhang</el-radio>
-                                    <el-radio :value="4">Lawyer Zhang</el-radio>
+                                    <el-radio :value="5">Lawyer Zhang</el-radio>
                                 </el-radio-group>
                               </div>
                             </div>
@@ -142,10 +142,10 @@
                                 style="--el-border-radius-base: 30px"
                               >
                                 <el-option
-                                  v-for="item in provinsiOptions"
-                                  :key="item.value"
-                                  :label="item.label"
-                                  :value="item.value"
+                                  v-for="item in provinces"
+                                  :key="item.id"
+                                  :label="item.name"
+                                  :value="item.name"
                                 />
                               </el-select>
                             </div>
@@ -164,10 +164,10 @@
                                 style="--el-border-radius-base: 30px"
                               >
                                 <el-option
-                                  v-for="item in kotaOptions"
-                                  :key="item.value"
-                                  :label="item.label"
-                                  :value="item.value"
+                                  v-for="item in cities"
+                                  :key="item.id"
+                                  :label="item.name"
+                                  :value="item.name"
                                 />
                               </el-select>
                             </div>
@@ -235,7 +235,7 @@
                                   src="/image/landing-page/icon-location-1.png"
                                 />
                                 <span class="text-[#333333] capitalize"
-                                  >Jember</span
+                                  >{{ item.location }}</span
                                 >
                               </div>
                               <div class="border-l h-2/3 border-gray-500"></div>
@@ -288,13 +288,9 @@
                                 <div class="flex gap-1 md:gap-2">
                                   <span
                                     class="text-[#04A45E] bg-[#CBFFE8] text-xs md:text-sm leading-3 w-auto rounded px-1 md:px-2 py-0.5 md:py-1 self-start max-w-[150px] truncate"
-                                    >Criminal</span
-                                  ><span
-                                    class="text-[#04A45E] bg-[#CBFFE8] text-xs md:text-sm leading-3 w-auto rounded px-1 md:px-2 py-0.5 md:py-1 self-start max-w-[150px] truncate"
-                                    >Civil</span
-                                  ><span
-                                    class="text-[#04A45E] bg-[#CBFFE8] text-xs md:text-sm leading-3 w-auto rounded px-1 md:px-2 py-0.5 md:py-1 self-start max-w-[150px] truncate"
-                                    >Employment</span
+                                    v-for="(d,i) in item.marks"
+                                    :key="i + 9090"
+                                    >{{ d }}</span
                                   >
                                 </div>
                               </div>
@@ -360,6 +356,11 @@
 import { ref } from "vue";
 // import CariSwiper from "~/components/CariSwiper.vue";
 
+
+import {provinces}  from '~/utils/provinces';
+
+import {cities}  from '~/utils/cities';
+
 const inputSearch = ref("");
 const inputCity = ref("");
 const checked1 = ref(false);
@@ -416,22 +417,37 @@ const kotaOptions = [
   },
 ];
 
+// "Consult now
+// Riza zafita rizki:Jakata;Corporate law, Contract review and drafting, Venture capital compliance, P2P lending, Acquisitions
+// Farouq Habibullah El-Hassan, S.H:Jakata;AML/CFT supervision,Commercial contracts,Company establishment,IPO legal affairs,Legal due diligence,Cross-border legal cooperatio
+// Edo:Jakata;Corporate transactions ,Merger & Acquistion, Foreign investment, Data protection
+// Rima Gravianty Baskoro,S.H., MPPM., ACIArb：Jakata;International Arbitration, Corporate Law
+
+
 const advokatList = [
   {
     photo: "/image/photo/photo-01.png",
-    name:'Riza Zafita Rizki, S.H.'
+    name:'Riza Zafita Rizki, S.H.',
+    location:'Jakata',
+    marks:['Corporate law','Contract review and drafting','Venture capital compliance']
   },
   {
     photo: "/image/photo/photo-02.png",
-    name:'Farouq Habibullah El-Hassan, S.H'
+    name:'Farouq Habibullah El-Hassan, S.H',
+    location:'Jakata',
+    marks:['AML/CFT','supervision','Commercial contracts']
   },
   {
     photo: "/image/photo/photo-03.png",
-    name:'Aditya Edo Primantoro'
+    name:'Aditya Edo Primantoro',
+    location:'Jakata',
+    marks:['Corporate transactions','Merger & Acquistion',' Foreign investment']
   },
   {
     photo: "/image/photo/photo-04.png",
-    name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.'
+    name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
+    location:'Jakata',
+    marks:['Jakata;International Arbitration',' Corporate Law']
   },
 ];
 </script>

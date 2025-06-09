@@ -83,6 +83,7 @@
                     />
                 </div>
                 <div class="border-b border-white/30 w-full"></div>
+
                 <div class="relative px-3 py-4 mb-8">
                     <img
                     src="/image/about-us/trust-adorn.svg"
@@ -97,11 +98,11 @@
                     >
                     <div class="flex flex-col">
                         <span class="md:text-2xl font-medium">8000+</span>
-                        <span class="text-xs md:text-sm">Registered Lawyers</span>
+                        <span class="text-xs md:text-sm">Suceess stories</span>
                     </div>
                     <div class="flex flex-col">
                         <span class="md:text-2xl font-medium">50+</span>
-                        <span class="text-xs md:text-sm">Registered Lawyers</span>
+                        <span class="text-xs md:text-sm">Registered lawyers</span>
                     </div>
                     <div class="flex flex-col">
                         <span class="md:text-2xl font-medium">15+</span>
@@ -129,7 +130,7 @@
             <div class="relative service-card  overflow-hidden xl:max-w-[1128px] xl:mx-auto -mt-32 pt-32 bg-[#F5FBFD] md:rounded-3xl">
                 <div class="py-6 md:py-12 px-4 flex flex-col gap-4 md:gap-8">
                         <h2 class="text-2xl lg:text-3xl font-semibold text-[#ffffff]  text-center xl:px-64">
-                            What should you use legal services in LawOnGo
+                            Why should you use legal service in LawOnGo
                         </h2>
                         <div class="md:px-20 px-4 grid md:grid-cols-4 grid-cols-2 md:gap-6 gap-x-4 gap-y-8">
                             <div class="flex flex-col items-center gap-3 md:gap-6"><img src="/image/service-page/costs_icon.png" alt="" class="w-fit">
@@ -151,7 +152,8 @@
                         <div class="flex flex-col items-center gap-3 md:gap-6">
                             <img src="/image/service-page/team-icon.png" alt="" class="w-fit">
                             <div class="flex flex-col text-center gap-2">
-                                <span class="md:text-xl font-semibold text-[#ffffff]">Professional Expert Team</span><span class="text-sm text-[#ffffff]">All services at Perqara are handled by a certified team and experts in their field</span>
+                                <span class="md:text-xl font-semibold text-[#ffffff]">Professional Expert Team</span><span class="text-sm text-[#ffffff]">All services in  LawOnGo are handled by a certified team and experts in their field</span>
+
                             </div>
                         </div>
                         <!-- <div class="flex flex-col items-center gap-3 md:gap-6">
@@ -176,9 +178,9 @@
                     <div  class="flex flex-col gap-6 w-full md:w-1/2">
                         <div  class="flex flex-col gap-4">
                             <img  src="/image/service-page/icon-legal-consultation-colored.png" alt="" class="w-fit md:inline-block hidden w-[10px]" >
-                            <h2 class="relative mt-[-60px] ml-[20px] text-2xl md:text-3xl font-bold md:text-left text-center"> Legal Consultation</h2><p  class="text-[#55707A]">Entrust your legal problems to the best professional Advocate in his field online without having to make an appointment.</p>
+                            <h2 class="relative mt-[-60px] ml-[20px] text-2xl md:text-3xl font-bold md:text-left text-center"> Legal Consultation</h2><p  class="text-[#55707A]">Entrust your legal problems to the best lawer in certain field online without making appointment in  advance</p>
                         </div>
-                        <button  class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Consult Now</button>
+                        <button @click="scrollToId('form')"  class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Consult Now</button>
                     </div>
                 </div>
             </div>
@@ -658,27 +660,38 @@
     };
 
     const scrollToId = (id) => {
-        const idEle = getQueryString('id');
-        if(idEle) {
-            let element= null;
-            if(idEle == 'document') {
-                element = document.getElementById('pendirian-badan-usaha');
-            }
-            if(idEle == 'tax') {
-                element = document.getElementById('konsultasi-pajak');
-            }
-            if(idEle == 'copyright') {
-                element = document.getElementById('form');
-            }
-
-            
+        if(id) {
+            const element = document.getElementById(id);
             if (element) {
                 element.scrollIntoView({
                     block: 'start',
                     behavior: 'smooth'
                 });
             }
+        }else {
+            const idEle = getQueryString('id');
+            if(idEle) {
+                let element= null;
+                if(idEle == 'document') {
+                    element = document.getElementById('pendirian-badan-usaha');
+                }
+                if(idEle == 'tax') {
+                    element = document.getElementById('konsultasi-pajak');
+                }
+                if(idEle == 'copyright') {
+                    element = document.getElementById('form');
+                }
+
+                
+                if (element) {
+                    element.scrollIntoView({
+                        block: 'start',
+                        behavior: 'smooth'
+                    });
+                }
+            }
         }
+        
     }
     const questionsList = [
             {
