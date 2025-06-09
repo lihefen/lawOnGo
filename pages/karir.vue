@@ -39,6 +39,7 @@ const showLoginDialog = ref(false);
 const activeNames = ref(['1'])
 const inputHukum =ref('')
 const textareaDibutuhkan = ref('')
+const showHrDialog = ref(true)
 const loginHandler = () => {
     console.log("loginHandler");
     showLoginDialog.value = true;
