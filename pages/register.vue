@@ -107,10 +107,10 @@
                                                         size="large"
                                                         >
                                                         <el-option
-                                                            v-for="item in options"
-                                                            :key="item.value"
-                                                            :label="item.label"
-                                                            :value="item.value"
+                                                            v-for="item in cities"
+                                                            :key="item.id"
+                                                            :label="item.name"
+                                                            :value="item.name"
                                                         />
                                                     </el-select>
                                                 </div>
@@ -143,6 +143,8 @@ import RegisterSwiper from '@/components/RegisterSwiper.vue'
 // 发送验证码
 import { sendCode } from '~/services/sendCode';
 import {encryptDataWithRSA}  from '~/utils/encryptDataWithRSA';
+import {cities}  from '~/utils/cities';
+
 
 const router = useRouter()
 // 姓名
@@ -159,28 +161,7 @@ const inputCity = ref('')
 // 公钥
 const publicKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbWcnQIWROhmlba/fhdJ8XGMLjHC5GC/Mb08ZueFocHLD7WUifTfyxTo0DjTm2KpRTMuUAO5YQbofuHU2kB018CAwEAAQ==';
 
-const options = [
-  {
-    value: 'Option1',
-    label: 'Option1',
-  },
-  {
-    value: 'Option2',
-    label: 'Option2',
-  },
-  {
-    value: 'Option3',
-    label: 'Option3',
-  },
-  {
-    value: 'Option4',
-    label: 'Option4',
-  },
-  {
-    value: 'Option5',
-    label: 'Option5',
-  },
-]
+    
 
 
 const registerHandle = async () => {
