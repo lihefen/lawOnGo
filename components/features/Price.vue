@@ -20,7 +20,7 @@
                 alt="icon"
                 class="w-20"
               />
-              <p class="font-bold antialiased sm:text-xl">Pro Bono</p>
+              <p class="font-bold antialiased sm:text-xl">Non-profit service</p>
             </div>
           </div>
           <div
@@ -34,7 +34,7 @@
           <p
             class="text-xs sm:text-base text-[#666666] leading-4 font-light h-18"
           >
-            Get free legal consultation by uploading your Identity Card (KTP).
+          get free legal service by uploading your KTP
           </p>
         </div>
         <button
@@ -58,7 +58,7 @@
                 alt="icon"
                 class="w-20"
               />
-              <p class="font-bold antialiased sm:text-xl">Chat Saja</p>
+              <p class="font-bold antialiased sm:text-xl"> Livechat serivice </p>
             </div>
           </div>
           <div
@@ -66,17 +66,16 @@
           >
             <p class="font-bold relative text-[#00673A]">
               <span class="absolute top-0 left-0">Rp</span>
-              <span class="text-2xl sm:text-[32px] ml-6">40.000</span>
+              <span class="text-2xl sm:text-[32px] ml-6">50.000</span>
             </p>
             <p class="text-[#00673A] font-semibold antialiased">
-              30 Minutes Consultat
+              30 Minutes
             </p>
           </div>
           <p
             class="text-xs sm:text-base text-[#666666] leading-4 font-light h-18"
           >
-            The ideal solution for urgent legal needs and more concise
-            discussions.
+          The ideal solution for urgent legal needs and more detailed discussions
           </p>
         </div>
         <button
@@ -115,7 +114,7 @@
                 class="w-20"
               />
               <p class="font-bold antialiased sm:text-xl">
-                Chat + Voice + Video Call
+                Chat+Voice+Vedio call service
               </p>
             </div>
           </div>
@@ -124,16 +123,16 @@
           >
             <p class="font-bold relative text-[#00673A]">
               <span class="absolute top-0 left-0">Rp</span>
-              <span class="text-2xl sm:text-[32px] ml-6">50.000</span>
+              <span class="text-2xl sm:text-[32px] ml-6">100.000</span>
             </p>
             <p class="text-[#00673A] font-semibold antialiased">
-              60 Minutes Consultat
+              60 Minutes
             </p>
           </div>
           <p
             class="text-xs sm:text-base text-[#556987] leading-4 font-light h-18"
           >
-            Waktu lebih leluasa untuk membahas masalah hukum secara mendalam.
+          In-depth discussion of difficult cases
           </p>
         </div>
         <button
