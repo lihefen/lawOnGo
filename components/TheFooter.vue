@@ -79,7 +79,7 @@
               <p class="text-[14px] lg:text-base mt-3">
                 Whatsapp: +62 823-2459-9898
               </p>
-              <p class="text-[14px] lg:text-base">Senopati, Jakarta Selatan</p>
+              <!-- <p class="text-[14px] lg:text-base">Senopati, Jakarta Selatan</p> -->
               <p class="text-[14px] lg:text-base mt-3">Email: cs@lawongo.id</p>
               <div class="mt-2 hidden lg:block">
                 <p class="font-bold">Address</p>
