@@ -145,11 +145,12 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="border-b my-2 border-[#E7ECF0]"></div>
                   <div class="flex justify-between items-center gap-1 px-2">
                     <div class="flex items-center gap-0.5">
                       <div class="flex flex-col gap-0.5 md:gap-1 rounded-lg">
-                        <div class="text-sm text-[#333333]">Mulai dari</div>
+                        <div class="text-sm text-[#333333]">Consultant price</div>
                         <div class="flex gap-1 items-center">
                           <p
                             class="text-[#04A45E] font-semibold !leading-5 text-sm"
@@ -170,7 +171,7 @@
                     <button
                       class="font-medium px-4 py-2.5 rounded-xl text-xs bg-[#04A45E] text-white"
                     >
-                      Konsultasi
+                    Consult
                     </button>
                   </div>
                 </div>
@@ -215,7 +216,6 @@ import "swiper/css";
 const swiperRef = ref(null);
 const activeIndex = ref(0);
 const isEnd = ref(false);
-
 const items = ref([
   {
     name: "Farouq Habibullah El-Hassan, S.H",
@@ -225,7 +225,7 @@ const items = ref([
     experience: 4,
     rating: 5.0,
     count: 275,
-    categories: ["Pidana", "Perdata"],
+    categories: ["Criminal defense", "Marriage Law"],
     addCount: 3,
     price: 40000,
     oldPrice: 60000,
@@ -240,7 +240,7 @@ const items = ref([
     rating: 4.9,
     count: 344,
     addCount: 5,
-    categories: ["Pidana", "Perkawinan &amp; Perceraian"],
+    categories: ["Criminal defense", "Marriage Law"],
     price: 40000,
     oldPrice: 60000,
     video: true,
@@ -254,7 +254,7 @@ const items = ref([
     rating: 5.0,
     count: 304,
     addCount: 3,
-    categories: ["Pidana"],
+    categories: ["Criminal defense", "Marriage Law"],
     price: 40000,
     oldPrice: 60000,
     video: false,
@@ -268,7 +268,7 @@ const items = ref([
     rating: 5.0,
     count: 304,
     addCount: 3,
-    categories: ["Pidana"],
+    categories: ["Criminal defense", "Marriage Law"],
     price: 40000,
     oldPrice: 60000,
     video: false,

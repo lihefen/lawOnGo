@@ -14,12 +14,12 @@
       class="px-3 py-2 flex justify-center items-center md:gap-9 sm:gap-6 gap-2"
     >
       <div class="text-center">
-        <p class="text-[#181E23] sm:text-2xl font-semibold">170000+</p>
-        <p class="text-[#39424D] sm:text-sm text-xs">Clients Enrolled</p>
+        <p class="text-[#181E23] sm:text-2xl font-semibold">8000+</p>
+        <p class="text-[#39424D] sm:text-sm text-xs">Suceess stories</p>
       </div>
       <div class="text-center">
-        <p class="text-[#181E23] sm:text-2xl font-semibold">500+</p>
-        <p class="text-[#39424D] sm:text-sm text-xs">Dedicated Team</p>
+        <p class="text-[#181E23] sm:text-2xl font-semibold">50+</p>
+        <p class="text-[#39424D] sm:text-sm text-xs">Registered lawyers</p>
       </div>
       <div class="text-center">
         <p
