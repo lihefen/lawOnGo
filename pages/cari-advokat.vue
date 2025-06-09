@@ -324,6 +324,7 @@
                                 </div>
                               </div>
                               <button
+                                @click="consultHandle"
                                 class="font-medium px-4 py-2.5 md:px-6 md:py-3 md:w-40 rounded-md md:rounded-[16px] text-xs md:text-base bg-[#04A45E] mt-[10px] text-white"
                               >
                               consult now
@@ -347,6 +348,11 @@
       v-model:show="showLoginDialog"
       @hide="showLoginDialog = false"
     />
+
+    <ProductManagerDialog
+      v-model:show="showProductManagerDialog"
+      @hide="showProductManagerDialog = false"
+    />
   </div>
 </template>
 
@@ -359,10 +365,14 @@ const inputCity = ref("");
 const checked1 = ref(false);
 const radioStatus = ref(1);
 const showLoginDialog = ref(false);
+const showProductManagerDialog = ref(false);
 const loginHandler = () => {
   console.log("loginHandler");
   showLoginDialog.value = true;
 };
+const consultHandle = () => {
+    showProductManagerDialog.value = true;
+}
 
 const provinsiOptions = [
   {

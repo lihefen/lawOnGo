@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-25 18:28:37
  * @LastEditors: hean
- * @LastEditTime: 2025-06-08 15:56:01
+ * @LastEditTime: 2025-06-09 11:32:09
 -->
 <template>
   <div class="w-full bg-gradient-to-r from-[#005F38] to-[#005F38]">
@@ -34,7 +34,7 @@
                   src="/image/footer/google-logo.png"
               /></a>
             </div>
-            <p class="font-dm-sans font-bold text-white text-base antialiased">
+            <!-- <p class="font-dm-sans font-bold text-white text-base antialiased">
               Mitra Kami
             </p>
             <div class="grid grid-cols-3 gap-2 mt-3">
@@ -51,7 +51,7 @@
                 src="/image/pbh-footer.png"
                 alt="peradi-footer"
               />
-            </div>
+            </div> -->
           </div>
           <div class="mt-8 flex w-full text-white gap-3 lg:pl-32">
             <div class="font-dm-sans antialiased w-1/2 lg:w-2/3">

@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-10 09:39:46
  * @LastEditors: hean
- * @LastEditTime: 2025-05-23 16:57:17
+ * @LastEditTime: 2025-06-09 11:53:59
 -->
 <!--
  * @Description: 
@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="md:px-6 py-3 px-4 rounded-2xl bg-white">
-                                <p class="font-semibold text-center mb-4"> Gabung Menjadi Advokat </p><a href="/register/advokat" class=""><img class="w-full cursor-pointer" src="/image/lawyer/login/banner-login-advokat.png" alt="banner-advokat"></a>
+                                <p class="font-semibold text-center mb-4"> Gabung Menjadi Advokat </p><a href="/login/advokat" class=""><img class="w-full cursor-pointer" src="/image/lawyer/login/banner-login-advokat.png" alt="banner-advokat"></a>
                             </div>
                         </div>
                     </div>
