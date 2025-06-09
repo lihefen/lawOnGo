@@ -77,7 +77,7 @@
                                 </div>
                             </div> -->
                             <!-- <div class="mt-1.5 flex justify-end"><button class="text-sm text-[#04A45E] text-right cursor-pointer"> Forgot your password? </button></div> -->
-                            <div class="mt-6 px-3 py-2 lg:px-2 w-full"><p class="text-black text-center text-base"> Don’t have a LawOnGo account yet? <span class="text-[#04A45E] lg:contents"><button>Register here</button></span></p></div>
+                            <div class="mt-6 px-3 py-2 lg:px-2 w-full"><p class="text-black text-center text-base"> Don’t have a LawOnGo account yet? <span class="text-[#04A45E] lg:contents"><button @click="goRegister">Register here</button></span></p></div>
                             <div id="border-line" class="my-4"><div class="border border-[#CED1D6]"></div></div>
                             <div id="login-advokat"><p class="antialiased font-bold mb-2"> Anda Advokat LawOnGo? </p><a href="/login/advokat" class=""><img class="w-full cursor-pointer" src="/image/lawyer/login/banner-login-advokat.png" alt="banner-advokat"></a></div>
                             <div class="pb-8 pt-4"><div class="flex items-start gap-1"><img class="w-3 mt-0.5" src="/image/info-icon.svg"><p class="text-xs text-slate-500 antialiased"> Untuk pengalaman lebih baik, gunakan browser <span class="font-semibold">Google Chrome</span> atau <span class="font-semibold">Firefox</span></p></div></div>
@@ -184,6 +184,10 @@
         } catch (error) {
             console.log(error)
         }
+    }
+    const goRegister = () => {
+        state.active = false;
+        window.location.href = '/register'
     }
 </script>
 <style scoped>
