@@ -197,7 +197,7 @@
                             <div class="flex items-start gap-3" >
                                 <img src="/image/service-page/icon-check.png" alt="" >
                                 <div class="flex flex-col" >
-                                    <span class="md:text-xl font-bold" >Establishment of PT, CV, Foundation</span><span class="text-[#55707A]" >PT, CV, Foundation e</span>
+                                    <span class="md:text-xl font-bold" >Establishment of PT, CV, Foundation</span><span class="text-[#55707A]" >all kinds of business needs</span>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3" >
@@ -209,7 +209,7 @@
                             <div class="flex items-start gap-3" >
                                 <img src="/image/service-page/icon-check.png" alt="" >
                                 <div class="flex flex-col" >
-                                    <span class="md:text-xl font-bold italic" >Authentication</span><span class="text-[#55707A]" >Bookkeeping service (warmerking) on ​​letters under hand</span>
+                                    <span class="md:text-xl font-bold italic" >Authentication</span><span class="text-[#55707A]" >Bookkeeping service on letters</span>
                                 </div>
                             </div>
                         </div>
@@ -253,29 +253,28 @@
                 </div>
             </div>
         </section>
-
         <section  id="pendaftaran-haki" class="py-6 md:py-12 bg-[#F5FBFD] relative z-10">
             <div  class="max-w-[1280px] mx-auto px-4 xl:px-40">
                 <div  class="flex flex-col-reverse md:flex-row gap-8 md:gap-12">
                     <div  class="flex flex-col gap-4 w-full md:w-1/2">
                         <img src="/image/service-page/icon-haki-registration-colored.png" alt="" class="w-fit md:inline-block hidden" >
                         <h2 class="relative mt-[-60px] ml-[20px]  text-2xl md:text-3xl font-bold md:text-left text-center" > Registration of RIGHTS (Intellectual Property Rights)</h2>
-                        <p class="text-[#55707A]" > Get easy registration and legal protection for Intellectual Property Rights (IPR) including:</p>
+                        <p class="text-[#55707A]" > Get easy registration and legal protection for Intellectual Property Rights (lPR) including:</p>
                         <div class="flex flex-col gap-3" >
                             <div class="flex items-start gap-3" >
                                 <img src="/image/service-page/icon-check.png" alt="" >
                                 <div class="flex flex-col" >
-                                    <span class="md:text-xl font-bold" >Pendaftaran Merek</span><span class="text-[#55707A]" >Dapatkan hak eksklusif atas merek berikut perlindungan hukumnya</span>
+                                    <span class="md:text-xl font-bold" >Trademark Registration</span><span class="text-[#55707A]" >Get exclusive rights to a trademark and its legal protection</span>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3" >
                                 <img src="/image/service-page/icon-check.png" alt="" >
                                 <div class="flex flex-col" >
-                                    <span class="md:text-xl font-bold" >Pencatatan Hak Cipta</span><span class="text-[#55707A]" >Dapatkan hak eksklusif dari sebuah karya ciptaan.</span>
+                                    <span class="md:text-xl font-bold" >Copyright Registration</span><span class="text-[#55707A]" >Getexclusive rights to a work of creation.</span>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3" >
-                                <img src="/image/service-page/icon-check.png" alt="" ><div class="flex flex-col" ><span class="md:text-xl font-bold" >Permohonan Desain Industri</span><span class="text-[#55707A]" >Dapatkan perlindungan atas kreasi desain yang berguna untuk menghasilkan suatu produk, barang komoditas industri, atau kerajinan tangan.</span>
+                                <img src="/image/service-page/icon-check.png" alt="" ><div class="flex flex-col" ><span class="md:text-xl font-bold" >Industrial Design Application</span><span class="text-[#55707A]" >Get protection for design creations that are useful for producing a product, industrial commodity, or handicraft.</span>
                             </div>
                         </div>
                     </div>
@@ -383,8 +382,8 @@
                                             size="large"
                                             >
                                             <el-option
-                                                v-for="item in hukumOptions"
-                                                :key="item.value"
+                                                v-for="item in legalServicesOptions"
+                                                :key="item.id"
                                                 :label="item.label"
                                                 :value="item.value"
                                             />
@@ -401,8 +400,8 @@
                                             size="large"
                                             >
                                             <el-option
-                                                v-for="item in hukumOptions"
-                                                :key="item.value"
+                                                v-for="item in typeOfServiceOptions"
+                                                :key="item.id"
                                                 :label="item.label"
                                                 :value="item.value"
                                             />
@@ -624,35 +623,41 @@
     const inputTypeOfService = ref('');
     const inputLegalServices = ref('');
     const textareaDibutuhkan =ref('');
-    const hukumOptions = [
-    {
-        value: 'Pembuatan Dokumen',
-        label: 'Pembuatan Dokumen',
-    },
-    {
-        value: 'Pendaftaran HAKI (Hak Kekayaan Intelektual)',
-        label: 'Pendaftaran HAKI (Hak Kekayaan Intelektual)',
-    },
+    const legalServicesOptions = [
+        {
+            id: '100001',
+            value:'Legal Document Creation',
+            label:'Legal Document Creation'
+        },
+        {
+            id: '100002',
+            value:'Intellectual Property Registration',
+            label:'Intellectual Property Registration'
+        },
+        {
+            id: '100003',
+            value:'Tax Consultation',
+            label:'Tax Consultation'
+        }
     ]
 
-    const kotaOptions = [
+
+    const typeOfServiceOptions = [
         {
-            value: 'SIMEULUE',
-            label: 'SIMEULUE',
+            id: '200001',
+            value:'Legal Document Creation',
+            label:'Legal Document Creation'
         },
         {
-            value: 'ACEH SINGKIL',
-            label: 'ACEH SINGKIL',
+            id: '200002',
+            value:'Intellectual Property Registration',
+            label:'Intellectual Property Registration'
         },
         {
-            value: 'ACEH SELATAN',
-            label: 'ACEH SELATAN',
-        },
-        {
-            value: 'ACEH TENGGARA',
-            label: 'ACEH TENGGARA',
-        },
-        
+            id: '200003',
+            value:'Tax Consultation',
+            label:'Tax Consultation'
+        }
     ]
     const loginHandler = () => {
         console.log("loginHandler");
@@ -723,14 +728,7 @@
 
     const officialInfoRequest = async () => {
 
-        // const inputName = ref("");
-        // const inputPhone = ref("");
-        // const inputHukum =ref('')
-        // const inputEmail = ref('')
-        // const inputType = ref('')
-        // const inputBusiness = ref('')
-
-        if(inputName.value == '' ||inputPhone.value == '' || inputTypeOfService.value ==''||inputEmail.value==''||inputBusiness.value == ''  || textareaDibutuhkan.value == '') {
+        if(inputName.value == '' ||inputPhone.value == '' || inputTypeOfService.value ==''||inputEmail.value==''||inputBusiness.value == ''  || inputLegalServices.value == '' || textareaDibutuhkan.value == '') {
             ElMessage('Please fill all the fields!')
             return
         }
@@ -738,15 +736,20 @@
             const res = await officialInfo({
                 data: {
                     "type": "web", 
-                    "fullName": "test", 
-                    "mobileNumber": "test", 
-                    "email": "test", 
-                    "legalServices": "test", 
-                    "typeOfService": "test", 
-                    "businessField": "test", 
-                    "detailOfRequired": "test" 
+                    "fullName": inputName.value, 
+                    "mobileNumber": inputPhone.value,
+                    "email": inputEmail.value,
+                    "legalServices": inputLegalServices.value, 
+                    "typeOfService": inputTypeOfService.value,
+                    "businessField": inputBusiness.value, 
+                    "detailOfRequired": textareaDibutuhkan.value
                 }
             })
+            if(res == 'success') {
+                ElMessage('Your request has been sent!')
+            }else {
+                ElMessage('Something went wrong!')
+            }
         } catch (error) {
             console.log(error)
         }
