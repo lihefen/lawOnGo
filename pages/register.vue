@@ -121,9 +121,23 @@
                                     <p class="text-neutral-800 text-sm text-center"> By registering, I agree to LawOnGo’s<a href="#" class="text-[#04A45E]"> Terms and 
                                         Conditions</a> and <a href="#" class="text-[#04A45E]">Privacy Policy</a>.</p>
                                     <button @click="registerHandle" type="button" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 w-full flex justify-center items-center px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E] rounded-lg font-medium"><span> List </span></button>
+
+                                    <div class="mt-6">
+                                        <div>
+                                            <p class="font-medium font-dm-sans antialiased mb-2 text-black text-base">verification code</p>
+                                            <div class="relative w-full flex">
+                                                <el-input
+                                                    v-model="inputCode"
+                                                    type="text"
+                                                    placeholder=""
+                                                    size="large" 
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="md:px-6 py-3 px-4 rounded-2xl bg-white">
+                            <div class="md:px-6 py-3 px-4 rounded-2xl bg-white" v-if="showCode">
                                 <p class="font-semibold text-center mb-4"> Gabung Menjadi Advokat </p><a href="/login/advokat" class=""><img class="w-full cursor-pointer" src="/image/lawyer/login/banner-login-advokat.png" alt="banner-advokat"></a>
                             </div>
                         </div>
@@ -142,8 +156,10 @@ import { useRouter } from 'vue-router'
 import RegisterSwiper from '@/components/RegisterSwiper.vue'
 // 发送验证码
 import { sendCode } from '~/services/sendCode';
+import { loginCode } from '~/services/loginCode';
 import {encryptDataWithRSA}  from '~/utils/encryptDataWithRSA';
 import {cities}  from '~/utils/cities';
+import { get } from 'lodash';
 
 
 const router = useRouter()
@@ -158,6 +174,9 @@ const inputDate = ref('')
 // 性别
 const inputGender = ref('Perempuan')
 const inputCity = ref('')
+const inputCode = ref('')
+const showCode = ref(false)
+
 // 公钥
 const publicKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbWcnQIWROhmlba/fhdJ8XGMLjHC5GC/Mb08ZueFocHLD7WUifTfyxTo0DjTm2KpRTMuUAO5YQbofuHU2kB018CAwEAAQ==';
 
@@ -165,25 +184,59 @@ const publicKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbWcnQIWROhmlba/fhdJ8XGMLjHC
 
 
 const registerHandle = async () => {
-    console.log(inputPhone.value)
+    if(inputName.value == '' || inputPhone.value == '' || inputEmail.value == '' || inputDate.value == '' || inputGender.value == '' || inputCity.value == '') {
+        // alert('请输入完整信息')
+        ElMessage('Please fill all the fields!')
+        return
+    }
     const dataText = JSON.stringify({
         channel: 'io.lawongo.app',
         mobile: inputPhone.value,
-        appName: 'LawOnGo'
+        appName: 'LawOnGo',
+        email:inputEmail.value,
+        date:inputDate.value,
+        city:inputCity.value,
+        sex:inputGender.value
     });
+    console.log(dataText)
     const dataBody = encryptDataWithRSA(dataText,publicKey)
     try {
         const res = await sendCode({
             data:dataBody
         })
+        // {"code":"00000","msg":"Success!","data":true}
+        const msg = get(res,'msg','');
+        const code = get(res,'code','-9999');
+            if(code != '00000' ) {
+                ElMessage(msg)
+            }else {
+                showCode.value = true
+            }
+        
     } catch (error) {
         console.log(error)
     }
-    if(inputName.value == '' || inputPhone.value == '' || inputEmail.value == '' || inputDate.value == '' || inputGender.value == '' || inputCity.value == '') {
-        // alert('请输入完整信息')
-        return
+}
+
+
+const loginRequest = async () => {
+    const dataText = JSON.stringify({
+        aesKey:'rMM+4uHIkgfbhk2qOqPxzw==',
+        appName:'LawOnGo',
+        channel:'io.lawongo.app',
+        mobile:inputPhone.value,
+        vcode: inputCode.value
+    });
+    const dataBody = encryptDataWithRSA(dataText,publicKey)
+    try {
+        const res = await loginCode({
+            data:dataBody
+        })
+    } catch (error) {
+        console.log(error)
     }
 }
+
 const navigateToRegister = () => {
     router.push('/login')
 };
