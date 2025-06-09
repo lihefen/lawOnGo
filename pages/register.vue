@@ -36,7 +36,7 @@
                                     <div class="space-y-2">
                                         <label class="text-slate-700 text-xs">Full name</label>
                                         <div>
-                                            <el-input v-model="inputName" type="text" placeholder="TWrite your full name" ></el-input>
+                                            <el-input v-model="inputName" type="text" placeholder="Write your full name" ></el-input>
                                         </div>
                                     </div>
 

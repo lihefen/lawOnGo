@@ -158,10 +158,6 @@
         } catch (error) {
             console.log(error)
         }
-        if(inputName.value == '' || inputPhone.value == '' || inputEmail.value == '' || inputDate.value == '' || inputGender.value == '' || inputCity.value == '') {
-            // alert('请输入完整信息')
-            return
-        }
     }
 
     const loginRequest = async () => {

@@ -31,12 +31,20 @@
                             <div class="flex flex-col sm:gap-6 gap-4 flex-1">
                                 <h5 class="text-xl sm:text-2xl font-semibold text-center"> Login to LawOnGo account</h5>
                                 <div>
-                                    <p class="font-medium font-dm-sans antialiased mb-2 text-black text-base">Mobile Number or Email</p>
-                                    <div class="relative w-full  rounded-lg text-black ">
-                                        <el-input v-model="inputEmail" type="text" placeholder="email@email.com or 08313302938***" size="large" ></el-input>
-                                    </div>
-
                                     <div>
+                                        <p class="font-medium font-dm-sans antialiased mb-2 text-black text-base">Full Name</p>
+                                        <div class="relative w-full  rounded-lg text-black ">
+                                            <el-input v-model="inputName" type="text" placeholder="Write your full name" size="large" ></el-input>
+                                        </div>
+                                    </div>
+                                   <div>
+                                        <p class="font-medium font-dm-sans antialiased mb-2 text-black text-base">Mobile Number</p>
+                                        <div class="relative w-full  rounded-lg text-black ">
+                                            <el-input v-model="inputPhone" type="text" placeholder="08313302938***" size="large" ></el-input>
+                                        </div>
+                                   </div>
+
+                                    <!-- <div>
                                         <div>
                                             <p  class="font-medium font-dm-sans antialiased mb-2 text-black text-base">Password</p>
                                             <div class="relative w-full  text-black ">
@@ -52,11 +60,11 @@
                                         <div class="flex justify-end mt-2">
                                             <button class="text-sm text-[#04A45E] text-right hover:underline"> Forgot your password? </button>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
-                                <button type="button" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E]/80 rounded-lg"><span><span>Masuk</span></span></button>
+                                <button type="button" @click="loginRequest" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E]/80 rounded-lg"><span><span>Masuk</span></span></button>
                             </div>
-                            <div class="flex flex-col gap-3">
+                            <!-- <div class="flex flex-col gap-3">
                                 <div class="border-t border-lightgrey-5"></div>
                                 <div class="flex items-center justify-center gap-1 sm:text-base text-sm">
                                     <span>Don’t have a LawOnGo account yet?</span><a href="/register/advokat" class="text-[#04A45E] hover:underline"> Register here </a>
@@ -64,7 +72,7 @@
                                 <div class="text-[#757E8C] sm:text-sm text-xs flex gap-2">
                                     <svg class="sm:w-6 sm:h-6 w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 17.75C12.4142 17.75 12.75 17.4142 12.75 17V11C12.75 10.5858 12.4142 10.25 12 10.25C11.5858 10.25 11.25 10.5858 11.25 11V17C11.25 17.4142 11.5858 17.75 12 17.75ZM12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7Z" fill="#757E8C"></path></svg><span class="flex-1 font-light">For a better experience, use Google Chrome or Firefox browser.</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -176,12 +184,38 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { officialInfoLawyer } from '~/services/officialInfoLawyer';
+
 const router = useRouter()
-const inputEmail = ref('');
-const inputPassword = ref('');
+const inputPhone = ref('');
+const inputName = ref('');
 const navigateToRegister = () => {
     router.push('/register')
 };
+const loginRequest = async () => {
+    if(inputPhone.value == '' || inputName.value == '') {
+        ElMessage('Please fill all the fields!')
+        return
+    }
+    const dataBody = {
+        fullName:inputName.value,
+        mobileNumber:inputPhone.value,
+    }
+    try {
+        const res = await officialInfoLawyer({
+            data:dataBody
+        })
+        console.log(res)
+        if(res != 'success' ) {
+            ElMessage('System error, please try again later.')
+            
+        }else {
+            window.location.href = '/'
+        }
 
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 </script>
