@@ -5,7 +5,7 @@
     </h1>
   </div>
   <div class="md:hidden mx-auto mb-16">
-    <UCarousel v-slot="{ item }" loop dots :items="items">
+    <UCarousel ref="mobileCarousel" v-slot="{ item }" loop dots :items="items">
       <img :src="item" class="rounded-lg mx-auto" />
     </UCarousel>
   </div>
@@ -111,6 +111,7 @@ const items = [
 
 const activeIndex = ref(0);
 const carousel = useTemplateRef("carousel");
+const mobileCarousel = useTemplateRef("mobileCarousel");
 
 function logSlidesInViewOnce(emblaApi) {
   const indexs = emblaApi.slidesInView();
@@ -120,7 +121,16 @@ function logSlidesInViewOnce(emblaApi) {
 }
 
 onMounted(() => {
+  const emblaApi = mobileCarousel.value.emblaApi;
+  if (emblaApi) {
+    emblaApi.on("slidesInView", logSlidesInViewOnce);
+  }
+});
+
+onMounted(() => {
   const emblaApi = carousel.value.emblaApi;
-  if (emblaApi) emblaApi.on("slidesInView", logSlidesInViewOnce);
+  if (emblaApi) {
+    emblaApi.on("slidesInView", logSlidesInViewOnce);
+  }
 });
 </script>

@@ -9,7 +9,9 @@
         alt=""
         class="absolute top-0 left-0 w-[260px] h-[150px] object-cover hidden lg:block"
       />
-      <div class="text-white text-[32px] font-bold pl-[70px] pt-[38px]">
+      <div
+        class="hidden md:block text-white text-[32px] font-bold pl-[70px] pt-[38px]"
+      >
         Brand Story
       </div>
       <div className="w-[470px] absolute -top-2 right-20 hidden lg:block">
