@@ -59,7 +59,7 @@ const items = ref([
   {
     title: "Leagal Consultation",
     description:
-      "LawOnGo bermitra dengan Advokat-advokat terbaik yang telah disumpah.",
+      "Your One-Stop Source for Customized Legal ResolutionsLegal consultation:Expert Legal Counsel from Top-Tier Lawyers Company establishment:Services for establishing a business entity (PT, CV), amending deeds, and notarization. ",
     image: "/image/features/chat.png",
     link: "/cari-advokat",
     top: -20,
@@ -75,21 +75,21 @@ const items = ref([
   {
     title: "Document Creation",
     description:
-      "Layanan pembuatan dokumen untuk individu/perusahaan seperti Perjanjian Jual Beli, Perjanjian Kerja, Surat Kuasa, dll.",
+      "Legal document creation:Services for creating legal documents for individuals/companies such as Sales and Purchase Agreements, Employment Agreements, Power of Attorney, etc.",
     image: "/image/features/wendang-2.png",
     link: "/service-page?id=document",
     top: -7,
   },
   {
     title: "Haki Registration",
-    description: "Layanan pendaftaran Merek, Paten, Hak Cipta, dll.",
+    description: "Intellectual Property Registration :Services for registering Trademarks, Patents, Copyrights, etc. ",
     image: "/image/features/zhishichanquan.png",
     link: "/service-page?id=copyright",
     top: -8,
   },
   {
     title: "Tax Consultation",
-    description: "Konsultasi pelaporan pajak perusahaan maupun individu.",
+    description: "Tax Consultation:Consultation on tax reporting for companies and individuals. ",
     image: "/image/features/tax.png",
     link: "/service-page?id=tax",
     top: -5,
