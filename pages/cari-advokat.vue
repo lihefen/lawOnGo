@@ -117,9 +117,10 @@
                             <div>
                               <div>
                                 <el-radio-group v-model="radioStatus">
-                                    <el-radio :value="3"> Lawyer Zhang </el-radio>
-                                    <el-radio :value="4">Lawyer Zhang</el-radio>
-                                    <el-radio :value="5">Lawyer Zhang</el-radio>
+                                    <el-radio :value="3"> Lawyer Riza </el-radio>
+                                    <el-radio :value="4">Lawyer Farouq</el-radio>
+                                    <el-radio :value="5">Lawyer Edo</el-radio>
+                                    <el-radio :value="5">Lawyer Rima</el-radio>
                                 </el-radio-group>
                               </div>
                             </div>
