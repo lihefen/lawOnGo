@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-25 18:28:37
  * @LastEditors: hean
- * @LastEditTime: 2025-06-09 11:32:09
+ * @LastEditTime: 2025-06-10 18:24:41
 -->
 <template>
   <div class="w-full bg-gradient-to-r from-[#005F38] to-[#005F38]">
@@ -58,7 +58,7 @@
               <p class="font-bold text-base">Site Map</p>
               <ul class="text-[14px] lg:text-base">
                 <li class="mt-2 lg:mt-3">
-                  <a href="/tentang-kami" class=""> About Us </a>
+                  <a href="/about" class=""> About Us </a>
                 </li>
                 <li class="mt-2 lg:mt-3">
                   <a href="/cari-advokat" class=""> Find an Advocate </a>
