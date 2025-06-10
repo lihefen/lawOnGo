@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-18 18:45:48
  * @LastEditors: hean
- * @LastEditTime: 2025-06-08 15:57:00
+ * @LastEditTime: 2025-06-10 20:03:23
 -->
 <template>
   <div
@@ -21,6 +21,12 @@
         <p class="text-[#181E23] sm:text-2xl font-semibold">50+</p>
         <p class="text-[#39424D] sm:text-sm text-xs">Registered lawyers</p>
       </div>
+
+      <div class="text-center">
+        <p class="text-[#181E23] sm:text-2xl font-semibold">15+</p>
+        <p class="text-[#39424D] sm:text-sm text-xs">Cities Covered</p>
+      </div>
+
       <div class="text-center">
         <p
           class="sm:text-2xl font-semibold flex items-center justify-center gap-1 sm:gap-2"
