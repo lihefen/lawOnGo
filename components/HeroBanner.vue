@@ -23,24 +23,24 @@
                 class="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-16"
             >
                 <!-- Left Content: Text + Button -->
-                <div class="text-center md:text-left md:w-1/2 lg:w-2/5">
-                <img src="/image/figma-hero/title.png" alt="title" class="" />
-                <p
-                    class="font-roboto text-xl sm:text-2xl lg:text-[20px] text-[#1D1F29] mt-4 mb-8"
-                >
-                    Bayar hanya jika mediasi berhasil. Privasi Anda dilindungi.
-                </p>
-                <button
-                @click="showDownDialog = true"
-                    type="button"
-                    class="font-roboto-mono font-bold text-lg sm:text-xl lg:text-[24px] text-white bg-[#04A45E] hover:bg-[#038a4c] transition-colors duration-300 py-4 px-8 sm:px-10 rounded-[24px] flex items-center justify-center"
-                >
-                See how it works
-                    <Icon
-                    name="material-symbols:arrow-right-alt-rounded"
-                    class="ml-2"
-                    />
-                </button>
+                <div class="text-center md:text-left md:w-1/2 lg:w-3/5">
+                    <img src="/image/figma-hero/title.png" alt="title" class="" />
+                    <p
+                        class="font-roboto text-xl sm:text-2xl lg:text-[20px] text-[#1D1F29] mt-4 mb-8"
+                    >
+                        Payment only made after successful mediation, your privacy is strictly protected
+                    </p>
+                    <button
+                    @click="showDownDialog = true"
+                        type="button"
+                        class="font-roboto-mono font-bold text-lg sm:text-xl lg:text-[24px] text-white bg-[#04A45E] hover:bg-[#038a4c] transition-colors duration-300 py-4 px-8 sm:px-10 rounded-[24px] flex items-center justify-center"
+                    >
+                    Click to learn more details
+                        <Icon
+                        name="material-symbols:arrow-right-alt-rounded"
+                        class="ml-2"
+                        />
+                    </button>
                 </div>
 
                 <!-- Right Content: Phone Image -->
