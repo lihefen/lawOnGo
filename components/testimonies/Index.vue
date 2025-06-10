@@ -1,8 +1,5 @@
 <template>
-  <section
-    id="testimonies"
-    class="max-w-[1280px] px-4 xl:px-40 mx-auto py-8 md:py-12 space-y-10 lg:-mt-30"
-  >
+  <section id="testimonies" class="max-w-[1280px] px-4 xl:px-40 mx-auto pb-12">
     <Solusi />
     <!-- <Artikel /> -->
   </section>

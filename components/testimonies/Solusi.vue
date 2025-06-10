@@ -14,26 +14,28 @@
             v-slot="{ item }"
             :items="items"
             :ui="{
+              container: 'items-stretch',
               item: 'basis-auto',
               dot: 'size-3 [&.bg-inverted]:bg-[#54F9AB]',
             }"
-            class="inline-flex gap-4 md:gap-6 w-full"
+            class="inline-flex gap-4 md:gap-6"
             @select="onSelect"
           >
             <div
-              class="w-52 pt-4 h-auto md:w-60 lg:w-[290px] xl:w-[320px] rounded-[24px] bg-card"
+              class="w-52 pt-4 h-full md:w-60 lg:w-[290px] xl:w-[320px] rounded-[24px] bg-card flex flex-col text-[#333333]"
             >
-              <div class="px-4 pb-4 overflow-auto scrollbar-hide">
+              <div class="px-4 pb-4 overflow-auto scrollbar-hide flex-grow">
                 <blockquote class="pt-2 text-sm antialiased text-slate-500">
                   {{ item.quote }}
                 </blockquote>
               </div>
-              <div class="flex justify-between">
+
+              <div class="flex justify-between mt-auto">
                 <div class="flex pl-4 py-2">
                   <div><img src="/image/utils/icon_person.png" /></div>
-                  <label class="text-black bottom-0 pl-2">{{
-                    item.name
-                  }}</label>
+                  <label class="text-lg font-bold bottom-0 pl-2">
+                    {{ item.name }}
+                  </label>
                 </div>
                 <div>
                   <img src="/image/card-testimoni.png" alt="kutip" />
