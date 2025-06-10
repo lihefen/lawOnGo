@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-10 15:16:42
  * @LastEditors: hean
- * @LastEditTime: 2025-06-08 16:00:29
+ * @LastEditTime: 2025-06-10 19:53:38
 -->
 <template>
     <div class="bg-cultured font-dm-sans min-h-screen">
@@ -62,7 +62,7 @@
                                         </div>
                                     </div> -->
                                 </div>
-                                <button type="button" @click="loginRequest" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E]/80 rounded-lg"><span><span>Masuk</span></span></button>
+                                <button type="button" @click="loginRequest" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E]/80 rounded-lg"><span><span>Login</span></span></button>
                             </div>
                             <!-- <div class="flex flex-col gap-3">
                                 <div class="border-t border-lightgrey-5"></div>
@@ -80,7 +80,7 @@
             <div class="px-4">
                 <div class="relative rounded-xl text-center sm:px-6 sm:py-3.5 p-3 bg-[linear-gradient(224deg,#18D683_0%,#00CE73_17%,#0DBC6F_46%,#04A45E_100%)]  sm:w-fit mx-auto mt-12">
                     <div class="flex md:flex-row flex-col items-center justify-center md:gap-6 gap-4 text-cultured">
-                        <span class="sm:text-2xl text-xl font-semibold">Also Download Perqara Advokat Application</span>
+                        <span class="sm:text-2xl text-xl font-semibold">Also Download LawOnGo Advokat Application</span>
                         <div class="flex items-center gap-3 flex-1">
                             <a href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share" rel="noopener noreferrer" target="_blank">
                                 <img

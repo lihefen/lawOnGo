@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-18 18:45:48
  * @LastEditors: hean
- * @LastEditTime: 2025-06-09 11:29:20
+ * @LastEditTime: 2025-06-10 19:51:46
 -->
 <template>
   <ClientOnly>
@@ -80,7 +80,7 @@ const items = ref([
     name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
     image: "/image/testimonial/testimonial-4.png",
     description:
-      "Saya cukup puas selama konsultasi, karena insight yang diberikan cukup baik dan jujur sehingga saya bisa menentukan keputusan apa yang sekiranya mungkin saya ambil.",
+      "Attorney Rima demonstrated exceptional professionalism—patiently listening to my concerns, providing practical legal guidance, and skillfully negotiating with my borrower. She resolved all my debts within manageable terms. I truly can't imagine how I'll be today without LawOnGo.",
   },
 ]);
 
