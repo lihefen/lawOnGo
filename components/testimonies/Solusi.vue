@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="text-xl lg:text-3xl text-center font-semibold">
+    <h2 class="text-xl lg:text-3xl text-center font-semibold pt-4">
       Like Them, Anyone Can Find A Solution!
     </h2>
     <div class="xl:flex xl:justify-center">
@@ -124,19 +124,19 @@ import { ref } from "vue";
 const items = ref([
   {
     id: 1,
-    name: "Siska",
+    name: "harina ",
     quote:
       "After submitting the information, the lawyer contacted me quickly and helped me solve the debt problem. Thanks to LawOnGo ",
   },
   {
     id: 2,
-    name: "Siska",
+    name: "matinrus",
     quote:
       "Attorney Rima demonstrated exceptional professionalism—patiently listening to my concerns, providing practical legal guidance, and skillfully negotiating with my borrower. She resolved all my debts within manageable terms. I truly can't imagine how I'll be today without LawOnGo. ",
   },
   {
     id: 3,
-    name: "Siska",
+    name: "siska",
     quote:
       "AI smart consultation is very goood. It answered my questions in just a few words. Most importantly, it is completely free. I hope LawOnGo will do better and better.",
   },

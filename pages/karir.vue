@@ -10,16 +10,16 @@
   <div class="bg-cultured font-dm-sans min-h-screen ">
     <main >
         <TheNavbar @loginHandler="loginHandler" />
-        <div class="mx-auto w-full">
+        <div class="mx-auto w-full bg-[#ffffff]">
             <img
                 alt="header"
                 class="w-full mx-auto"
                 src="/image/career-page/karir_banner.png" />
         </div>
-        <div class="mx-auto w-full bg-white">
-
+        <div class="mt-[-60px]">
+            <CarirComponents></CarirComponents>
         </div>
-        <CarirComponents></CarirComponents>
+       
         <div class="mt-16">
             <TheFooter />
         </div>

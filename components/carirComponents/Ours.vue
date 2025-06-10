@@ -15,10 +15,10 @@
             <img class="absolute left-1/2 -translate-x-1/2 top-[10px] z-9" width="100" height="100"  src="/image/landing-page/font_bar.png">
         </h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+      <div class="flex flex-wrap justify-center gap-3 md:gap-6 mt-6">
         <div
           v-for="member in members"
-          :key="member.name"
+          :key="member.id"
           class="flex flex-col items-center"
         >
          <div class="relative w-[366px] h-[360px]">
@@ -41,18 +41,33 @@ import { ref } from "vue";
 
 const members = ref([
   {
+    id:'1',
     name: "Customer First",
     image: "/image/landing-page/img_our_1.png",
   },
   {
-    name: "Fairness Keadilan ",
+    id:'2',
+    name: "Fairness",
     image: "/image/landing-page/img_our_2.png",
   },
   {
+    id:'3',
     name: "Professionalism",
     image: "/image/landing-page/img_our_3.png",
   },
+  {
+    id:'4',
+    name: "Transparency",
+    image: "/image/landing-page/img_our_4.png",
+  },
+  {
+    id:'5',
+    name: "Innovation and Technology",
+    image: "/image/landing-page/img_our_5.png",
+  },
+  
 ]);
+
 </script>
 
 <style scoped>

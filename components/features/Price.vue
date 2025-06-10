@@ -39,9 +39,10 @@
         </div>
         <button
           type="button"
+          @click="showDownDialog = true"
           class="flex-shrink-0 px-4.5 py-2.5 md:text-lg bg-linear-[264deg,#00D075,#069456] text-white rounded-2xl w-full text-center mt-4"
         >
-          <span>Apply pro Bono</span>
+          <span >Apply pro Bono</span>
         </button>
       </div>
       <div
@@ -80,6 +81,7 @@
         </div>
         <button
           type="button"
+          @click="showDownDialog = true"
           class="flex-shrink-0 px-4.5 py-2.5 md:text-lg bg-linear-[264deg,#00D075,#069456] text-white rounded-2xl w-full text-center mt-4"
         >
           <span>Consult Now</span>
@@ -136,6 +138,7 @@
           </p>
         </div>
         <button
+         @click="showDownDialog = true"
           type="button"
           class="flex-shrink-0 px-4.5 py-2.5 md:text-lg bg-linear-[259deg,#00D98A,#00E510_10%,#00BB4D] text-white rounded-2xl w-full text-center mt-4"
         >
@@ -143,11 +146,14 @@
         </button>
       </div>
     </section>
+
+    <DownDialog  v-model:show="showDownDialog" @hide="showDownDialog = false"></DownDialog>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+const showDownDialog = ref(false);
 // 每个卡片独立展开/收起状态
 const isOpen1 = ref(true); // 默认展开，可改为false
 const isOpen2 = ref(true);

@@ -30,10 +30,14 @@
                 <img class="absolute right-0 bottom-[40px]" src="/image/landing-page/work_text_icon.png" alt="">
             </div>
             <div  class="relative w-full md:w-1/2">
-                <img
+                <iframe
+            src="https://www.youtube.com/embed/Sy4ROOthOg4"
+            class="w-[360px] h-[212px] rounded-xl shrink-0"
+            />
+                <!-- <img
                     alt="iimg-company-services"
                     class="w-full"
-                    src="/image/landing-page/img_work.png" />
+                    src="/image/landing-page/img_work.png" /> -->
             </div>
       </div>
     </div>
