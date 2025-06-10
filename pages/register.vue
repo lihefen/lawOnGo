@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-10 09:39:46
  * @LastEditors: hean
- * @LastEditTime: 2025-06-10 18:49:11
+ * @LastEditTime: 2025-06-10 20:09:23
 -->
 <!--
  * @Description: 
@@ -22,7 +22,7 @@
             <div class="md:max-w-[492px] lg:max-w-[1280px] sm:px-4 xl:px-40 mx-auto py-6">
                 <a href="/" class=""><img src="/image/logo-perqara.png" alt="logo-perqara" class="mx-auto mb-3"></a>
                 <div>
-                    <div class="flex items-center justify-between py-2 px-4 sm:px-0 mb-3"><button @click="onClickBack"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 18.3102C11.0975 18.7008 11.0975 19.3339 10.707 19.7244C10.3164 20.115 9.68327 20.115 9.29274 19.7244L3.49985 13.9315C2.7188 13.1505 2.7188 11.8842 3.49985 11.1031L9.29274 5.31023C9.68327 4.9197 10.3164 4.9197 10.707 5.31023C11.0975 5.70075 11.0975 6.33392 10.707 6.72444L5.91406 11.5173H19.9998C20.5521 11.5173 20.9998 11.965 20.9998 12.5173C20.9998 13.0696 20.5521 13.5173 19.9998 13.5173H5.91406L10.707 18.3102Z" fill="#262E35"></path></svg></button><div class="font-semibold sm:text-base text-sm"> Have a LawOnGo accou <a href="/login" class=""><button class="ml-2  h-7 bg-[#F3FBFF] border-1 text-[#333333]  rounded-[18px]  sm:px-4 px-3 sm:text-sm text-xs font-semibold  hover:bg-white hover:text-[#1192E8] transition-colors"> Login </button></a></div></div>
+                    <div class="flex items-center justify-between py-2 px-4 sm:px-0 mb-3"><button @click="onClickBack"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 18.3102C11.0975 18.7008 11.0975 19.3339 10.707 19.7244C10.3164 20.115 9.68327 20.115 9.29274 19.7244L3.49985 13.9315C2.7188 13.1505 2.7188 11.8842 3.49985 11.1031L9.29274 5.31023C9.68327 4.9197 10.3164 4.9197 10.707 5.31023C11.0975 5.70075 11.0975 6.33392 10.707 6.72444L5.91406 11.5173H19.9998C20.5521 11.5173 20.9998 11.965 20.9998 12.5173C20.9998 13.0696 20.5521 13.5173 19.9998 13.5173H5.91406L10.707 18.3102Z" fill="#262E35"></path></svg></button><div class="font-semibold sm:text-base text-sm"> Have a LawOnGo account <a href="/login" class=""><button class="ml-2  h-7 bg-[#F3FBFF] border-1 text-[#333333]  rounded-[18px]  sm:px-4 px-3 sm:text-sm text-xs font-semibold  hover:bg-white hover:text-[#1192E8] transition-colors"> Login </button></a></div></div>
 
                     <div class="flex lg:flex-row flex-col gap-6">
                         <div class="lg:bg-[#E3F4FD]/80 lg:rounded-2xl lg:px-20 sm:px-0 px-4 lg:max-h-[800px] overflow-hidden flex-1">
@@ -51,7 +51,7 @@
                                     <div id="border-solid" class="border-t border-lightgrey-5"></div>
 
                                     <div class="flex gap-2 items-center">
-                                        <p class="text-slate-700 text-sm font-semibold"> Data Pendukung </p><button><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.58594 5.5299C7.36699 4.84648 8.63332 4.84648 9.41436 5.5299C10.1954 6.21331 10.1954 7.32135 9.41436 8.00477C9.27842 8.12372 9.12778 8.22197 8.96755 8.29951C8.47043 8.5401 8.00015 8.96505 8.00015 9.51733V10.0173M14 8.51733C14 11.831 11.3137 14.5173 8 14.5173C4.68629 14.5173 2 11.831 2 8.51733C2 5.20363 4.68629 2.51733 8 2.51733C11.3137 2.51733 14 5.20363 14 8.51733ZM8 12.0173H8.005V12.0223H8V12.0173Z" stroke="#3A475B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+                                        <p class="text-slate-700 text-sm font-semibold"> Data Support </p><button><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.58594 5.5299C7.36699 4.84648 8.63332 4.84648 9.41436 5.5299C10.1954 6.21331 10.1954 7.32135 9.41436 8.00477C9.27842 8.12372 9.12778 8.22197 8.96755 8.29951C8.47043 8.5401 8.00015 8.96505 8.00015 9.51733V10.0173M14 8.51733C14 11.831 11.3137 14.5173 8 14.5173C4.68629 14.5173 2 11.831 2 8.51733C2 5.20363 4.68629 2.51733 8 2.51733C11.3137 2.51733 14 5.20363 14 8.51733ZM8 12.0173H8.005V12.0223H8V12.0173Z" stroke="#3A475B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
                                     </div>
 
                                     <div class="px-3 py-2 bg-[#E7FFF4] text-[#00854B] rounded-lg flex items-center gap-2">
@@ -87,8 +87,8 @@
                                             <div class="flex w-full">
                                                 <!-- 女性 -->
                                                 <el-radio-group v-model="inputGender" size="large">
-                                                    <el-radio-button label="Laki - Laki" value="Laki - Laki" />
-                                                    <el-radio-button label="Permpuan" value="Permpuan" />
+                                                    <el-radio-button label="Male" value="Male" />
+                                                    <el-radio-button label="Female" value="Female" />
                                                 </el-radio-group>
 
 
@@ -152,7 +152,7 @@
                                 </div>
                             </div>
                             <div class="md:px-6 py-3 px-4 rounded-2xl bg-white">
-                                <p class="font-semibold text-center mb-4"> Gabung Menjadi Advokat </p><a href="/login/advokat" class=""><img class="w-full cursor-pointer" src="/image/lawyer/login/banner-login-advokat.png" alt="banner-advokat"></a>
+                                <p class="font-semibold text-center mb-4"> Join Us As Lawyer </p><a href="/login/advokat" class=""><img class="w-full cursor-pointer" src="/image/lawyer/login/banner-login-advokat.png" alt="banner-advokat"></a>
                             </div>
                         </div>
                     </div>
