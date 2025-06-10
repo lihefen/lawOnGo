@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-07 23:27:22
  * @LastEditors: hean
- * @LastEditTime: 2025-06-10 10:29:51
+ * @LastEditTime: 2025-06-10 11:25:12
 -->
 <template>
   <div class="bg-[#f4f2f3] font-dm-sans min-h-screen overflow-x-hidden">
@@ -40,7 +40,7 @@
         <Features />
         <Why />
         <Consultation />
-        <Solution />
+            <Solution />
         <!-- <TopAdvocate /> -->
         <BrandStory />
         <Testimonies />
