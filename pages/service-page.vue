@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-08 21:13:28
  * @LastEditors: hean
- * @LastEditTime: 2025-06-08 11:28:46
+ * @LastEditTime: 2025-06-10 17:12:56
 -->
 
 <template>
@@ -213,7 +213,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button  class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Apply Now </button>
+                        <button @click="scrollToId('form')" class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Apply Now </button>
                     </div>
                     <div  class="relative w-full md:w-1/2">
                         <img
@@ -248,7 +248,7 @@
                                 <span class="px-2 py-0.5 rounded-lg bg-[#CBFFE8] text-[#04A45E] text-sm font-medium" >+24</span>
                             </div>
                         </div>
-                        <button  class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Create Now </button>
+                        <button @click="scrollToId('form')" class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Create Now </button>
                     </div>
                 </div>
             </div>
@@ -278,7 +278,7 @@
                             </div>
                         </div>
                     </div>
-                    <button  class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Register Now </button>
+                    <button @click="scrollToId('form')" class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Register Now </button>
                 </div>
                 <div  class="relative w-full md:w-1/2">
                     <img
@@ -307,7 +307,7 @@
                             <h2  class="relative mt-[-60px] ml-[20px] text-2xl md:text-3xl font-bold md:text-left text-center"> Tax Consultation </h2>
                             <p  class="text-[#55707A]"> Report corporate and personal taxes accurately with an experienced and certified attorney in the field of taxation. </p>
                         </div>
-                        <button  class="bg-[#04A45E]  px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80   transition-all ease-in-out duration-300 cursor-pointer"> Consult Now </button>
+                        <button @click="scrollToId('form')"  class="bg-[#04A45E]  px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80   transition-all ease-in-out duration-300 cursor-pointer"> Consult Now </button>
                     </div>
                 </div>
             </div>
