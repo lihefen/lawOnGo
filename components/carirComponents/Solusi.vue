@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-31 14:46:30
  * @LastEditors: hean
- * @LastEditTime: 2025-06-03 16:30:21
+ * @LastEditTime: 2025-06-10 18:54:54
 -->
 <template>
   <div>
@@ -59,21 +59,21 @@ import { ref } from "vue";
 const items = ref([
   {
     id: 1,
-    name: "Siska",
+    name: "Michael",
     quote:
       "LawOnGo is a fast paced starup in a relatively new industry that has been exposing me with a step learning curve.",
     image:'/image/landing-page/img_sayphoto_1.png'
   },
   {
     id: 2,
-    name: "Siska",
+    name: "Alice",
     quote:
       "Advocate advice in this application is very helpful for small communities like me. ",
       image:'/image/landing-page/img_sayphoto_2.png'
   },
   {
     id: 3,
-    name: "Siska",
+    name: "John",
     quote:
       "Advocate advice in this application is very helpful for small communities like me. ",
       image:'/image/landing-page/img_sayphoto_3.png'

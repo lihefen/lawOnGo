@@ -708,8 +708,8 @@
                 desc:'<ol><ul><li> Open the official website or App and click on“Register.”</li></ul><ul><li>Enter your mobile phone number and receive the SMS verification code,or log in quickly using WeChat/Alipay.</li></ul><ul><li> Complete the basic information form:name,ID number,email address.</li></ul><ul><li>Upload a photo for facial recognition to enhance account security.</li></ul></ol>'
             },
             {
-                title: 'How can I participate in LawOnGos Pro Bono public interest projects',
-                desc:'The platform regularly collaborates with public welfare organizations to provide free legal aid to low-income or economically disadvantaged groups.</br>Enter the“Public Interest Law”section,register,and submit proof of family income or poverty.</br>After approval,you can book a Pro Bono lawyer for a 30-minute free consultation.<br/>Some assistance projects are subsidized.'
+                title: 'How can I participate in LawOnGos Non-profit service public interest projects',
+                desc:'The platform regularly collaborates with public welfare organizations to provide free legal aid to low-income or economically disadvantaged groups.</br>Enter the“Public Interest Law”section,register,and submit proof of family income or poverty.</br>After approval,you can book a Non-profit service lawyer for a 30-minute free consultation.<br/>Some assistance projects are subsidized.'
             },
             {
                 title: 'How to entrust LawOnGo to draft or review a contract?',

@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @version: 
+ * @Author: hean
+ * @Date: 2025-05-27 21:08:14
+ * @LastEditors: hean
+ * @LastEditTime: 2025-06-10 18:52:07
+-->
 <template>
   <div class="relative z-10 max-w-[1280px] mx-auto py-12 px-10 xl:px-42">
     <div class="mb-12">
@@ -56,11 +64,9 @@
           </h2>
         </div>
         <div class="space-y-1 flex flex-col text-black text-lg">
-          <div>Customer First Pelanggan adalah prioritas</div>
-          <div>Professionalism Profesionalisme</div>
-          <div>Transparency Transparansi</div>
-          <div>Fairness Keadilan</div>
-          <div>Innovation and Technology Inovasi dan Teknologi</div>
+          <div>Customer First Customers are priority </div>
+          <div>Professionalism Professionalism Transparency </div>
+          <div>Fairness Innovation and Technology</div>
         </div>
       </div>
     </div>

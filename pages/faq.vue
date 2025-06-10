@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-10 17:46:47
  * @LastEditors: hean
- * @LastEditTime: 2025-06-08 11:29:56
+ * @LastEditTime: 2025-06-10 18:51:10
 -->
 <template>
   <div class="bg-cultured font-dm-sans min-h-screen">
@@ -134,15 +134,15 @@ const faqList = ref([
         ]
     },
     {
-        subName:'Pro Bono and Public Interest Services',
+        subName:'Non-profit service and Public Interest Services',
         content:[
             {
-                title: "How can I participate in LawOnGo's Pro Bono public interest projects?",
-                desc:'The platform regularly collaborates with public welfare organizations to provide free legal aid to low-income or economically disadvantaged groups.</br>Enter the“Public Interest Law”section,register,and submit proof of family income or poverty.</br>After approval,you can book a Pro Bono lawyer for a 30-minute free consultation.<br/>Some assistance projects are subsidized.'
+                title: "How can I participate in LawOnGo's Non-profit service public interest projects?",
+                desc:'The platform regularly collaborates with public welfare organizations to provide free legal aid to low-income or economically disadvantaged groups.</br>Enter the“Public Interest Law”section,register,and submit proof of family income or poverty.</br>After approval,you can book a Non-profit service lawyer for a 30-minute free consultation.<br/>Some assistance projects are subsidized.'
             },
             {
-                title: 'Is there a limit to the number of Pro Bono services?',
-                desc:'Each user can enjoy 1 Pro Bono consultation within a year.<br/>If you need more services,you can choose to pay for consultations.'
+                title: 'Is there a limit to the number of Non-profit service services?',
+                desc:'Each user can enjoy 1 Non-profit service consultation within a year.<br/>If you need more services,you can choose to pay for consultations.'
             },
         ]
     }
