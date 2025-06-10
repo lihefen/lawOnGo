@@ -91,7 +91,7 @@
                             </a>
                             <a 
                                 href="javascript:;"
-                                @click="ElMessage('敬请期待')"rel="noopener noreferrer" >
+                                @click="ElMessage('Anticipate it with expectation')"rel="noopener noreferrer" >
                                 <img
                                     alt="appstore-logo"
                                     class="sm:w-36 w-full"
@@ -165,7 +165,7 @@
                             </a>
                             <a 
                               href="javascript:;"
-                                @click="ElMessage('敬请期待')" 
+                                @click="ElMessage('Anticipate it with expectation')" 
                 rel="noopener noreferrer">
                                 <img
                                     alt="appstore-logo"

@@ -21,6 +21,7 @@
             : ''
         )
       "
+       @click="changeActive('0')"
     >
       <h2 class="md:text-2xl text-base font-bold">AI intelligent match</h2>
       <p>
@@ -38,6 +39,7 @@
             : ''
         )
       "
+       @click="changeActive('1')"
     >
       <h2 class="md:text-2xl text-base font-bold">
         Multi dimensional value-added services
@@ -71,6 +73,7 @@
             : ''
         )
       "
+      @click="changeActive('2')"
     >
       <h2 class="md:text-2xl text-base font-bold">
         Professional endorsement and case library
@@ -89,6 +92,7 @@
             : ''
         )
       "
+       @click="changeActive('3')"
     >
       <h2 class="md:text-2xl text-base font-bold">Visual progress tracking</h2>
       <p>
@@ -113,12 +117,18 @@ const activeIndex = ref(0);
 const carousel = useTemplateRef("carousel");
 const mobileCarousel = useTemplateRef("mobileCarousel");
 
+
 function logSlidesInViewOnce(emblaApi) {
   const indexs = emblaApi.slidesInView();
   if (indexs.length === 1) {
     activeIndex.value = indexs[0];
   }
 }
+
+const changeActive = (value) => {
+    console.log(mobileCarousel.value.emblaApi.scrollTo)
+    // mobileCarousel.value.emblaApi.scrollTo(Number(value));
+};
 
 onMounted(() => {
   const emblaApi = mobileCarousel.value.emblaApi;

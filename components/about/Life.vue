@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-29 20:45:10
  * @LastEditors: hean
- * @LastEditTime: 2025-06-01 10:52:33
+ * @LastEditTime: 2025-06-10 18:15:08
 -->
 <template>
   <div class="max-w-[1280px] mx-auto pt-12 px-10 xl:px-42">
@@ -40,6 +40,7 @@
       </UCarousel>
       <div class="flex justify-center items-center gap-2 mt-9">
         <button
+          @click="goKarir"
           class="linear-button text-2xl font-bold text-[#333333] flex items-center justify-center"
         >
           Join Us
@@ -60,6 +61,10 @@ const items = ref([
   "/image/about-us/life-placeholder-2.jpg",
   "/image/about-us/life-placeholder-3.jpg",
 ]);
+
+const goKarir = () => {
+    window.location.href = '/karir'
+}
 </script>
 <style scoped>
 .custom-bg {

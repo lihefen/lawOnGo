@@ -18,7 +18,7 @@
             <div class="flex gap-2 pb-8 justify-center">
               <a
                 href="javascript:;"
-                @click="ElMessage('敬请期待')"
+                @click="ElMessage('Anticipate it with expectation')"
                 rel="noopener noreferrer"
                 ><img
                   alt="appstore-logo"

@@ -32,7 +32,7 @@
                                     <a href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share" rel="noopener noreferrer" target="_blank">
                                         <img class="w-[144px] h-[44px]" src="/image/landing-page/google-logo.png" alt="google icon">
                                     </a>
-                                    <a href="javascript:;"  @click="ElMessage('敬请期待')" rel="noopener noreferrer">
+                                    <a href="javascript:;"  @click="ElMessage('Anticipate it with expectation')" rel="noopener noreferrer">
                                         <img class="w-[144px] h-[44px]" src="/image/landing-page/appstore-logo.png" alt="appstore icon">
                                     </a>
                                 </div>

@@ -1,3 +1,11 @@
+<!--
+ * @Description
+ * @version: 
+ * @Author: hean
+ * @Date: 2025-06-03 20:59:15
+ * @LastEditors: hean
+ * @LastEditTime: 2025-06-10 18:14:52
+-->
 <template>
   <div class="max-w-[1280px] mx-auto pt-12 px-10 xl:px-42">
     <div class="relative text-center">
@@ -31,7 +39,7 @@
         <img :src="item" width="100%" height="350" class="rounded-lg" />
       </UCarousel>
       <div class="flex justify-center items-center gap-2 mt-9">
-        <button class="linear-button text-2xl font-bold text-[#333333]">
+        <button  @click="goKarir" class="linear-button text-2xl font-bold text-[#333333]">
           Join Us
           <Icon name="mdi:arrow-right" />
         </button>
@@ -47,6 +55,10 @@ const items = ref([
   "/image/about-us/life-placeholder.png",
   "/image/about-us/life-placeholder.png",
 ]);
+
+const goKarir = () => {
+    window.location.href = '/karir'
+}
 </script>
 <style scoped>
 .custom-bg {

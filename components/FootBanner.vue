@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-18 18:45:48
  * @LastEditors: hean
- * @LastEditTime: 2025-06-08 15:56:42
+ * @LastEditTime: 2025-06-10 18:12:41
 -->
 
 <template>
@@ -43,7 +43,7 @@
           <div class="flex items-center md:justify-start justify-center gap-2">
             <a
                 href="javascript:;"
-                @click="ElMessage('敬请期待')"
+                @click="ElMessage('Anticipate it with expectation')"
               rel="noopener noreferrer"
               ><img
                 alt="appstore-logo"

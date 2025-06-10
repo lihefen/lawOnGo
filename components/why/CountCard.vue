@@ -46,7 +46,7 @@
           src="/image/landing-page/google-logo.png" /></a
       ><a
          href="javascript:;"
-                @click="ElMessage('敬请期待')"
+                @click="ElMessage('Anticipate it with expectation')"
         rel="noopener noreferrer"
         ><img
           alt="appstore-logo"
