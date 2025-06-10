@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-07 23:27:22
  * @LastEditors: hean
- * @LastEditTime: 2025-06-03 16:09:36
+ * @LastEditTime: 2025-06-10 16:55:54
  */
 import tailwindcss from "@tailwindcss/vite";
 
@@ -40,4 +40,7 @@ export default defineNuxtConfig({
     mode: "css",
     cssLayer: "base",
   },
+  build: {
+    transpile: ['jsencrypt']
+  }
 });

@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-29 20:45:10
  * @LastEditors: hean
- * @LastEditTime: 2025-05-30 14:58:22
+ * @LastEditTime: 2025-06-10 16:53:21
 -->
 <template>
   <div class="card-bg md:h-[572px]">
@@ -32,7 +32,7 @@
           /> -->
 
         <iframe
-          src="https://www.youtube.com/embed/81FNi23lrbc"
+          src="https://www.youtube.com/embed/zq83AsGKCA0"
           class="w-[360px] h-[212px] rounded-xl shrink-0"
         />
       </div>
