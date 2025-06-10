@@ -440,7 +440,7 @@ const advokatList = [
     photo: "/image/photo/photo-04.png",
     name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
     location:'Jakata',
-    marks:['Jakata;International Arbitration',' Corporate Law']
+    marks:['International Arbitration',' Corporate Law']
   },
 ];
 </script>
