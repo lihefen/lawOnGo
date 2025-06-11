@@ -517,7 +517,7 @@
                     <img class="absolute left-[0] -bottom-[0px]"  src="/image/landing-page/icon-customer-service.png" alt="">
                     <div  class="flex flex-col md:flex-row items-center justify-between w-full text-center md:text-left gap-3">
                         <span  class="flex-1 font-semibold text-xl md:text-2xl text-cultured ml-[260px]">Can't find the service you need?</span>
-                        <button  class="w-full md:w-auto text-lightblack-1 font-semibold bg-white w-[180px] px-5 py-3 text-[#005F38] text-center rounded-[18px] text-[24px] shadow"> Contact Us </button>
+                        <button @click="goWa"  class="w-full md:w-auto text-lightblack-1 font-semibold bg-white w-[180px] px-5 py-3 text-[#005F38] text-center rounded-[18px] text-[24px] shadow"> Contact Us</button>
                     </div>
                 </div>
             </div>
@@ -724,7 +724,9 @@
         scrollToId()
     });
 
-
+    const goWa = () => {
+        window.location.href = 'https://wa.me/6282324599898'   
+    }
 
     const officialInfoRequest = async () => {
 
