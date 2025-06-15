@@ -57,13 +57,13 @@
               @mouseenter="openDropdown(item.id)"
               @mouseleave="closeDropdown"
             >
-              <router-link
+              <NuxtLink
                 v-if="!item.hasDropdown"
                 :to="item.path"
                 class="flex items-center h-16 px-2 font-medium text-sm text-[#344052]"
               >
                 {{ item.title }}
-              </router-link>
+              </NuxtLink>
 
               <a
                 v-else

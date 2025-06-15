@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-11 10:03:08
  * @LastEditors: hean
- * @LastEditTime: 2025-05-31 21:00:17
+ * @LastEditTime: 2025-06-15 09:44:31
 -->
 <template>
   <div class="bg-cultured font-dm-sans min-h-screen ">
@@ -47,38 +47,6 @@ const loginHandler = () => {
 const handleChange = (val) => {
   console.log(val)
 }
-
-
-const hukumOptions = [
-  {
-    value: 'Pembuatan Dokumen',
-    label: 'Pembuatan Dokumen',
-  },
-  {
-    value: 'Pendaftaran HAKI (Hak Kekayaan Intelektual)',
-    label: 'Pendaftaran HAKI (Hak Kekayaan Intelektual)',
-  },
-]
-
-const kotaOptions = [
-    {
-        value: 'SIMEULUE',
-        label: 'SIMEULUE',
-    },
-    {
-        value: 'ACEH SINGKIL',
-        label: 'ACEH SINGKIL',
-    },
-    {
-        value: 'ACEH SELATAN',
-        label: 'ACEH SELATAN',
-    },
-    {
-        value: 'ACEH TENGGARA',
-        label: 'ACEH TENGGARA',
-    },
-    
-]
 
 </script>
 
