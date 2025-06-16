@@ -166,13 +166,13 @@
               />
             </div>
 
-            <router-link
+            <NuxtLink
               v-else
-              :to="item.path"
+             :to="{path:item.path}"
               class="block py-4 text-base font-semibold text-[#344052]"
             >
               {{ item.title }}
-            </router-link>
+            </NuxtLink>
 
             <div v-if="item.hasDropdown && isDropdownOpen" class="py-2">
               <a
