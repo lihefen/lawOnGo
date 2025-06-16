@@ -129,7 +129,7 @@
                     class="border-2 border-[#04A45E] bg-white text-[#04A45E]  py-1.5 px-3 rounded-full leading-5"
                     @click="loginHandler"
                 >
-                Log On
+                LogOn
                 </button>
             
             </div>
