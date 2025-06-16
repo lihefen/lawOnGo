@@ -96,10 +96,12 @@
     import { sendCode } from '~/services/sendCode';
     import { loginCode } from '~/services/loginCode';
     import {encryptDataWithRSA}  from '~/utils/encryptDataWithRSA';
+    import publicKey  from '~/utils/publicKey';
+
+    
     const inputPhone = ref('');
     const inputCode = ref('');
     const showCode = ref(false)
-    const publicKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbWcnQIWROhmlba/fhdJ8XGMLjHC5GC/Mb08ZueFocHLD7WUifTfyxTo0DjTm2KpRTMuUAO5YQbofuHU2kB018CAwEAAQ==';
     const props = defineProps({
         show: {
             type: Boolean,

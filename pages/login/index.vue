@@ -100,7 +100,7 @@ import { sendCode } from '~/services/sendCode';
 import { loginCode } from '~/services/loginCode';
 import {encryptDataWithRSA}  from '~/utils/encryptDataWithRSA';
 import { get } from 'lodash';
-const publicKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbWcnQIWROhmlba/fhdJ8XGMLjHC5GC/Mb08ZueFocHLD7WUifTfyxTo0DjTm2KpRTMuUAO5YQbofuHU2kB018CAwEAAQ==';
+import publicKey  from '~/utils/publicKey';
 
 const router = useRouter()
 const inputPhone = ref('');

@@ -199,7 +199,7 @@ import { loginCode } from '~/services/loginCode';
 import {encryptDataWithRSA}  from '~/utils/encryptDataWithRSA';
 import {cities}  from '~/utils/cities';
 import { get } from 'lodash';
-
+import publicKey  from '~/utils/publicKey';
 
 const router = useRouter()
 // 姓名
@@ -217,7 +217,6 @@ const inputCode = ref('')
 const showCode = ref(false)
 
 // 公钥
-const publicKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbWcnQIWROhmlba/fhdJ8XGMLjHC5GC/Mb08ZueFocHLD7WUifTfyxTo0DjTm2KpRTMuUAO5YQbofuHU2kB018CAwEAAQ==';
 
     
 
