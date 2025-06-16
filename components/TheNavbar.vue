@@ -6,134 +6,136 @@
       <div class="flex justify-between gap-2 items-center">
         <!-- Logo and mobile menu trigger -->
         <div class="flex items-center gap-6">
-          <button
-            class="mr-2 md:hidden"
-            aria-label="Toggle menu"
-            @click="toggleMobileMenu"
-          >
-            <svg
-              v-if="isMobileMenuOpen"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6 6L18 18M18 6L6 18"
-                stroke="#1e40af"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <svg
-              v-else
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4 6H20M4 12H20M4 18H20"
-                stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <router-link to="/" class="flex-shrink-0">
-            <img src="/image/topbar_logo.svg" width="152" alt="LawOnGo Logo" />
-          </router-link>
-
-          <!-- Desktop Navigation Menu -->
-          <nav class="hidden md:flex items-center gap-1">
-            <div
-              v-for="item in menuItems"
-              :key="item.id"
-              class="relative"
-              @mouseenter="openDropdown(item.id)"
-              @mouseleave="closeDropdown"
-            >
-              <NuxtLink
-                v-if="!item.hasDropdown"
-                :to="{path:item.path}"
-                class="flex items-center h-16 px-2 font-medium text-sm text-[#344052]"
-              >
-                {{ item.title }}
-              </NuxtLink>
-
-              <a
-                v-else
-                href="#"
-                class="flex items-center h-16 px-2 font-medium text-sm text-black"
-              >
-                {{ item.title }}
-                <ChevronDown
-                  :class="[
-                    'chevron-rotate',
-                    { 'rotate-chevron': openDropdownId === item.id },
-                  ]"
-                  class="ml-1"
-                  :size="18"
-                />
-              </a>
-
-              <transition name="dropdown-fade-slide">
-                <div
-                  v-if="item.hasDropdown && openDropdownId === item.id"
-                  class="absolute top-2/3 left-0 w-80 bg-white rounded-lg shadow-lg p-2 z-50"
-                >
-                  <div class="grid gap-4">
-                    <a
-                      v-for="service in serviceItems"
-                      :key="service.id"
-                      :href="service.path"
-                      class="flex gap-2 p-2 hover:bg-gray-50 rounded-lg items-center"
+            <div class="flex items-center gap-3">
+                <div  class="md:hidden">
+                    <button
+                        aria-label="Toggle menu"
+                        @click="toggleMobileMenu"
                     >
-                      <img
-                        :src="service.icon"
-                        width="32"
-                        height="32"
-                        alt="Service Icon"
-                      />
-                      <div class="flex-1">
-                        <div class="flex items-center">
-                          <h3 class="font-semibold text-perqara-text text-sm">
-                            {{ service.title }}
-                          </h3>
-                        </div>
-                        <p class="text-perqara-gray text-xs mt-1">
-                          {{ service.description }}
-                        </p>
-                      </div>
-                      <div v-if="service.isNew" class="">
-                        <NewBadge />
-                      </div>
-                    </a>
-                  </div>
+                        <svg
+                        v-if="isMobileMenuOpen"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M6 6L18 18M18 6L6 18"
+                            stroke="#1e40af"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                        <svg
+                        v-else
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M4 6H20M4 12H20M4 18H20"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </button>
                 </div>
-              </transition>
+                
+                <NuxtLink to="/">
+                    <img src="/image/topbar_logo.svg"  alt="LawOnGo Logo" />
+                </NuxtLink>
             </div>
-          </nav>
+            <!-- Desktop Navigation Menu -->
+            <div class="hidden md:flex items-center gap-1">
+                <div
+                v-for="item in menuItems"
+                :key="item.id"
+                class="relative"
+                @mouseenter="openDropdown(item.id)"
+                @mouseleave="closeDropdown"
+                >
+                <NuxtLink
+                    v-if="!item.hasDropdown"
+                    :to="{path:item.path}"
+                    class="flex items-center h-16 px-2 font-medium text-sm text-[#344052]"
+                >
+                    {{ item.title }}
+                </NuxtLink>
+
+                <a
+                    v-else
+                    href="#"
+                    class="flex items-center h-16 px-2 font-medium text-sm text-black"
+                >
+                    {{ item.title }}
+                    <ChevronDown
+                    :class="[
+                        'chevron-rotate',
+                        { 'rotate-chevron': openDropdownId === item.id },
+                    ]"
+                    class="ml-1"
+                    :size="18"
+                    />
+                </a>
+
+                <transition name="dropdown-fade-slide">
+                    <div
+                    v-if="item.hasDropdown && openDropdownId === item.id"
+                    class="absolute top-2/3 left-0 w-80 bg-white rounded-lg shadow-lg p-2 z-50"
+                    >
+                    <div class="grid gap-4">
+                        <a
+                        v-for="service in serviceItems"
+                        :key="service.id"
+                        :href="service.path"
+                        class="flex gap-2 p-2 hover:bg-gray-50 rounded-lg items-center"
+                        >
+                        <img
+                            :src="service.icon"
+                            width="32"
+                            height="32"
+                            alt="Service Icon"
+                        />
+                        <div class="flex-1">
+                            <div class="flex items-center">
+                            <h3 class="font-semibold text-perqara-text text-sm">
+                                {{ service.title }}
+                            </h3>
+                            </div>
+                            <p class="text-perqara-gray text-xs mt-1">
+                            {{ service.description }}
+                            </p>
+                        </div>
+                        <div v-if="service.isNew" class="">
+                            <NewBadge />
+                        </div>
+                        </a>
+                    </div>
+                    </div>
+                </transition>
+                </div>
+            </div>
         </div>
 
-        <!-- Login/Register Buttons -->
         <div class="flex items-center gap-3">
-          <div class="flex rounded-lg w-full items-center">
-            <button
-            class="border-2 border-[#04A45E] bg-white text-[#04A45E]  py-1.5 px-3 rounded-full leading-5"
-            @click="loginHandler"
-          >
-            Log On
-          </button>
+            <div class="flex rounded-lg w-full items-center">
+                <button
+                    class="border-2 border-[#04A45E] bg-white text-[#04A45E]  py-1.5 px-3 rounded-full leading-5"
+                    @click="loginHandler"
+                >
+                Log On
+                </button>
             
-          </div>
-          <button
-              class="border-2  bg-[#04A45E] border-[#04A45E] text-white  py-1.5 px-3 rounded-full leading-5"
-              @click="navigateToRegister"
+            </div>
+            <button
+                class="border-2  bg-[#04A45E] border-[#04A45E] text-white  py-1.5 px-3 rounded-full leading-5"
+                @click="navigateToRegister"
             >
             Register
             </button>
