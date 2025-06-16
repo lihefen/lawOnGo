@@ -8,13 +8,13 @@
 -->
 <template>
   <div class="custom-bg mb-12">
-    <div class="max-w-[1280px] mx-auto pt-12 px-10 xl:px-42">
+    <div class="max-w-[1280px] mx-auto pt-4 px-10 xl:px-42">
       <div class="relative text-center">
-        <h2 class="text-[32px] font-bold text-[#333333]">
+        <h2 class="text-[32px] font-bold text-[#333333] mb-12">
           Core members of our team
         </h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-[150px]">
         <div
           v-for="member in members"
           :key="member.name"
@@ -23,15 +23,15 @@
           <img
             :src="member.image"
             alt="Member"
-            class="w-[220px] h-[250px] object-cover rounded-lg"
+            class="w-[205px] object-cover rounded-lg"
           />
           <div
-            class="blur-card -mt-20 px-6 flex flex-col justify-center text-[#333333] gap-2"
+            class="blur-card px-6 -mt-20 flex flex-col justify-center text-[#333333] gap-2"
           >
             <h3 class="text-2xl font-bold">{{ member.name }}</h3>
             <p class="text-lg">{{ member.job }}</p>
           </div>
-          <div class="relative px-6 text-[#333333] mt-2">
+          <div class="relative text-[#333333] mt-2 w-[260px]">
             <div class="relative z-100">
               <p class="text-warp">{{ member.description }}</p>
             </div>
@@ -77,8 +77,9 @@ const members = ref([
 
 <style scoped>
 .custom-bg {
-  background: url("/image/about-us/members-bg.png") no-repeat center center;
-  background-size: cover;
+  /* background: url("/image/about-us/members-bg.png") no-repeat center center; */
+  /* background-size: 100% 100%; */
+  background: linear-gradient( 180deg, #FFFFFF, rgba(204,255,235,0.96) 40%, rgba(194,255,231,0.73) 60%, rgba(255,255,255,0.19) 100%);
 }
 
 .blur-card {

@@ -9,12 +9,12 @@
 <template>
   <div class="card-bg md:h-[572px]">
     <div
-      class="relative z-10 max-w-[1280px] mx-auto px-10 xl:px-52 py-12 lg:py-20"
+      class="relative z-10 max-w-[1280px] mx-auto px-10 xl:px-52 py-12 lg:py-16"
     >
       <div
         class="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-16"
       >
-        <div class="flex flex-col text-white gap-4">
+        <div class="flex flex-col text-white gap-1">
           <p class="text-[42px] leading-[50px]">
             Building a Bridge between Law and Life
           </p>

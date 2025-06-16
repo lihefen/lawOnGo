@@ -7,11 +7,11 @@
  * @LastEditTime: 2025-06-10 18:52:07
 -->
 <template>
-  <div class="relative z-10 max-w-[1280px] mx-auto py-12 px-10 xl:px-42">
-    <div class="mb-12">
+  <div class="relative z-10 max-w-[1280px] mx-auto pb-12 px-10 xl:px-42">
+    <div class="mb-10">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <div class="relative mb-4">
+          <div class="relative mb-2">
             <div
               class="size-[30px] bg-[#1FF48F]/80 rounded-full absolute top-1 -left-3"
             />
@@ -19,7 +19,7 @@
               Mission
             </h1>
           </div>
-          <p class="text-lg text-black leading-relaxed">
+          <p class="text-lg text-black leading-7">
             Focus on customer service,continuously providing legal services that
             meet user needs,supported by exceptional innovation and
             technology.Our goal is to make our platform the first choice for
@@ -28,7 +28,7 @@
           </p>
         </div>
         <div class="relative">
-          <img src="/image/about-us/target.png" />
+          <img src="/image/about-us/target.png" class="w-[342px] h-[225px]" />
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@
     <div class="grid gap-12 md:grid-cols-2">
       <!-- Vision -->
       <div>
-        <div class="relative mb-4">
+        <div class="relative mb-2">
           <div
             class="size-[30px] bg-[#1FF48F]/80 rounded-full absolute top-1 -left-3"
           />
@@ -45,7 +45,7 @@
             Vision
           </h2>
         </div>
-        <p class="text-lg text-black leading-relaxed">
+        <p class="text-lg text-black leading-7">
           To become Indonesia's leading online legal consultation platform,
           centered on delivering exceptional customer experience. We aim to set
           the industry benchmark, promote fair access to legal services, and
@@ -55,7 +55,7 @@
 
       <!-- Values -->
       <div>
-        <div class="relative mb-4">
+        <div class="relative mb-2">
           <div
             class="size-[30px] bg-[#1FF48F]/80 rounded-full absolute top-1 -left-3"
           />
@@ -63,7 +63,7 @@
             Values
           </h2>
         </div>
-        <div class="space-y-1 flex flex-col text-black text-lg">
+        <div class="space-y-1 flex flex-col text-black text-lg leading-7">
           <div>Customer First Customers are priority </div>
           <div>Professionalism Professionalism Transparency </div>
           <div>Fairness Innovation and Technology</div>
