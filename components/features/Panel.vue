@@ -20,9 +20,9 @@
         >
           <a
             href="/cari-advokat"
-            class="bg-gradient-panel px-6 py-9 space-y-2 md:space-y-4 rounded-xl md:flex-1"
+            class="bg-gradient-panel p-6 md:flex-1"
           >
-            <div class="flex gap-2 items-center">
+            <div class="flex gap-2 items-center m-0">
               <img
                 src="/image/landing-page/icon-legal-consultation-colored.png"
                 alt="icon-legal-consultation"
@@ -45,14 +45,10 @@
           </a>
           <a
             href="/cari-advokat"
-            class="bg-gradient-panel px-6 py-9 space-y-2 md:space-y-4 rounded-xl md:flex-1 relative cursor-pointer"
+            class="bg-gradient-panel p-6  md:flex-1 cursor-pointer"
           >
-            <!-- <div
-              class="absolute right-4 -top-3 w-fit rounded-full px-2.5 py-0.5 font-semibold text-sm text-[#F4F2F3] bg-[linear-gradient(96.71deg,#EF5944_19.14%,#FF998B_104.79%)]"
-            >
-              Baru
-            </div> -->
-            <div class="flex gap-2 items-center !mt-0">
+
+            <div class="flex gap-2 items-center m-0">
               <img
                 src="/image/navbar/icon-company-establishment.png"
                 alt="icon-company-establishment"
@@ -73,18 +69,19 @@
           </a>
           <a
             href="/cari-advokat"
-            class="bg-gradient-panel px-6 py-9 space-y-2 md:space-y-4 md:max-w-[252px] cursor-pointer"
+            class="bg-gradient-panel p-6 md:max-w-[252px]  cursor-pointer"
           >
-            <div class="flex gap-2 items-center">
+            <div class="flex gap-2 items-center m-0">
                 <img src="/image/utils/other_icon.png" alt="icon-other" class="w-6 md:w-6 lg:w-[40px]">
               <p class="font-bold text-xl lg:text-2xl flex-1">Other</p>
             </div>
-            <p class="text-xs sm:text-sm text-[#647387]">
+            <p class="text-xs sm:text-sm text-[#647387] mt-2">
+              Rapid debt reduction
             </p>
             <img
               src="/image/features/polka-dot.svg"
               alt="polka-dot"
-              class="absolute right-0 bottom-0 w-[100px]"
+              class="absolute right-0 bottom-0 w-[80px]"
             />
           </a>
         </div>

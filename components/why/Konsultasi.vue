@@ -10,12 +10,12 @@
     </UCarousel>
   </div>
   <div
-    class="grid grid-rows-2 grid-cols-2 md:grid-cols-3 grid-flow-col md:gap-y-6 gap-4"
+    class="grid grid-rows-2 grid-cols-2 md:grid-cols-3 grid-flow-col md:gap-y-12 gap-4"
   >
     <div
       :class="
         cn(
-          'bg-[#F5FBFD] bg-[url(/image/features/ai.png)] bg-bottom-left bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333] font-light md:text-base text-sm space-y-1',
+          'bg-[#F5FBFD] bg-[url(/image/features/ai.png)] bg-position-[bottom_-1rem_left] bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333] md:text-base text-sm space-y-1',
           activeIndex === 0
             ? 'bg-[#54F9AB] bg-[url(/image/features/ai-active.png)]'
             : ''
@@ -33,7 +33,7 @@
     <div
       :class="
         cn(
-          'bg-[#F5FBFD] bg-[url(/image/features/multi.png)] bg-bottom-left bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333] font-light md:text-base text-sm space-y-1',
+          'bg-[#F5FBFD] bg-[url(/image/features/multi.png)] bg-position-[bottom_-1rem_left] bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333]  md:text-base text-sm space-y-1',
           activeIndex === 1
             ? 'bg-[#54F9AB] bg-[url(/image/features/multi-active.png)]'
             : ''
@@ -61,13 +61,13 @@
           dot: 'size-3 [&.bg-inverted]:bg-[#54F9AB]',
         }"
       >
-        <img :src="item" width="200" class="rounded-lg mx-auto" />
+        <img :src="item" width="250" class="rounded-lg mx-auto" />
       </UCarousel>
     </div>
     <div
       :class="
         cn(
-          'bg-[#F5FBFD] bg-[url(/image/features/professional.png)] bg-bottom-left bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333] font-light md:text-base text-sm space-y-1',
+          'bg-[#F5FBFD] bg-[url(/image/features/professional.png)] bg-position-[bottom_-1rem_left] bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333]  md:text-base text-sm space-y-1',
           activeIndex === 2
             ? 'bg-[#54F9AB] bg-[url(/image/features/professional-active.png)]'
             : ''
@@ -86,7 +86,7 @@
     <div
       :class="
         cn(
-          'bg-[#F5FBFD] bg-[url(/image/features/progress.png)] bg-bottom-left bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333] font-light md:text-base text-sm space-y-1',
+          'bg-[#F5FBFD] bg-[url(/image/features/progress.png)] bg-position-[bottom_-1rem_left] bg-size-[166px] bg-no-repeat rounded-[36px] p-6 text-[#333333]  md:text-base text-sm space-y-1',
           activeIndex === 3
             ? 'bg-[#54F9AB] bg-[url(/image/features/progress-active.png)]'
             : ''

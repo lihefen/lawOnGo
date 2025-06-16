@@ -8,7 +8,7 @@
 -->
 <template>
   <div
-    class="bg-card flex flex-col mt-20 sm:gap-6 gap-3 rounded-2xl sm:py-6 p-3 md:px-20 sm:px-10 lg:w-[820px] mx-auto"
+    class="bg-card flex flex-col mt-16 sm:gap-6 gap-3 rounded-2xl sm:py-6 p-3 md:px-20 sm:px-10 lg:w-[820px] mx-auto"
   >
     <div
       class="px-3 py-2 flex justify-center items-center md:gap-9 sm:gap-6 gap-2"
@@ -46,19 +46,24 @@
         href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share"
         rel="noopener noreferrer"
         target="_blank"
-        ><img
+      >
+        <img
           alt="android-logo"
           class="w-36"
-          src="/image/landing-page/google-logo.png" /></a
-      ><a
-         href="javascript:;"
-                @click="ElMessage('Anticipate it with expectation')"
+          src="/image/landing-page/google-logo.png" />
+      </a>
+      <a
+        href="javascript:;"
         rel="noopener noreferrer"
-        ><img
+        type="button"
+        @click="ElMessage('Anticipate it with expectation')"
+      >
+        <img
           alt="appstore-logo"
           class="w-36"
           src="/image/landing-page/appstore-logo.png"
-      /></a>
+        />
+      </a>
     </div>
   </div>
 </template>

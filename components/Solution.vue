@@ -1,7 +1,7 @@
 <template>
   <section
     id="solution"
-    class="max-w-[1280px] px-4 xl:px-20 mx-auto py-8 md:py-11"
+    class="max-w-[1280px] px-4 xl:px-20 mx-auto py-6"
   >
     <h1 class="text-2xl md:text-3xl font-semibold text-center mb-12">
       Various Other Legal Solutions for You
@@ -11,7 +11,7 @@
         v-for="item in items"
         :key="item.title"
         :href="item.link"
-        class="relative w-full md:w-[230px] p-3 card-bg flex flex-row sm:flex-col items-start gap-2 shadow-lg overflow-visible"
+        class="relative w-full md:w-[230px] p-3 card-bg flex flex-row sm:flex-col items-start gap-2 overflow-visible"
       >
         <img
           :src="item.image"
@@ -26,7 +26,7 @@
         /> -->
         <div class="flex flex-col gap-1 sm:gap-2 w-full mt-6 md:mb-2 z-10">
           <div class="flex items-center justify-between gap-2">
-            <span class="text-lightgrey-4 sm:text-lg font-blod">
+            <span class=" sm:text-lg font-extrabold">
               {{ item.title }}
             </span>
             <svg
@@ -57,7 +57,7 @@ import { ref } from "vue";
 
 const items = ref([
   {
-    title: "Your One-Stop Source for Customized Legal ResolutionsLegal consultation",
+    title: "Leagal Consultation",
     description:
       "Expert Legal Counsel from Top-Tier Lawyers Company establishment:Services for establishing a business entity (PT, CV), amending deeds, and notarization. ",
     image: "/image/features/chat.png",

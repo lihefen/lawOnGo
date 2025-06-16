@@ -42,22 +42,26 @@
           </div>
           <div class="flex items-center md:justify-start justify-center gap-2">
             <a
-                href="javascript:;"
-                @click="ElMessage('Anticipate it with expectation')"
+              href="javascript:;"
               rel="noopener noreferrer"
-              ><img
+              @click="ElMessage('Anticipate it with expectation')"
+              >
+              <img
                 alt="appstore-logo"
                 class="md:w-36 w-full"
-                src="/image/landing-page/appstore-logo.png" /></a
-            ><a
-              href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><img
+                src="/image/landing-page/appstore-logo.png" />
+            </a>
+            <a
+            href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+              <img
                 alt="android-logo"
                 class="md:w-36 w-full"
                 src="/image/landing-page/google-logo.png"
-            /></a>
+              />
+          </a>
           </div>
         </div>
       </div>

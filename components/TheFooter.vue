@@ -34,24 +34,31 @@
                   src="/image/footer/google-logo.png"
               /></a>
             </div>
-            <!-- <p class="font-dm-sans font-bold text-white text-base antialiased">
-              Mitra Kami
+            <p class="font-dm-sans font-bold text-white text-base antialiased">
+              Fllow Us
             </p>
-            <div class="grid grid-cols-3 gap-2 mt-3">
+            <div class="flex gap-1 mt-3">
               <img
-                class="w-32"
-                src="/image/peradi-footer.png"
-                alt="peradi-footer"
-              /><img
-                class="w-32"
-                src="/image/ylc-footer.png"
-                alt="peradi-footer"
-              /><img
-                class="w-32"
-                src="/image/pbh-footer.png"
-                alt="peradi-footer"
+                class="w-10"
+                src="/image/footer/fb.svg"
+                alt="fb-logo"
               />
-            </div> -->
+              <img
+                class="w-10"
+                src="/image/footer/x.svg"
+                alt="x-logo"
+              />
+              <img
+                class="w-10"
+                src="/image/footer/link.svg"
+                alt="in-logo"
+              />
+              <img
+                class="w-10"
+                src="/image/footer/ins.svg"
+                alt="ins-logo"
+              />
+            </div>
           </div>
           <div class="mt-8 flex w-full text-white gap-3 lg:pl-32">
             <div class="font-dm-sans antialiased w-1/2 lg:w-2/3">

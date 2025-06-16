@@ -17,7 +17,7 @@
             /> -->
 
             <div
-            class="max-w-[1280px] px-4 sm:px-6 lg:px-8 xl:px-40 mx-auto relative z-10 py-16 md:py-24 lg:py-32"
+            class="max-w-[1280px] px-4 sm:px-6 lg:px-8 xl:px-30 mx-auto relative z-10 py-16 md:py-24"
             >
             <div
                 class="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-16"
@@ -26,14 +26,14 @@
                 <div class="text-center md:text-left md:w-1/2 lg:w-3/5">
                     <img src="/image/figma-hero/title.png" alt="title" class="" />
                     <p
-                        class="font-roboto text-xl sm:text-2xl lg:text-[20px] text-[#1D1F29] mt-4 mb-8"
+                        class="text-center text-xl sm:text-2xl lg:text-[20px] text-[#1D1F29] -mt-2 mb-8"
                     >
                         Payment only made after successful mediation, your privacy is strictly protected
                     </p>
                     <button
-                    @click="showDownDialog = true"
+                        class="font-roboto-mono font-bold text-lg sm:text-xl lg:text-[24px] text-white bg-[#04A45E] py-4 px-8 sm:px-10 rounded-[24px] flex items-center justify-center"
+                        @click="showDownDialog = true"
                         type="button"
-                        class="font-roboto-mono font-bold text-lg sm:text-xl lg:text-[24px] text-white bg-[#04A45E] hover:bg-[#038a4c] transition-colors duration-300 py-4 px-8 sm:px-10 rounded-[24px] flex items-center justify-center"
                     >
                     Click to learn more details
                         <Icon

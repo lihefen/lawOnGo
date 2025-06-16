@@ -1,9 +1,9 @@
 <template>
   <section
     id="solution"
-    class="max-w-[1280px] px-4 xl:px-20 mx-auto py-8 md:py-11"
+    class="max-w-[1280px] px-4 xl:px-20 mx-auto py-8 md:py-10"
   >
-    <div class="story-bg relative min-h-[530px]">
+    <div class="story-bg relative pb-4">
       <img
         src="/image/features/story-top-left.png"
         alt=""
@@ -16,6 +16,8 @@
       </div>
       <div className="w-[470px] absolute -top-2 right-20 hidden lg:block">
         <div className="relative">
+          <div class="absolute top-1/2 -translate-y-1/2 left-0 bg-gradient-to-r from-white to-white/40 w-8 h-2 z-10" />
+           <div class="absolute top-1/2 -translate-y-1/2 right-0 bg-gradient-to-l from-white to-white/40 w-12 h-2 z-10" />
           <div
             className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 transform -translate-y-1/2"
           />
@@ -50,11 +52,11 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-wrap lg:flex-nowrap justify-center gap-3 md:pt-8">
+      <div class="flex flex-wrap lg:flex-nowrap justify-center gap-3 md:pt-4">
         <div
           v-for="item in items"
           :key="item.title"
-          class="relative w-full md:w-[340px] p-5 card-bg flex flex-col items-center gap-2 shadow-lg overflow-hidden"
+          class="relative w-full md:w-[340px] p-5 card-bg flex flex-col items-center gap-2 overflow-hidden"
         >
           <!-- <Video
             :video="item.video"
@@ -66,8 +68,8 @@
             class="w-[300px] h-[143px] rounded-xl shrink-0"
           />
 
-          <div class="w-full mt-2 px-10">
-            <span class="text-lightgrey-5 text-xs sm:text-sm">
+          <div class="w-full mt-2 px-10 text-center">
+            <span class="text-lightgrey-5 text-xs sm:text-sm line-clamp-2">
               {{ item.description }}
             </span>
           </div>
@@ -77,9 +79,9 @@
         class="flex justify-center w-full font-lexend text-sm font-bold antialiased"
       >
         <button
-          @click="goAbout"
+          class=" flex justify-center items-center px-4 py-2 text-lightblack-1 rounded-lg !text-[#04A45E] mt-4"
           type="button"
-          class="w-full flex justify-center items-center px-4 py-2 bg-white text-lightblack-1 rounded-lg !text-[#04A45E] mt-4"
+          @click="goAbout"
         >
           View all
           <Icon name="material-symbols:arrow-forward-ios" class="ml-2" />
@@ -96,21 +98,21 @@ const items = ref([
   {
     title: "Leagal Consultation",
     description:
-      "LawOnGo makes mediation simple, and legal services truly serve everyone.",
+      "Profesional lebih dari 15 tahun dalam lintas industri.",
     video: "https://www.youtube.com/embed/Sy4ROOthOg4",
     poster: "/image/features/story-placeholder.png",
   },
   {
     title: "Company Establishment",
     description:
-      "Oversight is not a barrier to progress, but a guardian of trust. LawOnGo will deliver legal tech services worthy of confidence from users, partners, and regulators.",
+      "Profesional lebih dari 15 tahun dalam lintas industri.",
     video: "https://www.youtube.com/embed/81FNi23lrbc",
     poster: "/image/features/story-placeholder.png",
   },
   {
     title: "Document Creation",
     description:
-      "Let's change our perspective on the debt problem, from something scary to an opportunity to improve and rebuild.",
+      "Profesional lebih dari 15 tahun dalam lintas industri.",
     video: "https://www.youtube.com/embed/zq83AsGKCA0",
     poster: "/image/features/story-placeholder.png",
   },
@@ -124,12 +126,14 @@ const goAbout = () => {
 .story-bg {
   background-image: url("/image/features/story-bg.png");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   /* min-height: 530px; */
 }
 .card-bg {
-  background: linear-gradient(179deg, #c6fce5 0%, #edfff7 100%);
-  border-radius: 20px;
+  /* background: linear-gradient(179deg, #c6fce5 0%, #edfff7 100%); */
+  background: #FFFFFF;
+  box-shadow: inset 0px 1px 0px 0px #5AE8AE;
+  border-radius: 18px;
 }
 </style>

@@ -26,7 +26,7 @@
               stretch: 0,
               depth: 150,
               modifier: 1,
-              scale: 0.6,
+              scale: 0.4,
               slideShadows: false,
             }"
             :modules="[EffectCoverflow]"
@@ -77,7 +77,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="text-base space-y-6">
+                  <div class="text-base space-y-4">
                     <div class="flex items-center gap-2">
                       <Icon name="ic:sharp-access-time" />
                       <span>{{ item.experience }}</span>
@@ -184,14 +184,10 @@ const onSlideChange = () => {
 </script>
 <style scoped>
 .person-card-active {
-  background: linear-gradient(
-    -53deg,
-    #4ee9b8 0%,
-    #00c683 44%,
-    #01d574 81%,
-    #04f19c 100%
-  );
-  box-shadow: 0px 17px 15px -14px rgba(15, 169, 119, 0.28);
+  background-image: url('/image/features/person-card-active.png');
+  background-repeat: no-repeat;
+  background-position: center 44%;
+  background-size: 180% 300%;
   border-radius: 17px;
   color: white;
   font-size: 14px;

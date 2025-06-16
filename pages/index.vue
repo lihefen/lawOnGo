@@ -21,7 +21,7 @@
                         <a href="https://play.google.com/store/apps/details?id=com.kopa.lawongo&pcampaignid=web_share" rel="noopener noreferrer" target="_blank">
                             <img class="w-[144px] h-[44px]" src="/image/landing-page/google-logo.png" alt="google icon">
                         </a>
-                        <a href="javascript:;"  @click="ElMessage('Anticipate it with expectation')" rel="noopener noreferrer">
+                        <a href="javascript:;"  rel="noopener noreferrer" @click="ElMessage('Anticipate it with expectation')">
                             <img class="w-[144px] h-[44px]" src="/image/landing-page/appstore-logo.png" alt="appstore icon">
                         </a>
                     </div>
@@ -34,13 +34,13 @@
         </div>
     </div>
     <main>
-      <TheNavbar @loginHandler="loginHandler" />
+      <TheNavbar @login-handler="loginHandler" />
       <div class="bg-white font-lexend -mt-16">
         <HeroBanner />
         <Features />
         <Why />
         <Consultation />
-            <Solution />
+        <Solution />
         <!-- <TopAdvocate /> -->
         <BrandStory />
         <Testimonies />
@@ -51,7 +51,7 @@
     <LoginDialog
       v-model:show="showLoginDialog"
       @hide="showLoginDialog = false"
-    ></LoginDialog>
+    />
   </div>
 </template>
 <script setup>

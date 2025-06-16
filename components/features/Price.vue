@@ -1,16 +1,16 @@
 <template>
   <div class="antialiased">
-    <p class="text-2xl font-bold text-black text-center mb-6">
+    <p class="text-3xl font-bold text-black text-center mb-6">
       Consultation Price
     </p>
     <section
-      class="justify-center items-center flex-col flex lg:flex-row lg:gap-8"
+      class="justify-center items-center flex-col flex lg:flex-row lg:gap-10"
     >
       <div
         class="bg-linear-[180deg,#D2FFEB,#E2FFEF] rounded-[24px] p-8 mt-4 w-[340px] h-auto flex-1 relative overflow-visible"
       >
         <div id="content-payment">
-          <div class="flex justify-between sm:justify-center items-center">
+          <div class="flex justify-between sm:justify-center items-center mb-6">
             <div
               id="wrap-title"
               class="flex sm:flex-col gap-2 items-center -mt-12"
@@ -32,15 +32,15 @@
             </p>
           </div>
           <p
-            class="text-xs sm:text-base text-[#666666] leading-4 font-light h-18"
+            class="text-xs sm:text-base text-[#666666] leading-4 text-center h-10 mt-6"
           >
           get free legal service by uploading your KTP
           </p>
         </div>
         <button
           type="button"
+          class="flex-shrink-0 px-4.5 py-2.5 md:text-lg bg-linear-[264deg,#00D075,#069456] text-white rounded-2xl w-full text-center mt-6"
           @click="showDownDialog = true"
-          class="flex-shrink-0 px-4.5 py-2.5 md:text-lg bg-linear-[264deg,#00D075,#069456] text-white rounded-2xl w-full text-center mt-4"
         >
           <span >Apply pro Bono</span>
         </button>
@@ -49,7 +49,7 @@
         class="bg-linear-[180deg,#D2FFEB,#E2FFEF] rounded-[24px] p-8 mt-4 w-[340px] h-auto flex-1 relative overflow-visible"
       >
         <div id="content-payment">
-          <div class="flex justify-between sm:justify-center items-center">
+          <div class="flex justify-between sm:justify-center items-center mb-4">
             <div
               id="wrap-title"
               class="flex sm:flex-col gap-2 items-center -mt-12"
@@ -74,15 +74,15 @@
             </p>
           </div>
           <p
-            class="text-xs sm:text-base text-[#666666] leading-4 font-light h-18"
+            class="text-xs sm:text-base text-[#666666] leading-4 text-center h-10 mt-6"
           >
           The ideal solution for urgent legal needs and more detailed discussions
           </p>
         </div>
         <button
           type="button"
+          class="flex-shrink-0 px-4.5 py-2.5 md:text-lg bg-linear-[264deg,#00D075,#069456] text-white rounded-2xl w-full text-center mt-6"
           @click="showDownDialog = true"
-          class="flex-shrink-0 px-4.5 py-2.5 md:text-lg bg-linear-[264deg,#00D075,#069456] text-white rounded-2xl w-full text-center mt-4"
         >
           <span>Consult Now</span>
         </button>
@@ -90,22 +90,8 @@
       <div
         class="three-card-bg rounded-[24px] p-8 mt-4 w-[340px] h-auto flex-1 relative overflow-visible"
       >
-        <!-- <div
-          class="bg-[linear-gradient(317.9deg,#2886F7_-145.55%,#F64F55_104.76%)] absolute -top-2 left-0 flex items-center justify-center rounded-tl-xl rounded-r-xl shadow-lg py-1 px-[6px]"
-        >
-          <div class="flex items-center space-x-2">
-            <div class="text-white text-2xl">
-              <img
-                src="/image/utils/icon-thumbs-up.svg"
-                alt="thumbs-up"
-                width="16"
-              />
-            </div>
-            <span class="text-white font-bold text-xs">Paling Hemat!</span>
-          </div>
-        </div> -->
         <div id="content-payment">
-          <div class="flex justify-between sm:justify-center items-center">
+          <div class="flex justify-between sm:justify-center items-center mb-6">
             <div
               id="wrap-title"
               class="flex sm:flex-col gap-2 items-center -mt-12"
@@ -116,7 +102,7 @@
                 class="w-20"
               />
               <p class="font-bold antialiased sm:text-xl">
-                Chat+Voice+Vedio call service
+                Chat+Voice+Vedio call
               </p>
             </div>
           </div>
@@ -132,15 +118,15 @@
             </p>
           </div>
           <p
-            class="text-xs sm:text-base text-[#556987] leading-4 font-light h-18"
+            class="text-xs sm:text-base text-[#556987] leading-4 text-center h-10 mt-4"
           >
           In-depth discussion of difficult cases
           </p>
         </div>
         <button
-         @click="showDownDialog = true"
+         class="flex-shrink-0 md:text-lg bg-linear-[259deg,#00D98A,#00E510_10%,#00BB4D] text-white rounded-2xl w-[240px] h-[60px] text-center mt-6"
           type="button"
-          class="flex-shrink-0 px-4.5 py-2.5 md:text-lg bg-linear-[259deg,#00D98A,#00E510_10%,#00BB4D] text-white rounded-2xl w-full text-center mt-4"
+          @click="showDownDialog = true"
         >
           <span>Consult Now</span>
         </button>
@@ -181,5 +167,9 @@ onMounted(() => {
 <style scoped>
 .three-card-bg {
   background: url("/image/features/card-bg.png") no-repeat center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>

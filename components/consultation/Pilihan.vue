@@ -4,12 +4,12 @@
       <div
         class="relative overflow-hidden xl:px-14 bg-card md:rounded-[32px] md:py-6 py-4 px-4 space-y-2"
       >
-        <div class="md:py-2 space-y-2 relative">
+        <div class="md:py-2 space-y-1 relative">
           <h2 class="md:text-3xl font-semibold text-xl text-black">
             Advocate Choice
           </h2>
           <p
-            class="text-sm md:text-xs lg:text-base font-dm-sans font-normal antialiased text-neutral-900 mb-6"
+            class="text-sm md:text-xs lg:text-base font-dm-sans font-normal antialiased text-neutral-900 mb-2"
           >
             Online advocate for your legal needs. Want to apply for Pro bono
             services ?
@@ -293,18 +293,11 @@ const onSlideChange = () => {
 </script>
 <style scoped>
 .bg-card {
-  /* background: linear-gradient(
-    180deg,
-    rgba(210, 255, 235, 0.7) 0%,
-    rgba(228, 255, 243, 0.7) 100%
-  ); */
   overflow: hidden;
   background-image: url("/image/features/advocate-bg.jpg");
   background-repeat: no-repeat;
-  background-size: center;
   background-position: 0 0;
-  box-shadow: 0px 37px 27px -31px rgba(15, 169, 66, 0.15),
-    inset 0px 3px 0px 0px #ffffff;
+  box-shadow: 0px 37px 27px -31px rgba(15, 169, 66, 0.15);
   border-radius: 24px;
   backdrop-filter: blur(5px);
 }
