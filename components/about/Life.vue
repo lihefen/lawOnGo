@@ -28,15 +28,17 @@
         v-slot="{ item }"
         arrows
         dots
+        prev-icon="ic:round-less-than"
+        next-icon="ic:round-greater-than"
         :autoplay="{ delay: 3000 }"
         :items="items"
         :ui="{
           dots: 'bottom-4',
           dot: 'w-6 h-2  rounded-[5px]  [&.bg-inverted]:bg-[#09EBA7]',
         }"
-        class="mt-15"
+        class="mt-10"
       >
-        <img :src="item" width="100%" height="350" class="rounded-lg" />
+        <img :src="item" class="rounded-xl w-[900px] h-[350px]" />
       </UCarousel>
       <div class="flex justify-center items-center gap-2 mt-9">
         <button

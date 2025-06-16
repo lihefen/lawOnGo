@@ -10,32 +10,14 @@
           </h5>
           <div class="flex flex-wrap gap-4 py-2">
             <img
-              class="w-20 md:w-36"
-              src="/image/about-us/trust-logo1.png"
-              alt="peradi-footer"
-            />
-            <img
-              class="w-20 md:w-36"
-              src="/image/about-us/trust-logo2.png"
-              alt="peradi-footer"
-            />
-            <img
-              class="w-20 md:w-36"
-              src="/image/about-us/trust-logo3.png"
-              alt="peradi-footer"
-            />
-            <img
-              class="w-20 md:w-36"
-              src="/image/about-us/trust-logo4.png"
-              alt="peradi-footer"
-            />
-            <img
-              class="w-20 md:w-36"
-              src="/image/about-us/trust-logo5.png"
-              alt="peradi-footer"
+              v-for="logo in logos"
+              :key="logo.src"
+              :src="logo.src"
+              :alt="logo.alt"
+              class="w-20 md:w-[135px]"
             />
           </div>
-          <div class="border-b border-white/30 w-full"></div>
+          <div class="border-b border-[#E9E9E9] w-3/5 h-0.5 border-dashed"></div>
           <div class="relative px-3 py-4 mb-8">
             <img
               src="/image/about-us/trust-adorn.svg"
@@ -80,6 +62,33 @@
     </div>
   </section>
 </template>
+<script setup>
+import { ref } from "vue";
+
+const logos = ref([
+  {
+    src: "/image/about-us/trust-logo1.png",
+    alt: "peradi-footer",
+  },
+  
+  {
+    src: "/image/about-us/trust-logo2.png",
+    alt: "peradi-footer",
+  },
+  {
+    src: "/image/about-us/trust-logo3.png",
+    alt: "peradi-footer",
+  },
+  {
+    src: "/image/about-us/trust-logo4.png",
+    alt: "peradi-footer",
+  },
+  {
+    src: "/image/about-us/trust-logo5.png",
+    alt: "peradi-footer",
+  },
+]);
+</script>
 <style scoped>
 .card-bg {
   background-image: url("/image/about-us/trust_bg.png");

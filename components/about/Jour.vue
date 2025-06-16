@@ -7,7 +7,7 @@
     </div>
     <div class="relative mt-14 hidden md:block">
       <div
-        className="absolute top-4 left-1/2 transform -translate-x-px h-full w-0.5 bg-green-400"
+        className="absolute top-4 left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-[#1FF48F] to-transparent"
       />
       <div v-for="(item, index) in timelineData" :key="item.year">
         <div
@@ -25,7 +25,8 @@
             </span>
             <img
               alt="story-2020"
-              class="w-[280px] md:w-[410px] ml-auto"
+              class="w-[280px] md:w-[360px] object-cover"
+              :class="[index % 2 === 1 ? 'mr-auto' : 'ml-auto']"
               :src="item.image"
             />
           </div>
@@ -42,18 +43,18 @@
             /> -->
           </div>
           <div class="flex-1 flex flex-col text-left">
-            <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+            <div class="bg-gray-50 rounded-lg p-6">
               <span className="highlight-mark text-2xl font-bold text-black">
                 {{ item.title }}
               </span>
-              <p className="text-black my-2 leading-relaxed">
+              <p className="text-black my-2 leading-7">
                 {{ item.description }}
               </p>
               <div className="space-y-1">
                 <p
                   v-for="(detail, detailIndex) in item.details"
                   :key="detailIndex"
-                  className="text-black leading-relaxed break-words"
+                  className="text-black leading-7 break-words"
                 >
                   {{ detail }}
                 </p>
