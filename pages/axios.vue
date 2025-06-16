@@ -21,8 +21,7 @@ import forge from 'node-forge';
 
 import JSEncrypt from 'jsencrypt';
 
-const publicKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIbWcnQIWROhmlba/fhdJ8XGMLjHC5GC/Mb08ZueFocHLD7WUifTfyxTo0DjTm2KpRTMuUAO5YQbofuHU2kB018CAwEAAQ==';
-
+import publicKey  from '~/utils/publicKey';
 // const dataText = JSON.stringify({
 //     mobile: '13867676767',
 // });
