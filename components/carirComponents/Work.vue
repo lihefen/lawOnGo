@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-06-01 10:26:14
  * @LastEditors: hean
- * @LastEditTime: 2025-06-17 18:30:36
+ * @LastEditTime: 2025-06-17 23:12:52
 -->
 <!--
  * @Description: 
@@ -23,21 +23,33 @@
             <img class="absolute left-1/2 -translate-x-1/2 top-[10px] z-9" width="100" height="100"  src="/image/landing-page/font_bar.png">
         </h2>
       </div>
-      <div class="flex flex-col-reverse md:flex-row gap-8 md:gap-12 mt-6">
-            <div class="relative flex flex-col gap-6 w-full md:w-1/2 mt-[40px]">
-                <p class="relative text-[#000000] text-[18px] z-10 leading-tight"><span class="text-[40px] font-bold">L</span>awOnGo offers a dynamic environment where everyone can get involved and contribute to every project. We believe that every opinion, experiment, even failure is part of the learning process that ultimately leads to the development of better products and services.
+
+      <div class="p-4  md:hidden ">
+            <div class="relative ">
+                <p class="relative text-[#000000] text-[18px] z-10 leading-snug"><span class="text-[40px] font-bold">L</span>awOnGo offers a dynamic environment where everyone can get involved and contribute to every project. We believe that every opinion, experiment, even failure is part of the learning process that ultimately leads to the development of better products and services.
                 </p>
                 <img class="absolute right-0 bottom-[0px]" src="/image/landing-page/work_text_icon.png" alt="">
             </div>
-            <div  class="relative w-full md:w-1/2">
+            <div class="mt-4">
                 <iframe
-            src="https://www.youtube.com/embed/Sy4ROOthOg4"
-            class="w-[360px] h-[212px] rounded-xl shrink-0"
-            />
-                <!-- <img
-                    alt="iimg-company-services"
-                    class="w-full"
-                    src="/image/landing-page/img_work.png" /> -->
+                    src="https://www.youtube.com/embed/Sy4ROOthOg4"
+                    class="w-full h-[212px] rounded-xl shrink-0"
+                    />
+            </div>
+      </div>
+
+
+      <div class="p-4 hidden md:flex md:gap-8 mt-6 items-center">
+            <div class="relative flex-1 pb-4">
+                <p class="relative text-[#000000] text-[18px] z-10 leading-snug"><span class="text-[40px] font-bold">L</span>awOnGo offers a dynamic environment where everyone can get involved and contribute to every project. We believe that every opinion, experiment, even failure is part of the learning process that ultimately leads to the development of better products and services.
+                </p>
+                <img class="absolute right-0 bottom-[0px]" src="/image/landing-page/work_text_icon.png" alt="">
+            </div>
+            <div  class="flex-1">
+                <iframe
+                    src="https://www.youtube.com/embed/Sy4ROOthOg4"
+                    class="w-full h-[212px] rounded-xl shrink-0"
+                    />
             </div>
       </div>
     </div>
