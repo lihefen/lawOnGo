@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-18 18:45:48
  * @LastEditors: hean
- * @LastEditTime: 2025-06-10 19:51:46
+ * @LastEditTime: 2025-06-17 18:19:47
 -->
 <template>
   <ClientOnly>
@@ -15,6 +15,7 @@
       :direction="'horizontal'"
       :loop="true"
       :mousewheel="true"
+      :enabled="true"
       :breakpoints="{
         '1024': {
           direction: 'vertical',
@@ -29,19 +30,19 @@
         <div
           class="bg-white rounded-xl lg:px-8 lg:pt-6 p-3 h-full shadow-[0_7px_25px_0_rgba(0,0,0,0.09)] flex lg:flex-col lg:gap-3.5 gap-2"
         >
-            <div class="text-[10px] flex items-center gap-1">
-                <div class="w-[16px]"><img src="/image/register/person_icon.png" alt=""></div>
-                <span>LawOnGo Clent</span>
-            </div>
             <img
                 :src="item.image"
                 alt="Yakup Putra Hasibuan, S.H., LL.M"
-                class="lg:mx-auto lg:w-[472px] w-[158px] self-start"
+                class="lg:mx-auto lg:w-[460px] w-[88px] self-start"
             />
             <div class="space-y-2 flex-1">
-                <p class="font-semibold text-sm lg:text-center">{{ item.name }}</p>
-                <div class="border-t border-lightgrey-5"></div>
-                <p class="text-xs font-light">"{{ item.description }}"</p>
+                <p class="font-semibold text-sm lg:text-center break-all">{{ item.name }}</p>
+                <div class="border-t border-dashed border-[#D7D7D7]"></div>
+                <p class="text-xs font-light break-all">"{{ item.description }}"</p>
+                <div class="text-[10px] flex items-center gap-1">
+                    <div class="w-[16px]"><img src="/image/register/person_icon.png" alt=""></div>
+                    <span>LawOnGo Clent</span>
+                </div>
             </div>
         </div>
         <!--]--><!---->

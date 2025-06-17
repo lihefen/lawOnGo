@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-06-01 10:26:14
  * @LastEditors: hean
- * @LastEditTime: 2025-06-01 10:41:57
+ * @LastEditTime: 2025-06-17 18:30:36
 -->
 <!--
  * @Description: 
@@ -25,9 +25,9 @@
       </div>
       <div class="flex flex-col-reverse md:flex-row gap-8 md:gap-12 mt-6">
             <div class="relative flex flex-col gap-6 w-full md:w-1/2 mt-[40px]">
-                <p class="relative text-[#000000] text-[18px] z-10"><span class="text-[40px] font-bold">L</span>awOnGo offers a dynamic environment where everyone can get involved and contribute to every project. We believe that every opinion, experiment, even failure is part of the learning process that ultimately leads to the development of better products and services.
+                <p class="relative text-[#000000] text-[18px] z-10 leading-tight"><span class="text-[40px] font-bold">L</span>awOnGo offers a dynamic environment where everyone can get involved and contribute to every project. We believe that every opinion, experiment, even failure is part of the learning process that ultimately leads to the development of better products and services.
                 </p>
-                <img class="absolute right-0 bottom-[40px]" src="/image/landing-page/work_text_icon.png" alt="">
+                <img class="absolute right-0 bottom-[0px]" src="/image/landing-page/work_text_icon.png" alt="">
             </div>
             <div  class="relative w-full md:w-1/2">
                 <iframe
