@@ -89,34 +89,33 @@
                     v-if="item.hasDropdown && openDropdownId === item.id"
                     class="absolute top-2/3 left-0 w-80 bg-white rounded-lg shadow-lg p-2 z-50"
                     >
-                    <div class="grid gap-4">
-                        <a
-                        v-for="service in serviceItems"
-                        :key="service.id"
-                        :href="service.path"
-                        class="flex gap-2 p-2 hover:bg-gray-50 rounded-lg items-center"
-                        >
-                        <img
-                            :src="service.icon"
-                            width="32"
-                            height="32"
-                            alt="Service Icon"
-                        />
-                        <div class="flex-1">
-                            <div class="flex items-center">
-                            <h3 class="font-semibold text-perqara-text text-sm">
-                                {{ service.title }}
-                            </h3>
-                            </div>
-                            <p class="text-perqara-gray text-xs mt-1">
-                            {{ service.description }}
-                            </p>
+                        <div class="grid gap-4">
+                            <NuxtLink 
+                                v-for="service in serviceItems"
+                                :key="service.id"
+                                :to="{path:service.path}"
+                                class="flex gap-2 p-2 hover:bg-gray-50 rounded-lg items-center">
+                                    <img
+                                        :src="service.icon"
+                                        width="32"
+                                        height="32"
+                                        alt="Service Icon"
+                                    />
+                                    <div class="flex-1">
+                                        <div class="flex items-center">
+                                        <h3 class="font-semibold text-perqara-text text-sm">
+                                            {{ service.title }}
+                                        </h3>
+                                        </div>
+                                        <p class="text-perqara-gray text-xs mt-1">
+                                        {{ service.description }}
+                                        </p>
+                                    </div>
+                                    <div v-if="service.isNew" class="">
+                                        <NewBadge />
+                                    </div>
+                            </NuxtLink>
                         </div>
-                        <div v-if="service.isNew" class="">
-                            <NewBadge />
-                        </div>
-                        </a>
-                    </div>
                     </div>
                 </transition>
                 </div>
@@ -175,34 +174,33 @@
             </NuxtLink>
 
             <div v-if="item.hasDropdown && isDropdownOpen" class="py-2">
-              <a
-                v-for="service in serviceItems"
-                :key="service.id"
-                href="#"
-                class="flex items-center gap-2 p-3"
-              >
-                <div>
-                  <img
-                    :src="service.icon"
-                    width="32"
-                    height="32"
-                    alt="Service Icon"
-                  />
-                </div>
-                <div class="flex-1">
-                  <div class="flex items-center">
-                    <h3 class="font-semibold text-perqara-text text-sm">
-                      {{ service.title }}
-                    </h3>
-                  </div>
-                  <p class="text-perqara-gray text-xs mt-1">
-                    {{ service.description }}
-                  </p>
-                </div>
-                <div v-if="service.isNew">
-                  <NewBadge />
-                </div>
-              </a>
+                <NuxtLink 
+                    v-for="service in serviceItems"
+                    :key="service.id"
+                    :to="{path:service.path}"
+                    class="flex items-center gap-2 p-3">
+                        <div>
+                            <img
+                                :src="service.icon"
+                                width="32"
+                                height="32"
+                                alt="Service Icon"
+                            />
+                            </div>
+                            <div class="flex-1">
+                            <div class="flex items-center">
+                                <h3 class="font-semibold text-perqara-text text-sm">
+                                {{ service.title }}
+                                </h3>
+                            </div>
+                            <p class="text-perqara-gray text-xs mt-1">
+                                {{ service.description }}
+                            </p>
+                            </div>
+                            <div v-if="service.isNew">
+                            <NewBadge />
+                        </div>
+                </NuxtLink>
             </div>
           </div>
         </div>

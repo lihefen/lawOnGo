@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-07 23:27:22
  * @LastEditors: hean
- * @LastEditTime: 2025-06-15 21:09:16
+ * @LastEditTime: 2025-06-17 10:04:16
  */
 import tailwindcss from "@tailwindcss/vite";
 
@@ -30,12 +30,12 @@ export default defineNuxtConfig({
       },
     },
     prerender: {
-        routes: ['/about', '/faq','/axios','/cari-advokat','/down','/index','/karir','/kebijakan-privasi','/karir','/kebijakan-privasi','/layanan-lainnya','/pendirian-badan-usaha','/register','/service-page','/syarat-ketentuan','/login/advokat'], // 列出所有静态路由
+        routes: ['/about', '/faq','/axios','/cari-advokat','/down','/index','/karir','/kebijakan-privasi','/karir','/kebijakan-privasi','/layanan-lainnya','/pendirian-badan-usaha','/register','/service-page','/syarat-ketentuan','/login/advokat','/login/advokat','/service-page?id=document','/service-page?id=copyright','/service-page?id=tax'], // 列出所有静态路由
         
     }
   },
   generate:{
-    routes: ['/about', '/faq','/axios','/cari-advokat','/down','/index','/karir','/kebijakan-privasi','/karir','/kebijakan-privasi','/layanan-lainnya','/pendirian-badan-usaha','/register','/service-page','/syarat-ketentuan','/login/advokat'], // 列出所有静态路由
+    routes: ['/about', '/faq','/axios','/cari-advokat','/down','/index','/karir','/kebijakan-privasi','/karir','/kebijakan-privasi','/layanan-lainnya','/pendirian-badan-usaha','/register','/service-page','/syarat-ketentuan','/login/advokat','/login/advokat','/service-page?id=document','/service-page?id=copyright','/service-page?id=tax'], // 列出所有静态路由
   },
   alias: {
     // services: "/<rootDir>/services",
