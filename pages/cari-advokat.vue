@@ -4,9 +4,9 @@
       <TheNavbar @login-handler="loginHandler" />
       <div class="bg-[#F6F9FD]">
         <div
-          class="container max-w-[1200px] mx-auto xl:p-0 h-full 2xl:h-auto relative"
+          class="container max-w-[1280px] mx-auto px-4 xl:px-[40px] h-full 2xl:h-auto relative"
         >
-          <div class="text-black pt-4 md:pt-8 p-4">
+          <div class="text-black pt-4 md:pt-8">
             <p class="font-lexend font-bold text-xl lg:text-3xl">
               Debt Consolidation
             </p>
@@ -19,9 +19,9 @@
 
           <div
             id="wrap-inputSearching"
-            class="pb-6 p-4 sticky top-16 z-[5] flex flex-row gap-5 lg:block bg-[#F6F9FD]"
+            class=" py-4 sticky top-16 z-[5] flex flex-row gap-5 lg:da gblock bg-[#F6F9FD]"
           >
-            <div class="basis-5/6">
+            <div class="flex-1">
               <div class="relative">
                 <el-input
                   v-model="inputSearch"
@@ -55,7 +55,7 @@
             </div> -->
           </div>
 
-          <div class="lg:grid lg:grid-cols-3 lg:gap-x-6 px-4">
+          <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
             <div>
               <div id="wrap-filter-mobile"></div>
               <div class="lg:sticky lg:top-[150px]">
@@ -216,7 +216,7 @@
                             </div>
                             <img
                               :src="item.photo"
-                              class="min-w-[62px] w-[62px] md:w-[80px] max-w-[80px] min-h-[80px] h-[80px] md:h-[123px] max-h-[123px] rounded-md md:rounded-lg md:ml-1 object-cover border border-[#E7ECF0]"
+                              class="min-w-[62px] w-[62px] md:w-[98px] max-w-[98px] min-h-[80px] h-[80px] md:h-[123px] max-h-[123px] rounded-md md:rounded-lg md:ml-1 object-cover border border-[#E7ECF0]"
                             />
                           </div>
                           <div class="flex flex-col gap-1.5 flex-1">
@@ -240,7 +240,7 @@
                                 >
                               </div>
                               <div class="border-l h-2/3 border-gray-500"></div>
-                              <div class="flex gap-1 flex-1">
+                              <div class="flex gap-1 flex-1 items-center">
                                 <img
                                   alt="medal-star"
                                   class="w-4 h-4"

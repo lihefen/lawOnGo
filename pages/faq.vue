@@ -4,14 +4,14 @@
  * @Author: hean
  * @Date: 2025-05-10 17:46:47
  * @LastEditors: hean
- * @LastEditTime: 2025-06-10 18:51:10
+ * @LastEditTime: 2025-06-18 10:19:56
 -->
 <template>
   <div class="bg-cultured font-dm-sans min-h-screen">
     <main>
         <TheNavbar @loginHandler="loginHandler" />
         <div class="bg-cultured">
-            <div class="px-6 md:px-10 lg:px-10 xl:px-36 2xl:px-72 h-auto pt-4 md:pt-8 container mx-auto">
+            <div class="px-6 md:px-10 lg:px-10 xl:px-[40px] h-auto pt-4 md:pt-8 container mx-auto">
                 <h1 class="font-dm-sans text-black font-bold text-xl antialiased"> Frequently Asked Questions</h1>
                 <div  v-for="(item,index) in faqList" :key="index +999">
                     <h1 class="font-dm-sans text-black font-medium text-xl antialiased pt-8">{{ item.subName }}</h1>

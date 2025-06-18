@@ -2,7 +2,7 @@
   <div
     class="w-full py-2.5 md:py-0 px-4 h-16 transition-all duration-300 ease-in-out sticky top-0 z-40 bg-white"
   >
-    <div class="max-w-[1280px] mx-auto xl:px-20">
+    <div class="max-w-[1280px] mx-auto xl:px-[40px]">
       <div class="flex justify-between gap-2 items-center">
         <!-- Logo and mobile menu trigger -->
         <div class="flex items-center gap-6">
