@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full py-2.5 md:py-0 px-4 h-16 transition-all duration-300 ease-in-out sticky top-0 z-40 bg-white"
+    class="relative w-full z-99999 py-2.5 md:py-0 px-4 h-16 transition-all duration-300 ease-in-out sticky top-0 z-40 bg-white"
   >
     <div class="max-w-[1280px] mx-auto xl:px-[40px]">
       <div class="flex justify-between gap-2 items-center">
@@ -123,12 +123,12 @@
         </div>
 
         <div class="flex items-center gap-3">
-            <div class="flex rounded-lg w-full items-center">
+            <div class="flex rounded-lg items-center">
                 <button
                     class="border-2 border-[#04A45E] bg-white text-[#04A45E]  py-1.5 px-3 rounded-full leading-5"
                     @click="loginHandler"
                 >
-                LogOn
+                {{ $t('login.logo_on') }}
                 </button>
             
             </div>
@@ -136,9 +136,12 @@
                 class="border-2  bg-[#04A45E] border-[#04A45E] text-white  py-1.5 px-3 rounded-full leading-5"
                 @click="navigateToRegister"
             >
-            Register
+            {{ $t('register.register') }}
             </button>
+
+            <a @click="checkLang" href="javascript:;" class=" w-[66px] h-[30px]"  :class=" locale == 'en' ? 'enBtn' : 'idBtn'"></a>
         </div>
+        
       </div>
 
       <!-- Mobile Menu -->
@@ -210,81 +213,112 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted,watchEffect } from "vue";
 import { useRouter } from "vue-router";
 import NewBadge from "./NewBadge.vue";
 import ChevronDown from "./ChevronDown.vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 const router = useRouter();
-// Menu items data
-const menuItems = [
+// 使用ref存储响应式服务项
+const serviceItems = ref([])
+
+// 原始菜单项配置（不含翻译）
+const menuConfig = [
   {
     id: 1,
-    title: "Legal Services",
-    path: "#",
+    key: 'legalServices.legal_services',
+    path: "javascript:;",
     hasDropdown: true,
   },
   {
     id: 2,
-    title: "About Us",
+    key: 'aboutUs.about_us',
     path: "about",
   },
-  //   {
-  //     id: 3,
-  //     title: "Artikel Hukum",
-  //     path: "#",
-  //   },
   {
     id: 3,
-    title: "FAQ",
+    key: 'Faq',
     path: "faq",
   },
-];
+]
 
+// 使用ref存储菜单项，使其具有响应性
+const menuItems = ref([])
+// 初始化菜单
+const initMenuItems = () => {
+  menuItems.value = menuConfig.map(item => ({
+    ...item,
+    title: t(item.key)
+  }))
+}
+
+// 监听语言变化，重新初始化菜单
+watch(locale, () => {
+  initMenuItems()
+})
+
+// 初始调用
+initMenuItems()
+
+
+const serviceItemKeys = {
+    1:{
+        title:'serviceNav.ai_based_legal_services',
+        description:'serviceNav.ai_based_legal_services_description'
+    },
+    2:{
+        title:'serviceNav.legal_document_creation',
+        description:'serviceNav.legal_document_creation'
+    },
+    3:{
+        title:'serviceNav.intellectual_property_registration',
+        description:'serviceNav.intellectual_property_registration_description',
+    },
+    4:{
+        title:'serviceNav.tax_consultation',
+        description:'serviceNav.tax_consultation_description',
+    }
+}
 // Service items data
-const serviceItems = [
+const baseServiceItems = [
 
   {
     id: 1,
-    title: " AI based Legal Services ",
-    description: "Contact lawyers directly in LOG for legal service",
     icon: "/image/navbar/icon-legal-consultation.png",
     path: "cari-advokat",
   },
-//   {
-//     id: 2,
-//     title: "Pendirian Badan Usaha",
-//     description:
-//       "Layanan pendirian badan usaha (PT, CV, Yayasan), perubahan akta, dan waarmerking.",
-//     icon: "/image/navbar/icon-company-establishment.svg",
-//     isNew: true,
-//     path: "pendirian-badan-usaha",
-//   },
   {
     id: 2,
-    title: "Legal Document Creation",
-    description:
-      "Services for creating legal documents for individuals/companies such as Sales and Purchase Agreements, Employment Agreements, Power of Attorney, etc.",
     icon: "/image/navbar/document-icon.png",
     isNew: true,
     path: "service-page?id=document",
   },
   {
     id: 3,
-    title: "Intellectual Property Registration",
-    description: "Services for registering Trademarks, Patents, Copyrights, etc.",
     icon: "/image/navbar/tax-icon.png",
     isNew: true,
     path: "service-page?id=tax",
   },
   {
     id: 4,
-    title: "Tax Consultation ",
-    description: "Consultation on tax reporting for companies and individuals",
     icon: "/image/navbar/copyright-icon.png",
     isNew: true,
     path: "service-page?id=copyright",
   },
 ];
+
+// 使用watchEffect监听语言变化
+watchEffect(() => {
+  // 每次语言变化时重新生成服务项
+  serviceItems.value = baseServiceItems.map(item => {
+    const keys = serviceItemKeys[item.id]
+    return {
+      ...item,
+      title: t(keys.title),
+      description: t(keys.description)
+    }
+  })
+})
 
 // Reactive state
 const isDropdownOpen = ref(false);
@@ -322,7 +356,15 @@ const loginHandler = () => {
 };
 
 const emit = defineEmits(["loginHandler"]);
-
+const checkLang = () => {
+    if(locale.value == 'en') {
+        locale.value = 'id'
+    }else {
+        locale.value = 'en'
+    }
+    setLocaleCookie(locale.value)
+}
+console.log(locale.value)
 // Lifecycle hooks
 onMounted(() => {
   checkMobile();
@@ -356,5 +398,16 @@ onUnmounted(() => {
 }
 .rotate-chevron {
   transform: rotate(180deg);
+}
+.enBtn {
+    display: block;
+    background: url("/image/en_icon.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.idBtn {
+    display: block;
+    background: url("/image/id_icon.png") no-repeat center center;
+    background-size: 100% 100%;
 }
 </style>

@@ -1,0 +1,30 @@
+{
+    "login": {
+        "logo_on":"LogoOn"
+    },
+    "register":{
+        "register":"Register"
+    },
+    "legalServices":{
+        "legal_services": "Legal Services"
+    },
+    "aboutUs":{
+        "about_us": "About Us"
+    },
+    "serviceNav":{
+        "ai_based_legal_services":"AI based Legal Services",
+        "legal_document_creation":"Legal Document Creation",
+        "intellectual_property_registration":"Intellectual Property Registration",
+        "tax_consultation":"Tax Consultation",
+        "ai_based_legal_services_description":"Contact lawyers directly in LOG for legal service",
+        "legal_document_creation_description":"Services for creating legal documents for individuals/companies such as Sales and Purchase Agreements, Employment Agreements, Power of Attorney, etc.",
+        "intellectual_property_registration_description":"Services for registering Trademarks, Patents, Copyrights, etc.",
+        "tax_consultation_description":"Consultation on tax reporting for companies and individuals"
+    },
+    "siteMap":{
+
+    },
+    "lawOnGo_legal_services":{
+        "lawOnGo_legal_services":" LawOnGo Legal Services"
+    }
+}

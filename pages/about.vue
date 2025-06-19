@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-08 21:13:28
  * @LastEditors: hean
- * @LastEditTime: 2025-05-13 00:14:51
+ * @LastEditTime: 2025-06-18 17:43:14
 -->
 
 <template>
@@ -12,7 +12,8 @@
     <main>
       <TheNavbar @loginHandler="loginHandler" />
       <About />
-      <TheFooter />
+        <TheFooter />
+      
       <LoginDialog
         :show.sync="showLoginDialog"
         @hide="showLoginDialog = false"

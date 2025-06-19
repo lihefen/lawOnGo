@@ -1,7 +1,7 @@
 <template>
   <div class="relative z-10 max-w-[1280px] mx-auto py-12 px-10 xl:px-42">
     <div class="flex justify-center">
-      <h1 class="title-adron text-[32px] font-bold text-[#333333] w-fit">
+      <h1 class="title-adron text-[32px] font-bold text-[#333333] w-fit ">
         Our Development Jour
       </h1>
     </div>
@@ -63,6 +63,40 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="relative mt-14  md:hidden">
+        <div v-for="(item, index) in timelineData" :key="item.year">
+            <div class="relative gap-4 items-start pl-7">
+                <div class="absolute left-0 top-0 flex flex-col h-full ">
+                    <div class="bg-[#1FF48F] relative w-4 h-4 rounded-full flex items-center justify-center mt-1">
+                        <div class="w-2 h-2 bg-white rounded-full flex items-center justify-center"></div>
+                    </div>
+                    <div id="border-dashed" class="h-full ml-1.5 mt-0.5 border-l-2 border-dashed border-[#1FF48F]"></div>
+                </div>
+                <div class="w-[90%]">
+                    <span class="font-dm-sans font-bold text-gray-700 antialiased">  {{ item.year }}</span>
+                    <img :src="item.image" class="w-[223px]" alt="">
+                    <p class="font-dm-sans text-xs text-gray-500 antialiased mt-2">
+                        <span className="highlight-mark text-2xl font-bold text-black">
+                            {{ item.title }}
+                        </span>
+                    </p>
+                    <p className="text-black my-2 leading-7">
+                        {{ item.description }}
+                    </p>
+                    <div className="space-y-1">
+                        <p
+                        v-for="(detail, detailIndex) in item.details"
+                        :key="detailIndex"
+                        className="text-black leading-7 break-words"
+                        >
+                        {{ detail }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
 </template>

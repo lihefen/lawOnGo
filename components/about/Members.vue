@@ -4,17 +4,17 @@
  * @Author: hean
  * @Date: 2025-05-29 20:45:10
  * @LastEditors: hean
- * @LastEditTime: 2025-06-01 10:07:50
+ * @LastEditTime: 2025-06-18 22:53:24
 -->
 <template>
   <div class="custom-bg mb-12">
-    <div class="max-w-[1280px] mx-auto pt-4 px-10 xl:px-42">
+    <div class="max-w-[1280px] mx-auto pt-4 px-2 xl:px-10">
       <div class="relative text-center">
         <h2 class="text-[32px] font-bold text-[#333333] mb-12">
           Core members of our team
         </h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-[150px]">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-[50px] md:gap-[150px]">
         <div
           v-for="member in members"
           :key="member.name"
@@ -31,7 +31,7 @@
             <h3 class="text-2xl font-bold">{{ member.name }}</h3>
             <p class="text-lg">{{ member.job }}</p>
           </div>
-          <div class="relative text-[#333333] mt-2 w-[260px]">
+          <div class="relative text-[#333333] mt-2 px-4 md:px-0  md:w-[260px]">
             <div class="relative z-100">
               <p class="text-warp">{{ member.description }}</p>
             </div>

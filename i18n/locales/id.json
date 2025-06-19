@@ -1,0 +1,24 @@
+{
+    "login": {
+        "logo_on":"Masuk"
+    },
+    "register":{
+        "register":"Daftar"
+    },
+    "legalServices":{
+        "legal_services": "Layanan Hukum"
+    },
+    "aboutUs":{
+        "about_us": "Tentang Kami"
+    },
+    "serviceNav":{
+        "ai_based_legal_services":"Layanan Hukum Berbasis AI",
+        "legal_document_creation":"Pembuatan Dokumen Hukum",
+        "intellectual_property_registration":"Pendaftaran Kekayaan Intelektual",
+        "tax_consultation":"Konsultasi Pajak",
+        "ai_based_legal_services_description":"Hubungi pengacara langsung di LOG untuk layanan hukum",
+        "legal_document_creation_description":"Layanan untuk pembuatan dokumen hukum bagi individu/perusahaan seperti Perjanjian Jual Beli, Perjanjian Kerja, Surat Kuasa, dan lainnya.",
+        "intellectual_property_registration_description":"Layanan untuk pendaftaran Merek Dagang, Paten, Hak Cipta, dan lainnya.",
+        "tax_consultation_description":"Konsultasi mengenai pelaporan pajak untuk perusahaan dan individu."
+    }
+}

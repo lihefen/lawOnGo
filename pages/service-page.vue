@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-08 21:13:28
  * @LastEditors: hean
- * @LastEditTime: 2025-06-18 14:46:11
+ * @LastEditTime: 2025-06-18 17:03:06
 -->
 
 <template>
@@ -185,7 +185,7 @@
             </div>
         </section>
 
-        <section id="pendirian-badan-usaha" class="py-6 md:py-12 bg-[#F5FBFD] relative z-10">
+        <section id="pendirian-badan-usaha" class="py-6 md:py-12 bg-[linear-gradient(0deg,rgba(255,255,255,1)_19%,rgba(194,255,231,0.43)_60%,rgba(204,255,235,0.26)_96%)] relative z-10">
             <div class="max-w-[1280px] mx-auto px-4 xl:px-40">
                 <div class="flex flex-col-reverse md:flex-row gap-8 md:gap-12">
                     <div class="flex flex-col gap-6 w-full md:w-1/2">
@@ -252,7 +252,7 @@
                 </div>
             </div>
         </section>
-        <section  id="pendaftaran-haki" class="py-6 md:py-12 bg-[#F5FBFD] relative z-10">
+        <section  id="pendaftaran-haki" class="py-6 md:py-12 bg-[#F7F7F7] relative z-10">
             <div  class="max-w-[1280px] mx-auto px-4 xl:px-40">
                 <div  class="flex flex-col-reverse md:flex-row gap-8 md:gap-12">
                     <div  class="flex flex-col gap-4 w-full md:w-1/2">
@@ -312,30 +312,37 @@
             </div>
         </section>
 
-        <section class="py-8 md:py-12 relative z-10" >
+        <section class="py-8 md:py-0 relative z-10" >
             <div class="max-w-[1280px] mx-auto px-4 xl:px-40" >
-                <div class="flex flex-col gap-12" >
+                <div class="flex juster-center flex-col gap-12" >
                     <h2 class="text-2xl md:text-3xl font-bold text-center" > Process Stages </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6 text-center" >
-                        <div relative  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4>
-                            <div class=" process-title-1  mx-auto  w-[130px] h-[130px]" ></div>
-                            <div class="processCard relative mt-[-80px]  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4" >
-                            <span class="text-lg md:text-2xl font-bold" >Submit Offer Form</span><span class="text-[#556987] font-light text-left" >Explain the details of your legal needs by filling out the offer form.</span>
-                            </div>
+                    <div class="md:flex text-center" >
+                        <div class="relative  md:gap-4 md:w-[390px]">
+                           <div  class="relative flex flex-col gap-2">
+                                <div class=" process-title-1  mx-auto  w-[130px] h-[130px]" ></div>
+                                <div class="processCard relative mt-[-84px]  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4 md:min-h-[190px]" >
+                                    <span class="text-lg md:text-2xl font-bold" >Submit Offer Form</span><span class="text-[#556987] font-light text-left" >Explain the details of your legal needs by filling out the offer form.</span>
+                                </div>
+                           </div>
+                            <img src="/image/process_arrow.png" class="hidden md:block absolute right-[-32px] top-[140px] w-[10px] h-[18px]" alt="">
                         </div>
-
-                        <div relative  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4>
-                            <div class=" process-title-2  mx-auto  w-[130px] h-[130px]" ></div>
-                            <div class="processCard relative mt-[-80px]  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4" >
-                            <span class="text-lg md:text-2xl font-bold" >Consult Your Needs</span><span class="text-[#556987] font-light text-left" >The LawOnGo team will contact you within a maximum of 24 hours.</span>
+                        <div class="relative md:gap-4 md:w-[390px] md:ml-[58px]">
+                            <div class="relative flex flex-col gap-2">
+                                <div class=" process-title-2  mx-auto  w-[130px] h-[130px]" ></div>
+                                <div class="processCard relative mt-[-84px]  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4 md:min-h-[190px]" >
+                                    <span class="text-lg md:text-2xl font-bold" >Consult Your Needs</span><span class="text-[#556987] font-light text-left" >The LawOnGo team will contact you within a maximum of 24 hours.</span>
+                                </div>
                             </div>
+                            <img src="/image/process_arrow.png" class="hidden md:block absolute right-[-32px] top-[140px] w-[10px] h-[18px]" alt="">
                         </div>
-
-                        <div relative  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4>
-                            <div class=" process-title-3  mx-auto  w-[130px] h-[130px]" ></div>
-                            <div class="processCard relative mt-[-80px]  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4" >
-                            <span class="text-lg md:text-2xl font-bold" >Transparent Process</span><span class="text-[#556987] font-light text-left" >Our professional team will report the work process periodically until completion.</span>
+                        <div class="relative md:gap-4 md:w-[390px] md:ml-[58px]">
+                            <div class="relative flex flex-col gap-2">
+                                <div class=" process-title-3  mx-auto  w-[130px] h-[130px]" ></div>
+                                <div class="processCard relative mt-[-84px]  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4 md:min-h-[190px]" >
+                                    <span class="text-lg md:text-2xl font-bold" >Transparent Process</span><span class="text-[#556987] font-light text-left" >Our professional team will report the work process periodically until completion.</span>
+                                </div>
                             </div>
+                       
                         </div>
                        
                     </div>
@@ -343,9 +350,10 @@
             </div>
         </section>
 
-        <section id="form" class="md:py-12 relative z-10">
-            <div class="max-w-[1280px] mx-auto xl:px-56">
-                <div class="rounded-2xl bg-white px-4 md:px-8 py-7 shadow-[0_-8px_10px_-5px_rgba(0,0,0,0.04),_0_10px_25px_-5px_rgba(0,0,0,0.10)]">
+        <section id="form" class="md:py-12 relative z-10 ">
+            <div class="max-w-[900px] mx-auto">
+                <div class="relative rounded-2xl bg-[linear-gradient(180deg,#D7FFEE_0%,#FFFFFF_23%,#FFFFFF_100%)] px-4 md:px-8 py-7 shadow-[0_6px_19px_-6px_rgba(15,207,123,0.31)]">
+                    <img src="/image/login_icon.png" class="absolute top-0 left-0  " alt="">
                     <div class="flex flex-col gap-4">
                         <h2 class="text-2xl font-semibold text-center md:w-[52%] mx-auto"> Complete your personal data so that we can immediately contact you</h2>
                         <div class="flex flex-col sm:flex-row gap-6">
@@ -439,18 +447,18 @@
         </section>
 
         <section class="py-8 relative z-10 bg-gradient-to-b from-[#DDF6EB] to-[#FFFFFF] ">
-            <div class="max-w-[1280px] mx-auto px-4 xl:px-40">
+            <div class="max-w-[1280px] mx-auto xl:px-[40px]">
                 <div class="space-y-4">
                     <h2 class="text-2xl md:text-3xl font-bold text-[#262E35] text-center" > Frequently Asked Questions </h2>
                     <div class="space-y-4" v-for="(item, index) in questionsList" :key="index + 909">
-                        <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 ">
-                            <el-collapse-item title="Consistency" name="1">
+                        <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 " expand-icon-position="right">
+                            <el-collapse-item title="Consistency" name="1" class="flex-1">
                                 <template #title="{ isActive }">
-                                <div :class="['title-wrapper', { 'is-active': isActive }]">
-                                    <div class="space-y-2 flex-1">
-                                        <p class="font-semibold leading-5" >{{ item.title }}</p>
+                                    <div :class="['title-wrapper', { 'is-active': isActive }]">
+                                        <div class="space-y-2 flex-1">
+                                            <p class="font-semibold leading-5" >{{ item.title }}</p>
+                                        </div>
                                     </div>
-                                </div>
                                 </template>
                                 <div>
                                     <p class="font-light text-[#737373] leading-6 group-data-[active=false]:hidden" v-html=" item.desc"></p>
@@ -511,11 +519,11 @@
         </section>
 
         <section  class="py-8 relative z-10">
-            <div  class="max-w-[1280px] mx-auto px-4 xl:px-60">
+            <div  class="max-w-[1280px] mx-auto px-4 xl:px-[60px]">
                 <div class="relative bg-gradient-to-r from-[#00B163] to-[#00D89C]  md:p-6  flex flex-col md:flex-row items-center gap-3 md:gap-6 rounded-2xl">
-                    <img class="absolute left-[0] -bottom-[0px]"  src="/image/landing-page/icon-customer-service.png" alt="">
+                    <img class="md:absolute md:left-[0] md:bottom-[0px]"  src="/image/landing-page/icon-customer-service.png" alt="">
                     <div  class="flex flex-col md:flex-row items-center justify-between w-full text-center md:text-left gap-3">
-                        <span  class="flex-1 font-semibold text-xl md:text-2xl text-cultured ml-[260px]">Can't find the service you need?</span>
+                        <span  class="flex-1 font-semibold text-xl md:text-[32px] text-[#ffffff]  md:ml-[260px]">Can't find the service you need?</span>
                         <button @click="goWa"  class="w-full md:w-auto text-lightblack-1 font-semibold bg-white w-[180px] px-5 py-3 text-[#005F38] text-center rounded-[18px] text-[24px] shadow"> Contact Us</button>
                     </div>
                 </div>

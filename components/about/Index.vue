@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-29 20:45:10
  * @LastEditors: hean
- * @LastEditTime: 2025-05-30 14:55:55
+ * @LastEditTime: 2025-06-18 18:09:38
 -->
 <template>
   <div>
@@ -14,7 +14,10 @@
     <Jour />
     <Members />
     <Life />
-    <FootBanner />
+    <div class="mt-12 md:mt-[116px]">
+        <FootBanner />
+    </div>
+    
   </div>
 </template>
 <script setup>
