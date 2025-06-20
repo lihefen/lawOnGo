@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-29 20:45:10
  * @LastEditors: hean
- * @LastEditTime: 2025-06-10 16:53:21
+ * @LastEditTime: 2025-06-20 14:49:21
 -->
 <template>
   <div class="card-bg md:h-[572px]">
@@ -16,20 +16,12 @@
       >
         <div class="flex flex-col text-white gap-1">
           <p class="text-[42px] leading-[50px]">
-            Building a Bridge between Law and Life
+            {{ $t('aboutUs.building_life') }}
           </p>
           <p class="text-lg">
-            LawOnGo is an AI-based legal service platform,focusing on providing
-            one-stop online legal solutions such as debt mediation,legal
-            consultation,and contract support for individuals and small and
-            medium-sized enterprises in Indonesia.
+            {{ $t('aboutUs.lawOnGo') }}
           </p>
         </div>
-        <!-- <Video
-            video="https://media.w3.org/2010/05/sintel/trailer.mp4"
-            poster="/image/features/story-placeholder.png"
-            class="w-[360px] h-[212px] shrink-0"
-          /> -->
 
         <iframe
           src="https://www.youtube.com/embed/zq83AsGKCA0"
@@ -41,6 +33,8 @@
 </template>
 <script setup>
 // import Video from "../BrandStory/Video.vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
+
 </script>
 <style scoped>
 .card-bg {

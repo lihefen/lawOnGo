@@ -6,7 +6,7 @@
       >
         <div class="flex flex-col gap-2 md:gap-4 items-center">
           <h5 class="sm:text-2xl lg:text-3xl font-semibold">
-            A Trustworthy Platform
+            {{ $t('trustworthy_platform.trustworthy_platform') }}
           </h5>
           <div class="flex flex-wrap gap-4 py-2">
             <img
@@ -32,15 +32,15 @@
             >
               <div class="flex flex-col">
                 <span class="md:text-2xl font-medium">8000+</span>
-                <span class="text-xs md:text-sm">Suceess stories</span>
+                <span class="text-xs md:text-sm">{{ $t('trustworthy_platform.suceess_stories') }}</span>
               </div>
               <div class="flex flex-col">
                 <span class="md:text-2xl font-medium">50+</span>
-                <span class="text-xs md:text-sm">Registered lawyers</span>
+                <span class="text-xs md:text-sm">{{ $t('trustworthy_platform.registered_lawyers') }}</span>
               </div>
               <div class="flex flex-col">
                 <span class="md:text-2xl font-medium">15+</span>
-                <span class="text-xs md:text-sm">Cities Covered</span>
+                <span class="text-xs md:text-sm">{{ $t('trustworthy_platform.cities_covered') }}</span>
               </div>
               <div class="flex flex-col">
                 <span
@@ -53,7 +53,7 @@
                   />
                   <span>4.9<span class="text-sm">/5.0</span></span>
                 </span>
-                <span class="text-xs md:text-sm">Excellent rating</span>
+                <span class="text-xs md:text-sm">{{ $t('trustworthy_platform.excellent_rating') }}</span>
               </div>
             </div>
           </div>
@@ -64,6 +64,7 @@
 </template>
 <script setup>
 import { ref } from "vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 
 const logos = ref([
   {

@@ -9,7 +9,18 @@
         "legal_services": "Legal Services"
     },
     "aboutUs":{
-        "about_us": "About Us"
+        "about_us": "About Us",
+        "building_life":"Building a Bridge between Law and Life",
+        "lawOnGo":"LawOnGo is an AI-based legal service platform,focusing on providing one-stop online legal solutions such as debt mediation,legal consultation,and contract support for individuals and small and medium-sized enterprises in Indonesia.",
+        "mission":"Mission",
+        "focus":"Focus on customer service,continuously providing legal services that meet user needs,supported by exceptional innovation and technology.Our goal is to make our platform the first choice for Indonesians to access high-quality,convenient,and personalized legal services.",
+        "vision":"Vision",
+        "to_become":"To become Indonesia's leading online legal consultation platform,centered on delivering exceptional customer experience. We aim to set the industry benchmark, promote fair access to legal services, and lead the digital transformation of the legal sector.",
+        "values":"Values",
+        "customer":"Customer First Customers are priority",
+        "professionalism":"Professionalism Professionalism Transparency",
+        "fairness":"Fairness Innovation and Technology"
+
     },
     "serviceNav":{
         "ai_based_legal_services":"AI based Legal Services",
