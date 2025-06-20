@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="text-xl lg:text-3xl text-center font-semibold pt-4">
-      Like Them, Anyone Can Find A Solution!
+      {{ $t('likeThem.like_them') }}
     </h2>
     <div class="xl:flex xl:justify-center">
       <div id="wrapper-carousel" class="max-w-[1280px] xl:px-40">
@@ -16,7 +16,7 @@
             v-slot="{ item }"
             :loop="true"
             :autoplay="{delay: 3000}"
-            :items="items"
+            :items="currentList"
             :ui="{
               container: 'items-stretch',
               item: 'basis-auto w-52 md:w-60 lg:w-[290px] xl:w-[320px]',
@@ -54,8 +54,9 @@
 </template>
 <script setup>
 import { ref } from "vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 
-const items = ref([
+const itemsEn = ref([
   {
     id: 1,
     name: "harina ",
@@ -76,6 +77,32 @@ const items = ref([
   },
 ]);
 
+const itemsId = ref([
+  {
+    id: 1,
+    name: "harina ",
+    quote:
+      "After submitting the information, the lawyer contacted me quickly and helped me solve the debt problem. Thanks to LawOnGo ",
+  },
+  {
+    id: 2,
+    name: "matinrus",
+    quote:
+      "Attorney Rima demonstrated exceptional professionalism—patiently listening to my concerns, providing practical legal guidance, and skillfully negotiating with my borrower. She resolved all my debts within manageable terms. I truly can't imagine how I'll be today without LawOnGo. ",
+  },
+  {
+    id: 3,
+    name: "siska",
+    quote:
+      "AI smart consultation is very goood. It answered my questions in just a few words. Most importantly, it is completely free. I hope LawOnGo will do better and better.",
+  },
+]);
+
+// 计算属性：根据语言环境返回对应的 FAQ 列表
+const currentList = computed(() => {
+  return locale.value == 'id' ? itemsId.value : itemsEn.value;
+});
+
 const carousel = useTemplateRef("carousel");
 const prevBtnDisabled = ref(false);
 const nextBtnDisabled = ref(false);
@@ -85,6 +112,7 @@ const onSelect = () => {
   prevBtnDisabled.value = !carousel.value.emblaApi.canScrollPrev();
   nextBtnDisabled.value = !carousel.value.emblaApi.canScrollNext();
 };
+
 
 // const onNextButtonClick = () => {
 //   if (!carousel.value) return;

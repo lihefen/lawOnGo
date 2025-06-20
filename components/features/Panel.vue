@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-25 18:28:37
  * @LastEditors: hean
- * @LastEditTime: 2025-06-18 10:16:20
+ * @LastEditTime: 2025-06-19 23:14:24
 -->
 <template>
   <div class="relative">
@@ -13,7 +13,7 @@
         class="p-3 md:p-6 rounded-xl flex flex-col items-center gap-3 md:gap-6"
       >
         <h5 class="text-2xl lg:text-3xl font-bold text-center">
-          LawOnGo Legal Services
+            {{ $t('lawOnGo_legal_services.lawOnGo_legal_services') }}
         </h5>
         <div
           class="flex md:flex-row md:flex-wrap flex-col gap-4 md:gap-6 w-full cursor-pointer"
@@ -30,10 +30,10 @@
               />
               <div>
                 <p class="font-bold text-xl lg:text-2xl flex-1">
-                  Debt <br />Consolidation
+                    {{ $t('lawOnGo_legal_services.debt') }} <br />{{ $t('lawOnGo_legal_services.consolidation') }}
                 </p>
                 <p class="text-xs sm:text-sm text-[#647387]">
-                  AI+Legal Consultation
+                    {{ $t('lawOnGo_legal_services.debt') }} <br />{{ $t('lawOnGo_legal_services.ai_legal_consultation') }}
                 </p>
               </div>
             </div>
@@ -55,9 +55,9 @@
                 class="w-12 md:w-14 lg:w-[110px]"
               />
               <div>
-                <p class="font-bold text-xl lg:text-2xl flex-1">Debt Relief</p>
+                <p class="font-bold text-xl lg:text-2xl flex-1">{{ $t('lawOnGo_legal_services.debt_relief') }}</p>
                 <p class="text-xs sm:text-sm text-[#647387]">
-                  Debt relief solution
+                    {{ $t('lawOnGo_legal_services.debt_relief_solution') }}
                 </p>
               </div>
             </div>
@@ -73,10 +73,10 @@
           >
             <div class="flex gap-2 items-center m-0">
                 <img src="/image/utils/other_icon.png" alt="icon-other" class="w-6 md:w-6 lg:w-[40px]">
-              <p class="font-bold text-xl lg:text-2xl flex-1">Other</p>
+              <p class="font-bold text-xl lg:text-2xl flex-1">{{ $t('lawOnGo_legal_services.other') }}</p>
             </div>
             <p class="text-xs sm:text-sm text-[#647387] mt-2">
-              Rapid debt reduction
+                {{ $t('lawOnGo_legal_services.rapid_debt_reduction') }}
             </p>
             <img
               src="/image/features/polka-dot.svg"
@@ -89,6 +89,9 @@
     </div>
   </div>
 </template>
+<script setup>
+    const { locales, locale, setLocaleCookie,t } = useI18n()
+</script>
 <style scoped>
 .bg-gradient-panel {
   position: relative;

@@ -20,5 +20,48 @@
         "legal_document_creation_description":"Layanan untuk pembuatan dokumen hukum bagi individu/perusahaan seperti Perjanjian Jual Beli, Perjanjian Kerja, Surat Kuasa, dan lainnya.",
         "intellectual_property_registration_description":"Layanan untuk pendaftaran Merek Dagang, Paten, Hak Cipta, dan lainnya.",
         "tax_consultation_description":"Konsultasi mengenai pelaporan pajak untuk perusahaan dan individu."
+    },
+    "lawOnGo_legal_services":{
+        "lawOnGo_legal_services":"Layanan Hukum LawOnGo",
+        "debt":"Utang",
+        "consolidation":"Konsultasi",
+        "ai_legal_consultation":"AI+Hukum Konsultasi",
+        "debt_relief":"Utang Kenyamanan",
+        "debt_relief_solution":"Solusi pembebasan utang",
+        "other":"Lainnya",
+        "rapid_debt_reduction":"Pengurangan utang cepat"
+    },
+    "ourTeam":{
+        "our_team":"Tim Kami",
+        "view_all_advocates" :"Lihat semua advokat"
+    },
+    "faq":{
+        "frequently_asked_questions":"Pertanyaan Umum (FAQ)",
+         "above_qa":"Pertanyaan dan jawaban di atas mencakup empat dimensi utama:pengenalan platform,keamanan akun,konsultasi online,dan mediasi utang.Jika Anda perlu mempelajari lebih lanjut tentang modul layanan lainnya(seperti layanan tinjauan kontrak),silakan hubungi layanan pelanggan AI 24/7 secara langsung."
+    },
+    "trustworthy_platform": {
+        "trustworthy_platform":"Sebuah Platform yang Dapat Diandalkan",
+        "suceess_stories":"Kisah Sukses",
+        "cities_covered":"Kota Dijangkau",
+        "registered_lawyers":"Advokat Terdaftar",
+        "excellent_rating":"Kepuasan Klien"
+    },
+    "likeThem": {
+        "like_them":"Seperti mereka, siapa saja dapat menemukan solusi!"
+    },
+    "footBanner": {
+        "consult_your":"Konsultasikan masalah hukum Anda sekarang!",
+        "with_lawOnGo":"Dengan LawOnGo, siapa saja dapat melakukan konsultasi hukum kapan saja dan di mana saja."
+    },
+    "foot": {
+        "fllow_us":"Ikuti Kami",
+        "about_us":"Tentang Kami",
+        "find_an_advocate":"Cari Advokat",
+        "career":"Karier",
+        "terms_and_conditions":"Syarat dan Ketentuan",
+        "address":"Alamat",
+        "vantage_office":"Vantage Office Business Centre at Equity Tower, 26th floor H, Kavling 52 - 52, Jl Jendral Sudirman Senayan, Jakarta Selatan, 12910 Jakarta, Indonesia"
     }
+
+
 }

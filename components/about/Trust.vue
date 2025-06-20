@@ -40,7 +40,7 @@
               </div>
               <div class="flex flex-col">
                 <span class="md:text-2xl font-medium">15+</span>
-                <span class="text-xs md:text-sm">cities Covered</span>
+                <span class="text-xs md:text-sm">Cities Covered</span>
               </div>
               <div class="flex flex-col">
                 <span

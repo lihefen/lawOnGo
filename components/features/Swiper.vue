@@ -33,7 +33,7 @@
             @swiper="onSwiper"
             @slide-change="onSlideChange"
           >
-            <swiper-slide v-for="item in items" :key="item.id" class="w-auto!">
+            <swiper-slide v-for="item in currentList" :key="item.id" class="w-auto!">
               <div class="w-[470px] h-[300px] py-8 relative overflow-visible">
                 <div
                   :class="
@@ -118,13 +118,14 @@
 import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { EffectCoverflow } from "swiper/modules";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 
 import "swiper/css";
 
 const swiperRef = ref(null);
 const activeIndex = ref(0);
 
-const items = ref([
+const itemsEn = ref([
   {
     id: 1,
     image: "/image/landing-page/lawyer/profile-lawyer-2.png",
@@ -171,6 +172,49 @@ const items = ref([
   //     services: "Family Law, Criminal Law, Civil Law",
   //   },
 ]);
+
+const itemsId = ref([
+  {
+    id: 1,
+    image: "/image/landing-page/lawyer/profile-lawyer-2.png",
+    name: "Aditya Edo Primantoro",
+    rating: 5,
+    experience: "10+ years",
+    peopleHelped: "1000+",
+    services: "Family Law, Criminal Law, Civil Law",
+  },
+  {
+    id: 2,
+    image: "/image/landing-page/lawyer/profile-lawyer-1.png",
+    name: "Farouq Habibullah El-Hassan, S.H",
+    rating: 5,
+    experience: "10+ years",
+    peopleHelped: "1000+",
+    services: "Family Law, Criminal Law, Civil Law",
+  },
+  {
+    id: 3,
+    image: "/image/landing-page/lawyer/profile-lawyer-3.png",
+    name: "Riza Zafita Rizki, S.H.",
+    rating: 5,
+    experience: "10+ years",
+    peopleHelped: "1000+",
+    services: "Family Law, Criminal Law, Civil Law",
+  },
+  {
+    id: 4,
+    image: "/image/landing-page/lawyer/profile-lawyer-4.png",
+    name: "Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.",
+    rating: 5,
+    experience: "10+ years",
+    peopleHelped: "1000+",
+    services: "Family Law, Criminal Law, Civil Law",
+  },
+]);
+
+const currentList = computed(() => {
+  return locale.value == 'id' ? itemsId.value : itemsEn.value;
+});
 
 const onSwiper = (newSwiper) => {
   swiperRef.value = newSwiper;

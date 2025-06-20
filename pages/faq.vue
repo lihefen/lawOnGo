@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-10 17:46:47
  * @LastEditors: hean
- * @LastEditTime: 2025-06-18 10:19:56
+ * @LastEditTime: 2025-06-20 14:01:53
 -->
 <template>
   <div class="bg-cultured font-dm-sans min-h-screen">
@@ -12,8 +12,8 @@
         <TheNavbar @loginHandler="loginHandler" />
         <div class="bg-cultured">
             <div class="px-6 md:px-10 lg:px-10 xl:px-[40px] h-auto pt-4 md:pt-8 container mx-auto">
-                <h1 class="font-dm-sans text-black font-bold text-xl antialiased"> Frequently Asked Questions</h1>
-                <div  v-for="(item,index) in faqList" :key="index +999">
+                <h1 class="font-dm-sans text-black font-bold text-xl antialiased">{{ $t('faq.frequently_asked_questions') }}</h1>
+                <div  v-for="(item,index) in currentFaqList" :key="index +999">
                     <h1 class="font-dm-sans text-black font-medium text-xl antialiased pt-8">{{ item.subName }}</h1>
                     <section class="flex flex-col md:flex-row mt-4" v-for="(d,i) in item.content" :key="i+10">
                         <div class="w-full">
@@ -28,8 +28,6 @@
                                             </template>
                                             <div>
                                                 <div class="mt-2 text-base font-dm-sans text-slate-500 font-normal antialiased prose" v-html="d.desc">
-
-
                                                 </div>
                                             </div>
                                         </el-collapse-item>
@@ -40,7 +38,7 @@
                         </div>
                     </section>
                 </div>
-                <div class="py-6">The above Q&A covers four major dimensions:platform introduction,account security,online consultation,and debt mediation.If you need to learn more about other service modules(such as contract review services),please contact the 24/7 AI customer service directly.</div>
+                <div class="py-6">T{{ $t('faq.above_qa') }}</div>
             </div>
         </div>
         <TheFooter />
@@ -52,8 +50,12 @@
 
 <script setup>
 import { faUtensilSpoon } from "@fortawesome/free-solid-svg-icons";
+
 import { ref ,defineEmits} from "vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
+
 const showLoginDialog = ref(false);
+console.log(locale.value)
 const loginHandler = () => {
     console.log("loginHandler");
     showLoginDialog.value = true;
@@ -64,7 +66,7 @@ const handleChange = (val) => {
   console.log(val)
 }
 
-const faqList = ref([
+const faqListEn = ref([
     {
         subName:'About LawOnGo',
         content:[
@@ -147,6 +149,298 @@ const faqList = ref([
         ]
     }
 ])
+
+const faqListId = ref([
+    {
+        subName:'Tentang LawOnGo',
+        content:[
+            {
+                title: 'Apa itu LawOnGo?',
+                desc:`LawOnGo adalah platform hukum berbasis AI yang fokus pada solusi mediasi utang yang cepat,legal,dan ramah pengguna.</br>
+                Melalui LawOnGo,Anda dapat dengan mudah mengakses layanan mediasi utang,konsultasi hukum,dan perlindungan hak melalui smartphone-tanpa biaya awal dan tanpa harus mengunjungi kantor pengacara.</br>
+                LawOnGo berkomitmen untuk membantu masyarakat Indonesia mengatasi tekanan utang secara adil, aman, dan manusiawi. Didukung oleh teknologi kecerdasan buatan dan jaringan profesional hukum yang terpercaya, kami menyediakan :</br>
+                <ol><ul><li>Mediasi utang secara daring yang sah dan sesuai regulasi</li></ul>
+                    <ul><li>Konsultasi hukum berbasis AI 24/7 yang cepat dan rahasia</li></ul>
+                    <ul><li>Layanan Negosiasi dengan kreditur atas nama Anda</li></ul>
+                    <ul><li>Perlindungan data serta pendampingan hukum selama proses berlangsung
+                    Kami percaya bahwa setiap individu berhak mendapatkan akses hukum yang terjangkau dan dapat diandalkan, terutama saat menghadapi masa-masa sulit. LawOnGo siap menjadi mitra Anda menuju kebebasan finansial.</li></ul></ol>`
+            },
+            {
+                title: 'Apa kekuatan inti LawOnGo?',
+                desc:`LawOnGo berkomitmen untuk menciptakan platform layanan hukum online yang profesional,efisien,dan dapat dipercaya dengan mengintegrasikan teknologi AI dengan sumber daya hukum.Keempat kekuatan inti kami meliputi:</br>
+                    <ol>
+                        <ul><li>Teknologi Pencocokan Cerdas yang Didukung AI</li</ul>
+                    </ol>
+                    Ajukan pertanyaan, sistem kami segera mencocokkan pengguna dengan advokat atau mediator terbaik berdasarkan jenis kasus, kebutuhan layanan, dan rekam jejak keberhasilan. Cepat, akurat, dan efisien.</br>
+                    Dimensi pencocokan meliputi:keahlian hukum,pengalaman penanganan kasus,peringkat pengguna,kecepatan respons,dll.</br>
+                    📌Keuntungan:Meningkatkan akurasi pencocokan,menghemat waktu tunggu,dan memastikan bahwa setiap pengguna menemukan bantuan hukum yang paling sesuai.
+                    <ol>
+                        <ul><li>Teknologi Pencocokan Cerdas yang Didukung AI</li></ul>
+                        <ul>
+                            <li>Integrasi Sumber Daya Hukum Nasional Top-Tier LawOnGo telah bekerja sama dengan lebih dari 50+firma hukum dan tim hukum terkenal,meliputi:</br></li>
+                        </ul>
+                        <ul><li>Mediasi utang</li></ul>
+                        <ul><li>Hukum perusahaan</li></ul>
+                        <ul><li>Hak kekayaan intelektual</li></ul>
+                        <ul><li>Perselisihan tenaga kerja</li></ul>
+                    </ol>
+                    Kemitraan ini mencakup kota-kota besar dan sektor industri utama di seluruh negeri,memberikan dukungan profesional yang luas bagi pengguna.
+                    📌Keuntungan:Baik masalah pribadi maupun kebutuhan perusahaan,pengguna dapat memperoleh layanan ahli satu atap di platform.
+                    <ol>
+                    <ul><li>Pengalaman Proses Penuh Online Satu Atap</li></ul>
+                    <ul><li>Dari konsultasi hukum→penyusunan rencana→mediasi online→penandatanganan perjanjian→pelacakan pelaksanaan,semuanya dapat diselesaikan dalam Aplikasi LawOnGo.</br>
+                    Platform ini mendukung tanda tangan elektronik,penyimpanan kontrak,pelacakan rekaman mediasi,dan layanan pengikut.</li></ul>
+                    </ol>
+                    📌Keuntungan:Menghilangkan proses offline yang merepotkan,meningkatkan efisiensi dan kenyamanan layanan hukum.
+                    <ol>
+                    <ul><li>Mekanisme Pembayaran Tanpa Risiko,Fleksibel</br>Kami menawarkan berbagai model pembayaran untuk memenuhi kebutuhan pengguna yang berbeda:</li></ul>
+                    <ul><li>Berorientasi hasil(bayar setelah berhasil)</li></ul>
+                    <ul><li>Pembayaran cicilan(0 uang muka+penyelesaian fleksibel)</li></ul>
+                    <ul><li>Layanan Tanya Jawab AI gratis</br>Tidak ada biaya kecuali berhasil,melindungi kepentingan pengguna.</li></ul>
+                    </ol>
+                    📌Keuntungan:Menurunkan batas masuk untuk pengguna pertama kali,meningkatkan kepercayaan dan tingkat konversi layanan.
+                    Kami berjanji:</br>
+                    <ol>
+                    <ul><li>100%Kerahasiaan Data:Semua materi yang diunggah dan konten percakapan dienkripsi secara ketat.</li></ul>
+                    <ul><li>100%Pengacara Asli:Setiap konsultan mitra diverifikasi untuk identitas dan kualifikasi profesional.</li></ul>
+                    <ul><li>100%Proses Terlihat:Setiap langkah kemajuan dapat dilacak di platform,memberikan pengguna kendali penuh.</li></ul>
+                    </ol>`
+            },
+            {
+                title: 'Apa jenis layanan yang ditawarkan LawOnGo?',
+                desc:`
+                    LawOnGo menawarkan berbagai layanan hukum dan solusi utang yang dirancang untuk membantu orang Indonesia mengatasi stres keuangan secara legal,aman,dan terjangkau.Berikut adalah layanan utama yang ditawarkan LawOnGo:
+                    <ol>
+                        <ul><li>Mediasi Profesional Penyelesaian Utang</li></ul>
+                    </ol>
+                    LawOnGo membantu Anda menyelesaikan masalah utang secara legal dan damai. Kami memfasilitasi negosiasi langsung dengan kreditur, menyusun rencana pembayaran yang sesuai kemampuan Anda, dan mencapai kesepakatan yang saling menguntungkan—semua tanpa perlu datang ke kantor pengacara.</br>
+                    <ol>
+                        <ul><li>Konsultasi Hukum Berbasis AI(24/7)</li></ul>
+                    </ol>
+                    Dapatkan jawaban cepat atas pertanyaan hukum Anda kapan saja. Sistem AI kami selalu siap membantu Anda memahami hak dan kewajiban Anda secara instan,rahasia,dan akurat.
+                    <ol>
+                        <ul><li>Bantuan Kasus Utang</li></ul>
+                    </ol>
+                    Jika Anda menghadapi penagihan utang agresif, intimidasi,atau perilaku tidak etis dari penagih utang,kami menyediakan dukungan hukum pribadi.Tim kami siap menawarkan bantuan hukum untuk melindungi hak Anda.
+                    <ol>
+                        <ul><li>Persiapan Dokumen Mediasi dan Perjanjian Pembayaran</li></ul>
+                    </ol>
+                    Layanan penyiapan dokumen hukum resmi untuk hasil mediasi utang Anda,termasuk perjanjian pembayaran angsuran,perjanjian penyelesaian,dan laporan kepada otoritas jika diperlukan.
+                    <ol>
+                        <ul><li>Perlindungan Privasi dan Keamanan Data</li></ul>
+                    </ol>
+                    LawOnGo memastikan kerahasiaan data pribadi dan transaksi Anda dan tidak akan membagikan informasi Anda dengan pihak ketiga tanpa izin. Keamanan pengguna adalah prioritas utama kami.</br>
+                    Jika Anda membutuhkan layanan hukum yang berfokus pada penyelesaian masalah utang secara bijak dan bermartabat, LawOnGo adalah mitra tepercaya yang siap membantu Anda.`
+            }
+        ]
+    },
+    {
+        subName:'Akun dan Keamanan',
+        content:[
+            {
+                title: 'Bagaimana mendaftar akun LawOnGo?',
+                desc:`
+                <ol>
+                    <ul><li>Buka situs web resmi atau aplikasi dan klik“Daftar.”</li></ul>
+                    <ul><li>Masukkan nomor telepon seluler Anda dan terima kode verifikasi SMS,atau masuk dengan cepat menggunakan WhatsApp.</li></ul>
+                    <ul><li>Lengkapi formulir informasi dasar:nama,nomor ID,alamat email.</li></ul>
+                    <ul><li>Unggah foto untuk pengenalan wajah untuk meningkatkan keamanan akun.</li></ul>
+                </ol>`
+            },
+            {
+                title: 'Apa yang harus saya lakukan jika saya lupa kata sandi?',
+                desc:`
+                    <ol>
+                        <ul><li>Klik tautan“Lupa Kata Sandi”di halaman masuk.</li></ul>
+                        <ul><li>Masukkan alamat email atau nomor telepon yang terkait dengan akun Anda.</li></ul>
+                        <ul><li>Anda akan menerima tautan reset kata sandi melalui email atau kode verifikasi melalui SMS.</li></ul>
+                        <ul><li>Ikuti petunjuk untuk menetapkan kata sandi baru.</li></ul>
+                    </ol>
+                `
+            },
+            {
+                title: 'Apakah data pribadi saya aman?',
+                desc:`
+                    Data di seluruh platform disimpan dengan enkripsi AES-256;</br>
+                    Akses ke informasi pengguna dibatasi hanya untuk pengacara/mediator yang berwenang atas dasar kebutuhan tahu;</br>
+                    Audit teratur dilakukan untuk memastikan kepatuhan dengan ISO27001 dan peraturan keamanan lokal.
+                `
+            },
+        ]
+    },
+    {
+        subName:'Konsultasi Hukum Online',
+        content:[
+            {
+                title: 'Bagaimana memulai konsultasi hukum online?',
+                desc:`
+                    LawOnGo menawarkan layanan konsultasi hukum online 24/7 untuk membantu Anda mendapatkan saran profesional dengan cepat.Berikut adalah proses lengkap untuk memulai konsultasi:</br>
+                    ✅Langkah 1:Akses Modul Konsultasi Hukum
+                    <ol>
+                        <ul><li>Masuk ke Aplikasi LawOnGo,klik ikon“Konsultasi Hukum”di halaman utama atau“Layanan Konsultasi”di menu navigasi.</li></ul>
+                        <ul><li>Pilih“Konsultasi Online”untuk masuk ke halaman layanan.</li></ul>
+                    </ol>
+                    ✅Langkah 2:Deskripsikan Masalah&Unggah Bahan
+
+                    <ol>
+                        <ul><li>Jelaskan dengan jelas masalah Anda,seperti sengketa utang,sengketa kontrak,atau gangguan penagihan.</li></ul>
+                        <ul><li>Unggah bahan yang relevan(misalnya,surat utang,kontrak,tangkapan layar percakapan)untuk membantu pengacara memahami situasi Anda lebih baik.</li></ul>
+                        <ul><li>📎Tip:Menyediakan bahan lengkap akan meningkatkan akurasi pencocokan dan efisiensi konsultasi.</li></ul>
+                    </ol>
+
+                    ✅Langkah 3:Pilih Pengacara/Mediator/Penasehat Utang yang Cocok
+                    <ol>
+                        <ul><li>Sistem akan secara otomatis merekomendasikan ahli yang paling sesuai berdasarkan masalah Anda.</li></ul>
+                        <ul><li>Anda juga dapat secara manual menjelajahi profil pengacara dan memilih ahli yang mahir di bidang yang relevan.</li></ul>
+                    </ol>
+                    ✅Langkah 4:Pilih Mode Konsultasi</br>
+                    LawOnGo menawarkan dua mode untuk memenuhi kebutuhan pengguna yang berbeda:
+                    <ol>
+                        <ul><li> Tanya Jawab Simulasi AI(Gratis)</li></ul>
+                    </ol>
+                    →Sistem cerdas menghasilkan saran dan jawaban referensi secara instan,cocok untuk mendapatkan pendapat dasar dengan cepat.
+                    <ol>
+                        <ul><li>Konsultasi Satu-satu Manusia(Berbayar)</li></ul>
+                    </ol>
+                    →Berkomunikasi secara real-time dengan pengacara berlisensi(melalui teks/telepon/video)untuk mendapatkan saran hukum yang terfokus.</br>
+                    →Sistem mendukung pemesanan terlebih dahulu dan koneksi instan.</br>
+                    ✅Langkah 5:Selesaikan Pembayaran&Mulai Konsultasi
+                    <ol>
+                        <ul><li>Jika Anda memilih konsultasi satu-satu,selesaikan pembayaran sesuai dengan jadwal biaya pengacara.</li></ul>
+                        <ul><li> Setelah pembayaran,Anda akan langsung masuk ke antarmuka sesi eksklusif untuk mulai berkomunikasi dengan pengacara.</li></ul>
+                    </ol>
+                    💡Catatan Tambahan:
+                    <ol>
+                        <ul><li>Semua rekaman konsultasi disimpan dengan enkripsi dan hanya terlihat oleh pengguna dan pengacara.</li></ul>
+                        <ul><li>LawOnGo melakukan peninjauan ketat terhadap kualifikasi profesional mitra pengacara untuk memastikan bahwa konsultasi profesional,aman,dan dapat diandalkan.</li></ul>
+                        <ul><li>Dalam kasus masalah hukum mendesak,disarankan untuk memilih“Konsultasi Satu-satu Manusia”untuk dukungan tepat waktu.</li></ul>
+                    </ol>
+                `
+            },
+            {
+                title: 'Apa perbedaan antara tanya jawab simulasi AI dan konsultasi manusia?',
+                desc:`
+                    Tanya Jawab Simulasi AI(Gratis)
+                    <ol>
+                        <ul><li>Prinsip Teknis:Sistem AI menghasilkan saran respons berdasarkan basis data besar kasus nyata,ketentuan hukum,dan interpretasi yudisial.</li></ul>
+                        <ul><li>Ruang Lingkup Aplikasi:Cocok untuk menangani pertanyaan dasar,umum,dan yang sering diajukan,seperti:</li></ul>
+                        <ul><li>Apa itu penagihan utang yang legal?</li></ul>
+                        <ul><li>Berapa lama setelah utang jatuh tempo saya akan dituduh?</li></ul>
+                        <ul><li>Bolehkah saya menolak penagihan utang door-to-door?</li></ul>
+                        <ul><li>Kecepatan Respons:Menghasilkan balasan secara instan tanpa menunggu.</li></ul>
+                        <ul><li>Harga:Gratis untuk digunakan.</li></ul>
+                        <ul><li> Keuntungan:</li></ul>
+                        <ul><li>Mendapatkan saran arah dengan cepat.</li></ul>
+                        <ul><li>Tidak perlu mendaftar informasi yang rumit.</li></ul>
+                    </ol>
+                    Konsultasi Satu-satu Manusia(Berbayar)
+
+                    <ol>
+                        <ul><li>Satu-satu Manusia:Pengacara sungguhan memberikan jawaban online,cocok untuk masalah hukum yang kompleks atau strategi hukum yang mendalam.</li></ul>
+                        <ul><li>Metode Layanan:Pengacara berlisensi menawarkan jawaban pribadi melalui teks,suara,atau video.</li></ul>
+                        <ul><li> Ruang Lingkup Aplikasi:Cocok untuk menangani masalah yang kompleks,bernilai tinggi,dan berbasis strategi,seperti:</li></ul>
+                        <ul><li>Bagaimana saya bisa bernegosiasi pembayaran angsuran dengan beberapa platform?</li></ul>
+                        <ul><li>Saya telah menerima panggilan pengadilan,apa yang harus saya lakukan?</li></ul>
+                        <ul><li>Bisakah saya menggugat penagih utang karena gangguan?</li></ul>
+                    </ol>
+
+                    Isi Layanan:
+                    <ol>
+                        <ul><li>Penilaian kasus</li></ul>
+                        <ul><li>Analisis hukum yang berlaku</li></ul>
+                        <ul><li>Rekomendasi tindakan spesifik(seperti mengajukan gugatan,mengajukan keluhan,atau menyiapkan negosiasi)</li></ul>
+                        <ul><li>Waktu Respons:Biasanya memasuki sesi dalam waktu 5-10 menit.</li></ul>
+                    </ol>
+                    Keuntungan:
+                    <ol>
+                        <ul><li>Komunikasi satu-satu,lebih fokus pada masalah Anda</li></ul>
+                        <ul><li>Mendapatkan saran jalur hukum dan panduan operasional praktis</li></ul>
+                    </ol>
+                `
+            },
+        ]
+    },
+    {
+        subName:'Layanan Mediasi Utang',
+        content:[
+            {
+                title: 'Bagaimana menggunakan LawOnGo untuk mediasi utang?',
+                desc:`
+                    <ol>
+                        <ul><li>Klik“Mediasi Utang”di halaman utama→Isi informasi seperti platform pinjaman,jumlah,dan jumlah hari terlambat;</li></ul>
+                        <ul><li>Model penilaian AI menghasilkan“Laporan Kelayakan Mediasi”dan merekomendasikan beberapa solusi;</li></ul>
+                        <ul><li>Pilih paket layanan dan tandatangani perjanjian mediasi elektronik;</li></ul>
+                        <ul><li>Konsultan mediasi khusus memulai negosiasi,dengan seluruh proses dapat dilacak secara online dalam bentuk visual;</li></ul>
+                        <ul><li>Setelah kesepakatan dicapai,rencana pelaksanaan secara otomatis dihasilkan,dan sistem mengirim pengingat pembayaran.</li></ul>
+                    </ol>
+                `
+            },
+            {
+                title: 'Berapa biaya untuk layanan mediasi utang?',
+                desc:`
+                    Biaya Berhasil(Pembayaran Setelah Layanan)
+                    <ol>
+                        <ul><li>Struktur Biaya:Biaya hanya dikenakan setelah mediasi berhasil.</li></ul>
+                        <ul><li> Metode Penentuan Harga:5%hingga 10%dari jumlah pengurangan yang sebenarnya dikenakan sebagai biaya layanan.</li></ul>
+                        <ul><li>Target Pengguna:Pengguna yang ingin mencoba tanpa risiko dan peka terhadap biaya.</li></ul>
+                        <ul><li>Keuntungan:Tidak ada biaya awal/Tidak dikenakan biaya jika tidak berhasil/Layanan berorientasi hasil</li></ul>
+                    </ol>
+                    Paket Eksklusif VIP(Layanan Prioritas+Proteksi Profesional)
+                    <ol>
+                        <ul><li>Struktur Biaya:Biaya layanan dasar tetap(ditentukan berdasarkan jumlah utang total);jika mediasi berhasil,pengembalian uang tunai tambahan dari platform akan diberikan.</li></ul>
+                        <ul><li>Keuntungan Tambahan:Layanan satu-satu dengan pengacara khusus/Jadwal mediasi prioritas di jalur cepat/Laporan eksklusif dan bahan dukungan negosiasi</li></ul>
+                        <ul><li>Target Pengguna:Pengguna dengan utang ganda,jumlah besar,dan kebutuhan untuk diproses dengan cepat
+                    </li></ul>
+                    </ol>
+                `
+            },
+            {
+                title: 'Apa yang terjadi jika mediasi gagal?',
+                desc:`
+                    Jika negosiasi resmi gagal mencapai pengurangan,LawOnGo akan mengembalikan biaya layanan secara penuh;</br>
+                    Sistem akan secara otomatis memicu rekomendasi solusi kedua,atau menyerahkan kepada tim manajemen risiko yang bekerja sama untuk bantuan lebih lanjut.
+                `
+            },
+            {
+                title: "Bagaimana cara meminta LawOnGo untuk menyusun atau meninjau kontrak?",
+                desc:`
+                    <ol>
+                        <ul><li>Pilih“Document Services”→“Contract Drafting/Review”pada platform.</li></ul>
+                        <ul><li>Unggah kontrak yang ada atau isi elemen dasar(informasi pihak,hak dan kewajiban).</li></ul>
+                        <ul><li>AI sistem akan melakukan tinjauan awal dan menghasilkan draf kontrak,yang dapat Anda pratinjau secara online dan sarankan perubahan.</li></ul>
+                        <ul><li>Setelah konsultan hukum menyelesaikan perubahan khusus,Anda dapat menandatangani dan mengunduh versi akhir secara online.</li></ul>
+                    </ol>
+                `
+            }
+        ]
+    },
+    {
+        subName:'Jasa Pro Bono dan Kepentingan Publik',
+        content:[
+            {
+                title: "Bagaimana saya dapat berpartisipasi dalam proyek kepentingan publik pro bono LawOnGo?",
+                desc:`
+                    Platform secara teratur bekerja sama dengan organisasi kesejahteraan publik untuk menyediakan bantuan hukum gratis bagi kelompok berpenghasilan rendah atau yang secara ekonomi kurang beruntung.</br>
+                    Masuk ke bagian“Hukum Kepentingan Publik”,daftar,dan kirimkan bukti penghasilan keluarga atau kemiskinan..</br>
+                    Setelah disetujui,Anda dapat memesan pengacara Pro Bono untuk konsultasi gratis selama 30 menit..</br>
+                    Beberapa proyek bantuan mendapat subsidi.
+                `
+            },
+            {
+                title: 'Apakah ada batasan jumlah layanan Pro Bono?',
+                desc:`
+                    Setiap pengguna dapat menikmati 1 konsultasi Pro Bono dalam setahun.</br>
+                    Jika Anda memerlukan lebih banyak layanan,Anda dapat memilih untuk membayar konsultasi.
+                `
+            },
+        ]
+    }
+])
+
+// 计算属性：根据语言环境返回对应的 FAQ 列表
+const currentFaqList = computed(() => {
+  return locale.value == 'id' ? faqListId.value : faqListEn.value;
+});
 </script>
 
 

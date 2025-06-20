@@ -25,6 +25,63 @@
 
     },
     "lawOnGo_legal_services":{
-        "lawOnGo_legal_services":" LawOnGo Legal Services"
+        "lawOnGo_legal_services":"LawOnGo Legal Services",
+        "debt":"Debt",
+        "consolidation":"Consolidation",
+        "ai_legal_consultation ":"AI+Legal Consultation",
+        "debt_relief":"Debt Relief",
+        "debt_relief_solution":"Debt relief solution",
+        "other":"Other",
+        "rapid_debt_reduction":"Rapid debt reduction"
+    },
+    "ourTeam":{
+        "our_team":"Our Team",
+        "view_all_advocates" :"View all advocates"
+    },
+    "faq":{
+        "frequently_asked_questions":"Frequently Asked Questions",
+         "above_qa":"The above Q&A covers four major dimensions:platform introduction,account security,online consultation,and debt mediation.If you need to learn more about other service modules(such as contract review services),please contact the 24/7 AI customer service directly."
+    },
+    "consultationPrice ": {
+        "consultation_price": "Consultation Price",
+        "non_rofit_service":"Non-profit service",
+        "free":"FREE",
+        "30 Minutes Consultat":"30 Minutes Consultat",
+        "get free legal service by uploading your KTP":"get free legal service by uploading your KTP",
+        "Apply pro Bono":"Apply pro Bono",
+        "Livechat serivice":"Livechat serivice",
+        "Rp":"Rp",
+        "Minutes":"Minutes",
+        "The ideal solution for urgent legal needs and more detailed discussions":"The ideal solution for urgent legal needs and more detailed discussions",
+        "Consult Now":"Consult Now",
+        " Chat+Voice+Vedio call":" Chat+Voice+Vedio call",
+        "In-depth discussion of difficult cases":"In-depth discussion of difficult cases"
+    },
+    "whyLegalConsultation": {
+
+    },
+    "trustworthy_platform": {
+        "trustworthy_platform":"A Trustworthy Platform",
+        "suceess_stories":"Suceess stories",
+        "cities_covered":"Cities Covered",
+        "registered_lawyers":"Registered lawyers",
+        "excellent_rating":"Excellent rating"
+    },
+    "likeThem": {
+        "like_them":"Like Them, Anyone Can Find A Solution!",
+    },
+    "footBanner": {
+        "consult_your":" Consult your legal problem now！",
+        "with_lawOnGo":" With LawOnGo,anyone can havea legal consultation anytime and anywhere."
+    },
+    "foot": {
+        "fllow_us":"Fllow Us",
+        "about_us":"About Us",
+        "find_an_advocate":" Find an Advocate",
+        "career":"Career",
+        "terms_and_conditions":" Terms and Conditions",
+        "address":"Address",
+        "vantage_office":"Vantage Office Business Centre at Equity Tower, 26th floor H, Kavling 52 - 52, Jl Jendral Sudirman Senayan, Jakarta Selatan, 12910 Jakarta, Indonesia"
     }
+
 }

@@ -202,3 +202,7 @@
 .rounded-xl {
     border-radius: .75rem;
 }
+
+.sm\:max-h-\[80\%\] {
+    height: 80%;
+}

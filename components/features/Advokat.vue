@@ -4,12 +4,12 @@
       <div
         class="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-linear-to-b from-[#12EB92] via-[#50FFBE] via-45% to-[#BEFFEE/30] bg-clip-text text-transparent font-bold text-[70px] lg:text-[110px] text-center opacity-45"
       >
-        Our Team
+        {{ $t('ourTeam.our_team') }}
       </div>
       <div
         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-black font-black text-2xl lg:text-4xl"
       >
-        Our Team
+        {{ $t('ourTeam.our_team') }}
       </div>
     </div>
 
@@ -23,7 +23,7 @@
         type="button"
         @click="goCariAdvokat"
       >
-        <span> View all advocates </span>
+        <span>  {{ $t('ourTeam.view_all_advocates') }} </span>
         <Icon
           name="material-symbols:arrow-forward-ios"
           class="ml-2"

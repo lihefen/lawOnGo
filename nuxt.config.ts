@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-07 23:27:22
  * @LastEditors: hean
- * @LastEditTime: 2025-06-19 18:16:54
+ * @LastEditTime: 2025-06-20 00:15:45
  */
 import tailwindcss from "@tailwindcss/vite";
 import { currentLocales } from './i18n/i18n'
@@ -53,7 +53,7 @@ export default defineNuxtConfig({
       // 用于存储当前语言环境的变量名
       cookieKey: 'i18n_redirected',
       // (建议用于改进SEO) -仅检测站点根路径(/)上的浏览器区域设置。只有当使用策略而不是“no_prefix”时才有效。
-      redirectOn: 'root'
+      redirectOn: 'root',
     }
   },
   devServer: {

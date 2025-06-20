@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-25 18:28:37
  * @LastEditors: hean
- * @LastEditTime: 2025-06-10 18:24:41
+ * @LastEditTime: 2025-06-20 14:30:13
 -->
 <template>
   <div class="w-full bg-gradient-to-r from-[#005F38] to-[#005F38]">
@@ -35,7 +35,7 @@
               /></a>
             </div>
             <p class="font-dm-sans font-bold text-white text-base antialiased">
-              Fllow Us
+              {{ $t('foot.fllow_us') }}
             </p>
             <div class="flex gap-1 mt-3">
               <img
@@ -65,18 +65,19 @@
               <p class="font-bold text-base">Site Map</p>
               <ul class="text-[14px] lg:text-base">
                 <li class="mt-2 lg:mt-3">
-                  <a href="/about" class=""> About Us </a>
+                  <a href="/about" class=""> {{ $t('foot.about_us') }}  </a>
                 </li>
                 <li class="mt-2 lg:mt-3">
-                  <a href="/cari-advokat" class=""> Find an Advocate </a>
+                  <a href="/cari-advokat" class="">{{ $t('foot.find_an_advocate') }} </a>
                 </li>
                 <li class="mt-2 lg:mt-3"><a href="/faq" class=""> FAQ </a></li>
                 <li class="mt-2 lg:mt-3">
-                  <a href="/karir" class=""> Career </a>
+                  <a href="/karir" class="">{{ $t('foot.career') }}  </a>
                 </li>
                 <li class="mt-2 lg:mt-3">
                   <a href="/syarat-ketentuan" class="">
-                    Terms and Conditions
+                   
+                    {{ $t('foot.terms_and_conditions') }} 
                   </a>
                 </li>
               </ul>
@@ -104,3 +105,8 @@
     </div>
   </div>
 </template>
+
+<script setup>
+const { locales, locale, setLocaleCookie,t } = useI18n()
+
+</script>

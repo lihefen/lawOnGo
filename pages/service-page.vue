@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-08 21:13:28
  * @LastEditors: hean
- * @LastEditTime: 2025-06-18 17:03:06
+ * @LastEditTime: 2025-06-20 13:23:38
 -->
 
 <template>
@@ -219,7 +219,6 @@
                             alt="iimg-company-services"
                             class="w-full"
                             src="/image/landing-page/img-company-services.png" />
-                        <img  src="/image/landing-page/icon-company-establishment-colored.svg" alt="" class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-fit md:hidden">
                     </div>
                 </div>
             </div>

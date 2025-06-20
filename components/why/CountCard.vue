@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-18 18:45:48
  * @LastEditors: hean
- * @LastEditTime: 2025-06-10 20:03:23
+ * @LastEditTime: 2025-06-20 12:32:44
 -->
 <template>
   <div
@@ -15,16 +15,16 @@
     >
       <div class="text-center">
         <p class="text-[#181E23] sm:text-2xl font-semibold">8000+</p>
-        <p class="text-[#39424D] sm:text-sm text-xs">Suceess stories</p>
+        <p class="text-[#39424D] sm:text-sm text-xs">{{ $t('trustworthy_platform.suceess_stories') }}</p>
       </div>
       <div class="text-center">
         <p class="text-[#181E23] sm:text-2xl font-semibold">50+</p>
-        <p class="text-[#39424D] sm:text-sm text-xs">Registered lawyers</p>
+        <p class="text-[#39424D] sm:text-sm text-xs">{{ $t('trustworthy_platform.registered_lawyers') }}</p>
       </div>
 
       <div class="text-center">
         <p class="text-[#181E23] sm:text-2xl font-semibold">15+</p>
-        <p class="text-[#39424D] sm:text-sm text-xs">Cities Covered</p>
+        <p class="text-[#39424D] sm:text-sm text-xs">{{ $t('trustworthy_platform.cities_covered') }}</p>
       </div>
 
       <div class="text-center">
@@ -37,7 +37,7 @@
             class="w-4 sm:w-6 h-4.5 sm:h-8"
           /><span>4.9</span>
         </p>
-        <p class="text-[#39424D] sm:text-sm text-xs">Excellent rating</p>
+        <p class="text-[#39424D] sm:text-sm text-xs">{{ $t('trustworthy_platform.excellent_rating') }}</p>
       </div>
     </div>
     <div class="border-t border-[#F1F1F1]"></div>
@@ -67,6 +67,9 @@
     </div>
   </div>
 </template>
+<script setup>
+    const { locales, locale, setLocaleCookie,t } = useI18n()
+</script>
 <style scoped>
 .bg-card {
   background-color: rgba(255, 255, 255, 0.5);

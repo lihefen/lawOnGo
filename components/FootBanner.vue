@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-18 18:45:48
  * @LastEditors: hean
- * @LastEditTime: 2025-06-10 18:12:41
+ * @LastEditTime: 2025-06-20 13:44:27
 -->
 
 <template>
@@ -33,11 +33,10 @@
             class="flex flex-col gap-2.5 text-cultured flex-1 md:text-left text-center"
           >
             <h1 class="text-2xl font-semibold">
-                Consult your legal<br/>
-                problem now！
+                {{ $t('footBanner.consult_your') }}
             </h1>
             <p>
-                With LawOnGo,anyone can havea legal consultation anytime and anywhere.
+                {{ $t('footBanner.with_lawOnGo') }}
             </p>
           </div>
           <div class="flex items-center md:justify-start justify-center gap-2">
@@ -70,4 +69,6 @@
 </template>
 <script setup>
     import { ElMessage } from 'element-plus'
+    const { t } = useI18n()
+
 </script>
