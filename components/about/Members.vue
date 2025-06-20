@@ -4,19 +4,19 @@
  * @Author: hean
  * @Date: 2025-05-29 20:45:10
  * @LastEditors: hean
- * @LastEditTime: 2025-06-18 22:53:24
+ * @LastEditTime: 2025-06-20 15:46:28
 -->
 <template>
   <div class="custom-bg mb-12">
     <div class="max-w-[1280px] mx-auto pt-4 px-2 xl:px-10">
       <div class="relative text-center">
         <h2 class="text-[32px] font-bold text-[#333333] mb-12">
-          Core members of our team
+            {{ $t('aboutUs.core_members_of_our_team') }}
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-[50px] md:gap-[150px]">
         <div
-          v-for="member in members"
+          v-for="member in currentMembers"
           :key="member.name"
           class="flex flex-col items-center"
         >
@@ -48,8 +48,9 @@
 </template>
 <script setup>
 import { ref } from "vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 
-const members = ref([
+const membersEn = ref([
   {
     name: "Nadya Nasya",
     job: "BOC",
@@ -73,6 +74,32 @@ const members = ref([
     description: `Rima believes that:"Technology can support legal performance,even with certain limitations and constraints from the law itself."Under her leadership,LawOnGo is working to build a trustworthy AI-powered legal service platform that leverages artificial intelligence to provide legal services to all segments of society.`,
   },
 ]);
+
+const membersId = ref([
+  {
+    name: "Nadya Nasya",
+    job: "BOC",
+    image: "/image/about-us/BOC.png",
+    description: `Nadya percaya bahwa: "Pengawasan yang efektif bukanlah soal perawatan setelah terjadinya, melainkan memastikan kepatuhan sebelum itu terjadi." Di bawah kepemimpinannya, sistem pengawasan LawOnGo telah menjadi lebih mandiri, jelas, dan bertanggung jawab, serta telah meletakkan dasar sistematis untuk perkembangan berkelanjutan LawOnGo.`,
+  },
+  {
+    name: "Ettyta Ramadhani ",
+    job: "CEO",
+    image: "/image/about-us/CEO.png",
+    description: `Filosofi kepemimpinan Ettyta didasarkan pada "pengembangan sistem sebagai dasar dari budaya kepatuhan, dan orientasi jangka panjang dengan menyediakan dukungan strategis yang dipercaya dan berkelanjutan bagi LawOnGo di tengah perubahan industri yang menantang."`,
+  },
+  {
+    name: "Rima Gravianty Baskoro",
+    job: "Lawyer",
+    image: "/image/about-us/lawyer.png",
+    description: `Rima percaya bahwa: "Teknologi dapat mendukung kinerja hukum, bahkan dengan beberapa keterbatasan dan kendala dari hukum sendiri." Di bawah kepemimpinannya, LawOnGo sedang berupaya membangun platform layanan hukum berbasis AI yang dipercaya, yang memanfaatkan kecerdasan buatan untuk menyediakan layanan hukum kepada semua segmen masyarakat.`,
+  },
+]);
+
+
+const currentMembers = computed(() => {
+  return locale.value == 'id' ? membersId.value : membersEn.value;
+});
 </script>
 
 <style scoped>

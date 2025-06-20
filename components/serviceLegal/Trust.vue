@@ -105,14 +105,9 @@
                         <div class="flex flex-col items-center gap-3 md:gap-6">
                             <img src="/image/service-page/team-icon.png" alt="" class="w-fit">
                             <div class="flex flex-col text-center gap-2">
-                                <span class="md:text-xl font-semibold text-[#ffffff]">Professional Expert Team</span><span class="text-sm text-[#ffffff]">All services at Perqara are handled by a certified team and experts in their field</span>
+                                <span class="md:text-xl font-semibold text-[#ffffff]">Professional Expert Team</span><span class="text-sm text-[#ffffff]">All services at law are handled by a certified team and experts in their field</span>
                             </div>
                         </div>
-                        <!-- <div class="flex flex-col items-center gap-3 md:gap-6">
-                            <img src="/image/service-page/team_icon.png" alt="" class="w-fit">
-                            <div class="flex flex-col text-center gap-2"><span class="md:text-xl font-semibold text-[#ffffff]">Professional Expert Team</span><span class="text-sm text-[#ffffff]">All services at Perqara are handled by a certified team and experts in their field</span>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>

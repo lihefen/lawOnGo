@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-27 21:08:14
  * @LastEditors: hean
- * @LastEditTime: 2025-06-20 14:57:13
+ * @LastEditTime: 2025-06-20 15:14:11
 -->
 <template>
   <div class="relative z-10 max-w-[1280px] mx-auto pb-12 px-10 xl:px-42">
@@ -16,15 +16,11 @@
               class="size-[30px] bg-[#1FF48F]/80 rounded-full absolute top-1 -left-3"
             />
             <h1 class="relative text-[32px] font-bold text-[#333333] z-10">
-              Mission
+                {{ $t('aboutUs.mission') }}
             </h1>
           </div>
           <p class="text-lg text-black leading-7">
-            Focus on customer service,continuously providing legal services that
-            meet user needs,supported by exceptional innovation and
-            technology.Our goal is to make our platform the first choice for
-            Indonesians to access high-quality,convenient,and personalized legal
-            services.
+            {{ $t('aboutUs.focus') }}
           </p>
         </div>
         <div class="relative">
@@ -42,14 +38,11 @@
             class="size-[30px] bg-[#1FF48F]/80 rounded-full absolute top-1 -left-3"
           />
           <h2 class="relative text-[32px] font-bold text-[#333333] z-10">
-            Vision
+            {{ $t('aboutUs.vision') }}
           </h2>
         </div>
         <p class="text-lg text-black leading-7">
-          To become Indonesia's leading online legal consultation platform,
-          centered on delivering exceptional customer experience. We aim to set
-          the industry benchmark, promote fair access to legal services, and
-          lead the digital transformation of the legal sector.
+            {{ $t('aboutUs.to_become') }}
         </p>
       </div>
 
@@ -60,15 +53,19 @@
             class="size-[30px] bg-[#1FF48F]/80 rounded-full absolute top-1 -left-3"
           />
           <h2 class="relative text-[32px] font-bold text-[#333333] z-10">
-            Values
+            {{ $t('aboutUs.values') }}
           </h2>
         </div>
         <div class="space-y-1 flex flex-col text-black text-lg leading-7">
-          <div>Customer First Customers are priority </div>
-          <div>Professionalism Professionalism Transparency </div>
-          <div>Fairness Innovation and Technology</div>
+          <div> {{ $t('aboutUs.customer') }} </div>
+          <div> {{ $t('aboutUs.professionalism') }} </div>
+          <div> {{ $t('aboutUs.fairness') }} </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+<script setup>
+const { locales, locale, setLocaleCookie,t } = useI18n()
+
+</script>

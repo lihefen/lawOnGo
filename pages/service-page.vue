@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-08 21:13:28
  * @LastEditors: hean
- * @LastEditTime: 2025-06-20 13:23:38
+ * @LastEditTime: 2025-06-20 18:11:47
 -->
 
 <template>
@@ -13,32 +13,27 @@
         <TheNavbar @loginHandler="loginHandler" />
         <div class="service-head md:h-[572px]">
             <div
-            class="relative z-10 max-w-[1280px] mx-auto px-10 xl:px-52 py-12 lg:py-12"
+            class="relative z-10 max-w-[1280px] mx-auto px-10  py-12 lg:py-12" :class="locale == 'id' ? 'xl:px-32' : 'xl:px-52'"
             >
             <div
                 class="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-16"
             >
                 <div class="flex flex-col ">
-                <p class="text-[42px] leading-[50px] font-bold text-[#333333]">
-                    Professional Legal Services for All Needs
-                </p>
-                <p class=" text-[#333333] text-[18px]">
-                    Serving various legal needs on-demand that you can access anytime and anywhere.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-[4px]" >
-                    <span class="px-2 py-1 rounded-lg bg-[#B2F4D7] text-[#00854B] text-sm font-medium" >Document Creation</span>
-                    <span class="px-2 py-1 rounded-lg bg-[#B2F4D7] text-[#00854B] text-sm font-medium" > Corporate Notary Services</span>
-                    <span class="px-2 py-1 rounded-lg bg-[#B2F4D7] text-[#00854B] text-sm font-medium" > Copyright Registration</span>
-                    <span class="px-2 py-1 rounded-lg bg-[#B2F4D7] text-[#00854B] text-sm font-medium" > Tax Consultation</span>
-                </div>
+                    <p class="text-[42px] leading-[50px] font-bold text-[#333333]">
+                        {{ $t('legalServices.professional_legal') }}
+                    </p>
+                    <p class=" text-[#333333] text-[18px]">
+                        {{ $t('legalServices.serving_various') }}
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-[4px]" >
+                        <span class="px-2 py-1 rounded-lg bg-[#B2F4D7] text-[#00854B] text-sm font-medium" > {{ $t('legalServices.document_creation') }}</span>
+                        <span class="px-2 py-1 rounded-lg bg-[#B2F4D7] text-[#00854B] text-sm font-medium" >  {{ $t('legalServices.corporate_notary_services') }}</span>
+                        <span class="px-2 py-1 rounded-lg bg-[#B2F4D7] text-[#00854B] text-sm font-medium" >  {{ $t('legalServices.copyright_registration') }}</span>
+                        <span class="px-2 py-1 rounded-lg bg-[#B2F4D7] text-[#00854B] text-sm font-medium" >{{ $t('legalServices.tax_consultation') }}</span>
+                    </div>
 
-                <button class="font-bold px-4 py-2.5 md:px-6 md:py-3 md:w-60 rounded-md md:rounded-[16px]  bg-[linear-gradient(224deg,#18D683_0%,#00CE73_17%,#0DBC6F_46%,#04A45E_100%)]  mt-[10px] text-white text-[24px]">View Services</button>
+                    <button class="font-bold px-4 py-2.5 md:px-6 md:py-3 md:w-60 rounded-md md:rounded-[16px]  bg-[linear-gradient(224deg,#18D683_0%,#00CE73_17%,#0DBC6F_46%,#04A45E_100%)]  mt-[10px] text-white text-[24px]">{{ $t('legalServices.view_services') }}</button>
                 </div>
-                <!-- <Video
-                video="https://media.w3.org/2010/05/sintel/trailer.mp4"
-                poster="/image/features/story-placeholder.png"
-                class="w-[360px] h-[212px] shrink-0"
-                /> -->
                 <iframe
                 src="https://www.youtube.com/embed/Sy4ROOthOg4"
                 class="w-[360px] h-[212px] rounded-xl shrink-0"
@@ -53,7 +48,8 @@
                 >
                     <div class="flex flex-col gap-2 md:gap-4 items-center">
                         <h5 class="sm:text-2xl lg:text-3xl font-semibold">
-                            A Trustworthy Platform
+                            
+                            {{ $t('trustworthy_platform.trustworthy_platform') }}
                         </h5>
                         <div class="flex flex-wrap gap-4 py-2">
                             <img
@@ -97,15 +93,15 @@
                             >
                                 <div class="flex flex-col">
                                     <span class="md:text-2xl font-medium">8000+</span>
-                                    <span class="text-xs md:text-sm">Suceess stories</span>
+                                    <span class="text-xs md:text-sm"> {{ $t('trustworthy_platform.suceess_stories') }}</span>
                                 </div>
                                 <div class="flex flex-col">
                                     <span class="md:text-2xl font-medium">50+</span>
-                                    <span class="text-xs md:text-sm">Registered lawyers</span>
+                                    <span class="text-xs md:text-sm">{{ $t('trustworthy_platform.registered_lawyers') }}</span>
                                 </div>
                                 <div class="flex flex-col">
                                     <span class="md:text-2xl font-medium">15+</span>
-                                    <span class="text-xs md:text-sm">Cities Covered</span>
+                                    <span class="text-xs md:text-sm">{{ $t('trustworthy_platform.cities_covered') }}</span>
                                 </div>
                                 <div class="flex flex-col">
                                     <span
@@ -118,7 +114,7 @@
                                     />
                                     <span>4.9<span class="text-sm">/5.0</span></span>
                                     </span>
-                                    <span class="text-xs md:text-sm">Excellent rating</span>
+                                    <span class="text-xs md:text-sm">{{ $t('trustworthy_platform.excellent_rating') }}</span>
                                 </div>
                             </div>
                         </div>
@@ -129,33 +125,33 @@
             <div class="relative service-card  overflow-hidden xl:max-w-[1180px] xl:mx-auto -mt-32 pt-32 bg-[#F5FBFD] md:rounded-3xl">
                 <div class=" px-4 flex flex-col gap-4 md:gap-8">
                         <h2 class="text-2xl lg:text-3xl font-semibold text-[#ffffff]  text-center xl:px-64">
-                            Why should you use legal service in LawOnGo
+                            {{ $t('legalServices.why') }}
                         </h2>
                         <div class="md:px-20 px-4 grid md:grid-cols-4 grid-cols-2 md:gap-6 gap-x-4 pb-10 md:pb-[60px]">
                             <div class="flex flex-col items-center ">
                                 <img src="/image/service-page/costs_icon.png" alt="" class="w-fit">
                                 <div class="flex flex-col text-center gap-2">
-                                    <span class="md:text-xl font-semibold text-[#ffffff]" >Transparent Costs</span>
-                                    <span class="text-sm text-[#ffffff]" >Get a complete price quote at the beginning without worrying about the addition of other costs</span>
+                                    <span class="md:text-xl font-semibold text-[#ffffff]" >{{  $t('legalServices.transparent_costs') }}</span>
+                                    <span class="text-sm text-[#ffffff]" >{{  $t('legalServices.transparent_costs_desc') }}</span>
                                 </div>
                             </div>
                             <div class="flex flex-col items-center " >
                                 <img src="/image/service-page/save_time_icon.png" alt="" class="w-fit">
                                 <div class="flex flex-col text-center gap-2" >
-                                    <span class="md:text-xl font-semibold text-[#ffffff]">Save Time</span><span class="text-sm text-[#ffffff]">The entire process is done online to save you time</span>
+                                    <span class="md:text-xl font-semibold text-[#ffffff]">{{  $t('legalServices.save_time') }}</span><span class="text-sm text-[#ffffff]">{{  $t('legalServices.save_time_desc') }}</span>
                                 </div>
                             </div>
                             <div class="flex flex-col items-center ">
                                 <img src="/image/service-page/accurate_icon.png" alt="" class="w-fit">
                                 <div class="flex flex-col text-center gap-2">
-                                    <span class="md:text-xl font-semibold text-[#ffffff]">Accurate Results</span><span class="text-sm text-[#ffffff]">Our team will ensure that you obtain the necessary permits and legalities</span>
+                                    <span class="md:text-xl font-semibold text-[#ffffff]">{{  $t('legalServices.accurate_results') }}</span><span class="text-sm text-[#ffffff]">{{  $t('legalServices.accurate_results_desc') }}</span>
                                 </div>
                             </div>
 
                             <div class="flex flex-col items-center ">
                                 <img src="/image/service-page/team-icon.png" alt="" class="w-fit">
                                 <div class="flex flex-col text-center gap-2">
-                                    <span class="md:text-xl font-semibold text-[#ffffff]">Professional Expert Team</span><span class="text-sm text-[#ffffff]">All services in  LawOnGo are handled by a certified team and experts in their field</span>
+                                    <span class="md:text-xl font-semibold text-[#ffffff]">{{  $t('legalServices.professional_expert_team') }}</span><span class="text-sm text-[#ffffff]">{{  $t('legalServices.professional_expert_team_desc') }}</span>
 
                                 </div>
                             </div>
@@ -437,7 +433,7 @@
                             </div>
                         </div>
                         <div  class="rounded-lg px-3 py-2 flex items-center gap-2 bg-[#E7FFF4] text-[#00854B] text-sm">
-                            <img class="w-4" src="/image/register/anquan_icon.png"><span  class="flex-1">Your data security is our top priority, this data will be used exclusively in Perqara services.</span>
+                            <img class="w-4" src="/image/register/anquan_icon.png"><span  class="flex-1">Your data security is our top priority, this data will be used exclusively in LawOnGo services.</span>
                         </div>
                         <button  @click="officialInfoRequest" class="text-center bg-[#04A45E] px-7 py-2.5 w-full text-lg text-white rounded-md shadow-gray-500 hover:bg-[#04A45E]/80 transition-all ease-in-out duration-300 cursor-pointer"> Send </button>
                     </div>
@@ -537,6 +533,8 @@
     </div>
   </template>
   
+
+  
   <style scoped>
  .service-head {
   background-image: url("/image/service-page/service_head.png");
@@ -623,6 +621,7 @@
   <script setup>
     import {getQueryString}  from '~/utils/getQueryString';
     import { officialInfo } from '~/services/officialInfo';
+    const { locales, locale, setLocaleCookie,t } = useI18n()
     const showLoginDialog = ref(false);
     const inputName = ref("");
     const inputPhone = ref("");

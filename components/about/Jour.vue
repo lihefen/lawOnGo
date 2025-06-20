@@ -2,14 +2,14 @@
   <div class="relative z-10 max-w-[1280px] mx-auto py-12 px-10 xl:px-42">
     <div class="flex justify-center">
       <h1 class="title-adron text-[32px] font-bold text-[#333333] w-fit ">
-        Our Development Jour
+        {{ $t('aboutUs.our_development_jour') }}
       </h1>
     </div>
     <div class="relative mt-14 hidden md:block">
       <div
         className="absolute top-4 left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-[#1FF48F] to-transparent"
       />
-      <div v-for="(item, index) in timelineData" :key="item.year">
+      <div v-for="(item, index) in currentTimelineData" :key="item.year">
         <div
           class="flex justify-center gap-4 max-w-[940px] w-full mx-auto items-start mt-12"
           :class="{ 'flex-row-reverse': index % 2 === 1 }"
@@ -66,7 +66,7 @@
     </div>
 
     <div class="relative mt-14  md:hidden">
-        <div v-for="(item, index) in timelineData" :key="item.year">
+        <div v-for="(item, index) in currentTimelineData" :key="item.year">
             <div class="relative gap-4 items-start pl-7">
                 <div class="absolute left-0 top-0 flex flex-col h-full ">
                     <div class="bg-[#1FF48F] relative w-4 h-4 rounded-full flex items-center justify-center mt-1">
@@ -102,8 +102,9 @@
 </template>
 <script setup>
 import { ref } from "vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 
-const timelineData = ref([
+const timelineDataEn = ref([
   {
     year: "2023",
     title: 'Initial Concept:Responding to the"Silent Need"',
@@ -156,6 +157,69 @@ const timelineData = ref([
     image: "/image/about-us/story-2025.png",
   },
 ]);
+
+const timelineDataId = ref([
+  {
+    year: "2023",
+    title: 'Ide Awal:Merespons"Kebutuhan yang Tidak Terdengar"',
+    description:
+      "Seiring perkembangan cepat industri fintech di Indonesia,semakin banyak pengguna individu dan pedagang kecil terjebak dalam masalah pinjaman berganda dan penagihan utang.Kami telah mengamati bahwa sejumlah besar pengguna,saat menghadapi utang,merasa bingung,takut,dan kekurangan sumber daya atau solusi yang layak.",
+    details: [
+      'Dengan demikian,kami memikirkan ide awal:menciptakan platform hukum yang berbasis digital,terpercaya,dan memiliki ambang batas rendah yang menjamin"setiap orang memiliki hak untuk bernegosiasi."',
+    ],
+    image: "/image/about-us/story-2023.png",
+  },
+
+
+
+  {
+    year: "2024",
+    title: "Peluncuran Platform LawOnGo",
+    details: [
+        "•Tim proyek LawOnGo secara resmi didirikan di Jakarta.",
+        "•Prototipe mesin tanya-jawab hukum AI generasi pertama dikembangkan.",
+        "•Mekanisme kerja sama awal didirikan dengan lebih dari 10 kantor hukum lokal.",
+        "•Proses model mediasi utang dirancang,termasuk:",
+        "•Pengumpulan profil pengguna",
+        "•Pra-asesmen kasus",
+        "•Pembuatan perjanjian mediasi yang terstandarisasi",
+        "•Verifikasi mekanisme pembayaran yang sukses",
+        "•Layanan kami mulai dibuka untuk pengujian kepada kelompok pengguna nyata pertama."
+    ],
+    image: "/image/about-us/story-2024-1.png",
+  },
+  {
+    year: "2024",
+    title: 'Melengkapi Loop Terintegrasi"Konsultasi-Mediasi-Penandatanganan"',
+    description:"Versi resmi Aplikasi 1.0 diluncurkan,mendukung konsultasi AI+mediasi manual+penandatanganan elektronik kontrak.",
+
+    details: [
+        'Lebih dari 30 kantor hukum,lembaga kreditur,dan para ahli mediasi di Indonesia telah bekerja sama untuk membentuk jaringan profesional.',
+        'Jumlah total konsultasi pengguna telah melebihi 10.000.',
+        'Diperkenalkannya paket layanan yang beragam.',
+        'Platform mulai diakui oleh media dan industri sebagai"wakil inovatif di bidang mediasi utang."'
+    ],
+    image: "/image/about-us/story-2024-2.png",
+  },
+  {
+    year: "2025",
+    title: 'Bertransformasi Menjadi"Platform Hukum Berbasis Kecerdasan Buatan"',
+    details: [
+         '• Sistem tanya-jawab hukum AI ditingkatkan untuk mendukung penyaringan awal kasus kompleks dan respons simulasi situasional.',
+         '• Dibuka saluran untuk sinkronisasi perjanjian mediasi dengan lembaga keuangan dan badan arbitrase.',
+         '• Diperluas modul layanan kontrak untuk mendukung seluruh rangkaian penyusunan kontrak,tinjauan,penerjemahan,dan penandatanganan.',
+         '• Dibentuk kemitraan jangka panjang dengan fakultas hukum dan organisasi hukum untuk memperluas dampak aksesibilitas hukum.',
+         '• Diluncurkan layanan B2B LawOnGo untuk menangani masalah kepatuhan dan manajemen utang bagi usaha kecil dan menengah.',
+         '• Kami bertransformasi dari"alat mediasi utang"menjadi"mitra hukum di saku setiap orang."'
+    ],
+    image: "/image/about-us/story-2025.png",
+  },
+]);
+
+// 计算属性：根据语言环境返回对应的 FAQ 列表
+const currentTimelineData = computed(() => {
+  return locale.value == 'id' ? timelineDataId.value : timelineDataEn.value;
+});
 </script>
 <style scoped>
 .title-adron {

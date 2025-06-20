@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-29 20:45:10
  * @LastEditors: hean
- * @LastEditTime: 2025-06-18 18:12:39
+ * @LastEditTime: 2025-06-20 15:51:15
 -->
 <template>
   <div class="max-w-[1280px] mx-auto pt-12 px-10 xl:px-42">
@@ -48,9 +48,9 @@
     <div class="flex justify-center items-center gap-2 mt-6 md:mt-[30px]">
         <button
           @click="goKarir"
-          class="linear-button text-2xl font-bold text-[#333333] flex items-center justify-center"
+          class="linear-button text-2xl font-bold text-[#333333] flex items-center justify-center px-6"
         >
-          Join Us
+           {{ $t('aboutUs.join_us') }}
           <Icon
             name="material-symbols:arrow-right-alt-rounded"
             class="ml-2 text-2xl"
@@ -90,7 +90,6 @@ const goKarir = () => {
   background: linear-gradient(270deg, #77ffce 0%, #a1ff83 100%);
   box-shadow: 0px 17px 23px -17px rgba(95, 229, 83, 0.66);
   border-radius: 18px;
-  width: 236px;
   height: 66px;
 }
 .caBtnGroup {

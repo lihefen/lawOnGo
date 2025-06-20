@@ -6,7 +6,27 @@
         "register":"Register"
     },
     "legalServices":{
-        "legal_services": "Legal Services"
+        "legal_services": "Legal Services",
+        "professional_legal":"Professional Legal Services for All Needs",
+        "serving_various":"Serving various legal needs on-demand that you can access anytime and anywhere.",
+        "document_creation":"Document Creation",
+        "corporate_notary_services":"Corporate Notary Services",
+        "copyright_registration":"Copyright Registration",
+        "tax_consultation":"Tax Consultation",
+        "view_services":"View Services",
+        "why":"Why should you use legal service in LawOnGo",
+        "transparent_costs":"Transparent Costs",
+        "transparent_costs_desc":"Get a complete price quote at the beginning without worrying about the addition of other costs",
+        "save_time":"Save Time",
+        "save_time_desc":"The entire process is done online to save you time",
+        "accurate_results":"Accurate Results",
+        "accurate_results_desc":"Our team will ensure that you obtain the necessary permits and legalities",
+        "professional_expert_team":"Professional Expert Team",
+        "professional_expert_team_desc":"All services in  LawOnGo are handled by a certified team and experts in their field",
+        "legal_consultation":"Legal Consultation",
+        "legal_consultation_desc":"Entrust your legal problems to the best lawer in certain field online without making appointment in  advance",
+        "establishment_of_a_business_bntity":"Establishment of a Business Entity",
+        "A simple and complete solution for establishing a business entity includes:":"A simple and complete solution for establishing a business entity includes:"
     },
     "aboutUs":{
         "about_us": "About Us",
@@ -19,7 +39,10 @@
         "values":"Values",
         "customer":"Customer First Customers are priority",
         "professionalism":"Professionalism Professionalism Transparency",
-        "fairness":"Fairness Innovation and Technology"
+        "fairness":"Fairness Innovation and Technology",
+        "our_development_jour":"Our Development Jour",
+        "core_members_of_our_team":"Core members of our team",
+        "join_us":"Join Us"
 
     },
     "serviceNav":{
