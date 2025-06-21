@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-07 23:27:22
  * @LastEditors: hean
- * @LastEditTime: 2025-06-17 17:13:41
+ * @LastEditTime: 2025-06-21 10:52:00
 -->
 <template>
   <div class="bg-[#f4f2f3] font-dm-sans min-h-screen overflow-x-hidden">
@@ -12,9 +12,9 @@
         <div class="relative bg-gradient-to-r from-[#00CD94] to-[#00BE6B] max-h-16">
             <img src="/image/landing-page/background-banner-left.png" class="lg:block hidden absolute left-0 z-0" alt="banner-left">
             <div class="cursor-pointer relative z-[1]">
-                <div class="max-w-[1280px] px-4 xl:px-40 mx-auto py-2 xs:py-3 h-16 flex items-center justify-between gap-2"><div class="sm:px-2 flex items-center gap-2.5 text-lightwhite-1 flex-1">
+                <div class="max-w-[1280px] px-4 xl:px-[40px] mx-auto py-2 xs:py-3 h-16 flex items-center justify-between gap-2"><div class="sm:px-2 flex items-center gap-2.5 text-lightwhite-1 flex-1">
                     <img class="w-20 h-16" src="/image/banner-mobile-icon.png" alt="banner-mobile"><img src="/image/lawongo-icon.png" alt="" class="hidden sm:inline-block">
-                    <span class="text-sm sm:text-base py-1 font-semibold text-[#ffffff]">Consultation is easier by downloading the LawOnGo application!</span>
+                    <span class="text-sm sm:text-base py-1 font-semibold text-[#ffffff]">{{ $t('consultation_is_easier') }}</span>
                 </div>
                 <div>
                     <div class="hidden md:flex md:gap-2">
@@ -56,6 +56,8 @@
 </template>
 <script setup>
 import { ref, defineEmits } from "vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
+
 const showLoginDialog = ref(false);
 const loginHandler = () => {
   console.log("loginHandler");
