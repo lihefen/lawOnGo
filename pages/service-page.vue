@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-08 21:13:28
  * @LastEditors: hean
- * @LastEditTime: 2025-06-21 10:45:55
+ * @LastEditTime: 2025-06-21 10:53:31
 -->
 
 <template>
@@ -574,7 +574,7 @@
   <script setup>
     import {getQueryString}  from '~/utils/getQueryString';
     import { officialInfo } from '~/services/officialInfo';
-    const { locales, locale, setLocaleCookie,t } = useI18n()
+    const { locales, locale, setLocaleCookie,t } = useI18n();
     const showLoginDialog = ref(false);
     const inputName = ref("");
     const inputPhone = ref("");

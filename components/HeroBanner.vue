@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-06-03 20:59:15
  * @LastEditors: hean
- * @LastEditTime: 2025-06-18 10:16:14
+ * @LastEditTime: 2025-06-21 11:24:25
 -->
 <template>
     <div>
@@ -28,14 +28,14 @@
                     <p
                         class="text-center text-xl sm:text-2xl lg:text-[20px] text-[#1D1F29] -mt-2 mb-8"
                     >
-                        Payment only made after successful mediation, your privacy is strictly protected
+                        {{ $t('payment_only_made') }}
                     </p>
                     <button
-                        class="font-roboto-mono font-bold text-lg sm:text-xl lg:text-[24px] text-white bg-[#04A45E] py-4 px-8 sm:px-10 rounded-[24px] flex items-center justify-center"
+                        class="font-roboto-mono font-bold text-lg w-full sm:w-auto sm:text-xl lg:text-[24px] text-white bg-[linear-gradient(-90deg,#18D683_0%,#00CE73_23%,#04A45E_100%)] py-4 px-8 sm:px-10 rounded-[24px] flex items-center justify-center" :class="locale == 'id' ? 'sm:px-5' : ''"
                         @click="showDownDialog = true"
                         type="button"
                     >
-                    Click to learn more details
+                        {{ $t('click_to_learn_more_details') }}
                         <Icon
                         name="material-symbols:arrow-right-alt-rounded"
                         class="ml-2"
@@ -73,6 +73,7 @@
 </template>
 
 <script setup>
+    const { locales, locale, setLocaleCookie,t } = useI18n()
     const showDownDialog = ref(false)
 </script>
 <style scoped>

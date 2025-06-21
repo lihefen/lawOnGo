@@ -6,6 +6,8 @@
         "register":"Register"
     },
     "consultation_is_easier":"Consultation is easier by downloading the LawOnGo application!",
+    "payment_only_made":" Payment only made after successful mediation, your privacy is strictly protected",
+    "click_to_learn_more_details":"Click to learn more details",
     "legalServices":{
         "legal_services": "Legal Services",
         "professional_legal":"Professional Legal Services for All Needs",
