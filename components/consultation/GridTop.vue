@@ -7,11 +7,10 @@
       />
       <div class="space-y-1 mb-8 text-white">
         <h2 class="md:text-3xl font-semibold  text-xl">
-          What Legal Consultation Do You Want?
+         {{ $t('what_legal_consultation_do_you_want') }}
         </h2>
         <p>
-          Advocates at LawOnGo are ready to listen and help resolve issues
-          related to:
+            {{ $t('advocates_at_lawOnGo') }}
         </p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -47,6 +46,7 @@
 </template>
 <script setup>
 import { ref } from "vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 
 const categories = ref([
   {

@@ -5,7 +5,20 @@
     "register":{
         "register":"Daftar"
     },
-    "consultation_is_easier":"Konsultasi menjadi lebih mudah dengan mengunduh aplikasi LawOnGo!",
+    "consultation":{
+        "why_legal_consultation_at_lawOnGo":"Mengapa Konsultasi Hukum di LawOnGo?",
+        "ai_intelligent_match":"Pencocokan Cerdas AI",
+        "ai_intelligent_match_desc":"Berbasis pada NLP dan perpustakaan kasus, secara cepat menganalisis kebutuhan pengguna, secara otomatis merekomendasikan pengacara atau konsultan mediasi yang paling cocok, sehinggahemat waktu dan meningkatkan efisiensi.",
+        "multi_dimensional":"Layanan Tambahan Berdimensi Multi",
+        "multi_dimensional_desc":"Selain mediasi hutang, kami juga menyediakan dukungan hukum terpadu seperti penulisan/peninjauan kontrak, dll.",
+        "professional_endorsement":"Dukungan Profesional dan Perpustakaan Kasus",
+        "professional_endorsement_desc":"Mengumpulkan firma hukum terkemuka dan ahli mediasi senior dari seluruh negara, memberikan referensi andal dan kepercayaan kepada pengguna.",
+        "visual_progress_tracking":"Pelacakan Progres Visual",
+        "visual_progress_tracking_desc":"Menawarkan pita progres real-time, catatan obrolan, dan arsip file di sisi web/aplikasi, memungkinkan pengguna melacak mediasi dan kesesuaian dengan peraturan."
+    },
+    "what_legal_consultation_do_you_want":"Anda Ingin Konsultasi Hukum Apa?",
+    "advocates_at_lawOnGo":"Advokat di LawOnGo siap mendengarkan dan membantu menyelesaikan masalah terkait dengan:",
+    "consultation_is_easier":"LawOnGo, solusi mudah untuk konsultasi hukum — unduh sekarang!",
     "payment_only_made":"Pembayaran hanya dilakukan setelah mediasi berhasil, privasi Anda dilindungi dengan ketat.",
     "click_to_learn_more_details":"Klik untuk mempelajari detail lebih lanjut",
     "legalServices":{

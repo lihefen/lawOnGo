@@ -5,6 +5,19 @@
     "register":{
         "register":"Register"
     },
+    "consultation":{
+        "why_legal_consultation_at_lawOnGo":"Why Legal Consultation at LawOnGo?",
+        "ai_intelligent_match":"AI intelligent match",
+        "ai_intelligent_match_desc":"Based on NLP and case library, quickly analyze user needs, automatically recommend the most suitable lawyer or mediation consultant, saving time and efficiency.",
+        "multi_dimensional":"Multi dimensional value-added services",
+        "multi_dimensional_desc":"In addition to debt mediation, we also provide integrated legal support such as contract drafting/review, etc.",
+        "professional_endorsement":"Professional endorsement and case library",
+        "professional_endorsement_desc":" Gathering top law firms and senior mediation experts from across the country, providing users with reliable references and confidence.",
+        "visual_progress_tracking":"Visual progress tracking",
+        "visual_progress_tracking_desc":"Provide real-time progress bars, chat records, and file archiving on the web/app end, allowing users to keep track of mediation and compliance"
+    },
+    "what_legal_consultation_do_you_want":"What Legal Consultation Do You Want?",
+    "advocates_at_lawOnGo":"Advocates at LawOnGo are ready to listen and help resolve issues related to:",
     "consultation_is_easier":"Consultation is easier by downloading the LawOnGo application!",
     "payment_only_made":" Payment only made after successful mediation, your privacy is strictly protected",
     "click_to_learn_more_details":"Click to learn more details",
