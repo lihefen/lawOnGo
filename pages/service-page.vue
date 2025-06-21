@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-08 21:13:28
  * @LastEditors: hean
- * @LastEditTime: 2025-06-20 18:11:47
+ * @LastEditTime: 2025-06-21 10:45:55
 -->
 
 <template>
@@ -173,9 +173,9 @@
                     <div  class="flex flex-col gap-6 w-full md:w-1/2">
                         <div  class="flex flex-col gap-4">
                             <img  src="/image/service-page/icon-legal-consultation-colored.png" alt="" class="w-fit md:inline-block hidden w-[10px]" >
-                            <h2 class="relative mt-[-60px] ml-[20px] text-2xl md:text-3xl font-bold md:text-left text-center"> Legal Consultation</h2><p  class="text-[#55707A]">Entrust your legal problems to the best lawer in certain field online without making appointment in  advance</p>
+                            <h2 class="relative mt-[-60px] ml-[20px] text-2xl md:text-3xl font-bold md:text-left text-center">{{ $t('legalServices.legal_consultation') }} </h2><p  class="text-[#55707A]">{{ $t('legalServices.legal_consultation_desc') }}</p>
                         </div>
-                        <button @click="scrollToId('form')"  class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Consult Now</button>
+                        <button @click="scrollToId('form')"  class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> {{ $t('legalServices.consult_now') }}</button>
                     </div>
                 </div>
             </div>
@@ -186,29 +186,29 @@
                 <div class="flex flex-col-reverse md:flex-row gap-8 md:gap-12">
                     <div class="flex flex-col gap-6 w-full md:w-1/2">
                         <img src="/image/service-page/icon-company-establishment-colored.png" alt="" class="w-fit md:inline-block hidden" >
-                        <h2 class="relative mt-[-60px] ml-[20px]  text-2xl md:text-3xl font-bold md:text-left text-center" > Establishment of a Business Entity </h2>
-                        <p class="text-[#55707A]" >A simple and complete solution for establishing a business entity includes:</p>
+                        <h2 class="relative mt-[-60px] ml-[20px]  text-2xl md:text-3xl font-bold md:text-left text-center" >{{ $t('legalServices.establishment_of_a_business_bntity') }}  </h2>
+                        <p class="text-[#55707A]" >{{ $t('legalServices.establishment_of_a_business_bntity_desc') }}</p>
                         <div class="flex flex-col gap-3" >
                             <div class="flex items-start gap-3" >
                                 <img src="/image/service-page/icon-check.png" alt="" >
                                 <div class="flex flex-col" >
-                                    <span class="md:text-xl font-bold" >Establishment of PT, CV, Foundation</span><span class="text-[#55707A]" >all kinds of business needs</span>
+                                    <span class="md:text-xl font-bold" >{{ $t('legalServices.establishment') }}</span><span class="text-[#55707A]" >{{ $t('legalServices.all_kinds') }}</span>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3" >
                                 <img src="/image/service-page/icon-check.png" alt="" >
                                 <div class="flex flex-col" >
-                                    <span class="md:text-xl font-bold" >Changes to the Act</span><span class="text-[#55707A]" >Information change services related to several aspects of business under the Enterprise Act</span>
+                                    <span class="md:text-xl font-bold" >{{ $t('legalServices.changes_to_the_act') }}</span><span class="text-[#55707A]" >{{ $t('legalServices.information_change') }}</span>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3" >
                                 <img src="/image/service-page/icon-check.png" alt="" >
                                 <div class="flex flex-col" >
-                                    <span class="md:text-xl font-bold italic" >Authentication</span><span class="text-[#55707A]" >Bookkeeping service on letters</span>
+                                    <span class="md:text-xl font-bold italic" >{{ $t('legalServices.authentication') }}</span><span class="text-[#55707A]">{{ $t('legalServices.bookkeeping_service_on_letters') }}</span>
                                 </div>
                             </div>
                         </div>
-                        <button @click="scrollToId('form')" class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Apply Now </button>
+                        <button @click="scrollToId('form')" class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer">{{ $t('legalServices.apply_now') }}</button>
                     </div>
                     <div  class="relative w-full md:w-1/2">
                         <img
@@ -234,15 +234,15 @@
                     <div  class="flex flex-col gap-6 w-full md:w-1/2">
                         <div class="flex flex-col gap-4" >
                             <img src="/image/service-page/icon-document-creation-colored.png" alt="" class="w-fit md:inline-block hidden" >
-                            <h2 class="relative mt-[-60px] ml-[20px]  text-2xl md:text-3xl font-bold md:text-left text-center" > Document Creation </h2><p class="text-[#55707A]" >Create various letters and legal agreements in an instant. Just answer the guide questions, your legal document will be filled automatically and ready to download.</p>
+                            <h2 class="relative mt-[-60px] ml-[20px]  text-2xl md:text-3xl font-bold md:text-left text-center" >{{ $t('legalServices.document_creation') }} </h2><p class="text-[#55707A]" >{{ $t('legalServices.create_various') }}</p>
                             <div class="flex flex-wrap gap-2" >
-                                <span class="px-2 py-0.5 rounded-lg bg-[#CBFFE8] text-[#04A45E] text-sm font-medium" >Sale and Purchase Agreement</span>
-                                <span class="px-2 py-0.5 rounded-lg bg-[#CBFFE8] text-[#04A45E] text-sm font-medium" >Power of Attorney</span>
-                                <span class="px-2 py-0.5 rounded-lg bg-[#CBFFE8] text-[#04A45E] text-sm font-medium" >Employment Agreement</span>
+                                <span class="px-2 py-0.5 rounded-lg bg-[#CBFFE8] text-[#04A45E] text-sm font-medium" >{{ $t('legalServices.sale_and_purchase_agreement') }}</span>
+                                <span class="px-2 py-0.5 rounded-lg bg-[#CBFFE8] text-[#04A45E] text-sm font-medium" >{{ $t('legalServices.power_of_attorney') }}</span>
+                                <span class="px-2 py-0.5 rounded-lg bg-[#CBFFE8] text-[#04A45E] text-sm font-medium" >{{ $t('legalServices.employment_agreement') }}</span>
                                 <span class="px-2 py-0.5 rounded-lg bg-[#CBFFE8] text-[#04A45E] text-sm font-medium" >+24</span>
                             </div>
                         </div>
-                        <button @click="scrollToId('form')" class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Create Now </button>
+                        <button @click="scrollToId('form')" class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> {{ $t('legalServices.create_now') }} </button>
                     </div>
                 </div>
             </div>
@@ -252,27 +252,27 @@
                 <div  class="flex flex-col-reverse md:flex-row gap-8 md:gap-12">
                     <div  class="flex flex-col gap-4 w-full md:w-1/2">
                         <img src="/image/service-page/icon-haki-registration-colored.png" alt="" class="w-fit md:inline-block hidden" >
-                        <h2 class="relative mt-[-60px] ml-[20px]  text-2xl md:text-3xl font-bold md:text-left text-center" > Registration of RIGHTS (Intellectual Property Rights)</h2>
-                        <p class="text-[#55707A]" > Get easy registration and legal protection for Intellectual Property Rights (lPR) including:</p>
+                        <h2 class="relative mt-[-60px] ml-[20px]  text-2xl md:text-3xl font-bold md:text-left text-center" > {{ $t('legalServices.registration') }}</h2>
+                        <p class="text-[#55707A]" > {{ $t('legalServices.get_easy_registration') }}</p>
                         <div class="flex flex-col gap-3" >
                             <div class="flex items-start gap-3" >
                                 <img src="/image/service-page/icon-check.png" alt="" >
                                 <div class="flex flex-col" >
-                                    <span class="md:text-xl font-bold" >Trademark Registration</span><span class="text-[#55707A]" >Get exclusive rights to a trademark and its legal protection</span>
+                                    <span class="md:text-xl font-bold" >{{ $t('legalServices.trademark_registration') }}</span><span class="text-[#55707A]" >{{ $t('legalServices.getexclusive_rights') }}</span>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3" >
                                 <img src="/image/service-page/icon-check.png" alt="" >
                                 <div class="flex flex-col" >
-                                    <span class="md:text-xl font-bold" >Copyright Registration</span><span class="text-[#55707A]" >Getexclusive rights to a work of creation.</span>
+                                    <span class="md:text-xl font-bold" >{{ $t('legalServices.copyright_registration') }}</span><span class="text-[#55707A]" >{{ $t('legalServices.getexclusive_rights') }}</span>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3" >
-                                <img src="/image/service-page/icon-check.png" alt="" ><div class="flex flex-col" ><span class="md:text-xl font-bold" >Industrial Design Application</span><span class="text-[#55707A]" >Get protection for design creations that are useful for producing a product, industrial commodity, or handicraft.</span>
+                                <img src="/image/service-page/icon-check.png" alt="" ><div class="flex flex-col" ><span class="md:text-xl font-bold" >{{ $t('legalServices.industrial_design_application') }}</span><span class="text-[#55707A]" >{{ $t('legalServices.get_protection_for_design') }}</span>
                             </div>
                         </div>
                     </div>
-                    <button @click="scrollToId('form')" class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer"> Register Now </button>
+                    <button @click="scrollToId('form')" class="bg-[#04A45E] px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80  transition-all ease-in-out duration-300 cursor-pointer">{{ $t('legalServices.register_now') }}</button>
                 </div>
                 <div  class="relative w-full md:w-1/2">
                     <img
@@ -298,10 +298,10 @@
                     <div  class="flex flex-col gap-6 w-full md:w-1/2">
                         <div  class="flex flex-col gap-4">
                             <img  src="/image/service-page/icon-tax-consultation-colored.png" alt="" class="w-fit md:inline-block hidden">
-                            <h2  class="relative mt-[-60px] ml-[20px] text-2xl md:text-3xl font-bold md:text-left text-center"> Tax Consultation </h2>
-                            <p  class="text-[#55707A]"> Report corporate and personal taxes accurately with an experienced and certified attorney in the field of taxation. </p>
+                            <h2  class="relative mt-[-60px] ml-[20px] text-2xl md:text-3xl font-bold md:text-left text-center">{{ $t('legalServices.tax_consultation') }}</h2>
+                            <p  class="text-[#55707A]">{{ $t('legalServices.report_corporate') }}  </p>
                         </div>
-                        <button @click="scrollToId('form')"  class="bg-[#04A45E]  px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80   transition-all ease-in-out duration-300 cursor-pointer"> Consult Now </button>
+                        <button @click="scrollToId('form')"  class="bg-[#04A45E]  px-5 py-3 w-full text-center md:w-fit text-white rounded-[18px] shadow-gray-500 hover:bg-[#04A45E]/80   transition-all ease-in-out duration-300 cursor-pointer">{{ $t('legalServices.consult_now') }} </button>
                     </div>
                 </div>
             </div>
@@ -310,13 +310,13 @@
         <section class="py-8 md:py-0 relative z-10" >
             <div class="max-w-[1280px] mx-auto px-4 xl:px-40" >
                 <div class="flex juster-center flex-col gap-12" >
-                    <h2 class="text-2xl md:text-3xl font-bold text-center" > Process Stages </h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-center" >{{ $t('legalServices.process_stages') }} </h2>
                     <div class="md:flex text-center" >
                         <div class="relative  md:gap-4 md:w-[390px]">
                            <div  class="relative flex flex-col gap-2">
                                 <div class=" process-title-1  mx-auto  w-[130px] h-[130px]" ></div>
                                 <div class="processCard relative mt-[-84px]  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4 md:min-h-[190px]" >
-                                    <span class="text-lg md:text-2xl font-bold" >Submit Offer Form</span><span class="text-[#556987] font-light text-left" >Explain the details of your legal needs by filling out the offer form.</span>
+                                    <span class="text-lg md:text-2xl font-bold" >{{ $t('legalServices.submit_offer_form') }}</span><span class="text-[#556987] font-light text-left" >{{ $t('legalServices.explain_the_details') }}</span>
                                 </div>
                            </div>
                             <img src="/image/process_arrow.png" class="hidden md:block absolute right-[-32px] top-[140px] w-[10px] h-[18px]" alt="">
@@ -325,7 +325,7 @@
                             <div class="relative flex flex-col gap-2">
                                 <div class=" process-title-2  mx-auto  w-[130px] h-[130px]" ></div>
                                 <div class="processCard relative mt-[-84px]  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4 md:min-h-[190px]" >
-                                    <span class="text-lg md:text-2xl font-bold" >Consult Your Needs</span><span class="text-[#556987] font-light text-left" >The LawOnGo team will contact you within a maximum of 24 hours.</span>
+                                    <span class="text-lg md:text-2xl font-bold" >{{ $t('legalServices.consult_your_needs') }}</span><span class="text-[#556987] font-light text-left" >{{ $t('legalServices.the_lawOnGo_team') }}</span>
                                 </div>
                             </div>
                             <img src="/image/process_arrow.png" class="hidden md:block absolute right-[-32px] top-[140px] w-[10px] h-[18px]" alt="">
@@ -334,7 +334,7 @@
                             <div class="relative flex flex-col gap-2">
                                 <div class=" process-title-3  mx-auto  w-[130px] h-[130px]" ></div>
                                 <div class="processCard relative mt-[-84px]  p-4 pt-6 md:p-6 md:pt-8 flex flex-col gap-2 md:gap-4 md:min-h-[190px]" >
-                                    <span class="text-lg md:text-2xl font-bold" >Transparent Process</span><span class="text-[#556987] font-light text-left" >Our professional team will report the work process periodically until completion.</span>
+                                    <span class="text-lg md:text-2xl font-bold" >{{ $t('legalServices.transparent_process') }} </span><span class="text-[#556987] font-light text-left" >{{ $t('legalServices.our_professional_team') }}</span>
                                 </div>
                             </div>
                        
@@ -350,18 +350,18 @@
                 <div class="relative rounded-2xl bg-[linear-gradient(180deg,#D7FFEE_0%,#FFFFFF_23%,#FFFFFF_100%)] px-4 md:px-8 py-7 shadow-[0_6px_19px_-6px_rgba(15,207,123,0.31)]">
                     <img src="/image/login_icon.png" class="absolute top-0 left-0  " alt="">
                     <div class="flex flex-col gap-4">
-                        <h2 class="text-2xl font-semibold text-center md:w-[52%] mx-auto"> Complete your personal data so that we can immediately contact you</h2>
+                        <h2 class="text-2xl font-semibold text-center md:w-[52%] mx-auto"> {{ $t('legalServices.complete_your_personal_data') }}</h2>
                         <div class="flex flex-col sm:flex-row gap-6">
                             <div class="w-full sm:w-1/2 flex flex-col gap-3">
                                 <div>
-                                    <p class="font-medium font-dm-sans antialiased mb-2 text-black text-base">Full Name</p>
+                                    <p class="font-medium font-dm-sans antialiased mb-2 text-black text-base">{{ $t('legalServices.full_name') }}</p>
                                     <div class="relative w-full text-black">
                                         <el-input v-model="inputName" type="text"  placeholder="Write your full name" size="large" ></el-input>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <p  class="font-medium font-dm-sans antialiased mb-2 text-black text-base">Mobile Number (Whatsapp)</p>
+                                    <p  class="font-medium font-dm-sans antialiased mb-2 text-black text-base">{{ $t('legalServices.mobile_number') }}</p>
                                     <div class="relative w-full text-black">
                                         <el-input v-model="inputPhone" type="text"  placeholder="Example:08123456789" size="large" ></el-input>
                                     </div>
@@ -376,7 +376,7 @@
                             </div>
                             <div class="w-full sm:w-1/2 flex flex-col gap-3">
                                 <div>
-                                    <label class="mb-2 block">Legal Services</label>
+                                    <label class="mb-2 block">{{ $t('legalServices.legal_services') }}</label>
                                     <div class="relative z-100">
                                         <el-select
                                             v-model="inputLegalServices"
@@ -394,7 +394,7 @@
                                 </div>
 
                                 <div>
-                                    <label class="mb-2 block">Type of Service</label>
+                                    <label class="mb-2 block">{{ $t('legalServices.type_of_service') }}</label>
                                     <div class="relative z-100">
                                         <el-select
                                             v-model="inputTypeOfService"
@@ -412,7 +412,7 @@
                                 </div>
 
                                 <div >
-                                    <p  class="font-medium font-dm-sans antialiased mb-2 text-black text-base">Business Field (Optional)</p>
+                                    <p  class="font-medium font-dm-sans antialiased mb-2 text-black text-base">{{ $t('legalServices.business_Field') }}</p>
                                     <div  class="relative w-full  text-black ">
                                         <el-input v-model="inputBusiness" type="text"  placeholder="Example:Food,Beverages,Heavy Equipen"  size="large" ></el-input>
                                     </div>
@@ -421,7 +421,7 @@
                         </div>
                         <div class="border-b border-[#E7ECF0]"></div>
                         <div>
-                            <label class="mb-2 block">Detail of Required Services</label>
+                            <label class="mb-2 block">{{ $t('legalServices.detail_of_required_services') }}</label>
                             <el-input
                                 v-model="textareaDibutuhkan"
                                 :rows="5"
@@ -429,13 +429,13 @@
                                 placeholder="Example: I want to register my furniture company brand"
                             />
                             <div class="flex items-center justify-between gap-2 text-xs">
-                                <span class="text-[#676767]">Minimal 10 karakter</span><span class="mr-1 transform duration-300 ease-in-out -translate-y-4 opacity-0">0</span>
+                                <span class="text-[#676767]">{{ $t('legalServices.minimal') }}</span><span class="mr-1 transform duration-300 ease-in-out -translate-y-4 opacity-0">0</span>
                             </div>
                         </div>
                         <div  class="rounded-lg px-3 py-2 flex items-center gap-2 bg-[#E7FFF4] text-[#00854B] text-sm">
-                            <img class="w-4" src="/image/register/anquan_icon.png"><span  class="flex-1">Your data security is our top priority, this data will be used exclusively in LawOnGo services.</span>
+                            <img class="w-4" src="/image/register/anquan_icon.png"><span  class="flex-1">{{ $t('legalServices.your_data_security') }}</span>
                         </div>
-                        <button  @click="officialInfoRequest" class="text-center bg-[#04A45E] px-7 py-2.5 w-full text-lg text-white rounded-md shadow-gray-500 hover:bg-[#04A45E]/80 transition-all ease-in-out duration-300 cursor-pointer"> Send </button>
+                        <button  @click="officialInfoRequest" class="text-center bg-[#04A45E] px-7 py-2.5 w-full text-lg text-white rounded-md shadow-gray-500 hover:bg-[#04A45E]/80 transition-all ease-in-out duration-300 cursor-pointer"> {{ $t('legalServices.send') }} </button>
                     </div>
                 </div>
             </div>
@@ -444,7 +444,7 @@
         <section class="py-8 relative z-10 bg-gradient-to-b from-[#DDF6EB] to-[#FFFFFF] ">
             <div class="max-w-[1280px] mx-auto xl:px-[40px]">
                 <div class="space-y-4">
-                    <h2 class="text-2xl md:text-3xl font-bold text-[#262E35] text-center" > Frequently Asked Questions </h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#262E35] text-center" > {{ $t('legalServices.frequently_asked_questions') }} </h2>
                     <div class="space-y-4" v-for="(item, index) in questionsList" :key="index + 909">
                         <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 " expand-icon-position="right">
                             <el-collapse-item title="Consistency" name="1" class="flex-1">
@@ -461,54 +461,7 @@
                             </el-collapse-item>
                         </el-collapse>
                     </div>
-                    <!-- <div class="space-y-4">
-                        <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 ">
-                            <el-collapse-item title="Consistency" name="1">
-                                <template #title="{ isActive }">
-                                <div :class="['title-wrapper', { 'is-active': isActive }]">
-                                    <div class="space-y-2 flex-1">
-                                        <p class="font-semibold leading-5" >Apa itu layanan hukum on-demand LawOnGo?</p>
-                                    </div>
-                                </div>
-                                </template>
-                                <div>
-                                    <p class="font-light text-[#737373] leading-6 group-data-[active=false]:hidden" >Layanan hukum on-demand LawOnGo memungkinkan Anda mendapatkan bantuan hukum sesuai kebutuhan. Anda bisa mengurus perizinan usaha, registrasi hak cipta, konsultasi pajak hingga membuat dokumen hukum kapan saja dengan biaya transparan.</p>
-                                </div>
-                            </el-collapse-item>
-                        </el-collapse>
-                    </div>
-                    <div class="space-y-4">
-                        <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 ">
-                            <el-collapse-item title="Consistency" name="1">
-                                <template #title="{ isActive }">
-                                <div :class="['title-wrapper', { 'is-active': isActive }]">
-                                    <div class="space-y-2 flex-1">
-                                        <p class="font-semibold leading-5" >Apa itu layanan hukum on-demand LawOnGo?</p>
-                                    </div>
-                                </div>
-                                </template>
-                                <div>
-                                    <p class="font-light text-[#737373] leading-6 group-data-[active=false]:hidden" >Layanan hukum on-demand LawOnGo memungkinkan Anda mendapatkan bantuan hukum sesuai kebutuhan. Anda bisa mengurus perizinan usaha, registrasi hak cipta, konsultasi pajak hingga membuat dokumen hukum kapan saja dengan biaya transparan.</p>
-                                </div>
-                            </el-collapse-item>
-                        </el-collapse>
-                    </div>
-                    <div class="space-y-4">
-                        <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 ">
-                            <el-collapse-item title="Consistency" name="1">
-                                <template #title="{ isActive }">
-                                <div :class="['title-wrapper', { 'is-active': isActive }]">
-                                    <div class="space-y-2 flex-1">
-                                        <p class="font-semibold leading-5" >Apa itu layanan hukum on-demand LawOnGo?</p>
-                                    </div>
-                                </div>
-                                </template>
-                                <div>
-                                    <p class="font-light text-[#737373] leading-6 group-data-[active=false]:hidden" >Layanan hukum on-demand LawOnGo memungkinkan Anda mendapatkan bantuan hukum sesuai kebutuhan. Anda bisa mengurus perizinan usaha, registrasi hak cipta, konsultasi pajak hingga membuat dokumen hukum kapan saja dengan biaya transparan.</p>
-                                </div>
-                            </el-collapse-item>
-                        </el-collapse>
-                    </div> -->
+                    
                 </div>
             </div>
         </section>
@@ -518,8 +471,8 @@
                 <div class="relative bg-gradient-to-r from-[#00B163] to-[#00D89C]  md:p-6  flex flex-col md:flex-row items-center gap-3 md:gap-6 rounded-2xl">
                     <img class="md:absolute md:left-[0] md:bottom-[0px]"  src="/image/landing-page/icon-customer-service.png" alt="">
                     <div  class="flex flex-col md:flex-row items-center justify-between w-full text-center md:text-left gap-3">
-                        <span  class="flex-1 font-semibold text-xl md:text-[32px] text-[#ffffff]  md:ml-[260px]">Can't find the service you need?</span>
-                        <button @click="goWa"  class="w-full md:w-auto text-lightblack-1 font-semibold bg-white w-[180px] px-5 py-3 text-[#005F38] text-center rounded-[18px] text-[24px] shadow"> Contact Us</button>
+                        <span  class="flex-1 font-semibold text-xl md:text-[32px] text-[#ffffff]  md:ml-[260px]">{{ $t('legalServices.find_the_service_you_need') }}</span>
+                        <button @click="goWa"  class="w-full md:w-auto text-lightblack-1 font-semibold bg-white w-[180px] px-5 py-3 text-[#005F38] text-center rounded-[18px] text-[24px] shadow">{{ $t('legalServices.contact_us') }}</button>
                     </div>
                 </div>
             </div>
