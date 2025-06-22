@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-25 18:28:37
  * @LastEditors: hean
- * @LastEditTime: 2025-06-23 00:00:03
+ * @LastEditTime: 2025-06-23 01:03:25
 -->
 <template>
   <div class="w-full bg-gradient-to-r from-[#005F38] to-[#005F38]">
@@ -69,21 +69,37 @@
             <div class="font-dm-sans antialiased w-1/2 lg:w-2/3">
               <p class="font-bold text-base">Site Map</p>
               <ul class="text-[14px] lg:text-base">
+                
                 <li class="mt-2 lg:mt-3">
-                  <a href="/about" class=""> {{ $t('foot.about_us') }}  </a>
+                    <NuxtLink
+                    :to="{path:'/about'}">
+                        {{ $t('foot.about_us') }} 
+                    </NuxtLink>
+
                 </li>
                 <li class="mt-2 lg:mt-3">
-                  <a href="/cari-advokat" class="">{{ $t('foot.find_an_advocate') }} </a>
+                    <NuxtLink
+                    :to="{path:'/cari-advokat'}">
+                        {{ $t('foot.find_an_advocate') }} 
+                    </NuxtLink>
                 </li>
-                <li class="mt-2 lg:mt-3"><a href="/faq" class=""> FAQ </a></li>
                 <li class="mt-2 lg:mt-3">
-                  <a href="/karir" class="">{{ $t('foot.career') }}  </a>
+                    <NuxtLink
+                    :to="{path:'/faq'}">
+                    FAQ
+                    </NuxtLink>
                 </li>
                 <li class="mt-2 lg:mt-3">
-                  <a href="/syarat-ketentuan" class="">
-                   
+                  <NuxtLink
+                    :to="{path:'/karir'}">
+                    {{ $t('foot.career') }}
+                    </NuxtLink>
+                </li>
+                <li class="mt-2 lg:mt-3">
+                  <NuxtLink
+                    :to="{path:'/syarat-ketentuan'}">
                     {{ $t('foot.terms_and_conditions') }} 
-                  </a>
+                    </NuxtLink>
                 </li>
               </ul>
             </div>

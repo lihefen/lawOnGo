@@ -165,7 +165,12 @@
         "filter":"Filter",
         "reset":"Reset",
         "consult_now ":"consult now",
-        "category":"Category"
+        "category":"Category",
+        "advocate_choice":"Advocate Choice",
+        "online_advocate":"Online advocate for your legal needs. Want to apply for Pro bono services ?",
+        "click":"Click",
+        "here":"here",
+        "consult":"Consult"
     },
     "whyLegalConsultation": {
 

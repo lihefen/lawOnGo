@@ -161,7 +161,12 @@
         "filter":"Filter",
         "reset":"Reset",
         "consult_now":"konsultasikan sekarang",
-        "category":"Kategori"
+        "category":"Kategori",
+        "advocate_choice":"Pilihan Advokat",
+        "online_advocate":"Advokat Online untuk Kebutuhan Hukum Anda. Ingin mengajukan layanan Pro Bono?",
+        "click":"Klik",
+        "here":"Disini",
+        "consult":"Konsultasi"
     },
     "trustworthy_platform": {
         "trustworthy_platform":"Sebuah Platform yang Dapat Diandalkan",

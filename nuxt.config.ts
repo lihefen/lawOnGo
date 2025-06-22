@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-07 23:27:22
  * @LastEditors: hean
- * @LastEditTime: 2025-06-20 00:15:45
+ * @LastEditTime: 2025-06-23 01:04:28
  */
 import tailwindcss from "@tailwindcss/vite";
 import { currentLocales } from './i18n/i18n'
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
   i18n: {
     locales: currentLocales,
     langDir: 'locales',
-    defaultLocale: 'en',
+    defaultLocale: 'id',
     strategy: 'no_prefix',
     vueI18n: '~/i18n/i18n.config.ts',
     // 启用浏览器语言检测，以便在访问者第一次访问您的站点时自动将其重定向到首选语言环境。

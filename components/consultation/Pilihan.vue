@@ -6,21 +6,15 @@
       >
         <div class="md:py-2 space-y-1 relative">
           <h2 class="md:text-3xl font-semibold text-xl text-black">
-            Advocate Choice
+            {{ $t('cariAdvokat.advocate_choice') }}
           </h2>
           <p
             class="text-sm md:text-xs lg:text-base font-dm-sans font-normal antialiased text-neutral-900 mb-2"
           >
-            Online advocate for your legal needs. Want to apply for Pro bono
-            services ?
+          {{ $t('cariAdvokat.online_advocate') }}
 
-            <!-- <span
-              class="text-transparent bg-gradient-to-r from-blue-2 to-blue-3 bg-clip-text font-bold"
-              >Pro bono</span
-            > -->
-
-            <a href="/probono" class="cursor-pointer text-blue-5 underline">
-              Click <span class="font-bold text-[#007B45]">here</span>
+            <a href="javascript:;" @click="showDownDialog = true"  class="cursor-pointer text-blue-5 underline">
+                {{ $t('cariAdvokat.click') }} <span class="font-bold text-[#007B45]">{{ $t('cariAdvokat.here') }}</span>
             </a>
           </p>
         </div>
@@ -169,9 +163,11 @@
                       </div>
                     </div>
                     <button
+                        @click="showDownDialog = true"
                       class="font-medium px-4 py-2.5 rounded-xl text-xs bg-[#04A45E] text-white"
                     >
-                    Consult
+                    
+                    {{ $t('cariAdvokat.consult') }}
                     </button>
                   </div>
                 </div>
@@ -204,6 +200,8 @@
         </div>
       </div>
     </div>
+    <DownDialog  v-model:show="showDownDialog" @hide="showDownDialog = false"></DownDialog>
+
   </ClientOnly>
 </template>
 
@@ -213,7 +211,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 const { locales, locale, setLocaleCookie,t } = useI18n()
-
+const showDownDialog = ref(false);
 const swiperRef = ref(null);
 const activeIndex = ref(0);
 const isEnd = ref(false);
