@@ -136,19 +136,19 @@
          "above_qa":"Pertanyaan dan jawaban di atas mencakup empat dimensi utama:pengenalan platform,keamanan akun,konsultasi online,dan mediasi utang.Jika Anda perlu mempelajari lebih lanjut tentang modul layanan lainnya(seperti layanan tinjauan kontrak),silakan hubungi layanan pelanggan AI 24/7 secara langsung."
     },
     "consultationPrice": {
-        "consultation_price": "Consultation Price",
-        "non_rofit_service":"Non-profit service",
-        "free":"FREE",
-        "30 Minutes Consultat":"30 Minutes Consultat",
-        "get_free_legal_service":"get free legal service by uploading your KTP",
-        "apply_pro_bono":"Apply pro Bono",
-        "livechat_serivice":"Livechat serivice",
+        "consultation_price": "Biaya Konsultasi",
+        "non_rofit_service":"Layanan Non-Komersil",
+        "free":"Gratis",
+        "minutes_consultat":"Konsultasi 30 menit",
+        "get_free_legal_service":"Dapatkan layanan hukum dengan mengunggah KTP Anda",
+        "apply_pro_bono":"Ajukan Pro Bono",
+        "livechat_serivice":"Layanan Live Chat",
         "rp":"Rp",
-        "minutes":"Minutes",
-        "the_ideal_solution":"The ideal solution for urgent legal needs and more detailed discussions",
-        "consult_now":"Consult Now",
-        "chat_voice_vedio_call":" Chat+Voice+Vedio call",
-        "In-depth discussion of difficult cases":"In-depth discussion of difficult cases"
+        "minutes":"Menit",
+        "the_ideal_solution":"Solusi ideal untuk kebutuhan hukum mendesak dan diskusi yang lebih mendalam",
+        "consult_now":"Konsultasi Sekarang",
+        "chat_voice_vedio_call":"Chat + Panggilan Telepon + Panggilan Video",
+        "in_depth_discussion":"Diskusi mendalam untuk kasus kompleks"
     },
     "trustworthy_platform": {
         "trustworthy_platform":"Sebuah Platform yang Dapat Diandalkan",

@@ -20,21 +20,23 @@
                 alt="icon"
                 class="w-20"
               />
-              <p class="font-bold antialiased sm:text-xl">Non-profit service</p>
+              <p class="font-bold antialiased sm:text-xl">{{ $t('consultationPrice.non_rofit_service') }}</p>
             </div>
           </div>
           <div
             class="bg-white shadow-[0px_-1px_1px_1px_#00B267] rounded-full p-2 flex flex-col justify-center items-center w-full my-2"
           >
-            <p class="text-2xl font-bold text-[#00673A] sm:text-[32px]">FREE</p>
+            <p class="text-2xl font-bold text-[#00673A] sm:text-[32px]">              
+                <p class="font-bold antialiased sm:text-xl">{{ $t('consultationPrice.free') }}</p>
+            </p>
             <p class="text-[#00673A] font-semibold antialiased">
-              30 Minutes Consultat
+                {{ $t('consultationPrice.minutes_consultat') }}
             </p>
           </div>
           <p
             class="text-xs sm:text-base text-[#666666] leading-4 text-center h-10 mt-6"
           >
-          get free legal service by uploading your KTP
+          {{ $t('consultationPrice.get_free_legal_service') }}
           </p>
         </div>
         <button
@@ -42,7 +44,7 @@
           class="flex-shrink-0 px-4.5 py-2.5 md:text-lg bg-linear-[264deg,#00D075,#069456] text-white rounded-2xl w-full text-center mt-6"
           @click="showDownDialog = true"
         >
-          <span >Apply pro Bono</span>
+          <span>{{ $t('consultationPrice.apply_pro_bono') }}</span>
         </button>
       </div>
       <div
@@ -59,7 +61,7 @@
                 alt="icon"
                 class="w-20"
               />
-              <p class="font-bold antialiased sm:text-xl"> Livechat serivice </p>
+              <p class="font-bold antialiased sm:text-xl">{{ $t('consultationPrice.livechat_serivice') }}</p>
             </div>
           </div>
           <div
@@ -70,13 +72,13 @@
               <span class="text-2xl sm:text-[32px] ml-6">50.000</span>
             </p>
             <p class="text-[#00673A] font-semibold antialiased">
-              30 Minutes
+              30 {{ $t('consultationPrice.minutes') }}
             </p>
           </div>
           <p
             class="text-xs sm:text-base text-[#666666] leading-4 text-center h-10 mt-6"
           >
-          The ideal solution for urgent legal needs and more detailed discussions
+          {{ $t('consultationPrice.the_ideal_solution') }}
           </p>
         </div>
         <button
@@ -84,7 +86,7 @@
           class="flex-shrink-0 px-4.5 py-2.5 md:text-lg bg-linear-[264deg,#00D075,#069456] text-white rounded-2xl w-full text-center mt-6"
           @click="showDownDialog = true"
         >
-          <span>Consult Now</span>
+          <span>{{ $t('consultationPrice.consult_now') }}</span>
         </button>
       </div>
       <div
@@ -102,7 +104,7 @@
                 class="w-20"
               />
               <p class="font-bold antialiased sm:text-xl">
-                Chat+Voice+Vedio call
+                {{ $t('consultationPrice.chat_voice_vedio_call') }}
               </p>
             </div>
           </div>
@@ -114,13 +116,13 @@
               <span class="text-2xl sm:text-[32px] ml-6">100.000</span>
             </p>
             <p class="text-[#00673A] font-semibold antialiased">
-              60 Minutes
+              60{{ $t('consultationPrice.minutes') }}
             </p>
           </div>
           <p
             class="text-xs sm:text-base text-[#556987] leading-4 text-center h-10 mt-4"
           >
-          In-depth discussion of difficult cases
+          {{ $t('consultationPrice.in_depth_discussion') }}
           </p>
         </div>
         <button

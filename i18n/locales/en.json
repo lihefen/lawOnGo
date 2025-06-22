@@ -143,7 +143,7 @@
         "consultation_price": "Consultation Price",
         "non_rofit_service":"Non-profit service",
         "free":"FREE",
-        "30 Minutes Consultat":"30 Minutes Consultat",
+        "minutes_consultat":"30 Minutes Consultat",
         "get_free_legal_service":"get free legal service by uploading your KTP",
         "apply_pro_bono":"Apply pro Bono",
         "livechat_serivice":"Livechat serivice",
@@ -152,7 +152,7 @@
         "the_ideal_solution":"The ideal solution for urgent legal needs and more detailed discussions",
         "consult_now":"Consult Now",
         "chat_voice_vedio_call":" Chat+Voice+Vedio call",
-        "In-depth discussion of difficult cases":"In-depth discussion of difficult cases"
+        "in_depth_discussion":"In-depth discussion of difficult cases"
     },
     "whyLegalConsultation": {
 
