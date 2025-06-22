@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-08 21:13:28
  * @LastEditors: hean
- * @LastEditTime: 2025-06-21 10:53:31
+ * @LastEditTime: 2025-06-23 01:00:13
 -->
 
 <template>
@@ -445,7 +445,7 @@
             <div class="max-w-[1280px] mx-auto xl:px-[40px]">
                 <div class="space-y-4">
                     <h2 class="text-2xl md:text-3xl font-bold text-[#262E35] text-center" > {{ $t('legalServices.frequently_asked_questions') }} </h2>
-                    <div class="space-y-4" v-for="(item, index) in questionsList" :key="index + 909">
+                    <div class="space-y-4" v-for="(item, index) in currentQuestionsList" :key="index + 909">
                         <el-collapse  @change="handleChange" class="rounded-xl px-4 py-3 shadow-sm flex gap-4 " expand-icon-position="right">
                             <el-collapse-item title="Consistency" name="1" class="flex-1">
                                 <template #title="{ isActive }">
@@ -658,7 +658,7 @@
         }
         
     }
-    const questionsList = [
+    const questionsListEn = ref([
             {
                 title: 'What is LawOnGo?',
                 desc:'LawOnGo is an AI-based legal platform that focuses on providing fast,legal,and user-friendly debt mediation solutions.</br>Through LawOnGo,you can easily access debt mediation services,legal consultations,and rights protection via your smartphone—no upfront fees and no need to visit a law firm.</br>LawOnGo is committed to helping the people of Indonesia deal with debt stress in a fair,secure,and humane manner.Supported by AI technology and a network of legal professionals,we offer:</br><ol></ol><uL><li>Legal and compliant online debt mediation</li></uL><uL><li>24/7 AI-powered legal consultations that are fast and confidential</li></uL><uL><li>Negotiation with creditors on your behalf</li></uL><uL><li> Data protection and legal assistance throughout the processLawOnGo believes that everyone should have access to affordable and reliable legal solutions,especially during tough times.We will accompany you on your journey to financial freedom.</li></uL></ol>'
@@ -679,7 +679,90 @@
 
            
         
-    ]
+    ])
+
+    const questionsListId = ref([
+            {
+                title: 'Apa itu LawOnGo?',
+                desc:`
+                    LawOnGo adalah platform hukum berbasis AI yang berfokus menyediakan solusi pengmediasian hutang yang cepat, legal, dan ramah pengguna.</br>Melalui LawOnGo, Anda dapat dengan mudah mengakses layanan pengmediasian hutang, konsultasi hukum, dan pelindungan hak melalui smartphone Anda—tanpa biaya awal dan tanpa perlu mengunjungi kantor hukum.</br>LawOnGo berkomitmen membantu masyarakat Indonesia menghadapi tekanan hutang dengan cara yang adil, aman, dan bermoral. Didukung oleh teknologi AI dan jaringan profesional hukum, kami menawarkan:</br>
+                    <ol>
+                        <uL>
+                            <li>Pengmediasian Hutang Online yang Legal dan Berkelembagaan</li>
+                        </uL>
+                        <uL
+                            <li>
+                                Konsultasi Hukum Berbasis AI 24/7 yang Cepat dan Confidensial
+                            </li>
+                        </uL>
+                        <uL>
+                            <li>Negosiasi dengan Creditor atas Nama Anda</li>
+                        </uL>
+                        <uL>
+                            <li> 
+                                Perlindungan Data dan Bantuan Hukum Selama Proses
+                                LawOnGo percaya bahwa setiap orang berhak mendapatkan solusi hukum yang terjangkau dan andal, terutama dalam waktu sulit. Kami akan menemani Anda dalam perjalanan menuju kebebasan finansial.
+                            </li>
+                        </uL>
+                    </ol>
+                `
+            },
+            {
+                title: 'Bagaimana Cara Mendaftar Akun LawOnGo?',
+                desc:`
+                    <ol>
+                        <ul>
+                            <li>Buka Website Resmi atau Aplikasi dan Klik "Daftar".</li>
+                        </ul>
+                        <ul>
+                            <li>Masukkan Nomor Handphone Anda dan Terima Kode Verifikasi SMS, atau Login Cepat Menggunakan WeChat/Alipay.</li>
+                        </ul>
+                        <ul>
+                            <li>
+                                Lengkapi Formulir Informasi Pokok: Nama, Nomor ID, Alamat Email.
+                            </li>
+                        </ul>
+                        <ul><li>Unggah Foto untuk Pengenalan Wajah untuk Meningkatkan Keamanan Akun.</li></ul>
+                    </ol>
+                `
+            },
+            {
+                title: 'Bagaimana Saya Bisa Mengikuti Proyek Manfaat Masyarakat dari Layanan Non-Profit LawOnGos?',
+                desc:'Platform ini secara teratur berkolaborasi dengan organisasi kesejahteraan umum untuk menyediakan bantuan hukum gratis kepada kelompok berpendapatan rendah atau dalam kondisi ekonomi tidak menguntungkan.</br>Masuk ke bagian "Hukum Kemanfaatan Umum", daftarkan diri, dan serahkan bukti pendapatan keluarga atau ketidakmampuan ekonomi.</br>Setelah disetujui, Anda dapat membooking pengacara Layanan Non-Profit untuk konsultasi gratis selama 30 menit.<br/>Beberapa proyek bantuan didanai.'
+            },
+            {
+                title: 'Bagaimana Cara Mem 委託 LawOnGo Menyusun atau Mengecek Kontrak?',
+                desc:`
+                    <ol>
+                        <ul>
+                            <li>
+                                Pilih "Layanan Dokumen" → "Penulisan/Memeriksa Kontrak" di platform.
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                Unggah kontrak yang sudah ada atau isi elemen pokok (informasi pihak-pihak, hak dan kewajiban).
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                Sistem AI akan melakukan pemeriksaan awal dan menghasilkan draf kontrak, yang dapat Anda pratinjau secara online dan sampaikan saran perubahan.
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Setelah konsultan pengacara menyelesaikan perubahan khusus, Anda dapat menandatangani dan mengunduh versi akhir secara online.</li>
+                        </ul>
+                    </ol>                
+                `
+            }
+
+
+           
+        
+    ])
+    const currentQuestionsList = computed(() => {
+        return locale.value == 'id' ? questionsListId.value : questionsListEn.value;
+    });
     onMounted(() => {
         scrollToId()
     });

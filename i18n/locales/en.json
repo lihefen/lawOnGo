@@ -159,6 +159,14 @@
         "established":"Established",
         "fast_developing":"Fast developing"
     },
+    "cariAdvokat":{
+        "debt_consolidation":"Debt Consolidation",
+        "find_the_best_advoca":"Find the best Advoca",
+        "filter":"Filter",
+        "reset":"Reset",
+        "consult_now ":"consult now",
+        "category":"Category"
+    },
     "whyLegalConsultation": {
 
     },

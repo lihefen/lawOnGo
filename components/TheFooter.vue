@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-25 18:28:37
  * @LastEditors: hean
- * @LastEditTime: 2025-06-20 14:30:13
+ * @LastEditTime: 2025-06-23 00:00:03
 -->
 <template>
   <div class="w-full bg-gradient-to-r from-[#005F38] to-[#005F38]">
@@ -38,26 +38,31 @@
               {{ $t('foot.fllow_us') }}
             </p>
             <div class="flex gap-1 mt-3">
-              <img
+                <a href="" target="_blank"><img
                 class="w-10"
                 src="/image/footer/fb.svg"
                 alt="fb-logo"
-              />
-              <img
+                /></a>
+                <a href="https://x.com/lawongo_id?t=55bPYi3TYLvRBnxddt4Jbg&s=09" target="_blank"><img
                 class="w-10"
                 src="/image/footer/x.svg"
                 alt="x-logo"
-              />
-              <img
+                /></a>
+                <a href="https://www.instagram.com/lawongo.id/" target="_blank"><img
                 class="w-10"
                 src="/image/footer/link.svg"
                 alt="in-logo"
-              />
-              <img
+                /></a>
+                <a href="https://www.instagram.com/lawongo.id/" target="_blank"><img
                 class="w-10"
                 src="/image/footer/ins.svg"
                 alt="ins-logo"
-              />
+                /></a>
+                 <a href="https://api.whatsapp.com/send/?phone=6282324599898&text&type=phone_number&app_absent=0" target="_blank"><img
+                class="w-10"
+                src="/image/footer/whatsapp.png"
+                alt="whatsapp"
+                /></a>
             </div>
           </div>
           <div class="mt-8 flex w-full text-white gap-3 lg:pl-32">

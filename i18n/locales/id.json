@@ -155,6 +155,14 @@
         "established":"Didirikan",
         "fast_developing":"Berembang cepat"
     },
+    "cariAdvokat":{
+        "debt_consolidation":"Konsolidasi Utang",
+        "find_the_best_advoca":"Temukan Advoca Terbaik",
+        "filter":"Filter",
+        "reset":"Reset",
+        "consult_now":"konsultasikan sekarang",
+        "category":"Kategori"
+    },
     "trustworthy_platform": {
         "trustworthy_platform":"Sebuah Platform yang Dapat Diandalkan",
         "suceess_stories":"Kisah Sukses",

@@ -8,12 +8,12 @@
         >
           <div class="text-black pt-4 md:pt-8">
             <p class="font-lexend font-bold text-xl lg:text-3xl">
-              Debt Consolidation
+                {{ $t('cariAdvokat.debt_consolidation') }}
             </p>
             <h1
               class="text-[#757E8C] font-lexend text-xs lg:text-base font-semibold antialiased"
             >
-              Find the best Advoca
+            {{ $t('cariAdvokat.find_the_best_advoca') }}
             </h1>
           </div>
 
@@ -42,17 +42,6 @@
                 </el-input>
               </div>
             </div>
-            <!-- <div
-              class="relative basis-1/6 bg-white border border-blue-2 lg:hidden rounded-md flex justify-center items-center"
-            >
-              <button class="w-6 h-6">
-                <img
-                  alt="icon-filter"
-                  class="w-6 h-6"
-                  src="/image/utils/icon-filter.png"
-                />
-              </button>
-            </div> -->
           </div>
 
           <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
@@ -112,16 +101,19 @@
                             <div
                               class="text-black antialiased font-medium text-xs leading-6"
                             >
-                              <h2>Category</h2>
+                              <h2>{{ $t('cariAdvokat.category') }}</h2>
                             </div>
                             <div>
-                              <div>
-                                <el-radio-group v-model="radioStatus">
-                                    <el-radio :value="3"> Lawyer Riza </el-radio>
-                                    <el-radio :value="4">Lawyer Farouq</el-radio>
-                                    <el-radio :value="5">Lawyer Edo</el-radio>
-                                    <el-radio :value="6">Lawyer Rima</el-radio>
-                                </el-radio-group>
+                              <div class="flex flex-col">
+                                <el-checkbox v-model="checked1" label="Kepailitan & PKPU" size="large" />
+                                <el-checkbox v-model="checked2" label="Pinjaman Online" size="large" />
+                                <el-checkbox v-model="checked3" label="Ketenagakerjaa" size="large" />
+                                <el-checkbox v-model="checked4" label="Perkawinan & Perceraian" size="large" />
+                                <el-checkbox v-model="checked5" label="Pertanahan" size="large" />
+                                <el-checkbox v-model="checked6" label="Pidana" size="large" />
+                                <el-checkbox v-model="checked7" label="Perdata" size="large" />
+                                <el-checkbox v-model="checked8" label="Pajak Perusahaan" size="large" />
+                                <el-checkbox v-model="checked9" label="Pajak Pribadi" size="large" />
                               </div>
                             </div>
                           </div>
@@ -183,7 +175,7 @@
             <div class="lg:col-span-2">
               <!-- <CariSwiper /> -->
               <div class="pb-7">
-                <div v-for="(item, index) in advokatList" :key="index + 908">
+                <div v-for="(item, index) in currentAdvokatList" :key="index + 908">
                   <div
                     class="cursor-pointer relative font-lexend min-w-[328px] max-h-[239px] mb-4"
                   >
@@ -191,17 +183,6 @@
                       class="relative bg-white rounded-xl overflow-hidden border border-[#E7ECF0]"
                     >
                       <div class="relative md:py-3 py-2">
-                        <!-- <div class="absolute left-0 top-0 z-[4]">
-                          <span class="relative flex h-3 w-3"
-                            ><span
-                              class="absolute inline-flex h-full w-full rounded-full opacity-75 bg-green-200 animate-ping-slow"
-                            ></span
-                            ><span
-                              class="relative inline-flex rounded-full h-3 w-3 bg-green-500"
-                            ></span
-                          ></span>
-                        </div> -->
-
                         <div class="md:px-3 px-2 items-center flex gap-3">
                           <div class="relative h-fit">
                             <div class="absolute left-2 top-1 z-[4]">
@@ -259,7 +240,7 @@
                                   alt="medal-star"
                                   class="w-4 h-4"
                                   src="/image/landing-page/icon-year.png"
-                                />6 years
+                                />{{ item.years }}
                               </p>
                               <div class="flex items-center">
                                 <div
@@ -329,23 +310,16 @@
                                         <button
                                             class="font-medium px-4 py-2.5 md:px-6 md:py-3 md:w-[160px] rounded-md md:rounded-[16px] text-xs md:text-base bg-[#04A45E] mt-[10px] text-white"
                                         >
-                                        consult now
+                                        {{ $t('cariAdvokat.consult_now') }}
                                         </button>
                                     </template>
                                     <div class="text-center">
                                         <img src="/image/ewm.png" class="m-auto">
                                     </div>
                                 </el-popover>
-                              <!-- <button
-                                @click="consultHandle"
-                                class="font-medium px-4 py-2.5 md:px-6 md:py-3 md:w-[160px] rounded-md md:rounded-[16px] text-xs md:text-base bg-[#04A45E] mt-[10px] text-white"
-                              >
-                              consult now
-                              </button> -->
                             </div>
                           </div>
                         </div>
-                        <!-- <div class="border-b my-2 border-[#E7ECF0]"></div> -->
                       </div>
                     </div>
                   </div>
@@ -366,87 +340,127 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-// import CariSwiper from "~/components/CariSwiper.vue";
+    import { ref } from "vue";
+    const { locales, locale, setLocaleCookie,t } = useI18n()
+
+    // import CariSwiper from "~/components/CariSwiper.vue";
 
 
-import {provinces}  from '~/utils/provinces';
+    import {provinces}  from '~/utils/provinces';
 
-import {cities}  from '~/utils/cities';
+    import {cities}  from '~/utils/cities';
 
-const inputSearch = ref("");
-const inputCity = ref("");
-const checked1 = ref(false);
-const radioStatus = ref(1);
-const showLoginDialog = ref(false);
-const showProductManagerDialog = ref(false);
-const loginHandler = () => {
-  console.log("loginHandler");
-  showLoginDialog.value = true;
-};
-const consultHandle = () => {
-    showProductManagerDialog.value = true;
-}
+    const inputSearch = ref("");
+    const inputCity = ref("");
+    const checked1 = ref(false);
+    const radioStatus = ref(1);
+    const showLoginDialog = ref(false);
+    const showProductManagerDialog = ref(false);
+    const loginHandler = () => {
+    console.log("loginHandler");
+    showLoginDialog.value = true;
+    };
+    const consultHandle = () => {
+        showProductManagerDialog.value = true;
+    }
 
-const provinsiOptions = [
-  {
-    value: "ACEH",
-    label: "ACEH",
-  },
-  {
-    value: "SUMATERA UTARA",
-    label: "SUMATERA UTARA",
-  },
-  {
-    value: "SUMATERA BARAT",
-    label: "SUMATERA BARAT",
-  },
-  {
-    value: "RIAU",
-    label: "RIAU",
-  },
-  {
-    value: "JAMBI",
-    label: "JAMBI",
-  },
-];
+    const advokatListEn = ref([
+    {
+        photo: "/image/photo/photo-01.png",
+        name:'Riza Zafita Rizki, S.H.',
+        location:'Jakata',
+        years:"8 years",
+        marks:['Corporate law','Contract review and drafting','Venture capital compliance']
+    },
+    {
+        photo: "/image/photo/photo-02.png",
+        name:'Farouq Habibullah El-Hassan, S.H',
+        location:'Jakata',
+        years:"6 years",
+        marks:['AML/CFT','supervision','Commercial contracts']
+    },
+    {
+        photo: "/image/photo/photo-03.png",
+        name:'Aditya Edo Primantoro',
+        location:'Jakata',
+        years:"7+ years",
+        marks:['Corporate transactions','Merger & Acquistion',' Foreign']
+    },
+    {
+        photo: "/image/photo/photo-04.png",
+        name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
+        location:'Jakata',
+        years:"10+ years",
+        marks:['International Arbitration',' Corporate Law']
+    }
+    ]);
 
-// "Consult now
-// Riza zafita rizki:Jakata;Corporate law, Contract review and drafting, Venture capital compliance, P2P lending, Acquisitions
-// Farouq Habibullah El-Hassan, S.H:Jakata;AML/CFT supervision,Commercial contracts,Company establishment,IPO legal affairs,Legal due diligence,Cross-border legal cooperatio
-// Edo:Jakata;Corporate transactions ,Merger & Acquistion, Foreign investment, Data protection
-// Rima Gravianty Baskoro,S.H., MPPM., ACIArb：Jakata;International Arbitration, Corporate Law
+    const advokatListId = ref([
+    {
+        photo: "/image/photo/photo-01.png",
+        name:'Riza Zafita Rizki, S.H.',
+        location:'Jakata',
+        years:"8 Tahun",
+        marks:['Corporate law','Contract review and drafting','Venture capital compliance']
+    },
+    {
+        photo: "/image/photo/photo-02.png",
+        name:'Farouq Habibullah El-Hassan, S.H',
+        location:'Jakata',
+        years:"Lebih dari 6 Tahun",
+        marks:['AML/CFT','supervision','Commercial contracts']
+    },
+    {
+        photo: "/image/photo/photo-03.png",
+        name:'Aditya Edo Primantoro',
+        location:'Jakata',
+        years:"Lebih dari 7 Tahun",
+        marks:['Corporate transactions','Merger & Acquistion',' Foreign']
+    },
+    {
+        photo: "/image/photo/photo-04.png",
+        name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
+        location:'Jakata',
+        years:"Lebih dari 10 Tahun",
+        marks:['International Arbitration',' Corporate Law']
+    }
+    ]);
 
-
-const advokatList = [
-  {
-    photo: "/image/photo/photo-01.png",
-    name:'Riza Zafita Rizki, S.H.',
-    location:'Jakata',
-    marks:['Corporate law','Contract review and drafting','Venture capital compliance']
-  },
-  {
-    photo: "/image/photo/photo-02.png",
-    name:'Farouq Habibullah El-Hassan, S.H',
-    location:'Jakata',
-    marks:['AML/CFT','supervision','Commercial contracts']
-  },
-  {
-    photo: "/image/photo/photo-03.png",
-    name:'Aditya Edo Primantoro',
-    location:'Jakata',
-    marks:['Corporate transactions','Merger & Acquistion',' Foreign']
-  },
-  {
-    photo: "/image/photo/photo-04.png",
-    name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
-    location:'Jakata',
-    marks:['International Arbitration',' Corporate Law']
-  },
-];
+    const currentAdvokatList = computed(() => {
+        return locale.value == 'id' ? advokatListId.value : advokatListEn.value;
+    });
 </script>
 
 <style scoped>
+::v-deep  .el-checkbox__input.is-checked .el-checkbox__inner {
+    background: #04A45E;
+    border: #04A45E;
+}
+
+::v-deep .el-checkbox__input.is-checked+.el-checkbox__label {
+    color: #333;
+    font-size: 18px;
+}
+
+::v-deep .el-checkbox.el-checkbox--large .el-checkbox__label {
+    color: #333;
+    font-size: 18px;
+}
+
+::v-deep .el-checkbox.el-checkbox--large .el-checkbox__inner {
+    width: 16px;
+    height: 16px;
+}
+
+::v-deep  .el-checkbox__inner:after {
+    left:6px;
+    top:3px;
+}
+
+::v-deep .el-checkbox.el-checkbox--large {
+    height: 34px;
+}
+
 ::v-deep .el-radio__input .el-radio__inner {
     width: 22px;
     height: 22px;
