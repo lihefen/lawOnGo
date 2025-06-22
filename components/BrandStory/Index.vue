@@ -12,7 +12,7 @@
       <div
         class="hidden md:block text-white text-[32px] font-bold pl-[70px] pt-[38px]"
       >
-        Brand Story
+        {{ $t('brandStory.brand_story') }}
       </div>
       <div className="w-[470px] absolute -top-2 right-20 hidden lg:block">
         <div className="relative">
@@ -37,7 +37,7 @@
                 className="w-2 h-2 bg-green-500 rounded-full relative z-10 mb-1"
               />
               <div className="text-lg text-[#333333] text-center max-w-xs">
-                Established
+                {{ $t('brandStory.established') }}
               </div>
             </div>
             <div className="flex flex-col items-center">
@@ -46,7 +46,7 @@
                 className="w-2 h-2 bg-green-500 rounded-full relative z-10 mb-1"
               />
               <div className="text-lg text-[#333333] text-center max-w-xs">
-                Fast developing
+                {{ $t('brandStory.fast_developing') }}
               </div>
             </div>
           </div>
@@ -54,15 +54,10 @@
       </div>
       <div class="flex flex-wrap lg:flex-nowrap justify-center gap-3 md:pt-4">
         <div
-          v-for="item in items"
+          v-for="item in currentItems"
           :key="item.title"
           class="relative w-full md:w-[340px] p-5 card-bg flex flex-col items-center gap-2 overflow-hidden"
         >
-          <!-- <Video
-            :video="item.video"
-            :poster="item.poster"
-            class="w-[300px] h-[143px]"
-          /> -->
           <iframe
             :src="item.video"
             class="w-[300px] h-[143px] rounded-xl shrink-0"
@@ -92,9 +87,9 @@
 </template>
 <script setup>
 import { ref } from "vue";
-// import Video from "./Video.vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 
-const items = ref([
+const itemsEn = ref([
   {
     title: "Leagal Consultation",
     description:
@@ -118,6 +113,32 @@ const items = ref([
   },
 ]);
 
+const itemsId = ref([
+  {
+    title: "Konsultasi Hukum",
+    description:
+      "Profesional dengan pengalaman lebih dari 15 tahun di berbagai industri",
+    video: "https://www.youtube.com/embed/Sy4ROOthOg4",
+    poster: "/image/features/story-placeholder.png",
+  },
+  {
+    title: "Pendirian Perusahaan",
+    description:
+      "Profesional dengan pengalaman lebih dari 15 tahun di berbagai industri",
+    video: "https://www.youtube.com/embed/81FNi23lrbc",
+    poster: "/image/features/story-placeholder.png",
+  },
+  {
+    title: "Dokumen Hukum",
+    description:
+      "Profesional dengan pengalaman lebih dari 15 tahun di berbagai industri",
+    video: "https://www.youtube.com/embed/zq83AsGKCA0",
+    poster: "/image/features/story-placeholder.png",
+  },
+]);
+const currentItems = computed(() => {
+  return locale.value == 'id' ? itemsId.value : itemsEn.value;
+});
 const goAbout = () => { 
     navigateTo("/about");
 }

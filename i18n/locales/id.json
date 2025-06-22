@@ -150,6 +150,11 @@
         "chat_voice_vedio_call":"Chat + Panggilan Telepon + Panggilan Video",
         "in_depth_discussion":"Diskusi mendalam untuk kasus kompleks"
     },
+    "brandStory": {
+        "brand_story":"Cerita Brand",
+        "established":"Didirikan",
+        "fast_developing":"Berembang cepat"
+    },
     "trustworthy_platform": {
         "trustworthy_platform":"Sebuah Platform yang Dapat Diandalkan",
         "suceess_stories":"Kisah Sukses",

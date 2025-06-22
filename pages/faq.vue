@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-10 17:46:47
  * @LastEditors: hean
- * @LastEditTime: 2025-06-20 14:01:53
+ * @LastEditTime: 2025-06-22 18:09:58
 -->
 <template>
   <div class="bg-cultured font-dm-sans min-h-screen">
@@ -55,7 +55,6 @@ import { ref ,defineEmits} from "vue";
 const { locales, locale, setLocaleCookie,t } = useI18n()
 
 const showLoginDialog = ref(false);
-console.log(locale.value)
 const loginHandler = () => {
     console.log("loginHandler");
     showLoginDialog.value = true;

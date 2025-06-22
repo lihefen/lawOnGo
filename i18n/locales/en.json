@@ -154,6 +154,11 @@
         "chat_voice_vedio_call":" Chat+Voice+Vedio call",
         "in_depth_discussion":"In-depth discussion of difficult cases"
     },
+    "brandStory": {
+        "brand_story":"Brand Story",
+        "established":"Established",
+        "fast_developing":"Fast developing"
+    },
     "whyLegalConsultation": {
 
     },
