@@ -82,19 +82,19 @@ const itemsId = ref([
     id: 1,
     name: "harina ",
     quote:
-      "After submitting the information, the lawyer contacted me quickly and helped me solve the debt problem. Thanks to LawOnGo ",
+      "Setelah submitted informasi, pengacara segera menghubungi saya dan membantu menyelesaikan masalah hutang saya. Terima kasih kepada LawOnGo.",
   },
   {
     id: 2,
     name: "matinrus",
     quote:
-      "Attorney Rima demonstrated exceptional professionalism—patiently listening to my concerns, providing practical legal guidance, and skillfully negotiating with my borrower. She resolved all my debts within manageable terms. I truly can't imagine how I'll be today without LawOnGo. ",
+      "Pengacara Rima menunjukkan keahlian yang luar biasa—dengan sabar mendengarkan kekhawatiran saya, memberikan bimbingan hukum praktis, dan dengan mahir bernegosiasi dengan peminjamku. Dia menyelesaikan semua hutang saya dalam syarat-syarat yang dapat ditangani. Benar-benar tidak bisa membayangkan bagaimana saya sekarang tanpa LawOnGo.",
   },
   {
     id: 3,
     name: "siska",
     quote:
-      "AI smart consultation is very goood. It answered my questions in just a few words. Most importantly, it is completely free. I hope LawOnGo will do better and better.",
+      "Konsultasi cerdas AI sangat bagus. Ia menjawab pertanyaan saya hanya dengan beberapa kata. Yang terpenting, itu sepenuhnya gratis. Saya harap LawOnGo akan semakin berkembang dan sukses.",
   },
 ]);
 

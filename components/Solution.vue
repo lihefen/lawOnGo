@@ -4,11 +4,11 @@
     class="max-w-[1280px] px-4 xl:px-20 mx-auto py-6"
   >
     <h1 class="text-2xl md:text-3xl font-semibold text-center mb-12">
-      Various Other Legal Solutions for You
+        {{ $t('various_other_legal') }}
     </h1>
     <div class="flex flex-wrap lg:flex-nowrap justify-center gap-3">
       <a
-        v-for="item in items"
+        v-for="item in currentItems"
         :key="item.title"
         :href="item.link"
         class="relative w-full md:w-[230px] p-3 card-bg flex flex-row sm:flex-col items-start gap-2 overflow-visible"
@@ -54,8 +54,9 @@
 </template>
 <script setup>
 import { ref } from "vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 
-const items = ref([
+const itemsEn = ref([
   {
     title: "Leagal Consultation",
     description:
@@ -64,14 +65,7 @@ const items = ref([
     link: "/cari-advokat",
     top: -20,
   },
-//   {
-//     title: "Company Establishment",
-//     description:
-//       "Layanan pendirian badan usaha (PT, CV, Yayasan), perubahan akta, dan waarmerking.",
-//     image: "/image/features/gongsi-2.png",
-//     link: "/pendirian-badan-usaha",
-//     top: -7,
-//   },
+
   {
     title: "Legal document creation",
     description:
@@ -95,6 +89,44 @@ const items = ref([
     top: -5,
   },
 ]);
+
+const itemsId = ref([
+  {
+    title: "Konsultasi Hukum",
+    description:
+      "Penasihat Hukum Ahli dari Pengacara Terkemuka Pendirian Perusahaan: Layanan untuk mendirikan entitas bisnis (PT, CV), mengubah akta, dan notarisasi.",
+    image: "/image/features/chat.png",
+    link: "/cari-advokat",
+    top: -20,
+  },
+
+  {
+    title: "Pembuatan Dokumen Hukum",
+    description:
+      "Layanan untuk pembuatan dokumen hukum bagi individu/perusahaan seperti Perjanjian Jual Beli, Perjanjian Kerja, Surat Kuasa, dan lainnya.",
+    image: "/image/features/wendang-2.png",
+    link: "/service-page?id=document",
+    top: -7,
+  },
+  {
+    title: "Pendaftaran Kekayaan Intelektual",
+    description: "Layanan untuk pendaftaran Merek Dagang, Paten, Hak Cipta, dan lainnya.",
+    image: "/image/features/zhishichanquan.png",
+    link: "/service-page?id=copyright",
+    top: -8,
+  },
+  {
+    title: "Konsultasi Pajak",
+    description: "Konsultasi mengenai pelaporan pajak untuk perusahaan dan individu.",
+    image: "/image/features/tax.png",
+    link: "/service-page?id=tax",
+    top: -5,
+  },
+]);
+
+const currentItems = computed(() => {
+  return locale.value == 'id' ? itemsId.value : itemsEn.value;
+});
 </script>
 <style scoped>
 .card-bg {

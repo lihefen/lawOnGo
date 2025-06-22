@@ -1,7 +1,7 @@
 <template>
   <div class="antialiased">
     <p class="text-3xl font-bold text-black text-center mb-6">
-      Consultation Price
+      {{ $t('consultationPrice.consultation_price') }}
     </p>
     <section
       class="justify-center items-center flex-col flex lg:flex-row lg:gap-10"
@@ -139,6 +139,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 const showDownDialog = ref(false);
 // 每个卡片独立展开/收起状态
 const isOpen1 = ref(true); // 默认展开，可改为false

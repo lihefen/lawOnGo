@@ -14,7 +14,7 @@
         </p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
-        <div v-for="category in categories" :key="category.name">
+        <div v-for="category in currentCategories" :key="category.name">
           <div
             class="w-full flex justify-center min-h-[64px] lg:h-auto h-[104px] max-h-[104px] lg:justify-start p-2 category-card-bg gap-2 hover:shadow-lg shadow-[rgba(15, 169, 66, 0.27)]/50"
           >
@@ -25,7 +25,7 @@
                   :src="category.image"
                   alt=""
                 />
-                <div class="grid gap-1 pr-4">
+                <div class="grid gap-1 pr-2">
                   <p
                     class="sm:leading-6 text-center lg:text-left text-xs text-neutral-800 font-dm-sans font-bold"
                   >
@@ -45,48 +45,91 @@
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
-const { locales, locale, setLocaleCookie,t } = useI18n()
+    import { ref } from "vue";
+    const { locales, locale, setLocaleCookie,t } = useI18n()
 
-const categories = ref([
-  {
-    name: "Bankruptcy & PKPU",
-    image: "/image/category/kepailitan.png",
-  },
-  {
-    name: "Employment",
-    image: "/image/category/ketenagakerjaan.png",
-    description: 'Industrial relations dis…'
-  },
-  {
-    name: "Marriage & Divorce",
-    image: "/image/category/perkawinan.png",
-    description: 'General marriage and…'
-  },
-  {
-    name: "Land",
-    image: "/image/category/pertanahan.png",
-    description: 'Criminal trespass'
-  },
-  {
-    name: "Criminal",
-    image: "/image/category/pidana.png",
-    description: 'Abuse and mob violen…'
-  },
-  {
-    name: "Civil",
-    image: "/image/category/perdata.png",
-    description: 'General civil law'
-  },
-  {
-    name: "Corporate",
-    image: "/image/category/corporate.png",
-  },
-  {
-    name: "Personal Tax",
-    image: "/image/category/tax.png",
-  },
-]);
+    const categoriesEn = ref([
+        {
+            name: "Bankruptcy & PKPU",
+            image: "/image/category/kepailitan.png",
+        },
+        {
+            name: "Employment",
+            image: "/image/category/ketenagakerjaan.png",
+            description: 'Industrial relations dis…'
+        },
+        {
+            name: "Marriage & Divorce",
+            image: "/image/category/perkawinan.png",
+            description: 'General marriage and…'
+        },
+        {
+            name: "Land",
+            image: "/image/category/pertanahan.png",
+            description: 'Criminal trespass'
+        },
+        {
+            name: "Criminal",
+            image: "/image/category/pidana.png",
+            description: 'Abuse and mob violen…'
+        },
+        {
+            name: "Civil",
+            image: "/image/category/perdata.png",
+            description: 'General civil law'
+        },
+        {
+            name: "Corporate",
+            image: "/image/category/corporate.png",
+        },
+        {
+            name: "Personal Tax",
+            image: "/image/category/tax.png",
+        },
+    ]);
+
+    const categoriesId = ref([
+        {
+             name: "Bankruptcy & PKPU",
+            image: "/image/category/kepailitan.png",
+        },
+        {
+            name: "Pekerjaan",
+            image: "/image/category/ketenagakerjaan.png",
+            description: 'Industrial relations dis…'
+        },
+        {
+            name: "Perkawinan & Perceraian",
+            image: "/image/category/perkawinan.png",
+            description: 'Perkawinan Umum dan…'
+        },
+        {
+            name: "Tanah",
+            image: "/image/category/pertanahan.png",
+            description: 'Pemerasaan Pidana'
+        },
+        {
+            name: "Pidana",
+            image: "/image/category/pidana.png",
+            description: 'Pemerkosaan dan Kekerasan Kerumunan'
+        },
+        {
+            name: "Perdata",
+            image: "/image/category/perdata.png",
+            description: 'General civil law'
+        },
+        {
+            name: "Perusahaan",
+            image: "/image/category/corporate.png",
+        },
+        {
+            name: "Pajak Pribadi",
+            image: "/image/category/tax.png",
+        },
+    ]);
+    const currentCategories = computed(() => {
+        return locale.value == 'id' ? categoriesId.value : categoriesEn.value;
+    });
 </script>
 <style scoped>
 .bg-card {

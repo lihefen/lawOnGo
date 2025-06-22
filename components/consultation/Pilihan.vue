@@ -38,7 +38,7 @@
             @swiper="onSwiper"
             @slide-change="onSlideChange"
           >
-            <SwiperSlide v-for="item in items" :key="item.id">
+            <SwiperSlide v-for="item in currentItems" :key="item.id">
               <div
                 class="bg-white relative rounded-lg min-w-[332px] max-h-[185px] my-2 cursor-pointer"
               >
@@ -123,7 +123,7 @@
                           </label>
                         </div>
                         <span class="text-xs text-[#757E8C] ml-1"
-                          >({{ item.count }} consultations)</span
+                          >({{ item.count }} {{ $t('advocateChoice.consultations') }})</span
                         >
                       </div>
                       <div class="flex items-center justify-between gap-1">
@@ -150,7 +150,7 @@
                   <div class="flex justify-between items-center gap-1 px-2">
                     <div class="flex items-center gap-0.5">
                       <div class="flex flex-col gap-0.5 md:gap-1 rounded-lg">
-                        <div class="text-sm text-[#333333]">Consultant price</div>
+                        <div class="text-sm text-[#333333]">{{ $t('advocateChoice.consultant_price') }}</div>
                         <div class="flex gap-1 items-center">
                           <p
                             class="text-[#04A45E] font-semibold !leading-5 text-sm"
@@ -212,17 +212,18 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+const { locales, locale, setLocaleCookie,t } = useI18n()
 
 const swiperRef = ref(null);
 const activeIndex = ref(0);
 const isEnd = ref(false);
-const items = ref([
+const itemsEn = ref([
   {
     name: "Farouq Habibullah El-Hassan, S.H",
     image: "/image/landing-page/lawyer/profile-lawyer-1.png",
     location: "Jakarta Selatan",
     verified: true,
-    experience: 4,
+    experience: 6,
     rating: 5.0,
     count: 275,
     categories: ["Criminal defense", "Marriage Law"],
@@ -236,7 +237,7 @@ const items = ref([
     image: "/image/landing-page/lawyer/profile-lawyer-2.png",
     location: "Jakarta Selatan",
     verified: true,
-    experience: 4,
+    experience: 7,
     rating: 4.9,
     count: 344,
     addCount: 5,
@@ -250,7 +251,7 @@ const items = ref([
     image: "/image/landing-page/lawyer/profile-lawyer-3.png",
     location: "Jakarta Selatan",
     verified: true,
-    experience: 4,
+    experience: 8,
     rating: 5.0,
     count: 304,
     addCount: 3,
@@ -264,7 +265,7 @@ const items = ref([
     image: "/image/landing-page/lawyer/profile-lawyer-4.png",
     location: "Jakarta Selatan",
     verified: true,
-    experience: 4,
+    experience: 10,
     rating: 5.0,
     count: 304,
     addCount: 3,
@@ -275,6 +276,67 @@ const items = ref([
   },
 ]);
 
+const itemsId = ref([
+  {
+    name: "Farouq Habibullah El-Hassan, S.H",
+    image: "/image/landing-page/lawyer/profile-lawyer-1.png",
+    location: "Jakarta Selatan",
+    verified: true,
+    experience: 6,
+    rating: 5.0,
+    count: 275,
+    categories: ["Criminal defense", "Marriage Law"],
+    addCount: 3,
+    price: 40000,
+    oldPrice: 60000,
+    video: false,
+  },
+  {
+    name: "Aditya Edo Primantoro",
+    image: "/image/landing-page/lawyer/profile-lawyer-2.png",
+    location: "Jakarta Selatan",
+    verified: true,
+    experience: 7,
+    rating: 4.9,
+    count: 344,
+    addCount: 5,
+    categories: ["Criminal defense", "Marriage Law"],
+    price: 40000,
+    oldPrice: 60000,
+    video: true,
+  },
+  {
+    name: "Riza Zafita Rizki, S.H.",
+    image: "/image/landing-page/lawyer/profile-lawyer-3.png",
+    location: "Jakarta Selatan",
+    verified: true,
+    experience: 8,
+    rating: 5.0,
+    count: 304,
+    addCount: 3,
+    categories: ["Criminal defense", "Marriage Law"],
+    price: 40000,
+    oldPrice: 60000,
+    video: false,
+  },
+  {
+    name: "Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.",
+    image: "/image/landing-page/lawyer/profile-lawyer-4.png",
+    location: "Jakarta Selatan",
+    verified: true,
+    experience: 10,
+    rating: 5.0,
+    count: 304,
+    addCount: 3,
+    categories: ["Criminal defense", "Marriage Law"],
+    price: 40000,
+    oldPrice: 60000,
+    video: false,
+  },
+]);
+const currentItems = computed(() => {
+  return locale.value == 'id' ? itemsId.value : itemsEn.value;
+});
 const pagination = ref({
   clickable: true,
   enabled: true,

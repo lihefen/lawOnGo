@@ -17,10 +17,15 @@
         "visual_progress_tracking_desc":"Menawarkan pita progres real-time, catatan obrolan, dan arsip file di sisi web/aplikasi, memungkinkan pengguna melacak mediasi dan kesesuaian dengan peraturan."
     },
     "what_legal_consultation_do_you_want":"Anda Ingin Konsultasi Hukum Apa?",
+    "various_other_legal":"Berbagai Solusi Hukum Lainnya untuk Anda",
     "advocates_at_lawOnGo":"Advokat di LawOnGo siap mendengarkan dan membantu menyelesaikan masalah terkait dengan:",
     "consultation_is_easier":"LawOnGo, solusi mudah untuk konsultasi hukum — unduh sekarang!",
     "payment_only_made":"Pembayaran hanya dilakukan setelah mediasi berhasil, privasi Anda dilindungi dengan ketat.",
     "click_to_learn_more_details":"Klik untuk mempelajari detail lebih lanjut",
+    "advocateChoice":{
+        "consultant_price":"Harga Konsultan",
+        "consultations":"Konsultasi"
+    },
     "legalServices":{
         "legal_services": "Layanan Hukum",
         "professional_legal":"Layanan Hukum Profesional untuk Semua Kebutuhan",
@@ -129,6 +134,21 @@
     "faq":{
         "frequently_asked_questions":"Pertanyaan Umum (FAQ)",
          "above_qa":"Pertanyaan dan jawaban di atas mencakup empat dimensi utama:pengenalan platform,keamanan akun,konsultasi online,dan mediasi utang.Jika Anda perlu mempelajari lebih lanjut tentang modul layanan lainnya(seperti layanan tinjauan kontrak),silakan hubungi layanan pelanggan AI 24/7 secara langsung."
+    },
+    "consultationPrice": {
+        "consultation_price": "Consultation Price",
+        "non_rofit_service":"Non-profit service",
+        "free":"FREE",
+        "30 Minutes Consultat":"30 Minutes Consultat",
+        "get_free_legal_service":"get free legal service by uploading your KTP",
+        "apply_pro_bono":"Apply pro Bono",
+        "livechat_serivice":"Livechat serivice",
+        "rp":"Rp",
+        "minutes":"Minutes",
+        "the_ideal_solution":"The ideal solution for urgent legal needs and more detailed discussions",
+        "consult_now":"Consult Now",
+        "chat_voice_vedio_call":" Chat+Voice+Vedio call",
+        "In-depth discussion of difficult cases":"In-depth discussion of difficult cases"
     },
     "trustworthy_platform": {
         "trustworthy_platform":"Sebuah Platform yang Dapat Diandalkan",

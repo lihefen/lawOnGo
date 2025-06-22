@@ -21,6 +21,11 @@
     "consultation_is_easier":"Consultation is easier by downloading the LawOnGo application!",
     "payment_only_made":" Payment only made after successful mediation, your privacy is strictly protected",
     "click_to_learn_more_details":"Click to learn more details",
+    "various_other_legal":"Various Other Legal Solutions for You",
+    "advocateChoice":{
+        "consultant_price":"Consultant price",
+        "consultations":"consultations"
+    },
     "legalServices":{
         "legal_services": "Legal Services",
         "professional_legal":"Professional Legal Services for All Needs",
@@ -134,19 +139,19 @@
         "frequently_asked_questions":"Frequently Asked Questions",
          "above_qa":"The above Q&A covers four major dimensions:platform introduction,account security,online consultation,and debt mediation.If you need to learn more about other service modules(such as contract review services),please contact the 24/7 AI customer service directly."
     },
-    "consultationPrice ": {
+    "consultationPrice": {
         "consultation_price": "Consultation Price",
         "non_rofit_service":"Non-profit service",
         "free":"FREE",
         "30 Minutes Consultat":"30 Minutes Consultat",
-        "get free legal service by uploading your KTP":"get free legal service by uploading your KTP",
-        "Apply pro Bono":"Apply pro Bono",
-        "Livechat serivice":"Livechat serivice",
-        "Rp":"Rp",
-        "Minutes":"Minutes",
-        "The ideal solution for urgent legal needs and more detailed discussions":"The ideal solution for urgent legal needs and more detailed discussions",
-        "Consult Now":"Consult Now",
-        " Chat+Voice+Vedio call":" Chat+Voice+Vedio call",
+        "get_free_legal_service":"get free legal service by uploading your KTP",
+        "apply_pro_bono":"Apply pro Bono",
+        "livechat_serivice":"Livechat serivice",
+        "rp":"Rp",
+        "minutes":"Minutes",
+        "the_ideal_solution":"The ideal solution for urgent legal needs and more detailed discussions",
+        "consult_now":"Consult Now",
+        "chat_voice_vedio_call":" Chat+Voice+Vedio call",
         "In-depth discussion of difficult cases":"In-depth discussion of difficult cases"
     },
     "whyLegalConsultation": {
