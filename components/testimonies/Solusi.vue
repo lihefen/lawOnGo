@@ -26,7 +26,7 @@
             @select="onSelect"
           >
             <div
-              class="pt-4 h-full  rounded-[24px] bg-card flex flex-col text-[#333333]"
+              class="pt-4 h-[240px]  rounded-[24px] bg-card flex flex-col text-[#333333]"
             >
               <div class="px-4 pb-4 overflow-auto scrollbar-hide flex-grow">
                 <blockquote class="pt-2 text-sm antialiased text-slate-500">

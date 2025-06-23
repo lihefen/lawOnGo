@@ -33,7 +33,7 @@
                         
                         <div class="relative px-6 lg:px-8  hidden md:block">
                             <div class="relative text-center pt-8">
-                                <p class="text-black font-bold antialiased text-2xl">Login LawOnGo Accoun</p>
+                                <p class="text-black font-bold antialiased text-2xl">{{ $t('login.login_lawOnGo_accoun') }}</p>
                             </div>
                         </div>
                         <div class="md:px-8 px-6">

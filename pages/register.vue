@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-10 09:39:46
  * @LastEditors: hean
- * @LastEditTime: 2025-06-17 18:20:34
+ * @LastEditTime: 2025-06-23 09:22:05
 -->
 <!--
  * @Description: 
@@ -24,7 +24,7 @@
                 <div>
                     <div class="flex items-center justify-between py-2 px-4 sm:px-0 mb-3">
                         <button @click="onClickBack"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 18.3102C11.0975 18.7008 11.0975 19.3339 10.707 19.7244C10.3164 20.115 9.68327 20.115 9.29274 19.7244L3.49985 13.9315C2.7188 13.1505 2.7188 11.8842 3.49985 11.1031L9.29274 5.31023C9.68327 4.9197 10.3164 4.9197 10.707 5.31023C11.0975 5.70075 11.0975 6.33392 10.707 6.72444L5.91406 11.5173H19.9998C20.5521 11.5173 20.9998 11.965 20.9998 12.5173C20.9998 13.0696 20.5521 13.5173 19.9998 13.5173H5.91406L10.707 18.3102Z" fill="#262E35"></path></svg></button>
-                        <div class="font-semibold sm:text-base text-sm"> Have a LawOnGo account <a href="/login" class=""><button class="ml-2  h-7  border-1 text-[#333333]  rounded-[18px]  sm:px-4 px-3 sm:text-sm text-xs font-semibold  hover:bg-white hover:text-[#00854B] transition-colors"> Login </button></a></div></div>
+                        <div class="font-semibold sm:text-base text-sm">{{ $t('register.have_a_lawOnGo_account') }}<a href="/login" class=""><button class="ml-2  h-7  border-1 text-[#333333]  rounded-[18px]  sm:px-4 px-3 sm:text-sm text-xs font-semibold  hover:bg-white hover:text-[#00854B] transition-colors"> {{ $t('register.login') }} </button></a></div></div>
 
                     <div class="flex lg:flex-row flex-col gap-6">
                         <div class="lg:bg-[#A6F6D4]/30 lg:rounded-[60px] lg:px-10 sm:px-0 px-4 lg:max-h-[800px] overflow-hidden flex-1">
@@ -33,7 +33,7 @@
 
                         <div class="lg:w-[520px] space-y-3">
                             <div id="form-register" class="p-4 md:p-6 rounded-2xl bg-white md:shadow-[0_20px_50px_0_rgba(0,0,0,0.13)]" v-if="!showCode">
-                                <p class="text-center text-neutral-800 text-2xl font-bold pb-4"> Account Registration </p>
+                                <p class="text-center text-neutral-800 text-2xl font-bold pb-4"> {{ $t('register.account_registration') }} </p>
                                 <div class="space-y-4">
                                     <div class="space-y-2">
                                         <label class="text-slate-700 text-xs">Full name</label>
@@ -58,8 +58,7 @@
 
                                     <div class="px-3 py-2 bg-[#E7FFF4] text-[#00854B] rounded-lg flex items-center gap-2">
                                         <div><img class="w-4" src="/image/register/anquan_icon.png"></div>
-                                        <p class="text-[#00854B] text-xs font-light flex-1"> Your data security is our top priority,this data 
-                                            will be used exclusively within LawOnGo services.  </p>
+                                        <p class="text-[#00854B] text-xs font-light flex-1">{{ $t('register.your_data_security') }} </p>
                                     </div>
 
                                     <div class="space-y-2">
@@ -154,7 +153,7 @@
                                 </div>
                             </div>
                             <div class="md:px-6 py-3 px-4 rounded-2xl bg-white">
-                                <p class="font-semibold text-center mb-4"> Join Us As Lawyer </p><a href="/login/advokat" class=""><img class="w-full cursor-pointer" src="/image/lawyer/login/banner-login-advokat.png" alt="banner-advokat"></a>
+                                <p class="font-semibold text-center mb-4">{{ $t('register.join_us_as_lawyer') }}</p><a href="/login/advokat" class=""><img class="w-full cursor-pointer" src="/image/lawyer/login/banner-login-advokat.png" alt="banner-advokat"></a>
                             </div>
                         </div>
                     </div>

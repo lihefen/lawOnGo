@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-10 15:16:42
  * @LastEditors: hean
- * @LastEditTime: 2025-05-23 17:05:21
+ * @LastEditTime: 2025-06-23 09:32:41
 -->
 <template>
   <div class="bg-cultured font-dm-sans min-h-screen">
@@ -38,7 +38,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button @click="sendSms" type="button" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 w-full flex justify-center items-center px-4.5 py-2.5 md:text-lg bg-[#04A45E] hover:bg-[#04A45E] text-[#ffffff] rounded-lg font-medium"><span> Login </span></button>
+                                        <button @click="sendSms" type="button" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 w-full flex justify-center items-center px-4.5 py-2.5 md:text-lg bg-[#04A45E] hover:bg-[#04A45E] text-[#ffffff] rounded-lg font-medium"><span> {{ $t('login.login') }} </span></button>
                                     </div>
                                    
                                     <div class="space-y-6" v-if="showCode">
@@ -64,7 +64,7 @@
                                                 </div>
                                             </section>
                                         </div>
-                                        <button  @click="loginRequest" type="button" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 w-full flex justify-center items-center px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E]/80 rounded-lg font-medium"><span> Login </span></button>
+                                        <button  @click="loginRequest" type="button" class="focus:outline-none focus:outline-0 focus-visible:outline-0 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 flex-shrink-0 transition-all ease-in-out duration-300 w-full flex justify-center items-center px-4.5 py-2.5 md:text-lg bg-[#04A45E] text-white hover:bg-[#04A45E]/80 rounded-lg font-medium"><span> {{ $t('login.login') }} </span></button>
                                     </div>
                                 </div>
 
@@ -101,6 +101,7 @@ import { loginCode } from '~/services/loginCode';
 import {encryptDataWithRSA}  from '~/utils/encryptDataWithRSA';
 import { get } from 'lodash';
 import publicKey  from '~/utils/publicKey';
+const { locales, locale, setLocaleCookie,t } = useI18n()
 
 const router = useRouter()
 const inputPhone = ref('');

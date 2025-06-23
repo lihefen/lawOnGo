@@ -1,9 +1,28 @@
 {
     "login": {
-        "logo_on":"LogoOn"
+        "logo_on":"LogoOn",
+        "login_lawOnGo_accoun":"Login LawOnGo Accoun",
+        "login":"Login",
+        "together_in_search":"Together in Search of Justice",
+        "benefits_of_consulting":"Benefits of Consulting at LawOnGo",
+        "probono_consultation":"Probono Consultation",
+        "provide_and_access":"Provide and access Probono consultation easily",
+        "getting_new_clients":"Getting New Clients",
+        "getting_new_clients_from":"Getting new clients from various regions in Indonesia",
+        "developing_expertise":"Developing Expertise",
+        "sharpen_your_skills":"Sharpen your skills and connect with various cases",
+        "expanding_connections":"Expanding Connections",
+        "lawOnGo_is_connected":"LawOnGo is connected and connected from all over Indonesia",
+        "also_download_lawOnGo":"Also Download LawOnGo Advokat Application"
     },
     "register":{
-        "register":"Register"
+        "register":"Register",
+        "account_registration":"Account Registration",
+        "have_a_lawOnGo_account":"Have a LawOnGo account",
+        "login":"login",
+        "your_data_security":"Your data security is our top priority,this data  will be used exclusively within LawOnGo services. ",
+        "join_us_as_lawyer":"Join Us As Lawyer",
+        "lawOnGo_clent":"LawOnGo Client"
     },
     "consultation":{
         "why_legal_consultation_at_lawOnGo":"Why Legal Consultation at LawOnGo?",
