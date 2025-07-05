@@ -37,8 +37,7 @@
                     <div class="max-h-[500px] sm:max-h-[400px] max-h-[500px] min-h-[360px] overflow-auto  overflow-y-auto  scrollbar">
                         <div class="flex flex-col gap-2" >
                             <h2>Primary Job Role :</h2>
-                            <div>
-                               {{ hrJd[jd].jobRole }}
+                            <div v-html=" hrJd[jd].jobRole ">
                             </div>
                             <h2 class="font-semibold" >Responsibilities</h2>
                             <ul class="list-disc pl-8 text-sm leading-6 font-light" >

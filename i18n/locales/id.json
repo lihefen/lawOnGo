@@ -87,7 +87,7 @@
         "get_protection_for_design":"Dapatkan perlindungan untuk kreasi desain yang berguna dalam produksi produk, barang industri, atau kerajinan tangan.",
         "register_now":"Daftarkan Sekarang",
         "report_corporate":"Laporkan pajak perusahaan dan pribadi dengan akurasi bersama pengacara berpengalaman dan bersertifikasi di bidang perpajakan.",
-        "consult_now":"Konsultasikan Sekarang",
+        "consult_now":"konsultasikan Sekarang",
         "process_stages":"Tahap Proses",
         "submit_offer_form":"Kirim Formulir Penawaran",
         "explain_the_details":"Jelaskan rincian kebutuhan hukum Anda dengan mengisi formulir penawaran.",
@@ -209,7 +209,9 @@
         "terms_and_conditions":"Syarat dan Ketentuan",
         "address":"Alamat",
         "vantage_office":"Vantage Office Business Centre at Equity Tower, 26th floor H, Kavling 52 - 52, Jl Jendral Sudirman Senayan, Jakarta Selatan, 12910 Jakarta, Indonesia"
-    }
+    },
+    "career":"karir",
+    "viewCareers":"Lihat Karier"
 
 
 }

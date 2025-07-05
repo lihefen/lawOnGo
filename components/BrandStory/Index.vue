@@ -93,21 +93,21 @@ const itemsEn = ref([
   {
     title: "Leagal Consultation",
     description:
-      "Profesional lebih dari 15 tahun dalam lintas industri.",
+      "LawOnGo makes mediation simple, and legal services truly serve everyone.",
     video: "https://www.youtube.com/embed/Sy4ROOthOg4",
     poster: "/image/features/story-placeholder.png",
   },
   {
     title: "Company Establishment",
     description:
-      "Profesional lebih dari 15 tahun dalam lintas industri.",
+      "Oversight is not a barrier to progress, but a guardian of trust. LawOnGo will deliver legal tech services worthy of confidence from users, partners, and regulators.",
     video: "https://www.youtube.com/embed/81FNi23lrbc",
     poster: "/image/features/story-placeholder.png",
   },
   {
     title: "Document Creation",
     description:
-      "Profesional lebih dari 15 tahun dalam lintas industri.",
+      "Let's change our perspective on the debt problem, from something scary to an opportunity to improve and rebuild.",
     video: "https://www.youtube.com/embed/zq83AsGKCA0",
     poster: "/image/features/story-placeholder.png",
   },
@@ -117,21 +117,21 @@ const itemsId = ref([
   {
     title: "Konsultasi Hukum",
     description:
-      "Profesional dengan pengalaman lebih dari 15 tahun di berbagai industri",
+      "LawOnGo membuat mediasi menjadi sederhana, dan layanan hukum benar-benar melayani semua orang.",
     video: "https://www.youtube.com/embed/Sy4ROOthOg4",
     poster: "/image/features/story-placeholder.png",
   },
   {
     title: "Pendirian Perusahaan",
     description:
-      "Profesional dengan pengalaman lebih dari 15 tahun di berbagai industri",
+      "Pengawasan bukanlah penghalang bagi kemajuan, melainkan penjaga kepercayaan. LawOnGo akan menyediakan layanan teknologi hukum yang layak mendapatkan kepercayaan dari pengguna, mitra, dan regulator.",
     video: "https://www.youtube.com/embed/81FNi23lrbc",
     poster: "/image/features/story-placeholder.png",
   },
   {
     title: "Dokumen Hukum",
     description:
-      "Profesional dengan pengalaman lebih dari 15 tahun di berbagai industri",
+      "Mari kita ubah perspektif kita tentang masalah utang, dari sesuatu yang menakutkan menjadi kesempatan untuk memperbaiki dan membangun kembali.",
     video: "https://www.youtube.com/embed/zq83AsGKCA0",
     poster: "/image/features/story-placeholder.png",
   },

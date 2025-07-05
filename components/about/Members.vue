@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-29 20:45:10
  * @LastEditors: hean
- * @LastEditTime: 2025-06-20 15:46:28
+ * @LastEditTime: 2025-07-05 18:52:35
 -->
 <template>
   <div class="custom-bg mb-12">
@@ -68,10 +68,10 @@ const membersEn = ref([
     description: `Ettyta’s leadership philosophy is based on"system development as the foundation of a culture of compliance,and long-term orientation by providing trustworthy and sustainable strategic support for LawOnGo amid challenging industry changes."`,
   },
   {
-    name: "Rima Gravianty Baskoro",
-    job: "Lawyer",
-    image: "/image/about-us/lawyer.png",
-    description: `Rima believes that:"Technology can support legal performance,even with certain limitations and constraints from the law itself."Under her leadership,LawOnGo is working to build a trustworthy AI-powered legal service platform that leverages artificial intelligence to provide legal services to all segments of society.`,
+    name: "Riza Zafita Rizki, S.H.",
+    job: "Legal & Compliance Lead",
+    image: "/image/about-us/lawyer_riza.png",
+    description: `She believes that accessible and transparent legal services are key to empowering digital innovation. With her background in the financial services sector, she contributes to LawOnGo’s mission to bridge legal support with technology for broader impact.`,
   },
 ]);
 
@@ -89,10 +89,10 @@ const membersId = ref([
     description: `Filosofi kepemimpinan Ettyta didasarkan pada "pengembangan sistem sebagai dasar dari budaya kepatuhan, dan orientasi jangka panjang dengan menyediakan dukungan strategis yang dipercaya dan berkelanjutan bagi LawOnGo di tengah perubahan industri yang menantang."`,
   },
   {
-    name: "Rima Gravianty Baskoro",
-    job: "Lawyer",
-    image: "/image/about-us/lawyer.png",
-    description: `Rima percaya bahwa: "Teknologi dapat mendukung kinerja hukum, bahkan dengan beberapa keterbatasan dan kendala dari hukum sendiri." Di bawah kepemimpinannya, LawOnGo sedang berupaya membangun platform layanan hukum berbasis AI yang dipercaya, yang memanfaatkan kecerdasan buatan untuk menyediakan layanan hukum kepada semua segmen masyarakat.`,
+    name: "Riza Zafita Rizki, S.H.",
+    job: "Legal & Compliance Lead",
+    image: "/image/about-us/lawyer_riza.png",
+    description: `Dia percaya bahwa layanan hukum yang mudah diakses dan transparan merupakan kunci untuk memberdayakan inovasi digital. Dengan latar belakangnya di sektor layanan keuangan, dia berkontribusi pada misi LawOnGo untuk menjembatani dukungan hukum dengan teknologi demi dampak yang lebih luas.`,
   },
 ]);
 

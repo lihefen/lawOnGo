@@ -58,5 +58,83 @@ export const hrJd =  {
             'Experience using GraphQL is a plus.',
             'Experience as a Backend Engineer is a plus.',
         ]
+    },
+    'jd3': {
+        position:'Product Development',
+        jobRole:`
+        We are seeking a highly driven <strong>Product Manager</strong> to lead the development and optimization of our digital
+        products and internal tools. This role involves gathering and relaying feedback from legal partners,
+        proposing innovative features, and collaborating with cross-functional teams to deliver seamless
+        onboarding and registration experiences. You'll own the product roadmap, define business and technical
+        requirements, and drive product delivery from concept to launch.<br/><br/>
+        The ideal candidate has a background in computer science or related fields, with proven experience in
+        managing end-to-end product lifecycles, engaging in strategic engineering discussions, and using data to
+        drive decisions. Strong analytical skills, communication excellence, and the ability to coordinate across
+        design, engineering, legal, and marketing teams are essential for success.
+        `,
+        responsibilities:[
+            `Managing the end to end of Product Development`,
+            `Proactively identify and resolve strategic issues that may impair the team’s ability to meet strategic, financial, and technical goals`,
+            `Relaying feedback from our lawyer partners to our internal teams`,
+
+            `Proposing product features that enhance the value and experience of our clients`,
+            `Creating tools and UI/UX that will streamline our registration and onboarding process, as well as
+            reporting processes for internal usage`,
+            `Own the communication and coordination of requirements to the business, design and
+            development teams. Ensure that the user stories match the overall business requirements.`,
+            `Measure and analyse existing products and business models for opportunities to innovate and
+            improve, providing additional benefits to developers and customers.`,
+            `Proactively identify and resolve strategic issues that may impair the various teams ability to meet
+            strategic, financial, and technical goals`,
+            `Work cross-functionally with engineering, design, legal, privacy, marketing to deliver on the
+            product roadmap`,
+        ],
+        requirements:[
+           `Bachelor of Computer Science or related technical field or equivalent practical experience`,
+            `Experience to develop product roadmap strategy, define business and technical product
+            requirements, and manage an end-to-end product delivery`,
+            `Experience contributing to engineering discussions around technology decisions and strategy
+            related to a product`,
+            `Proven track record of leading cross-functional discussions to execute on product plans and to
+            deliver results`,
+            `Exceptional analytical and quantitative skills; ability to use hard data and metrics to back up
+            assumptions, recommendations, and drive actions`,
+            `Strengths in problem-solving, issue-resolution, ability to work in a deadline-driven work
+            environment, attention to detail, and ability to multitask`,
+            `Impeccable verbal and written communication skills with demonstrated experience engaging and
+            influencing senior executives`,
+            `Demonstrated ability to work cross-functionally with engineering, design, and project
+            management counterparts to deliver online products/services`,
+            `History of successful product ownership and multiple products and feature launches`,
+        ]
+    },
+    'jd4': {
+        position:'UI UX Designer',
+        jobRole:`
+            We are looking for a creative and detail-oriented UI/UX Designer to craft intuitive and
+            engaging user experiences across web and mobile platforms. In this role, you'll be
+            responsible for planning and implementing new designs, developing prototypes for new
+            ideas, and continuously optimizing existing interfaces. You’ll blend visual creativity with
+            user-centered research to enhance functionality and usability.<br/><br/>
+            The ideal candidate has 3–5 years of experience in UI/UX design, a strong portfolio, and
+            proficiency in tools like Figma, Photoshop, and Illustrator. You should have a keen eye for detail,
+            the ability to explain design decisions clearly, and excellent communication and collaboration
+            skills.
+        `,
+        responsibilities:[
+            `Plan and implement new designs of our website and application`,
+            `Create prototypes for new product ideas`,
+            `Combine creativity with an awareness of the design elements`,
+            `Optimize existing user interface designs`,
+            `Conduct an ongoing user research`,
+        ],
+        requirements:[
+           `Bachelor in any discipline`,
+            `2-4 years of experience as an UI-UX Designer or similar role`,
+            `Detail oriented`,
+            `Ability to discuss and explain design options`,
+            `Excellent interpersonal and communication skill`,
+            `Strong applied skills for design tools related to creating mobile and web application interfaces, e.g., Figma, Photoshop, Illustrator, etc`
+        ]
     }
 }

@@ -183,7 +183,7 @@
         "find_the_best_advoca":"Find the best Advoca",
         "filter":"Filter",
         "reset":"Reset",
-        "consult_now ":"consult now",
+        "consult_now":"consult now",
         "category":"Category",
         "advocate_choice":"Advocate Choice",
         "online_advocate":"Online advocate for your legal needs. Want to apply for Pro bono services ?",
@@ -216,6 +216,8 @@
         "terms_and_conditions":" Terms and Conditions",
         "address":"Address",
         "vantage_office":"Vantage Office Business Centre at Equity Tower, 26th floor H, Kavling 52 - 52, Jl Jendral Sudirman Senayan, Jakarta Selatan, 12910 Jakarta, Indonesia"
-    }
+    },
+    "career":"career",
+    "viewCareers":"View Careers"
 
 }

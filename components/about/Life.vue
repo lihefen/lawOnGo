@@ -4,7 +4,7 @@
  * @Author: hean
  * @Date: 2025-05-29 20:45:10
  * @LastEditors: hean
- * @LastEditTime: 2025-06-20 15:51:15
+ * @LastEditTime: 2025-07-05 18:55:15
 -->
 <template>
   <div class="max-w-[1280px] mx-auto pt-12 px-10 xl:px-42">
@@ -36,8 +36,8 @@
         }"
         class="mt-10"
       >
-            <div class="rounded-[18px] overflow-hidden md:w-[900px] md:h-[350px] mx-auto">
-                <img :src="item" class="md:w-[900px] md:h-[350px] mx-auto" />
+            <div class="rounded-[18px] overflow-hidden md:w-[800px] md:h-[460px] mx-auto">
+                <img :src="item" class="md:w-[800px] md:h-[460px] mx-auto" />
             </div>
       </UCarousel>
       <div class="caBtnGroup hidden md:block">
@@ -48,7 +48,7 @@
     <div class="flex justify-center items-center gap-2 mt-6 md:mt-[30px]">
         <button
           @click="goKarir"
-          class="linear-button text-2xl font-bold text-[#333333] flex items-center justify-center px-6"
+          class="linear-button text-2xl font-bold text-[#333333] flex items-center justify-center px-[58px]"
         >
            {{ $t('aboutUs.join_us') }}
           <Icon

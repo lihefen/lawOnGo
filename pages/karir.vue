@@ -31,8 +31,9 @@
 </template>
 
 <script setup>
+
 import { ref ,defineEmits} from "vue";
-// const containerRef = ref<HTMLElement | null>(null);
+const { locales, locale, setLocaleCookie,t } = useI18n()
 const inputSearch = ref('')
 const radioStatus = ref(1)
 const showLoginDialog = ref(false);
