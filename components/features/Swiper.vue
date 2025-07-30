@@ -153,15 +153,15 @@ const itemsEn = ref([
     peopleHelped: "1000+",
     services: "Family Law, Criminal Law, Civil Law",
   },
-  {
-    id: 4,
-    image: "/image/landing-page/lawyer/profile-lawyer-4.png",
-    name: "Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.",
-    rating: 5,
-    experience: "10+ years",
-    peopleHelped: "1000+",
-    services: "Family Law, Criminal Law, Civil Law",
-  },
+//   {
+//     id: 4,
+//     image: "/image/landing-page/lawyer/profile-lawyer-4.png",
+//     name: "Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.",
+//     rating: 5,
+//     experience: "10+ years",
+//     peopleHelped: "1000+",
+//     services: "Family Law, Criminal Law, Civil Law",
+//   },
 ]);
 
 const itemsId = ref([
@@ -192,15 +192,15 @@ const itemsId = ref([
     peopleHelped: "1000 Orang",
     services: "Hukum Keluarga, Hukum Pidana, Hukum Perdata",
   },
-  {
-    id: 4,
-    image: "/image/landing-page/lawyer/profile-lawyer-4.png",
-    name: "Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.",
-    rating: 5,
-    experience: "Lebih dari 10 Tahun",
-    peopleHelped: "1000 Orang",
-    services: "Hukum Keluarga, Hukum Pidana, Hukum Perdata",
-  },
+//   {
+//     id: 4,
+//     image: "/image/landing-page/lawyer/profile-lawyer-4.png",
+//     name: "Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.",
+//     rating: 5,
+//     experience: "Lebih dari 10 Tahun",
+//     peopleHelped: "1000 Orang",
+//     services: "Hukum Keluarga, Hukum Pidana, Hukum Perdata",
+//   },
 ]);
 
 const currentList = computed(() => {
