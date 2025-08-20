@@ -386,13 +386,13 @@
         years:"7+ years",
         marks:['Corporate transactions','Merger & Acquistion',' Foreign']
     },
-    {
-        photo: "/image/photo/photo-04.png",
-        name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
-        location:'Jakata',
-        years:"10+ years",
-        marks:['International Arbitration',' Corporate Law']
-    }
+    // {
+    //     photo: "/image/photo/photo-04.png",
+    //     name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
+    //     location:'Jakata',
+    //     years:"10+ years",
+    //     marks:['International Arbitration',' Corporate Law']
+    // }
     ]);
 
     const advokatListId = ref([
@@ -417,13 +417,13 @@
         years:"Lebih dari 7 Tahun",
         marks:['Corporate transactions','Merger & Acquistion',' Foreign']
     },
-    {
-        photo: "/image/photo/photo-04.png",
-        name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
-        location:'Jakata',
-        years:"Lebih dari 10 Tahun",
-        marks:['International Arbitration',' Corporate Law']
-    }
+    // {
+    //     photo: "/image/photo/photo-04.png",
+    //     name:'Rima Gravianty Baskoro,S.H.,MPPM.,ACIArb.',
+    //     location:'Jakata',
+    //     years:"Lebih dari 10 Tahun",
+    //     marks:['International Arbitration',' Corporate Law']
+    // }
     ]);
 
     const currentAdvokatList = computed(() => {
