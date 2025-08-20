@@ -58,9 +58,14 @@
                 src="/image/footer/ins.svg"
                 alt="ins-logo"
                 /></a>
-                 <a href="https://api.whatsapp.com/send/?phone=6282324599898&text&type=phone_number&app_absent=0" target="_blank"><img
+                <a href="https://api.whatsapp.com/send/?phone=6282324599898&text&type=phone_number&app_absent=0" target="_blank"><img
                 class="w-10"
                 src="/image/footer/whatsapp.png"
+                alt="whatsapp"
+                /></a>
+                <a href="javascript:;" ><img
+                class="w-10"
+                src="/image/footer/tiktok.png"
                 alt="whatsapp"
                 /></a>
             </div>
